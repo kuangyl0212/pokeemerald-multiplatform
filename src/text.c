@@ -2020,7 +2020,8 @@ static void DecompressGlyph_Chinese(u16 glyphId)
     DecompressGlyphTile(glyphs + 0x18, gCurGlyph.gfxBufferBottom + 8);
     gCurGlyph.width = gFontChineseWidths[idx];
     // Height 15 matches English FONT_NORMAL (height=15) so Chinese glyphs
-    // align with the English baseline. Glyphs are rendered at y=[3,14]
-    // in the 16px cell (CHAR_OFFSET_Y=3 in generate_chinese_font.py).
+    // align with the English baseline. Glyphs are rendered at y=[2,13]
+    // in the 16px cell (CHAR_OFFSET_Y=2 in generate_chinese_font.py);
+    // height=15 leaves the bottom row (y=14) as padding.
     gCurGlyph.height = 15;
 }

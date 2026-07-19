@@ -39,11 +39,13 @@ CHAR_WIDTH = 12
 CHAR_HEIGHT = 12
 CHAR_OFFSET_X = 0
 # Vertical offset to align Chinese baseline with English font.
-# English latin_normal renders glyphs at y=[0,14] (height=15).
-# Without offset, Chinese glyphs render at y=[0,11], making text appear
-# too high. Pushing down by 3px places Chinese at y=[3,14], aligning
-# the baseline with the English font.
-CHAR_OFFSET_Y = 3
+# English latin_normal renders glyphs at y=[0,14] (height=15), but English
+# lowercase letters typically have ink only in y=[2,12] (descenders occupy
+# y=[13,14]). CHAR_OFFSET_Y=2 places Chinese glyphs at y=[2,13], aligning
+# the bottom of typical Chinese characters with the English lowercase
+# baseline. Previous value 3 was too aggressive and made Chinese appear
+# lower than English.
+CHAR_OFFSET_Y = 2
 
 # 2bpp: 4 pixels per byte, 2 bytes per row (8 pixels), 16 bytes per 8x8 tile
 TILE_SIZE = 8
@@ -103,6 +105,77 @@ def find_font():
         if os.path.exists(path):
             return path
     return None
+
+
+# Cache of (font_path, PIL ImageFont object, set of codepoints) for fallback.
+# Primary font (Ark-Pixel) is first; subsequent entries are fallbacks.
+_FONT_CACHE = None
+
+
+def _build_font_cache():
+    """Build a cache of (path, ImageFont, codepoint_set) for all available fonts.
+
+    Used by find_font_for_char() to pick a font that actually contains the
+    requested character. The primary Ark-Pixel font is missing ~515 GB2312
+    characters; system fonts like SimSun cover the full GB2312 set.
+    """
+    cache = []
+    try:
+        from fontTools.ttLib import TTFont
+    except ImportError:
+        # fontTools unavailable — return empty cache; caller falls back to
+        # using primary font for everything (will produce .notdef boxes
+        # for missing chars, but won't crash).
+        return cache
+
+    for path in FONT_PATHS:
+        if not os.path.exists(path):
+            continue
+        try:
+            tt = TTFont(path, lazy=True, fontNumber=0)
+            cmap = tt.getBestCmap()
+            codepoints = set(cmap.keys()) if cmap else set()
+            tt.close()
+        except Exception as e:
+            print(f"Warning: Could not read cmap from {path}: {e}",
+                  file=sys.stderr)
+            continue
+
+        try:
+            from PIL import ImageFont
+            font_obj = ImageFont.truetype(path, CHAR_HEIGHT)
+        except Exception as e:
+            print(f"Warning: Could not load font {path}: {e}",
+                  file=sys.stderr)
+            continue
+
+        cache.append((path, font_obj, codepoints))
+        print(f"Loaded font: {path} ({len(codepoints)} glyphs)")
+
+    return cache
+
+
+def find_font_for_char(char):
+    """Return a PIL ImageFont that contains the given character.
+
+    Tries the primary pixel font first; if the character is missing,
+    falls back to system fonts that cover GB2312 completely.
+    Returns None if no font is available at all.
+    """
+    global _FONT_CACHE
+    if _FONT_CACHE is None:
+        _FONT_CACHE = _build_font_cache()
+
+    if not _FONT_CACHE:
+        return None
+
+    cp = ord(char)
+    for _path, font_obj, codepoints in _FONT_CACHE:
+        if cp in codepoints:
+            return font_obj
+    # Last resort: return the first font even if it doesn't have the char.
+    # This will produce .notdef but at least won't crash.
+    return _FONT_CACHE[0][1]
 
 
 def _pixel_to_2bpp(pixel):
@@ -199,19 +272,10 @@ def generate_font(glyph_path, width_path, font_path=None):
     Args:
         glyph_path: Output path for chinese.latfont
         width_path: Output path for chinese_widths.bin
-        font_path: Optional TTF font path. If None, auto-detect.
+        font_path: Optional TTF font path. If None, auto-detect with fallback.
     """
-    if font_path is None:
-        font_path = find_font()
-
     glyph_data = bytearray(TOTAL_SLOTS * BYTES_PER_GLYPH)
     width_data = bytearray(TOTAL_SLOTS)
-
-    if font_path is None:
-        print("Warning: No Chinese TTF font found. Generating empty placeholder.",
-              file=sys.stderr)
-        _write_files(glyph_path, width_path, glyph_data, width_data)
-        return
 
     try:
         from PIL import Image, ImageDraw, ImageFont
@@ -220,14 +284,32 @@ def generate_font(glyph_path, width_path, font_path=None):
               file=sys.stderr)
         sys.exit(1)
 
-    print(f"Loading font: {font_path}")
-    # Render at 12px to fit in 12x12 region.
-    # Use 'L' (8-bit grayscale) mode to support FG + SHADOW pixel values.
-    font = ImageFont.truetype(font_path, CHAR_HEIGHT)
+    # If a specific font_path is given, use only that font.
+    # Otherwise, build a fallback cache covering all available fonts so
+    # characters missing from the primary font can still be rendered.
+    if font_path is not None:
+        font = ImageFont.truetype(font_path, CHAR_HEIGHT)
+        # Single-font mode: no fallback.
+        def get_char_font(ch):
+            return font
+        print(f"Loading font: {font_path}")
+    else:
+        primary = find_font()
+        if primary is None:
+            print("Warning: No Chinese TTF font found. Generating empty placeholder.",
+                  file=sys.stderr)
+            _write_files(glyph_path, width_path, glyph_data, width_data)
+            return
+        # Trigger cache build (also prints loaded fonts).
+        find_font_for_char('的')
+        def get_char_font(ch):
+            return find_font_for_char(ch)
+
     img = Image.new('L', (CANVAS_WIDTH, CANVAS_HEIGHT), 0)
     draw = ImageDraw.Draw(img)
 
     count = 0
+    fallback_count = 0
     for b1 in range(0x81, 0xFF):
         for b2 in range(0x40, 0xFF):
             if b2 == 0x7F:
@@ -238,7 +320,18 @@ def generate_font(glyph_path, width_path, font_path=None):
             except (UnicodeDecodeError, ValueError):
                 continue
 
-            glyph_bytes, width = render_glyph_2bpp(char, font, img, draw)
+            char_font = get_char_font(char)
+            if char_font is None:
+                continue
+
+            # Track how many chars used fallback (not the primary font).
+            if font_path is None and _FONT_CACHE:
+                primary_path = _FONT_CACHE[0][0]
+                primary_cps = _FONT_CACHE[0][2]
+                if ord(char) not in primary_cps:
+                    fallback_count += 1
+
+            glyph_bytes, width = render_glyph_2bpp(char, char_font, img, draw)
 
             idx = gb2312_to_index(b1, b2)
             offset = idx * BYTES_PER_GLYPH
@@ -248,6 +341,8 @@ def generate_font(glyph_path, width_path, font_path=None):
 
     _write_files(glyph_path, width_path, glyph_data, width_data)
     print(f"Generated {count} glyphs ({count * 100 // TOTAL_SLOTS}% of {TOTAL_SLOTS} slots)")
+    if font_path is None and fallback_count:
+        print(f"  ({fallback_count} chars used fallback font)")
 
 
 def _write_files(glyph_path, width_path, glyph_data, width_data):

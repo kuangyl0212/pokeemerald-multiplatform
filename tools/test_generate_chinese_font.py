@@ -28,6 +28,7 @@ from generate_chinese_font import (
     generate_font,
     render_glyph_2bpp,
     find_font,
+    find_font_for_char,
 )
 
 
@@ -315,6 +316,88 @@ class TestBaselineAlignment(unittest.TestCase):
         self.assertIsNotNone(max_y, "Glyph '的' has no ink pixels")
         self.assertGreaterEqual(max_y, 13,
                                 f"Glyph bottom at y={max_y}, expected >= 13")
+
+
+class TestFontFallback(unittest.TestCase):
+    """Test font fallback for characters missing from primary font.
+
+    The Ark-Pixel 12px font covers most but not all GB2312 characters
+    (515 are missing, including '徽', '搬', '奖'). For these missing
+    characters, the generator must fall back to a system font (e.g.
+    SimSun) so the rendered glyph is the actual character instead of
+    a .notdef rectangle box (which renders as □ in-game).
+    """
+
+    def test_find_font_for_char_returns_object(self):
+        """find_font_for_char must always return a usable font object."""
+        font = find_font_for_char('的')
+        self.assertIsNotNone(font, "find_font_for_char returned None")
+
+    def test_missing_char_finds_fallback_font(self):
+        """'徽' is missing from Ark-Pixel but must find a fallback font."""
+        font = find_font_for_char('徽')
+        self.assertIsNotNone(font,
+                             "No fallback font found for '徽'")
+
+    def test_fallback_renders_actual_glyph_not_box(self):
+        """'徽' rendered via fallback must NOT be a hollow rectangle.
+
+        The .notdef glyph renders as a square outline (top + bottom rows
+        all FG, left + right columns all FG, interior all BG). A real
+        character has varied ink distribution. Verify by checking that
+        the rendered glyph has interior ink pixels (not just border).
+        """
+        from PIL import Image, ImageDraw, ImageFont
+        font = find_font_for_char('徽')
+        if font is None:
+            self.skipTest("No fallback font available for '徽'")
+        img = Image.new('L', (16, 16), 0)
+        draw = ImageDraw.Draw(img)
+        glyph_bytes, _ = render_glyph_2bpp('徽', font, img, draw)
+
+        # Unpack into 16x16 grid
+        grid = [[0] * 16 for _ in range(16)]
+        tile_order = [(0, 0), (1, 0), (0, 1), (1, 1)]
+        for tile_idx, (tx, ty) in enumerate(tile_order):
+            tile_offset = tile_idx * 16
+            base_x = tx * 8
+            base_y = ty * 8
+            for row in range(8):
+                y = base_y + row
+                byte_offset = tile_offset + row * 2
+                hi_byte = glyph_bytes[byte_offset]
+                lo_byte = glyph_bytes[byte_offset + 1]
+                for i in range(4):
+                    px = (hi_byte >> (6 - i * 2)) & 0x3
+                    grid[y][base_x + 4 + i] = px
+                for i in range(4):
+                    px = (lo_byte >> (6 - i * 2)) & 0x3
+                    grid[y][base_x + i] = px
+
+        # Count interior (non-border) ink pixels. A .notdef box has zero
+        # interior ink; a real character has interior ink.
+        interior_ink = 0
+        for y in range(1, 15):
+            for x in range(1, 15):
+                if grid[y][x] in (FG, SHADOW):
+                    interior_ink += 1
+        self.assertGreater(interior_ink, 0,
+                           "Glyph '徽' looks like a hollow box (.notdef). "
+                           "Fallback font not working or still missing.")
+
+    def test_missing_chars_have_valid_glyph_data(self):
+        """All reported missing chars must produce non-empty glyph data."""
+        from PIL import Image, ImageDraw
+        for ch in ['徽', '搬', '奖']:
+            font = find_font_for_char(ch)
+            if font is None:
+                self.fail(f"No font available for '{ch}'")
+            img = Image.new('L', (16, 16), 0)
+            draw = ImageDraw.Draw(img)
+            glyph_bytes, _ = render_glyph_2bpp(ch, font, img, draw)
+            non_zero = sum(1 for b in glyph_bytes if b != 0)
+            self.assertGreater(non_zero, 0,
+                               f"Glyph '{ch}' produced all-zero data")
 
 
 if __name__ == "__main__":
