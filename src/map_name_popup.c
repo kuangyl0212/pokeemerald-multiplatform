@@ -180,14 +180,14 @@ static const u8 sMapSectionToThemeId[MAPSEC_COUNT - KANTO_MAPSEC_COUNT - 1] =
     [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE,
 };
 
-static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
-static const u8 sText_PyramidFloor2[] = _("PYRAMID FLOOR 2");
-static const u8 sText_PyramidFloor3[] = _("PYRAMID FLOOR 3");
-static const u8 sText_PyramidFloor4[] = _("PYRAMID FLOOR 4");
-static const u8 sText_PyramidFloor5[] = _("PYRAMID FLOOR 5");
-static const u8 sText_PyramidFloor6[] = _("PYRAMID FLOOR 6");
-static const u8 sText_PyramidFloor7[] = _("PYRAMID FLOOR 7");
-static const u8 sText_Pyramid[] = _("PYRAMID");
+static const u8 sText_PyramidFloor1[] = _("{CHN}金字塔1层");
+static const u8 sText_PyramidFloor2[] = _("{CHN}金字塔2层");
+static const u8 sText_PyramidFloor3[] = _("{CHN}金字塔3层");
+static const u8 sText_PyramidFloor4[] = _("{CHN}金字塔4层");
+static const u8 sText_PyramidFloor5[] = _("{CHN}金字塔5层");
+static const u8 sText_PyramidFloor6[] = _("{CHN}金字塔6层");
+static const u8 sText_PyramidFloor7[] = _("{CHN}金字塔7层");
+static const u8 sText_Pyramid[] = _("{CHN}金字塔");
 
 static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
