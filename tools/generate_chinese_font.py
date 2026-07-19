@@ -227,12 +227,18 @@ def render_glyph_2bpp(char, font, img, draw):
     x_off = CHAR_OFFSET_X + (CHAR_WIDTH - char_w) // 2 - bbox[0]
     y_off = CHAR_OFFSET_Y + (CHAR_HEIGHT - char_h) // 2 - bbox[1]
 
-    # Draw drop shadow first (bottom-right offset), then foreground on top.
-    # FG (1) overwrites SHADOW (2) where they overlap, leaving a 1px shadow
-    # on the bottom-right edge — matching the english latin_normal.png style.
-    draw.text((x_off + SHADOW_OFFSET_X, y_off + SHADOW_OFFSET_Y), char,
-              fill=SHADOW, font=font)
-    draw.text((x_off, y_off), char, fill=FG, font=font)
+    # Draw drop shadow at three 1px offsets, then foreground on top.
+    # Analysis of english latin_normal.png shows the shadow is the union of
+    # three offsets: (+1,0) right, (0,+1) down, (+1,+1) diagonal. This
+    # matches the user's description "向下和向右都有1像素的阴影" (shadow has
+    # 1px down and 1px right). FG (1) overwrites SHADOW (2) where they
+    # overlap, leaving shadow visible only on the right/down/diagonal edges.
+    # Previous implementation only used (+1,+1) diagonal, producing a
+    # thinner shadow that visually differed from English text.
+    draw.text((x_off + 1, y_off),     char, fill=SHADOW, font=font)  # right
+    draw.text((x_off,     y_off + 1), char, fill=SHADOW, font=font)  # down
+    draw.text((x_off + 1, y_off + 1), char, fill=SHADOW, font=font)  # diagonal
+    draw.text((x_off,     y_off),     char, fill=FG,     font=font)  # foreground
 
     # Extract 16x16 pixel grid
     px = img.load()

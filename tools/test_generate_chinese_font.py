@@ -241,6 +241,91 @@ class TestShadowRendering(unittest.TestCase):
         self.assertGreater(avg_sh_y, avg_fg_y,
                            "Shadow is not offset below FG")
 
+    def test_shadow_matches_english_three_direction_rule(self):
+        """Shadow must match English latin_normal.png distribution rule.
+
+        Analysis of latin_normal.png shows English shadow is the union of
+        three 1px offsets: (+1,0) right, (0,+1) down, (+1,+1) diagonal.
+        This means every SHADOW pixel (sx, sy) must have at least one FG
+        pixel at (sx-1, sy-1), (sx-1, sy), or (sx, sy-1).
+
+        Previous implementation only used (+1,+1) diagonal, producing a
+        thinner shadow that visually differed from English text. The user
+        reported: "中文需改为和英文的阴影一样" (Chinese shadow must match
+        English).
+        """
+        glyph_bytes, _ = self._render('字')
+        grid = self._unpack_glyph(glyph_bytes)
+
+        fg_coords = [(x, y) for y in range(16) for x in range(16)
+                     if grid[y][x] == FG]
+        shadow_coords = [(x, y) for y in range(16) for x in range(16)
+                         if grid[y][x] == SHADOW]
+        self.assertTrue(fg_coords, "No FG pixels")
+        self.assertTrue(shadow_coords, "No SHADOW pixels")
+
+        # Rule: every SHADOW must have at least one FG source at
+        # (sx-1, sy-1), (sx-1, sy), or (sx, sy-1).
+        no_source = 0
+        for sx, sy in shadow_coords:
+            has_diag = (sx-1 >= 0 and sy-1 >= 0 and grid[sy-1][sx-1] == FG)
+            has_right = (sx-1 >= 0 and grid[sy][sx-1] == FG)
+            has_down = (sy-1 >= 0 and grid[sy-1][sx] == FG)
+            if not (has_diag or has_right or has_down):
+                no_source += 1
+        self.assertEqual(no_source, 0,
+                         f"{no_source} SHADOW pixels have no FG source at "
+                         f"(-1,-1), (-1,0), or (0,-1). Shadow rule mismatch.")
+
+    def test_shadow_has_right_only_pixels(self):
+        """Some SHADOW pixels must be explainable only by (+1,0) right offset.
+
+        If shadow only used (+1,+1) diagonal, no SHADOW would exist where
+        the only FG source is to the left (-1, 0). English has such pixels
+        (e.g. right edge of vertical strokes). Verify Chinese matches.
+        """
+        glyph_bytes, _ = self._render('影')
+        grid = self._unpack_glyph(glyph_bytes)
+
+        right_only_count = 0
+        for sy in range(16):
+            for sx in range(16):
+                if grid[sy][sx] != SHADOW:
+                    continue
+                has_diag = (sx-1 >= 0 and sy-1 >= 0 and grid[sy-1][sx-1] == FG)
+                has_right = (sx-1 >= 0 and grid[sy][sx-1] == FG)
+                has_down = (sy-1 >= 0 and grid[sy-1][sx] == FG)
+                # right_only: has_right but not has_diag and not has_down
+                if has_right and not has_diag and not has_down:
+                    right_only_count += 1
+        self.assertGreater(right_only_count, 0,
+                           "No SHADOW pixel is explainable only by (+1,0) "
+                           "right offset. Shadow likely only uses diagonal.")
+
+    def test_shadow_has_down_only_pixels(self):
+        """Some SHADOW pixels must be explainable only by (0,+1) down offset.
+
+        Symmetric to test_shadow_has_right_only_pixels. Verifies the
+        (0,+1) down offset is present in the shadow.
+        """
+        glyph_bytes, _ = self._render('影')
+        grid = self._unpack_glyph(glyph_bytes)
+
+        down_only_count = 0
+        for sy in range(16):
+            for sx in range(16):
+                if grid[sy][sx] != SHADOW:
+                    continue
+                has_diag = (sx-1 >= 0 and sy-1 >= 0 and grid[sy-1][sx-1] == FG)
+                has_right = (sx-1 >= 0 and grid[sy][sx-1] == FG)
+                has_down = (sy-1 >= 0 and grid[sy-1][sx] == FG)
+                # down_only: has_down but not has_diag and not has_right
+                if has_down and not has_diag and not has_right:
+                    down_only_count += 1
+        self.assertGreater(down_only_count, 0,
+                           "No SHADOW pixel is explainable only by (0,+1) "
+                           "down offset. Shadow likely only uses diagonal.")
+
 
 class TestBaselineAlignment(unittest.TestCase):
     """Test that Chinese glyph baseline aligns with English font.
