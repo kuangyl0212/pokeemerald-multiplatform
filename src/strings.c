@@ -944,7 +944,10 @@ const u8 gText_MoveItemsDescription[] = _("{CHN}移动箱子或队伍中宝可�
 const u8 gText_SeeYaDescription[] = _("{CHN}返回上一级菜单。");
 const u8 gText_JustOnePkmn[] = _("{CHN}你只有一只宝可梦。");
 const u8 gText_PartyFull[] = _("{CHN}你的队伍已满！");
-const u8 gText_Box[] = _("{CHN}箱子");
+// Box name prefix used by ResetPokemonStorageSystem: "{CHN}箱" + 2-digit number + EOS
+// = 2 (CHN) + 3 (箱) + 2 (digits) + 1 (EOS) = 8 bytes, fits BOX_NAME_LENGTH+1 (9) buffer.
+// Using "箱子" (8 bytes) would overflow by 1-2 bytes when digits are appended.
+const u8 gText_Box[] = _("{CHN}箱");
 const u8 gText_CheckMapOfHoenn[] = _("{CHN}查看丰缘地区的地图。");
 const u8 gText_CheckPokemonInDetail[] = _("{CHN}详细查看宝可梦。");
 const u8 gText_CallRegisteredTrainer[] = _("{CHN}拨打已登记的训练家电话。");

@@ -1980,10 +1980,6 @@ void AddTextPrinterParameterized5(u8 windowId, u8 fontId, const u8 *str, u8 left
 
 void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 {
-    int count = 0;
-    while (gSaveBlock2Ptr->playerName[count] != EOS)
-        count++;
-
     StringExpandPlaceholders(gStringVar4, src);
 
     AddTextPrinterParameterized(windowId, 1, gStringVar4, x, y, TEXT_SKIP_DRAW, 0);

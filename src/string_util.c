@@ -385,7 +385,19 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
             break;
         case 0x80: // Chinese escape: next 2 bytes are GB2312 encoding
             *dest++ = c;
+            // Defensive: if 0x80 is followed by EOS (e.g. truncated playerName
+            // from an old save), stop copying to avoid out-of-bounds read.
+            if (*src == EOS)
+            {
+                *dest = EOS;
+                return dest;
+            }
             *dest++ = *src++;
+            if (*src == EOS)
+            {
+                *dest = EOS;
+                return dest;
+            }
             *dest++ = *src++;
             break;
         case EOS:
