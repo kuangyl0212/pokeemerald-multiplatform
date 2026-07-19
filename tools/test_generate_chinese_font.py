@@ -241,5 +241,81 @@ class TestShadowRendering(unittest.TestCase):
                            "Shadow is not offset below FG")
 
 
+class TestBaselineAlignment(unittest.TestCase):
+    """Test that Chinese glyph baseline aligns with English font.
+
+    The English latin_normal.png font renders glyphs at y=[0,14]
+    (height=15). Chinese glyphs must be offset downward so their
+    bottoms align with the English baseline at y=14, rather than
+    rendering at y=[0,11] which makes Chinese text appear too high.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.font_path = find_font()
+        if cls.font_path is None:
+            raise unittest.SkipTest("No Chinese TTF font available")
+        from PIL import Image, ImageDraw, ImageFont
+        cls._PIL = (Image, ImageDraw, ImageFont)
+
+    def _render(self, char):
+        Image, ImageDraw, ImageFont = self._PIL
+        font = ImageFont.truetype(self.font_path, CHAR_HEIGHT)
+        img = Image.new('L', (16, 16), 0)
+        draw = ImageDraw.Draw(img)
+        return render_glyph_2bpp(char, font, img, draw)
+
+    def _unpack_glyph(self, glyph_bytes):
+        grid = [[0] * 16 for _ in range(16)]
+        tile_order = [(0, 0), (1, 0), (0, 1), (1, 1)]
+        for tile_idx, (tx, ty) in enumerate(tile_order):
+            tile_offset = tile_idx * 16
+            base_x = tx * 8
+            base_y = ty * 8
+            for row in range(8):
+                y = base_y + row
+                byte_offset = tile_offset + row * 2
+                hi_byte = glyph_bytes[byte_offset]
+                lo_byte = glyph_bytes[byte_offset + 1]
+                for i in range(4):
+                    px = (hi_byte >> (6 - i * 2)) & 0x3
+                    grid[y][base_x + 4 + i] = px
+                for i in range(4):
+                    px = (lo_byte >> (6 - i * 2)) & 0x3
+                    grid[y][base_x + i] = px
+        return grid
+
+    def test_glyph_has_top_padding(self):
+        """Chinese glyphs should have top padding (not start at y=0).
+
+        English font glyphs have content starting around y=0 but the
+        16px cell means the baseline is at y=14. Chinese glyphs must
+        be pushed down by CHAR_OFFSET_Y so their bottom aligns.
+        """
+        from generate_chinese_font import CHAR_OFFSET_Y
+        self.assertGreater(CHAR_OFFSET_Y, 0,
+                           "CHAR_OFFSET_Y must be > 0 to align baseline")
+
+    def test_glyph_bottom_near_english_baseline(self):
+        """The bottom of Chinese glyphs should be near y=14.
+
+        English glyphs render at y=[0,14] (height=15). Chinese glyphs
+        should have their bottom ink pixel near y=13-14 to align with
+        the English baseline.
+        """
+        # Test with a full-height character
+        glyph_bytes, _ = self._render('的')
+        grid = self._unpack_glyph(glyph_bytes)
+        max_y = None
+        for y in range(16):
+            for x in range(16):
+                if grid[y][x] in (FG, SHADOW):
+                    if max_y is None or y > max_y:
+                        max_y = y
+        self.assertIsNotNone(max_y, "Glyph '的' has no ink pixels")
+        self.assertGreaterEqual(max_y, 13,
+                                f"Glyph bottom at y={max_y}, expected >= 13")
+
+
 if __name__ == "__main__":
     unittest.main()

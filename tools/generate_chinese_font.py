@@ -38,7 +38,12 @@ CANVAS_HEIGHT = 16
 CHAR_WIDTH = 12
 CHAR_HEIGHT = 12
 CHAR_OFFSET_X = 0
-CHAR_OFFSET_Y = 0
+# Vertical offset to align Chinese baseline with English font.
+# English latin_normal renders glyphs at y=[0,14] (height=15).
+# Without offset, Chinese glyphs render at y=[0,11], making text appear
+# too high. Pushing down by 3px places Chinese at y=[3,14], aligning
+# the baseline with the English font.
+CHAR_OFFSET_Y = 3
 
 # 2bpp: 4 pixels per byte, 2 bytes per row (8 pixels), 16 bytes per 8x8 tile
 TILE_SIZE = 8
