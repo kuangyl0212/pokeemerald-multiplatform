@@ -148,119 +148,120 @@ JaggedPass_EventScript_Autumn::
 	end
 
 JaggedPass_Text_EricIntro:
-	.string "MT. CHIMNEY's JAGGED PASS…\p"
-	.string "Now this is what I've always wanted\n"
-	.string "in a mountain.\p"
-	.string "This jagged bumpiness…\n"
-	.string "It rocks my soul!$"
+	.string "{CHN}烟突山的凹凸山道…\p"
+	.string "这正是我一直想要的\n"
+	.string "山脉的样子。\p"
+	.string "这种凹凸不平的感觉…\n"
+	.string "震撼着我的灵魂！$"
 
 JaggedPass_Text_EricDefeat:
-	.string "Losing left me bitter!$"
+	.string "{CHN}输了让我心里很不是滋味！$"
 
 JaggedPass_Text_EricPostBattle:
-	.string "Yes, I did lose at POKéMON…\p"
-	.string "But, when it comes to the love of\n"
-	.string "the mountains, I have you beat!$"
+	.string "{CHN}是的，我确实在宝可梦对战上输了…\p"
+	.string "但是说到对山的热爱，\n"
+	.string "我可比你强多了！$"
 
 JaggedPass_Text_DianaIntro:
-	.string "This place isn't your casual hike.\n"
-	.string "It's not suited for a picnic.$"
+	.string "{CHN}这里可不是随便爬爬山的地方。\n"
+	.string "不适合野餐。$"
 
 JaggedPass_Text_DianaDefeat:
-	.string "Ohhh, no!\n"
-	.string "The ground is too bumpy…$"
+	.string "{CHN}哦，不！\n"
+	.string "地面太凹凸不平了…$"
 
 JaggedPass_Text_DianaPostBattle:
-	.string "Did you know?\p"
-	.string "Some people cleverly ride their\n"
-	.string "bicycles up this horribly bumpy pass.$"
+	.string "{CHN}你知道吗？\p"
+	.string "有些人很聪明地骑着自行车\n"
+	.string "爬上这条凹凸得要命的山道。$"
 
 JaggedPass_Text_DianaRegister:
-	.string "Will you ever be back in this area?\n"
-	.string "If you do return, I'd like a rematch.$"
+	.string "{CHN}你还会再回这一带吗？\n"
+	.string "如果你再来的话，我想跟你重赛。$"
 
 JaggedPass_Text_DianaRematchIntro:
-	.string "Picnics are fun wherever you go.\n"
-	.string "Just like POKéMON!$"
+	.string "{CHN}野餐到哪里都很有趣。\n"
+	.string "就像宝可梦一样！$"
 
 JaggedPass_Text_DianaRematchDefeat:
-	.string "I only lost because the ground is\n"
-	.string "too bumpy!$"
+	.string "{CHN}我只是因为地面太凹凸不平\n"
+	.string "才输的！$"
 
 JaggedPass_Text_DianaPostRematch:
-	.string "I'll forget about losing and just\n"
-	.string "enjoy this bumpy hike.$"
+	.string "{CHN}我会忘掉输的事，\n"
+	.string "好好享受这凹凸不平的登山之旅。$"
 
 JaggedPass_Text_EthanIntro:
-	.string "JAGGED PASS is hard to walk on.\n"
-	.string "It's a good place for training.$"
+	.string "{CHN}凹凸山道很难走。\n"
+	.string "这是个训练的好地方。$"
 
 JaggedPass_Text_EthanDefeat:
-	.string "It was all over while we were still\n"
-	.string "trying to find a good footing…$"
+	.string "{CHN}我们还在找稳当的立足点时，\n"
+	.string "战斗就已经结束了…$"
 
 JaggedPass_Text_EthanPostBattle:
-	.string "If I had an ACRO BIKE, I'd be able to\n"
-	.string "jump ledges.$"
+	.string "{CHN}如果我有一辆特技自行车，\n"
+	.string "我就能跳过台阶了。$"
 
 JaggedPass_Text_EthanRegister:
-	.string "When I get more used to this bumpiness,\n"
-	.string "I'll be sure to win!\p"
-	.string "Can you register me in your POKéNAV?$"
+	.string "{CHN}等我更习惯这种凹凸不平的路，\n"
+	.string "我一定会赢的！\p"
+	.string "你能把我登录到\n"
+	.string "你的宝可领航员里吗？$"
 
 JaggedPass_Text_EthanRematchIntro:
-	.string "I got used to this bumpiness.\n"
-	.string "I sing while I climb now.$"
+	.string "{CHN}我已经习惯了这种凹凸不平。\n"
+	.string "现在我一边爬一边唱歌。$"
 
 JaggedPass_Text_EthanRematchDefeat:
-	.string "It's still not easy to battle on this\n"
-	.string "bumpy ground…$"
+	.string "{CHN}在这种凹凸不平的地面上战斗\n"
+	.string "还是不容易…$"
 
 JaggedPass_Text_EthanPostRematch:
-	.string "I should get an ACRO BIKE from RYDEL\n"
-	.string "in MAUVILLE CITY…$"
+	.string "{CHN}我应该去紫堇市找翔太\n"
+	.string "弄一辆特技自行车…$"
 
 JaggedPass_Text_GruntIntro:
-	.string "Wah!\n"
-	.string "What are you doing here?\p"
-	.string "What am I doing in a place like this?\p"
-	.string "What business is it of yours?$"
+	.string "{CHN}哇！\n"
+	.string "你在这里做什么？\p"
+	.string "那我又在这种地方做什么？\p"
+	.string "这关你什么事？$"
 
 JaggedPass_Text_GruntDefeat:
-	.string "Urrrgh…\p"
-	.string "I should've ducked into our HIDEOUT\n"
-	.string "right away…$"
+	.string "{CHN}呃呃…\p"
+	.string "我应该直接躲进\n"
+	.string "我们的秘密基地里才对…$"
 
 JaggedPass_Text_GoWhereverYouWant:
-	.string "Okay, oh-kay!\n"
-	.string "I admit it--you're strong!\p"
-	.string "Don't worry about me.\n"
-	.string "Go wherever you want!$"
+	.string "{CHN}好，好吧！\n"
+	.string "我承认——你很强！\p"
+	.string "别管我了。\n"
+	.string "你想去哪里就去哪里吧！$"
 
 JaggedPass_Text_BoulderShakingInResponseToEmblem:
-	.string "Oh! This boulder is shaking in response\n"
-	.string "to the MAGMA EMBLEM!$"
+	.string "{CHN}哦！这块巨石感应到\n"
+	.string "熔岩徽章在震动！$"
 
 JaggedPass_Text_JulioIntro:
-	.string "Aiyeeh! It's awfully scary to shoot\n"
-	.string "down the mountain in one go!$"
+	.string "{CHN}哇啊！\n"
+	.string "一口气冲下山真是可怕极了！$"
 
 JaggedPass_Text_JulioDefeat:
-	.string "I feel like I'm falling apart…$"
+	.string "{CHN}我感觉自己要散架了…$"
 
 JaggedPass_Text_JulioPostBattle:
-	.string "My bicycle bounced around so much,\n"
-	.string "my rear end's sore…$"
+	.string "{CHN}我的自行车颠得厉害，\n"
+	.string "我的屁股都疼了…$"
 
 JaggedPass_Text_AutumnIntro:
-	.string "I climb this hill every day.\n"
-	.string "I have confidence in my strength!$"
+	.string "{CHN}我每天都会爬这座山。\n"
+	.string "我对自己的体力很有信心！$"
 
 JaggedPass_Text_AutumnDefeat:
-	.string "Hmm…\n"
-	.string "What went wrong?$"
+	.string "{CHN}嗯…\n"
+	.string "哪里出问题了？$"
 
 JaggedPass_Text_AutumnPostBattle:
-	.string "What is that odd rock protrusion\n"
-	.string "a little up the hill from here?$"
+	.string "{CHN}从这里往山上走一点，\n"
+	.string "那个奇怪的岩石突起是什么？$"
 

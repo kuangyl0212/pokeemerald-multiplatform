@@ -10,11 +10,11 @@ OldaleTown_House2_EventScript_Man::
 	end
 
 OldaleTown_House2_Text_PokemonLevelUp:
-	.string "When POKéMON battle, they eventually\n"
-	.string "level up and become stronger.$"
+	.string "{CHN}宝可梦通过战斗，最终会\n"
+	.string "升级并变得更强.$"
 
 OldaleTown_House2_Text_YoullGoFurtherWithStrongPokemon:
-	.string "If the POKéMON with you become\n"
-	.string "stronger, you'll be able to go farther\l"
-	.string "away from here.$"
+	.string "{CHN}如果身边的宝可梦\n"
+	.string "变强了，你就能去离这里\l"
+	.string "更远的地方.$"
 

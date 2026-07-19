@@ -88,69 +88,68 @@ FortreeCity_Movement_KecleonFlee:
 	step_end
 
 FortreeCity_Text_SawGiganticPokemonInSky:
-	.string "No one believes me, but I saw this\n"
-	.string "gigantic POKéMON in the sky.\p"
-	.string "It seemed to squirm as it flew toward\n"
-	.string "ROUTE 131.\p"
-	.string "By the way… Sniff…\n"
-	.string "Um… You, uh…smell singed.\p"
-	.string "Were you at a volcano or something?$"
+	.string "{CHN}没人相信我，但我确实在天空中\n"
+	.string "看到了巨大的宝可梦。\p"
+	.string "它一边扭动一边\n"
+	.string "飞向131号道路。\p"
+	.string "对了……嗅嗅……\n"
+	.string "嗯……你，呃……身上有股烧焦味。\p"
+	.string "你是不是去了火山之类的地方？$"
 
 FortreeCity_Text_SomethingBlockingGym:
-	.string "I want to go to the POKéMON GYM,\n"
-	.string "but something's blocking the way.\p"
-	.string "After all the bother I went through\n"
-	.string "training on ROUTE 120…$"
+	.string "{CHN}我想去宝可梦道馆，\n"
+	.string "但有什么东西挡住了路。\p"
+	.string "我费了那么大劲\n"
+	.string "在120号道路上特训……$"
 
 FortreeCity_Text_ThisTimeIllBeatWinona:
-	.string "I've got my pride-and-joy POKéMON\n"
-	.string "with me. This time, I'll beat WINONA.$"
+	.string "{CHN}我带上了最引以为豪的宝可梦。\n"
+	.string "这次，我一定能打败娜琪。$"
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
-	.string "The ground absorbs rainwater, and\n"
-	.string "trees grow by drinking that water…\p"
-	.string "Our FORTREE CITY exists because\n"
-	.string "there's both water and soil.$"
+	.string "{CHN}大地吸收雨水，\n"
+	.string "树木通过吸收水分而生长……\p"
+	.string "我们的茵郁市之所以存在，\n"
+	.string "就是因为有水和土壤。$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
-	.string "The CITY consists of homes built on\n"
-	.string "trees.\p"
-	.string "Perhaps because of that lifestyle,\n"
-	.string "everyone is healthy and lively.\p"
-	.string "Why, even myself--I feel as if I've\n"
-	.string "grown thirty years younger.$"
+	.string "{CHN}这座城市由建在\n"
+	.string "树上的房屋组成。\p"
+	.string "也许正是因为这种生活方式，\n"
+	.string "每个人都健康活泼。\p"
+	.string "哎呀，连我自己都觉得\n"
+	.string "年轻了三十岁。$"
 
 FortreeCity_Text_BugPokemonComeThroughWindow:
-	.string "Living on top of trees is okay.\p"
-	.string "But sometimes BUG POKéMON come in\n"
-	.string "through windows.\l"
-	.string "It can be really startling.$"
+	.string "{CHN}住在树上也挺好。\p"
+	.string "但有时虫属性宝可梦\n"
+	.string "会从窗户飞进来。\l"
+	.string "有时真的很吓人。$"
 
 FortreeCity_Text_PokemonThatEvolveWhenTraded:
-	.string "There are POKéMON that evolve when\n"
-	.string "you trade them! That's what I heard.$"
+	.string "{CHN}有些宝可梦在\n"
+	.string "交换之后会进化！我是这么听说的。$"
 
 FortreeCity_Text_SomethingUnseeable:
-	.string "Something unseeable is in the way.$"
+	.string "{CHN}有什么看不见的东西挡住了路。$"
 
 FortreeCity_Text_UnseeableUseDevonScope:
-	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "{CHN}有什么看不见的东西挡住了路。\p"
+	.string "要使用得文观测镜吗？$"
 
 FortreeCity_Text_UsedDevonScopePokemonFled:
-	.string "{PLAYER} used the DEVON SCOPE.\p"
-	.string "An invisible POKéMON became completely\n"
-	.string "visible!\p"
-	.string "The startled POKéMON fled!$"
+	.string "{CHN}{PLAYER}使用了得文观测镜。\p"
+	.string "原本看不见的宝可梦\n"
+	.string "完全显现出来了！\p"
+	.string "受惊的宝可梦逃走了！$"
 
 FortreeCity_Text_CitySign:
-	.string "FORTREE CITY\n"
-	.string "“The treetop city that frolics with\l"
-	.string "nature.”$"
+	.string "{CHN}茵郁市\n"
+	.string "“在自然中嬉戏的\l"
+	.string "树梢之城。”$"
 
 FortreeCity_Text_GymSign:
-	.string "FORTREE CITY POKéMON GYM\n"
-	.string "LEADER: WINONA\p"
-	.string "“The bird user taking flight into\n"
-	.string "the world.”$"
-
+	.string "{CHN}茵郁市宝可梦道馆\n"
+	.string "馆主：娜琪\p"
+	.string "“展翅飞向\n"
+	.string "世界的鸟类使者。”$"

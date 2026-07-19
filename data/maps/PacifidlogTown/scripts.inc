@@ -28,27 +28,26 @@ PacifidlogTown_EventScript_TownSign::
 	end
 
 PacifidlogTown_Text_FastRunningCurrent:
-	.string "The sea between PACIFIDLOG and\n"
-	.string "SLATEPORT has a fast-running tide.\p"
-	.string "If you decide to SURF, you could end\n"
-	.string "up swept away somewhere else.$"
+	.string "{CHN}凯那吉镇和\n"
+	.string "凯那市之间的海域潮水流动很快。\p"
+	.string "如果你决定冲浪，可能会被\n"
+	.string "冲到其他地方去哦。$"
 
 PacifidlogTown_Text_NeatHousesOnWater:
-	.string "See, isn't it neat?\n"
-	.string "These houses are on water!\p"
-	.string "I was born here!$"
+	.string "{CHN}看，是不是很棒？\n"
+	.string "这些房子都建在水上！\p"
+	.string "我就出生在这里！$"
 
 PacifidlogTown_Text_SkyPillarTooScary:
-	.string "The SKY PILLAR?\p"
-	.string "…Oh, you must mean that tall, tall\n"
-	.string "tower a little further out.\p"
-	.string "If you asked me, I wouldn't climb it.\n"
-	.string "It's too scary to get up that high.\p"
-	.string "Life at sea level in PACIFIDLOG,\n"
-	.string "that suits me fine.$"
+	.string "{CHN}天空之柱？\p"
+	.string "……哦，你一定是说再远一点的\n"
+	.string "那座高高耸立的塔吧。\p"
+	.string "要我说，我可不会爬上去。\n"
+	.string "爬到那么高太可怕了。\p"
+	.string "在凯那吉镇的海平面上生活，\n"
+	.string "那才适合我。$"
 
 PacifidlogTown_Text_TownSign:
-	.string "PACIFIDLOG TOWN\p"
-	.string "“Where the morning sun smiles upon\n"
-	.string "the waters.”$"
-
+	.string "{CHN}凯那吉镇\p"
+	.string "“晨曦的阳光\n"
+	.string "在水面上微笑。”$"

@@ -315,78 +315,78 @@ Route110_TrickHousePuzzle7_EventScript_Everett::
 	end
 
 Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened::
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is huggable.”\n"
+	.string "{CHN}{PLAYER}在门上\n"
+	.string "写下了暗号。\p"
+	.string "“诡计大师很可爱。”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "咔嗒，锁开了！$"
 
 Route110_TrickHousePuzzle7_Text_JoshuaIntro:
-	.string "The TRICK MASTER always vanishes\n"
-	.string "like smoke. How does he do it?$"
+	.string "{CHN}诡计大师总是像烟一样\n"
+	.string "消失不见。他是怎么做到的？$"
 
 Route110_TrickHousePuzzle7_Text_JoshuaDefeat:
-	.string "Aiyeeeh! You're much too strong!\n"
-	.string "How do you do it?$"
+	.string "{CHN}哎呀呀！你也太强了！\n"
+	.string "你是怎么做到的？$"
 
 Route110_TrickHousePuzzle7_Text_JoshuaPostBattle:
-	.string "I wish I could appear and disappear as\n"
-	.string "if I were smoke, too.$"
+	.string "{CHN}我也希望能像烟一样\n"
+	.string "出现又消失。$"
 
 Route110_TrickHousePuzzle7_Text_PatriciaIntro:
-	.string "Going around the same spot…\n"
-	.string "It begets ill fortune…$"
+	.string "{CHN}在同一处打转……\n"
+	.string "会招来厄运的……$"
 
 Route110_TrickHousePuzzle7_Text_PatriciaDefeat:
-	.string "Defeated!\n"
-	.string "It's a bad sign…$"
+	.string "{CHN}输了！\n"
+	.string "这是不祥之兆……$"
 
 Route110_TrickHousePuzzle7_Text_PatriciaPostBattle:
-	.string "I've circled the same spot over ten\n"
-	.string "times now… It's ill fortune…$"
+	.string "{CHN}我已经在同一处绕了十多\n"
+	.string "圈了……真是厄运……$"
 
 Route110_TrickHousePuzzle7_Text_AlexisIntro:
-	.string "Whoever wins will get through here\n"
-	.string "first. That's the feeling I get.$"
+	.string "{CHN}谁赢了就能先从这里\n"
+	.string "通过。我有这种感觉。$"
 
 Route110_TrickHousePuzzle7_Text_AlexisDefeat:
-	.string "Oh!\n"
-	.string "Well, go ahead, then!$"
+	.string "{CHN}哦！\n"
+	.string "那好吧，你先请！$"
 
 Route110_TrickHousePuzzle7_Text_AlexisPostBattle:
-	.string "You're solving all the puzzles in the\n"
-	.string "TRICK HOUSE. That's the feeling I get.$"
+	.string "{CHN}你正在解开诡计屋里\n"
+	.string "所有的谜题。我有这种感觉。$"
 
 Route110_TrickHousePuzzle7_Text_MarielaIntro:
-	.string "Nufufufu, here at last!\n"
-	.string "Let's get right with it!$"
+	.string "{CHN}努夫夫夫，总算到了！\n"
+	.string "我们这就开始吧！$"
 
 Route110_TrickHousePuzzle7_Text_MarielaDefeat:
-	.string "You're so casual about winning!$"
+	.string "{CHN}你赢得也太轻松了！$"
 
 Route110_TrickHousePuzzle7_Text_MarielaPostBattle:
-	.string "Humph! I'm not upset!\n"
-	.string "Not me!$"
+	.string "{CHN}哼！我才不生气！\n"
+	.string "我才不！$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroIntro:
-	.string "I ever so closely watched you coming!$"
+	.string "{CHN}我可是紧紧盯着你过来的！$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroDefeat:
-	.string "This outcome I didn't see coming…$"
+	.string "{CHN}这样的结果我可没料到……$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroPostBattle:
-	.string "Well, anyway, we both picked a weird\n"
-	.string "place to get acquainted.\p"
-	.string "As one weirdo to another,\n"
-	.string "let's do our best!$"
+	.string "{CHN}总之，我们都选了个奇怪\n"
+	.string "的地方认识彼此。\p"
+	.string "作为怪人之间的交流，\n"
+	.string "一起加油吧！$"
 
 Route110_TrickHousePuzzle7_Text_EverettIntro:
-	.string "It's awfully cramped in here…$"
+	.string "{CHN}这里面挤得要命……$"
 
 Route110_TrickHousePuzzle7_Text_EverettDefeat:
-	.string "Oh, yes, strong you are.$"
+	.string "{CHN}哦，对，你很强。$"
 
 Route110_TrickHousePuzzle7_Text_EverettPostBattle:
-	.string "I was hoping to switch places with you\n"
-	.string "when I beat you, but…$"
+	.string "{CHN}我本想打败你后和你\n"
+	.string "交换位置，但是……$"
 

@@ -28,31 +28,31 @@ Route110_TrickHousePuzzle4_EventScript_Paula::
 	end
 
 Route110_TrickHousePuzzle4_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is cool.”\n"
+	.string "{CHN}{PLAYER}在门上\n"
+	.string "写下了暗号。\p"
+	.string "“诡计大师真酷。”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "咔嗒，锁开了！$"
 
 Route110_TrickHousePuzzle4_Text_CoraIntro:
-	.string "It's too much bother to think this out.\n"
-	.string "I only wanted to battle!$"
+	.string "{CHN}想这些太麻烦了。\n"
+	.string "我只想对战！$"
 
 Route110_TrickHousePuzzle4_Text_CoraDefeat:
-	.string "Even though I lost, I still like battling\n"
-	.string "the best!$"
+	.string "{CHN}虽然输了，但我还是\n"
+	.string "最喜欢对战！$"
 
 Route110_TrickHousePuzzle4_Text_CoraPostBattle:
-	.string "Wouldn't you agree? You would go\n"
-	.string "anywhere if TRAINERS were there.$"
+	.string "{CHN}你不觉得吗？只要有训练家\n"
+	.string "在的地方你就会去。$"
 
 Route110_TrickHousePuzzle4_Text_YujiIntro:
-	.string "Heh! Boulders like this, I can brush\n"
-	.string "aside with one finger!$"
+	.string "{CHN}哼！这种巨石，我一根\n"
+	.string "手指就能推开！$"
 
 Route110_TrickHousePuzzle4_Text_YujiDefeat:
-	.string "I can push boulders, but I can't solve\n"
-	.string "the puzzle…$"
+	.string "{CHN}我会推石头，但不会\n"
+	.string "解谜题……$"
 
 Route110_TrickHousePuzzle4_Text_YujiPostBattle:
 	.string "It's not good enough to be brawny…\n"
@@ -63,8 +63,8 @@ Route110_TrickHousePuzzle4_Text_PaulaIntro:
 	.string "isn't it?$"
 
 Route110_TrickHousePuzzle4_Text_PaulaDefeat:
-	.string "Aaak!$"
+	.string "{CHN}啊啊啊！$"
 
 Route110_TrickHousePuzzle4_Text_PaulaPostBattle:
-	.string "Has anyone made it to the end?$"
+	.string "{CHN}有人走到过终点吗？$"
 

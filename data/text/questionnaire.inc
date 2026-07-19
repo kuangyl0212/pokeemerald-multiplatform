@@ -1,43 +1,43 @@
 Questionnaire_Text_FillOut::
-	.string "There is a questionnaire.\n"
-	.string "Would you like to fill it out?$"
+	.string "{CHN}这里有一份问卷。\n"
+	.string "您想填写吗？$"
 
 Questionnaire_Text_ThankYou::
-	.string "Thank you for taking the time to\n"
-	.string "fill out our questionnaire.\p"
-	.string "Your feedback will be used for\n"
-	.string "future reference.$"
+	.string "{CHN}感谢您抽出时间\n"
+	.string "填写我们的问卷。\p"
+	.string "您的反馈将作为\n"
+	.string "今后的参考。$"
 
 Questionnaire_Text_YouKnowThoseWordsGift::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY GIFT.\p"
-	.string "From now on, you should be\n"
-	.string "receiving MYSTERY GIFTS!$"
+	.string "{CHN}哦，您好！\n"
+	.string "您知道那些词？\p"
+	.string "那就意味着您一定知道\n"
+	.string "神秘礼物。\p"
+	.string "从现在起，您应该可以\n"
+	.string "接收神秘礼物了！$"
 
 Questionnaire_Text_YouCanAccessMysteryGift::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY GIFT.$"
+	.string "{CHN}保存游戏后，您就可以\n"
+	.string "使用神秘礼物了。$"
 
 Questionnaire_Text_YouKnowThoseWordsEvent::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY EVENT.$"
+	.string "{CHN}哦，您好！\n"
+	.string "您知道那些词？\p"
+	.string "那就意味着您一定知道\n"
+	.string "神秘事件。$"
 
 Questionnaire_Text_YouCanAccessMysteryEvent::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY EVENT.$"
+	.string "{CHN}保存游戏后，您就可以\n"
+	.string "使用神秘事件了。$"
 
 MysteryGift_Text_TheresATicketForYou::
-	.string "Thank you for using the MYSTERY\n"
-	.string "EVENT System.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
+	.string "{CHN}感谢您使用神秘\n"
+	.string "事件系统。\p"
+	.string "您一定是{PLAYER}吧。\n"
+	.string "这里有一张给您的票。$"
 
 MysteryGift_Text_TryUsingItAtLilycovePort::
-	.string "It appears to be for use at\n"
-	.string "the LILYCOVE CITY port.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
+	.string "{CHN}它似乎是用来在\n"
+	.string "水静市港口使用的。\p"
+	.string "何不试一试，看看\n"
+	.string "是怎么回事呢？$"

@@ -119,100 +119,100 @@ VictoryRoad_1F_EventScript_Katelynn::
 	end
 
 VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore:
-	.string "WALLY: Hi! {PLAYER}!\p"
-	.string "I bet you're surprised to see me here!\p"
-	.string "I made it all the way here, and it's\n"
-	.string "all thanks to you!\p"
-	.string "{PLAYER}, losing to you that time\n"
-	.string "made me stronger!\p"
-	.string "But I'm not going to lose anymore!\p"
-	.string "I'm going to win! For the POKéMON who\n"
-	.string "gave me courage and strength!\p"
-	.string "Okay… Here I come!$"
+	.string "{CHN}满充：嗨！{PLAYER}！\p"
+	.string "看到我在这里，很惊讶吧！\p"
+	.string "我能一路走到这里，\n"
+	.string "全都是多亏了你！\p"
+	.string "{PLAYER}，那次输给你，\n"
+	.string "让我变得更强了！\p"
+	.string "但我不会再输了！\p"
+	.string "我要赢！为了那些给予我勇气和力量\n"
+	.string "的宝可梦！\p"
+	.string "好了……我来了！$"
 
 VictoryRoad_1F_Text_WallyEntranceDefeat:
-	.string "Wow!\n"
-	.string "{PLAYER}, you are strong, after all!$"
+	.string "{CHN}哇！\n"
+	.string "{PLAYER}，你果然很强！$"
 
 VictoryRoad_1F_Text_WallyPostEntranceBattle:
-	.string "WALLY: I couldn't beat you today,\n"
-	.string "{PLAYER}, but one of these days, I'll\l"
-	.string "catch up to you!$"
+	.string "{CHN}满充：今天我没能赢你，\n"
+	.string "{PLAYER}，但总有一天，我会\l"
+	.string "追上你的！$"
 
 VictoryRoad_1F_Text_WallyIntro:
-	.string "WALLY: Hi! {PLAYER}!\p"
-	.string "I've gotten stronger since that last\n"
-	.string "time! I wanted to show you, {PLAYER}!\p"
-	.string "Okay… Here I come!$"
+	.string "{CHN}满充：嗨！{PLAYER}！\p"
+	.string "自上次以来，我变得更强了！\n"
+	.string "我想让你看看，{PLAYER}！\p"
+	.string "好了……我来了！$"
 
 VictoryRoad_1F_Text_WallyDefeat:
-	.string "Wow!\n"
-	.string "{PLAYER}, you are strong, after all!$"
+	.string "{CHN}哇！\n"
+	.string "{PLAYER}，你果然很强！$"
 
 VictoryRoad_1F_Text_WallyPostBattle:
-	.string "WALLY: I couldn't beat you this time,\n"
-	.string "too… But one of these days, {PLAYER},\l"
-	.string "I'm going to catch up to you…\p"
-	.string "And challenge the POKéMON LEAGUE!$"
+	.string "{CHN}满充：这次我也没能赢你……\n"
+	.string "但总有一天，{PLAYER}，\l"
+	.string "我会追上你的……\p"
+	.string "去挑战宝可梦联盟！$"
 
 VictoryRoad_1F_Text_EdgarIntro:
-	.string "I've made it this far a couple times,\n"
-	.string "but the last stretch is so long…$"
+	.string "{CHN}我已经走到这一步好几次了，\n"
+	.string "但最后一段路真是漫长……$"
 
 VictoryRoad_1F_Text_EdgarDefeat:
-	.string "My dream ends here again…$"
+	.string "{CHN}我的梦想再次在这里破灭……$"
 
 VictoryRoad_1F_Text_EdgarPostBattle:
-	.string "You've made it this far. Keep the\n"
-	.string "momentum going and become the\l"
-	.string "CHAMPION! If anyone can, it's you!$"
+	.string "{CHN}你已经走到这里了。保持这股势头，\n"
+	.string "成为冠军吧！\l"
+	.string "如果有人能做到，那就是你！$"
 
 VictoryRoad_1F_Text_AlbertIntro:
-	.string "I didn't come all this way to lose now.\n"
-	.string "That possibility doesn't exist!$"
+	.string "{CHN}我大老远跑到这里，可不是为了现在输掉。\n"
+	.string "这种可能性根本不存在！$"
 
 VictoryRoad_1F_Text_AlbertDefeat:
-	.string "Impossible…\n"
-	.string "I lost?$"
+	.string "{CHN}不可能……\n"
+	.string "我输了？$"
 
 VictoryRoad_1F_Text_AlbertPostBattle:
-	.string "I lost here…\p"
-	.string "That means I lack the qualifications\n"
-	.string "to become the CHAMPION…$"
+	.string "{CHN}我在这里输了……\p"
+	.string "这意味着我还没有\n"
+	.string "成为冠军的资格……$"
 
 VictoryRoad_1F_Text_HopeIntro:
-	.string "This seemingly infinite and harsh road\n"
-	.string "lives up to its name of VICTORY.$"
+	.string "{CHN}这条看似无尽而艰险的道路，\n"
+	.string "果然无愧于胜利之名。$"
 
 VictoryRoad_1F_Text_HopeDefeat:
-	.string "Your battle style is fantastic…$"
+	.string "{CHN}你的对战方式真精彩……$"
 
 VictoryRoad_1F_Text_HopePostBattle:
-	.string "You seem to have the potential for\n"
-	.string "becoming the CHAMPION.$"
+	.string "{CHN}你似乎有着成为\n"
+	.string "冠军的潜质。$"
 
 VictoryRoad_1F_Text_QuincyIntro:
-	.string "What is the VICTORY ROAD?\n"
-	.string "I'll tell you if you win!$"
+	.string "{CHN}冠军之路是什么？\n"
+	.string "你赢了我就告诉你！$"
 
 VictoryRoad_1F_Text_QuincyDefeat:
-	.string "Okay!\n"
-	.string "Well done!$"
+	.string "{CHN}好吧！\n"
+	.string "干得漂亮！$"
 
 VictoryRoad_1F_Text_QuincyPostBattle:
-	.string "Getting through here safely--that's\n"
-	.string "the final test for any TRAINER aiming\l"
-	.string "to become the POKéMON CHAMPION.\p"
-	.string "That's why it's called the VICTORY\n"
-	.string "ROAD.$"
+	.string "{CHN}能安全通过这里——\n"
+	.string "这是对任何志在成为宝可梦冠军的训练家\l"
+	.string "都要面对的最后考验。\p"
+	.string "所以它才被称为\n"
+	.string "冠军之路。$"
 
 VictoryRoad_1F_Text_KatelynnIntro:
-	.string "I have nothing to say to anyone\n"
-	.string "that's come this far. Come on!$"
+	.string "{CHN}我对走到这里的人\n"
+	.string "没什么好说的。来吧！$"
 
 VictoryRoad_1F_Text_KatelynnDefeat:
-	.string "This is a disgrace…$"
+	.string "{CHN}真是耻辱……$"
 
 VictoryRoad_1F_Text_KatelynnPostBattle:
-	.string "Humph, go right on ahead.\n"
-	.string "See if I care.$"
+	.string "{CHN}哼，继续走吧。\n"
+	.string "我才不在乎呢。$"

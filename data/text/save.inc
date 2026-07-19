@@ -1,33 +1,32 @@
 	.align 2
 gText_ConfirmSave::
-	.string "Would you like to save the game?$"
+	.string "{CHN}要保存游戏吗？$"
 
 gText_AlreadySavedFile::
-	.string "There is already a saved file.\n"
-	.string "Is it okay to overwrite it?$"
+	.string "{CHN}已经存在保存文件。\n"
+	.string "要覆盖它吗？$"
 
 gText_SavingDontTurnOff::
-	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"
+	.string "{CHN}保存中…\n"
+	.string "请勿关闭电源。$"
 
 gText_PlayerSavedGame::
-	.string "{PLAYER} saved the game.$"
+	.string "{CHN}{PLAYER}保存了游戏。$"
 
 gText_DifferentSaveFile::
-	.string "WARNING!\p"
-	.string "There is a different game file that\n"
-	.string "is already saved.\p"
-	.string "If you save now, the other file's\n"
-	.string "adventure, including items and\l"
-	.string "POKéMON, will be entirely lost.\p"
-	.string "Are you sure you want to save now\n"
-	.string "and overwrite the other save file?$"
+	.string "{CHN}警告！\p"
+	.string "已经存在另一个游戏文件。\n"
+	.string "如果现在保存，另一个文件的\n"
+	.string "冒险，包括道具和\l"
+	.string "宝可梦，将全部丢失。\p"
+	.string "确定要现在保存\n"
+	.string "并覆盖另一个保存文件吗？$"
 
 gText_SaveError::
-	.string "Save error.\p"
-	.string "Please exchange the\n"
-	.string "backup memory.$"
+	.string "{CHN}保存错误。\p"
+	.string "请更换\n"
+	.string "备份记忆体。$"
 
 gText_SavingDontTurnOffPower::
-	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"
+	.string "{CHN}保存中…\n"
+	.string "请勿关闭电源。$"

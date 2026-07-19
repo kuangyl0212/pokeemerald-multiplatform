@@ -32,46 +32,45 @@ AbandonedShip_Rooms_1F_EventScript_ThaliaRematch::
 	end
 
 AbandonedShip_Rooms_1F_Text_TakingALookAround:
-	.string "Ships of this sort are rare, so I'm\n"
-	.string "taking a look around.\p"
-	.string "Hmhm…\n"
-	.string "There appear to be other cabins…$"
+	.string "{CHN}这种船很罕见，所以我\n"
+	.string "在到处看看。\p"
+	.string "嗯嗯……\n"
+	.string "好像还有其他船舱……$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaIntro:
-	.string "What on earth would compel you to\n"
-	.string "come here? You must be curious!$"
+	.string "{CHN}到底是什么促使你\n"
+	.string "来这里？你一定很好奇！$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaDefeat:
-	.string "Not just curious, but also strong…$"
+	.string "{CHN}不只是好奇，还很强大……$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaPostBattle:
-	.string "The man next door…\p"
-	.string "He says he's just sightseeing,\n"
-	.string "but I don't know about that.$"
+	.string "{CHN}隔壁那个男人……\p"
+	.string "他说他只是在观光，\n"
+	.string "但我可不那么认为。$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRegister:
-	.string "You're such a tough TRAINER!\n"
-	.string "Let me register you as a memento!$"
+	.string "{CHN}你真是个厉害的训练家！\n"
+	.string "让我把你登记下来作为纪念！$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRematchIntro:
-	.string "What on earth would compel you to\n"
-	.string "come back? You must really be curious!$"
+	.string "{CHN}到底是什么促使你\n"
+	.string "回来？你真的很好奇！$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRematchDefeat:
-	.string "Aren't you too strong?$"
+	.string "{CHN}你是不是太强了？$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaPostRematch:
-	.string "I'm sure that man's up to something!\n"
-	.string "He just acts so suspiciously!$"
+	.string "{CHN}我敢肯定那个男人在搞什么鬼！\n"
+	.string "他的行为太可疑了！$"
 
 AbandonedShip_Rooms_1F_Text_DemetriusIntro:
-	.string "Waaah!\n"
-	.string "I've been found! …Huh?$"
+	.string "{CHN}哇！\n"
+	.string "被发现了！……咦？$"
 
 AbandonedShip_Rooms_1F_Text_DemetriusDefeat:
-	.string "Oh, you're not my mom.$"
+	.string "{CHN}哦，你不是我妈妈。$"
 
 AbandonedShip_Rooms_1F_Text_DemetriusPostBattle:
-	.string "I'm in trouble with my mom, so I ran.\n"
-	.string "Keep it a secret where I am!$"
-
+	.string "{CHN}我惹妈妈生气了，所以我跑出来了。\n"
+	.string "请保密我在这里！$"

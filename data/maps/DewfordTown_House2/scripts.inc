@@ -27,13 +27,13 @@ DewfordTown_House2_EventScript_Boy::
 	end
 
 DewfordTown_House2_Text_WantYouToHaveSilkScarf:
-	.string "Gorge your eyes on this!\p"
-	.string "It's a SILK SCARF. It's right at the\n"
-	.string "cutting edge of fashion, yeah!\p"
-	.string "Oh, I can see your eyes twinkling!\n"
-	.string "You appreciate my dazzling style!\p"
-	.string "Oh, you're a delight!\n"
-	.string "Here you go. I want you to have it!$"
+	.string "{CHN}让你大开眼界！\p"
+	.string "这是丝绸围巾。它正处于\n"
+	.string "时尚的前沿，没错！\p"
+	.string "哦，我可以看到你的眼睛在闪光！\n"
+	.string "你欣赏我耀眼的风格！\p"
+	.string "哦，你真讨人喜欢！\n"
+	.string "给你。我希望你收下它！$"
 
 DewfordTown_House2_Text_NoRoom:
 	.string "Oh, you don't have room?\p"
@@ -42,10 +42,10 @@ DewfordTown_House2_Text_NoRoom:
 	.string "in order to get it!$"
 
 DewfordTown_House2_Text_ExplainSilkScarf:
-	.string "The SILK SCARF raises the power of\n"
-	.string "NORMAL-type moves.\p"
-	.string "It's a marvelous SCARF that will go\n"
-	.string "with almost all POKéMON!$"
+	.string "{CHN}丝绸围巾能提升\n"
+	.string "一般属性招式的威力。\p"
+	.string "它是一条出色的围巾，几乎适合\n"
+	.string "所有的宝可梦！$"
 
 DewfordTown_House2_Text_BrawlySoCool:
 	.string "Wow, you bothered to cross the sea\n"

@@ -100,42 +100,42 @@ Route110_TrickHousePuzzle2_EventScript_Georgia::
 	end
 
 Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is smart.”\n"
+	.string "{CHN}{PLAYER}在门上\n"
+	.string "写下了暗号。\p"
+	.string "“诡计大师真聪明。”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "咔嗒，锁开了！$"
 
 Route110_TrickHousePuzzle2_Text_TedIntro:
-	.string "Which switch closes which hole?$"
+	.string "{CHN}哪个开关关闭哪个洞呢？$"
 
 Route110_TrickHousePuzzle2_Text_TedDefeat:
-	.string "After that battle, I'm even more\n"
-	.string "confused!$"
+	.string "{CHN}打完那场对战，我更加\n"
+	.string "糊涂了！$"
 
 Route110_TrickHousePuzzle2_Text_TedPostBattle:
-	.string "Can I get you to push all the buttons\n"
-	.string "for me?$"
+	.string "{CHN}你能帮我把所有按钮\n"
+	.string "都按一遍吗？$"
 
 Route110_TrickHousePuzzle2_Text_PaulIntro:
-	.string "Oh! You're on your second TRICK HOUSE\n"
-	.string "challenge!$"
+	.string "{CHN}哦！这是你第二次\n"
+	.string "挑战诡计屋了吧！$"
 
 Route110_TrickHousePuzzle2_Text_PaulDefeat:
-	.string "You're good at battling too?$"
+	.string "{CHN}你对战也很厉害吗？$"
 
 Route110_TrickHousePuzzle2_Text_PaulPostBattle:
-	.string "The TRICK MASTER rigged all the tricks\n"
-	.string "in this house all by himself.$"
+	.string "{CHN}诡计大师一个人\n"
+	.string "设计了这栋房子里所有的诡计。$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaIntro:
-	.string "I want to make my own GYM one day.\n"
-	.string "So, I'm studying how to set traps.$"
+	.string "{CHN}我有一天想建自己的道馆。\n"
+	.string "所以我正在研究怎么设置陷阱。$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaDefeat:
-	.string "I didn't study battling enough!$"
+	.string "{CHN}我对战练得不够！$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle:
-	.string "You're strong, aren't you?\n"
-	.string "Maybe even enough to be a GYM LEADER!$"
+	.string "{CHN}你很强，不是吗？\n"
+	.string "说不定强到能当道馆馆长了！$"
 

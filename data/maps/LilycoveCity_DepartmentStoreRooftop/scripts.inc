@@ -185,35 +185,35 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ExitVendingMachine::
 	end
 
 LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales:
-	.string "Don't they have set dates for their\n"
-	.string "clear-out sales?\p"
-	.string "I watch TV, but they never show any\n"
-	.string "commercials.$"
+	.string "{CHN}他们的清仓大甩卖\n"
+	.string "不是有固定日期吗？\p"
+	.string "我看电视，但他们从来不播\n"
+	.string "任何广告。$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
-	.string "Yes! I've been waiting a long time for\n"
-	.string "this clear-out sale.\p"
-	.string "They have items that you can only get\n"
-	.string "here. I'm going to load up, that I am!$"
+	.string "{CHN}太好了！我等这场\n"
+	.string "清仓大甩卖等了好久了。\p"
+	.string "他们有只有这里\n"
+	.string "才能买到的商品。我要大买特买，没错！$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
-	.string "Ohh… I'm bone-dry thirsty!$"
+	.string "{CHN}哦…我渴得嗓子都冒烟了！$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
-	.string "It's a VENDING MACHINE.\n"
-	.string "Which drink would you like?$"
+	.string "{CHN}这是一台自动售货机。\n"
+	.string "你想要哪种饮料？$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_CanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "A can of {STR_VAR_1} dropped down.$"
+	.string "{CHN}哐当！\p"
+	.string "一罐{STR_VAR_1}掉了下来。$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_ExtraCanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "Score! An extra can of {STR_VAR_1}\n"
-	.string "dropped down!$"
+	.string "{CHN}哐当！\p"
+	.string "赚到！额外的一罐{STR_VAR_1}\n"
+	.string "掉了下来！$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney:
-	.string "Not enough money…$"
+	.string "{CHN}钱不够…$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink:
-	.string "Decided against buying a drink.$"
+	.string "{CHN}决定不买饮料了。$"

@@ -391,7 +391,7 @@ struct BattleDomeTrainer
 } ALIGNED(4);
 
 #define DOME_TOURNAMENT_TRAINERS_COUNT 16
-#define BATTLE_TOWER_RECORD_COUNT 5
+#define BATTLE_TOWER_RECORD_COUNT 4
 
 struct BattleFrontier
 {

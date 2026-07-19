@@ -1,63 +1,63 @@
-@ Only contains the text for the Mauville Man named Giddy. The rest is in scripts/mauville_man.inc
+@ Only contains the text for the Mauville Man named Giddy. The Rest is in scripts/mauville_man.inc
 GiddyText_SoPretty::
-	.string " so pretty!$"
+	.string "{CHN} 太漂亮了！$"
 
 GiddyText_SoDarling::
-	.string " so darling!$"
+	.string "{CHN} 太可爱了！$"
 
 GiddyText_SoRelaxed::
-	.string " so relaxed!$"
+	.string "{CHN} 太轻松了！$"
 
 GiddyText_SoSunny::
-	.string " so sunny!$"
+	.string "{CHN} 太阳光了！$"
 
 GiddyText_SoDesirable::
-	.string " so desirable!$"
+	.string "{CHN} 太令人向往了！$"
 
 GiddyText_SoExciting::
-	.string " so exciting!$"
+	.string "{CHN} 太刺激了！$"
 
 GiddyText_SoAmusing::
-	.string " so amusing!$"
+	.string "{CHN} 太有趣了！$"
 
 GiddyText_SoMagical::
-	.string " so magical!$"
+	.string "{CHN} 太神奇了！$"
 
 GiddyText_Is::
-	.string " is$"
+	.string "{CHN} 是$"
 
 GiddyText_DontYouAgree::
-	.string "\n"
-	.string "Don't you agree?$"
+	.string "{CHN}\n"
+	.string "你不觉得吗？$"
 
 GiddyText_ISoWantToGoOnAVacation::
-	.string "I so want to go on a vacation.\n"
-	.string "Would you happen to know a nice place?$"
+	.string "{CHN}我好想去度假啊。\n"
+	.string "你知道有什么好地方吗？$"
 
 GiddyText_IBoughtCrayonsWith120Colors::
-	.string "I bought crayons with 120 colors!\n"
-	.string "Don't you think that's nice?$"
+	.string "{CHN}我买了120色的蜡笔！\n"
+	.string "你不觉得很棒吗？$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
-	.string "Wouldn't it be nice if we could float\n"
-	.string "away on a cloud of bubbles?$"
+	.string "{CHN}要是我们能乘着\n"
+	.string "泡泡飘走，那该多好啊？$"
 
 GiddyText_WhenYouWriteOnASandyBeach::
-	.string "When you write on a sandy beach,\n"
-	.string "they wash away. It makes me sad.$"
+	.string "{CHN}当你在沙滩上写字，\n"
+	.string "它们会被冲走。这让我很难过。$"
 
 GiddyText_WhatsTheBottomOfTheSeaLike::
-	.string "What's the bottom of the sea like?\n"
-	.string "Just once I would so love to go!$"
+	.string "{CHN}海底是什么样子的？\n"
+	.string "我真想去一次！$"
 
 GiddyText_WhenYouSeeTheSettingSunDoesIt::
-	.string "When you see the setting sun, does it\n"
-	.string "make you want to go home?$"
+	.string "{CHN}当你看到夕阳时，\n"
+	.string "会不会想回家？$"
 
 GiddyText_LyingBackInTheGreenGrass::
-	.string "Lying back in the green grass…\n"
-	.string "Oh, it's so, so nice!$"
+	.string "{CHN}躺在绿草地上……\n"
+	.string "哦，真是太棒了！$"
 
 GiddyText_SecretBasesAreSoWonderful::
-	.string "SECRET BASES are so wonderful!\n"
-	.string "Can't you feel the excitement?$"
+	.string "{CHN}秘密基地真是太棒了！\n"
+	.string "你能感受到那种兴奋吗？$"

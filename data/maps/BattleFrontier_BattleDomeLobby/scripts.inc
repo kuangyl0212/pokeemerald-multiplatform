@@ -430,249 +430,249 @@ BattleFrontier_BattleDomeLobby_EventScript_ExitRules::
 	end
 
 BattleFrontier_BattleDomeLobby_Text_WelcomeSingleBattle:
-	.string "Where the strategies of TRAINERS\n"
-	.string "are put to the test!\p"
-	.string "Welcome to the BATTLE DOME!\p"
-	.string "I am your guide to the SINGLE BATTLE\n"
-	.string "Tournament.$"
+	.string "{CHN}这里是考验训练家\n"
+	.string "战术的地方！\p"
+	.string "欢迎来到对战巨蛋！\p"
+	.string "我是你的单打对战\n"
+	.string "锦标赛向导。$"
 
 BattleFrontier_BattleDomeLobby_Text_TakeSinglesChallenge:
-	.string "Would you like to challenge\n"
-	.string "the SINGLE BATTLE Tournament?$"
+	.string "{CHN}你想挑战\n"
+	.string "单打对战锦标赛吗？$"
 
 BattleFrontier_BattleDomeLobby_Text_HopeToSeeYouAgain:
-	.string "We hope to see you again.$"
+	.string "{CHN}希望能再次见到你。$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge:
-	.string "The SINGLE BATTLE Tournament\n"
-	.string "is exactly as the name suggests--\l"
-	.string "a tournament of SINGLE BATTLES.\p"
-	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
-	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The other two POKéMON can battle\n"
-	.string "one at a time.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
-	.string "You win the tournament by defeating\n"
-	.string "four TRAINERS.\p"
-	.string "Battle Points are awarded to\n"
-	.string "the tournament winner.\p"
-	.string "If you want to interrupt your\n"
-	.string "tournament, please save the game.\p"
-	.string "If you don't save before interrupting,\n"
-	.string "you will be disqualified.$"
+	.string "{CHN}单打对战锦标赛\n"
+	.string "正如其名——\l"
+	.string "是单打对战的锦标赛。\p"
+	.string "所有参赛的训练家都必须\n"
+	.string "各自带三只宝可梦。\p"
+	.string "在每场对战中，三只宝可梦中\n"
+	.string "必须有一只作为替补。\p"
+	.string "另外两只宝可梦可以\n"
+	.string "一只一只地参战。\p"
+	.string "在查看对手的三只宝可梦后\n"
+	.string "选择参战的两只宝可梦。\p"
+	.string "击败四位训练家\n"
+	.string "即可赢得锦标赛。\p"
+	.string "对战点数将授予\n"
+	.string "锦标赛的胜者。\p"
+	.string "如果你想中断锦标赛，\n"
+	.string "请保存游戏。\p"
+	.string "如果中断前不保存，\n"
+	.string "你将被取消资格。$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before I show you to the BATTLE DOME,\n"
-	.string "I must save the data. Is that okay?$"
+	.string "{CHN}在我带你去对战巨蛋之前，\n"
+	.string "我必须保存数据。可以吗？$"
 
 BattleFrontier_BattleDomeLobby_Text_WhichLevelMode:
-	.string "The tournament offers two levels\n"
-	.string "of challenge, Level 50 and Open Level.\l"
-	.string "Which is your choice?$"
+	.string "{CHN}锦标赛提供两种等级的挑战，\n"
+	.string "50级和开放等级。\l"
+	.string "你选哪个？$"
 
 BattleFrontier_BattleDomeLobby_Text_SelectThreeMons:
-	.string "Now select the three POKéMON that\n"
-	.string "you wish to enter, please.$"
+	.string "{CHN}现在请选择你想参赛的\n"
+	.string "三只宝可梦。$"
 
 BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLvOpen:
-	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "Also, the POKéMON must be holding\n"
-	.string "different kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
-	.string "Please come see me when you are ready.$"
+	.string "{CHN}打扰一下！\p"
+	.string "你没有三只符合条件的宝可梦。\p"
+	.string "另外，宝可梦必须携带\n"
+	.string "不同种类的道具。\p"
+	.string "蛋{STR_VAR_1}不符合资格。\p"
+	.string "准备好后请再来找我。$"
 
 BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
-	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "You must have three different POKéMON\n"
-	.string "of Level 50 or less to enter.\p"
-	.string "They also must be holding different\n"
-	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
-	.string "Please come see me when you are ready.$"
+	.string "{CHN}打扰一下！\p"
+	.string "你没有三只符合条件的宝可梦。\p"
+	.string "你必须有三只不同的宝可梦，\n"
+	.string "且都是50级或以下才能参赛。\p"
+	.string "它们也必须携带不同\n"
+	.string "种类的道具。\p"
+	.string "蛋{STR_VAR_1}不符合资格。\p"
+	.string "准备好后请再来找我。$"
 
 BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome:
-	.string "I will now show you to\n"
-	.string "the BATTLE DOME.$"
+	.string "{CHN}我现在带你去\n"
+	.string "对战巨蛋。$"
 
 BattleFrontier_BattleDomeLobby_Text_DidntSaveBeforeQuitting:
-	.string "Excuse me!\p"
-	.string "You didn't save before you quit your\n"
-	.string "challenge last time.\p"
-	.string "Because of that, your challenge so far\n"
-	.string "has been disqualified. Sorry!$"
+	.string "{CHN}打扰一下！\p"
+	.string "你上次退出挑战前\n"
+	.string "没有保存。\p"
+	.string "因此，你到目前为止的挑战\n"
+	.string "已被取消资格。抱歉！$"
 
 BattleFrontier_BattleDomeLobby_Text_CongratsForWinningTourney:
-	.string "Congratulations for winning\n"
-	.string "your Battle Tournament!$"
+	.string "{CHN}恭喜你赢得了\n"
+	.string "对战锦标赛！$"
 
 /* Unused*/
 BattleFrontier_BattleDomeLobby_Text_HereIsYourPrize:
-	.string "Here is your prize for your Battle\n"
-	.string "Tournament victory.$"
+	.string "{CHN}这是你赢得对战\n"
+	.string "锦标赛的奖品。$"
 
 /* Used by Verdanturf Tent*/
 BattleFrontier_BattleDomeLobby_Text_ReceivedPrize:
-	.string "{PLAYER} received the prize\n"
-	.string "{STR_VAR_1}.$"
+	.string "{CHN}{PLAYER}获得了奖品\n"
+	.string "{STR_VAR_1}。$"
 
 /* Unused*/
 BattleFrontier_BattleDomeLobby_Text_BagFullMakeRoom:
-	.string "Oh, your BAG appears to be full.\p"
-	.string "Please make room in your BAG, then come\n"
-	.string "see me.$"
+	.string "{CHN}哦，你的包包好像满了。\p"
+	.string "请先在包包里腾出空间，\n"
+	.string "然后再来找我。$"
 
 BattleFrontier_BattleDomeLobby_Text_ThankYouForPlaying:
-	.string "Thank you for playing!$"
+	.string "{CHN}谢谢你的参与！$"
 
 BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved:
-	.string "Your record will be saved.\n"
-	.string "Please wait.$"
+	.string "{CHN}你的记录将被保存。\n"
+	.string "请稍等。$"
 
 BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou:
-	.string "We've been waiting for you!$"
+	.string "{CHN}我们一直在等你！$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge2:
-	.string "Before I show you to the BATTLE DOME,\n"
-	.string "I must save the data. Is that okay?$"
+	.string "{CHN}在我带你去对战巨蛋之前，\n"
+	.string "我必须保存数据。可以吗？$"
 
 BattleFrontier_BattleDomeLobby_Text_WelcomeDoubleBattle:
-	.string "Where the strategies of TRAINERS\n"
-	.string "are put to the test!\p"
-	.string "Welcome to the BATTLE DOME!\p"
-	.string "I am your guide to the DOUBLE BATTLE\n"
-	.string "Tournament.$"
+	.string "{CHN}这里是考验训练家\n"
+	.string "战术的地方！\p"
+	.string "欢迎来到对战巨蛋！\p"
+	.string "我是你的双打对战\n"
+	.string "锦标赛向导。$"
 
 BattleFrontier_BattleDomeLobby_Text_TakeDoublesChallenge:
-	.string "Would you like to challenge\n"
-	.string "the DOUBLE BATTLE Tournament?$"
+	.string "{CHN}你想挑战\n"
+	.string "双打对战锦标赛吗？$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainDoublesChallenge:
-	.string "The DOUBLE BATTLE Tournament\n"
-	.string "is exactly as the name suggests--\l"
-	.string "a tournament of DOUBLE BATTLES.\p"
-	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
-	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The remaining two POKéMON must take\n"
-	.string "part in a DOUBLE BATTLE.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
-	.string "You win the tournament by defeating\n"
-	.string "four TRAINERS.\p"
-	.string "Battle Points are awarded to\n"
-	.string "the tournament winner.\p"
-	.string "If you want to interrupt your\n"
-	.string "tournament, please save the game.\p"
-	.string "If you don't save before interrupting,\n"
-	.string "you will be disqualified.$"
+	.string "{CHN}双打对战锦标赛\n"
+	.string "正如其名——\l"
+	.string "是双打对战的锦标赛。\p"
+	.string "所有参赛的训练家都必须\n"
+	.string "各自带三只宝可梦。\p"
+	.string "在每场对战中，三只宝可梦中\n"
+	.string "必须有一只作为替补。\p"
+	.string "剩下的两只宝可梦必须\n"
+	.string "参加双打对战。\p"
+	.string "在查看对手的三只宝可梦后\n"
+	.string "选择参战的两只宝可梦。\p"
+	.string "击败四位训练家\n"
+	.string "即可赢得锦标赛。\p"
+	.string "对战点数将授予\n"
+	.string "锦标赛的胜者。\p"
+	.string "如果你想中断锦标赛，\n"
+	.string "请保存游戏。\p"
+	.string "如果中断前不保存，\n"
+	.string "你将被取消资格。$"
 
 BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsSinglesLv50:
-	.string "They're the results of the last\n"
-	.string "Level 50 SINGLE BATTLE Tournament.$"
+	.string "{CHN}这是上一届50级单打对战\n"
+	.string "锦标赛的结果。$"
 
 BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsDoublesLv50:
-	.string "They're the results of the last\n"
-	.string "Level 50 DOUBLE BATTLE Tournament.$"
+	.string "{CHN}这是上一届50级双打对战\n"
+	.string "锦标赛的结果。$"
 
 BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsSinglesLvOpen:
-	.string "They're the results of the last\n"
-	.string "Open Level SINGLE BATTLE Tournament.$"
+	.string "{CHN}这是上一届开放等级单打对战\n"
+	.string "锦标赛的结果。$"
 
 BattleFrontier_BattleDomeLobby_Text_PrevTourneyResultsDoublesLvOpen:
-	.string "They're the results of the last\n"
-	.string "Open Level DOUBLE BATTLE Tournament.$"
+	.string "{CHN}这是上一届开放等级双打对战\n"
+	.string "锦标赛的结果。$"
 
 BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough:
-	.string "Did you see it?\n"
-	.string "The last Battle Tournament?\p"
-	.string "The winner, {STR_VAR_1}, was seriously\n"
-	.string "tough.\p"
-	.string "You should check out the results\n"
-	.string "on the monitor beside the PC.$"
+	.string "{CHN}你看到了吗？\n"
+	.string "上一届对战锦标赛？\p"
+	.string "胜者{STR_VAR_1}真的很\n"
+	.string "厉害。\p"
+	.string "你应该去PC旁边的显示器\n"
+	.string "看看结果。$"
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
-	.string "The BATTLE FRONTIER…\n"
-	.string "I've long dreamed about a place like it.$"
+	.string "{CHN}对战开拓区……\n"
+	.string "我一直梦想着有这样一个地方。$"
 
 /* Functionally unused*/
 BattleFrontier_OutsideWest_Text_BattleDomeSign2:
-	.string "The BATTLE DOME\n"
-	.string "Become the Unbeatable Superstar!$"
+	.string "{CHN}对战巨蛋\n"
+	.string "成为无敌的超级明星！$"
 
 /* Functionally unused*/
 BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction:
-	.string "The ??????\n"
-	.string "Under Construction!$"
+	.string "{CHN}??????\n"
+	.string "正在建设中！$"
 
 BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation:
-	.string "When a TRAINER chains tournament\n"
-	.string "wins at the BATTLE DOME, he or she\l"
-	.string "gains a reputation as a star.\p"
-	.string "Tough TRAINERS are drawn by that\n"
-	.string "reputation to the BATTLE DOME.\p"
-	.string "A true superstar is a TRAINER who\n"
-	.string "can keep winning tournaments.$"
+	.string "{CHN}当训练家在对战巨蛋连续\n"
+	.string "赢得锦标赛时，他或她\l"
+	.string "会作为明星获得声誉。\p"
+	.string "厉害的训练家被那种声誉\n"
+	.string "吸引到对战巨蛋。\p"
+	.string "真正的超级明星是能不断\n"
+	.string "赢得锦标赛的训练家。$"
 
 BattleFrontier_BattleDomeLobby_Text_TrashedInFirstRound:
-	.string "I ran into one of the tournament\n"
-	.string "favorites in the very first round.\p"
-	.string "Of course I got trashed…$"
+	.string "{CHN}我在第一轮就遇到了\n"
+	.string "锦标赛的热门选手。\p"
+	.string "我当然被痛扁了……$"
 
 BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully:
-	.string "I would've won if I'd kept this POKéMON\n"
-	.string "held in reserve.\p"
-	.string "You need to check your opponent's\n"
-	.string "POKéMON carefully before choosing\l"
-	.string "your battling POKéMON.$"
+	.string "{CHN}如果我留这只宝可梦做替补，\n"
+	.string "我就赢了。\p"
+	.string "你需要仔细查看对手的宝可梦，\n"
+	.string "然后再选择\l"
+	.string "参战的宝可梦。$"
 
 BattleFrontier_BattleDomeLobby_Text_CongratsDefeatedTucker:
-	.string "Congratulations!\p"
-	.string "You defeated the DOME ACE and won\n"
-	.string "the Battle Tournament!$"
+	.string "{CHN}恭喜！\p"
+	.string "你击败了巨蛋王牌并赢得了\n"
+	.string "对战锦标赛！$"
 
 BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints:
-	.string "In recognition of your strategy--\n"
-	.string "a thing of beauty it was, too--\l"
-	.string "we award you these Battle Point(s)!$"
+	.string "{CHN}为表彰你的战术——\n"
+	.string "那真是美妙绝伦——\l"
+	.string "我们授予你这些对战点数！$"
 
 BattleFrontier_BattleDomeLobby_Text_RecordLastMatch:
-	.string "Would you like to record your\n"
-	.string "last BATTLE DOME match on your\l"
-	.string "FRONTIER PASS?$"
+	.string "{CHN}你想把你上一场对战巨蛋的\n"
+	.string "对战记录到你的\l"
+	.string "开拓区通行证上吗？$"
 
 BattleFrontier_BattleDomeLobby_Text_RulesAreListed:
-	.string "The Battle Tournament rules\n"
-	.string "are listed.$"
+	.string "{CHN}这里列出了对战锦标赛\n"
+	.string "的规则。$"
 
 BattleFrontier_BattleDomeLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "{CHN}你想阅读哪个标题？$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainMatchupRules:
-	.string "The tournament matchups are drawn up\n"
-	.string "based on the toughness of POKéMON\l"
-	.string "held by TRAINERS.\p"
-	.string "The matchups avoid having tough\n"
-	.string "TRAINERS face each other right away.$"
+	.string "{CHN}锦标赛的对阵是根据训练家\n"
+	.string "持有的宝可梦的强度\l"
+	.string "来决定的。\p"
+	.string "对阵安排会避免厉害的训练家\n"
+	.string "一开始就互相交手。$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainTourneyTree:
-	.string "The tournament chart, or as we call it,\n"
-	.string "the “Tree,” is available for viewing\l"
-	.string "in the Waiting Room from any guide.\p"
-	.string "The Tournament Tree will provide\n"
-	.string "several kinds of data.\p"
-	.string "The data on view includes the previous\n"
-	.string "tournament's results, the POKéMON held\l"
-	.string "by TRAINERS, and the battle styles of\l"
-	.string "TRAINERS.$"
+	.string "{CHN}锦标赛图表，我们称之为\n"
+	.string "“树状图”，可以在等候室\l"
+	.string "通过任何向导查看。\p"
+	.string "锦标赛树状图将提供\n"
+	.string "多种数据。\p"
+	.string "展示的数据包括上一届锦标赛的\n"
+	.string "结果、训练家持有的\l"
+	.string "宝可梦，以及训练家的\l"
+	.string "对战风格。$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainDoubleKORules:
-	.string "If battling POKéMON faint at the same\n"
-	.string "time--a double KO--in a tournament\l"
-	.string "match, the REFEREES will review\l"
-	.string "the match and declare the winner.$"
+	.string "{CHN}如果对战中的宝可梦同时\n"
+	.string "倒下——即双倒——在锦标赛\l"
+	.string "对战中，裁判们将复盘\l"
+	.string "比赛并裁决胜者。$"

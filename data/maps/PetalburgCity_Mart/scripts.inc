@@ -63,20 +63,20 @@ PetalburgCity_Mart_EventScript_Man::
 	end
 
 PetalburgCity_Mart_Text_WeakWillGrowStronger:
-	.string "Even if a POKéMON is weak now,\n"
-	.string "it will grow stronger.\p"
-	.string "The most important thing is love!\n"
-	.string "Love for your POKéMON!$"
+	.string "{CHN}即使宝可梦现在很弱，\n"
+	.string "它也会变强。\p"
+	.string "最重要的是爱！\n"
+	.string "对你的宝可梦的爱！$"
 
 PetalburgCity_Mart_Text_RepelIsUseful:
-	.string "Do you use REPEL?\n"
-	.string "It keeps POKéMON away, so it's\l"
-	.string "useful when you're in a hurry.$"
+	.string "{CHN}你用驱虫剂吗？\n"
+	.string "它能驱赶宝可梦，\l"
+	.string "赶时间的时候很有用。$"
 
 PetalburgCity_Mart_Text_TakeSomeAntidotesWithYou:
-	.string "Do you have any ANTIDOTES with\n"
-	.string "you?\p"
-	.string "If you walk around with a poisoned\n"
-	.string "POKéMON, it will lose HP until it faints.\l"
-	.string "Take some ANTIDOTES with you.$"
+	.string "{CHN}你身上\n"
+	.string "有解毒药吗？\p"
+	.string "如果你带着中毒的宝可梦\n"
+	.string "到处走，它会一直减HP直到倒下。\l"
+	.string "记得带些解毒药在身上。$"
 

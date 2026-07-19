@@ -46,19 +46,18 @@ FallarborTown_Mart_EventScript_Skitty::
 	end
 
 FallarborTown_Mart_Text_DecidingSkittyEvolve:
-	.string "I'm having a hard time deciding if I\n"
-	.string "should make my SKITTY evolve or not.\p"
-	.string "I only have to use this MOON STONE,\n"
-	.string "but it's so hard to decide…\p"
-	.string "If I make it evolve, it will become\n"
-	.string "much stronger.\p"
-	.string "But it will look so different, too.$"
+	.string "{CHN}我正在苦恼要不要\n"
+	.string "让我的向尾猫进化。\p"
+	.string "我只需要用这块月之石，\n"
+	.string "但就是难以决定……\p"
+	.string "如果让它进化，它会变得\n"
+	.string "更强。\p"
+	.string "但它的样子也会大不一样。$"
 
 FallarborTown_Mart_Text_Skitty:
-	.string "SKITTY: Miyao?$"
+	.string "{CHN}向尾猫：喵？$"
 
 FallarborTown_Mart_Text_SellNuggetIFound:
-	.string "This NUGGET I found here…\n"
-	.string "I suppose I'll have to sell it, seeing\l"
-	.string "as how it has no other use.$"
-
+	.string "{CHN}我在这里找到的这颗金珠……\n"
+	.string "我想我只能把它卖了，\l"
+	.string "反正它也没别的用处。$"

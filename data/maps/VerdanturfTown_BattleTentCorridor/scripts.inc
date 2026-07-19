@@ -43,32 +43,32 @@ VerdanturfTown_BattleTentCorridor_Movement_AttendantEnterDoor:
 /* Leftover text from when this was a Contest Hall in R/S*/
 /* Unused*/
 VerdanturfTown_ContestHall_Text_WhichContestYouEntering:
-	.string "Which CONTEST are you entering?\n"
-	.string "Want a piece of advice?\p"
-	.string "In any CONTEST, for example, a CUTE\n"
-	.string "CONTEST, I don't think they judge you\l"
-	.string "only on cuteness in the first round.\p"
-	.string "You need to work out ways for raising\n"
-	.string "POKéMON better.$"
+	.string "{CHN}你要参加哪个华丽大赛？\n"
+	.string "想听个建议吗？\p"
+	.string "在任何华丽大赛中，比如可爱\n"
+	.string "大赛，我认为第一回合不会只\l"
+	.string "以可爱度来评判你。\p"
+	.string "你需要研究出更好的方法\n"
+	.string "来培育宝可梦。$"
 
 /* Unused*/
 VerdanturfTown_ContestHall_Text_RaisedMonToBeCute:
-	.string "I raised my POKéMON to be cute.\p"
-	.string "I found out you can put POKéMON in\n"
-	.string "a CONTEST for cuteness!\p"
-	.string "I'm so glad I raised my POKéMON with\n"
-	.string "loving care…$"
+	.string "{CHN}我把我的宝可梦培育得很可爱。\p"
+	.string "我发现可以让宝可梦参加\n"
+	.string "可爱华丽大赛！\p"
+	.string "我真庆幸我用爱心\n"
+	.string "培育了我的宝可梦…$"
 
 /* Unused*/
 VerdanturfTown_ContestHall_Text_MyMonRules:
-	.string "My POKéMON rules!\p"
-	.string "It's cool, tough yet beautiful, cute,\n"
-	.string "and smart. It's complete!\p"
-	.string "I may as well go for wins in every\n"
-	.string "single CONTEST.$"
+	.string "{CHN}我的宝可梦最棒了！\p"
+	.string "它既帅气、强壮又美丽、可爱，\n"
+	.string "而且聪明。它很完美！\p"
+	.string "我索性去参加每一个\n"
+	.string "华丽大赛并赢得胜利。$"
 
 /* Unused*/
 VerdanturfTown_ContestHall_Text_NormalRankStage:
-	.string "POKéMON CONTESTS\n"
-	.string "NORMAL RANK STAGE!$"
+	.string "{CHN}宝可梦华丽大赛\n"
+	.string "普通级舞台！$"
 

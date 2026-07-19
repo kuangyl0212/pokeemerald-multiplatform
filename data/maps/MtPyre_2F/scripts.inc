@@ -43,93 +43,93 @@ MtPyre_2F_EventScript_Zander::
 	end
 
 MtPyre_2F_Text_MemoriesOfSkitty:
-	.string "Memories of my darling SKITTY…\n"
-	.string "My eyes overflow thinking about it.$"
+	.string "{CHN}我亲爱的向尾喵的回忆……\n"
+	.string "一想到它，眼泪就止不住。$"
 
 MtPyre_2F_Text_TumbledFromFloorAbove:
-	.string "Ooch, ouch… There are holes in the\n"
-	.string "ground here and there.\p"
-	.string "I didn't notice and took a tumble from\n"
-	.string "the floor above.$"
+	.string "{CHN}哎哟，疼……这里到处都是\n"
+	.string "地上的洞。\p"
+	.string "我没注意，结果从上一层\n"
+	.string "摔下来了。$"
 
 MtPyre_2F_Text_MarkIntro:
-	.string "Hey! Are you searching for POKéMON?\n"
-	.string "You came along after me! You're rude!$"
+	.string "{CHN}嘿！你在找宝可梦吗？\n"
+	.string "你跟在我后面来的！你太没礼貌了！$"
 
 MtPyre_2F_Text_MarkDefeat:
-	.string "Ayieeeeh!\n"
-	.string "I'm sorry, forgive me, please!$"
+	.string "{CHN}呀啊啊啊！\n"
+	.string "对不起，请原谅我！$"
 
 MtPyre_2F_Text_MarkPostBattle:
-	.string "People don't come here often, so\n"
-	.string "I thought there'd be rare POKéMON.$"
+	.string "{CHN}这里很少有人来，所以我\n"
+	.string "以为会有稀有的宝可梦。$"
 
 MtPyre_2F_Text_LukeIntro:
-	.string "LUKE: We're here on a dare.\p"
-	.string "Heheh, if I show her how cool I am,\n"
-	.string "she'll fall for me. I know it!\p"
-	.string "I know! I'll cream you and show her\n"
-	.string "how cool I am!$"
+	.string "{CHN}卢克：我们是来打赌的。\p"
+	.string "嘿嘿，如果我让她看到我多帅，\n"
+	.string "她就会爱上我。我知道！\p"
+	.string "对了！我打败你，让她\n"
+	.string "看看我有多帅！$"
 
 MtPyre_2F_Text_LukeDefeat:
-	.string "LUKE: Whoopsie!$"
+	.string "{CHN}卢克：糟糕！$"
 
 MtPyre_2F_Text_LukePostBattle:
-	.string "LUKE: Well, we lost but that's okay!\n"
-	.string "I'm right here by your side.\l"
-	.string "We'll make it through this dare!$"
+	.string "{CHN}卢克：嗯，我们输了，但没关系！\n"
+	.string "我就陪在你身边。\l"
+	.string "我们会一起挺过这个考验的！$"
 
 MtPyre_2F_Text_LukeNotEnoughMons:
-	.string "LUKE: If you want to take me on,\n"
-	.string "bring some more POKéMON.\p"
-	.string "If you don't, I won't be able to show\n"
-	.string "off to my girl how cool I am!$"
+	.string "{CHN}卢克：如果你想跟我对战，\n"
+	.string "再多带几只宝可梦来吧。\p"
+	.string "不然的话，我就没法在我女朋友\n"
+	.string "面前耍帅了！$"
 
 MtPyre_2F_Text_DezIntro:
-	.string "DEZ: I came here on a dare with my\n"
-	.string "boyfriend.\p"
-	.string "It's really scary, but I'm with my\n"
-	.string "boyfriend. It's okay.\p"
-	.string "I know! I'll get my boyfriend to look\n"
-	.string "cool by beating you!$"
+	.string "{CHN}迪兹：我和男朋友打赌\n"
+	.string "来到这里。\p"
+	.string "虽然很可怕，但我跟男朋友\n"
+	.string "在一起。没事的。\p"
+	.string "对了！我让我男朋友打败你，\n"
+	.string "好让他耍耍帅！$"
 
 MtPyre_2F_Text_DezDefeat:
-	.string "DEZ: Waaaah! I'm scared!$"
+	.string "{CHN}迪兹：哇啊啊！我好害怕！$"
 
 MtPyre_2F_Text_DezPostBattle:
-	.string "DEZ: We're lovey-dovey, so we don't\n"
-	.string "care if we lose!$"
+	.string "{CHN}迪兹：我们俩恩爱得很，\n"
+	.string "输了也不在乎！$"
 
 MtPyre_2F_Text_DezNotEnoughMons:
-	.string "DEZ: If you want to challenge us, you\n"
-	.string "should bring at least two POKéMON.\p"
-	.string "My boyfriend's strong.\n"
-	.string "Just one POKéMON won't do at all.$"
+	.string "{CHN}迪兹：如果你想挑战我们，\n"
+	.string "至少要带两只宝可梦来。\p"
+	.string "我男朋友很强。\n"
+	.string "只有一只宝可梦可不行。$"
 
 MtPyre_2F_Text_LeahIntro:
-	.string "You are an unfamiliar sight…\n"
-	.string "Depart before anything befalls you!$"
+	.string "{CHN}你是个生面孔……\n"
+	.string "趁还没出事，赶紧离开吧！$"
 
 MtPyre_2F_Text_LeahDefeat:
-	.string "Hmm…\n"
-	.string "You're durable.$"
+	.string "{CHN}嗯……\n"
+	.string "你挺耐打的。$"
 
 MtPyre_2F_Text_LeahPostBattle:
-	.string "Our family has been TRAINERS here\n"
-	.string "since my great-grandmother's time…\p"
-	.string "It is my duty to protect this\n"
-	.string "mountain…$"
+	.string "{CHN}从我曾祖母那一代起，\n"
+	.string "我们家族就一直在这里当训练家……\p"
+	.string "守护这座山\n"
+	.string "是我的使命……$"
 
 MtPyre_2F_Text_ZanderIntro:
-	.string "Kiyaaaaah!\n"
-	.string "I'm terrified!$"
+	.string "{CHN}呀啊啊啊！\n"
+	.string "我好害怕！$"
 
 MtPyre_2F_Text_ZanderDefeat:
-	.string "Nooooooo!\n"
-	.string "I lost my wits!$"
+	.string "{CHN}不不不不！\n"
+	.string "我吓傻了！$"
 
 MtPyre_2F_Text_ZanderPostBattle:
-	.string "I get freaked out every time I see\n"
-	.string "anything move…\p"
-	.string "I shouldn't have come here to train…$"
+	.string "{CHN}我每次看到什么东西动\n"
+	.string "都会被吓到……\p"
+	.string "我不该来这里修行的……$"
 

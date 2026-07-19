@@ -1,108 +1,108 @@
 @ Battle Tower
 gText_AnabelWonSilver::
-	.string "It's very disappointing…$"
+	.string "{CHN}真让人失望……$"
 
 gText_AnabelDefeatSilver::
-	.string "Okay, I understand…$"
+	.string "{CHN}好吧，我明白了……$"
 
 gText_AnabelWonGold::
-	.string "I'm terribly sorry…$"
+	.string "{CHN}非常抱歉……$"
 
 gText_AnabelDefeatGold::
-	.string "Thank you…$"
+	.string "{CHN}谢谢你……$"
 
 @ Battle Dome
 gText_TuckerWonSilver::
-	.string "Ahahaha! Aren't you embarrassed?\n"
-	.string "Everyone's watching!$"
+	.string "{CHN}啊哈哈！你不觉得难为情吗？\n"
+	.string "大家都在看着呢！$"
 
 gText_TuckerDefeatSilver::
-	.string "Grr…\n"
-	.string "What the…$"
+	.string "{CHN}呃……\n"
+	.string "怎么会……$"
 
 gText_TuckerWonGold::
-	.string "My DOME ACE title isn't just for show!$"
+	.string "{CHN}我的巨蛋王牌称号可不是浪得虚名！$"
 
 gText_TuckerDefeatGold::
-	.string "Ahahaha!\n"
-	.string "You're inspiring!$"
+	.string "{CHN}啊哈哈！\n"
+	.string "你真令人振奋！$"
 
 @ Battle Factory
 gText_NolandWonSilver::
-	.string "Way to work!\n"
-	.string "That was a good lesson, eh?$"
+	.string "{CHN}干得好！\n"
+	.string "这可是堂好课，是吧？$"
 
 gText_NolandDefeatSilver::
-	.string "Good job!\n"
-	.string "You know what you're doing!$"
+	.string "{CHN}做得好！\n"
+	.string "你很清楚自己在做什么！$"
 
 gText_NolandWonGold::
-	.string "Hey, hey, hey!\n"
-	.string "You're finished already?$"
+	.string "{CHN}嘿，嘿，嘿！\n"
+	.string "你已经结束了吗？$"
 
 gText_NolandDefeatGold::
-	.string "What happened here?$"
+	.string "{CHN}这里发生了什么？$"
 
 @ Battle Pike
 gText_LucyWonSilver::
-	.string "Humph…$"
+	.string "{CHN}哼……$"
 
 gText_LucyDefeatSilver::
-	.string "Urk…$"
+	.string "{CHN}呃……$"
 
 gText_LucyWonGold::
-	.string "Hah!$"
+	.string "{CHN}哈！$"
 
 gText_LucyDefeatGold::
-	.string "Darn!$"
+	.string "{CHN}可恶！$"
 
 @ Battle Arena
 gText_GretaWonSilver::
-	.string "Oh, come on!\n"
-	.string "You have to try harder than that!$"
+	.string "{CHN}哎呀，得了吧！\n"
+	.string "你得更加努力才行！$"
 
 gText_GretaDefeatSilver::
-	.string "No way!\n"
-	.string "Good job!$"
+	.string "{CHN}不可能！\n"
+	.string "干得不错！$"
 
 gText_GretaWonGold::
-	.string "Heheh!\n"
-	.string "What did you expect?$"
+	.string "{CHN}嘿嘿！\n"
+	.string "你还指望什么？$"
 
 gText_GretaDefeatGold::
-	.string "Huh?\n"
-	.string "Are you serious?!$"
+	.string "{CHN}啊？\n"
+	.string "你认真的吗？！$"
 
 @ Battle Palace
 gText_SpenserWonSilver::
-	.string "Your POKéMON are wimpy because\n"
-	.string "you're wimpy as a TRAINER!$"
+	.string "{CHN}你的宝可梦之所以软弱，\n"
+	.string "是因为作为训练家的你太软弱了！$"
 
 gText_SpenserDefeatSilver::
-	.string "Ah…\n"
-	.string "Now this is something else…$"
+	.string "{CHN}啊……\n"
+	.string "这可真是与众不同……$"
 
 gText_SpenserWonGold::
-	.string "Gwahahaha!\n"
-	.string "My brethren, we have nothing to fear!$"
+	.string "{CHN}哇哈哈哈！\n"
+	.string "我的同胞们，我们无所畏惧！$"
 
 gText_SpenserDefeatGold::
-	.string "Gwah!\n"
-	.string "Hahahaha!$"
+	.string "{CHN}哇哈！\n"
+	.string "哈哈哈哈！$"
 
 @ Battle Pyramid
 gText_BrandonWonSilver::
-	.string "Hey! What's wrong with you!\n"
-	.string "Let's see some effort! Get up!$"
+	.string "{CHN}嘿！你怎么了！\n"
+	.string "拿出点干劲来！站起来！$"
 
 gText_BrandonDefeatSilver::
-	.string "That's it! You've done great!\n"
-	.string "You've worked hard for this!$"
+	.string "{CHN}就是这样！你做得太棒了！\n"
+	.string "你为这一刻付出了努力！$"
 
 gText_BrandonWonGold::
-	.string "Hey! Don't you give up now!\n"
-	.string "Get up! Don't lose faith in yourself!$"
+	.string "{CHN}嘿！你别放弃啊！\n"
+	.string "站起来！不要对自己失去信心！$"
 
 gText_BrandonDefeatGold::
-	.string "That's it! You've done it!\n"
-	.string "You kept working for this!$"
+	.string "{CHN}就是这样！你做到了！\n"
+	.string "你一直为此努力着！$"

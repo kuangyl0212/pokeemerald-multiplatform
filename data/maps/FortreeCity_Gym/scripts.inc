@@ -134,185 +134,185 @@ FortreeCity_Gym_EventScript_GymStatue::
 	end
 
 FortreeCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "FORTREE GYM LEADER WINONA is\n"
-	.string "a master of FLYING-type POKéMON.\p"
-	.string "She's waiting at the back of this GYM,\n"
-	.string "behind the rotating doors.\p"
-	.string "She's waiting for new challengers\n"
-	.string "who are trying to take wing!\p"
-	.string "Okay, go for it!$"
+	.string "{CHN}哟，最近怎么样，朝冠军\n"
+	.string "迈进的{PLAYER}？\p"
+	.string "茵郁道馆馆主娜琪\n"
+	.string "是飞行属性宝可梦的大师。\p"
+	.string "她就在这道馆的深处，\n"
+	.string "旋转门的后面等着你。\p"
+	.string "她正在等待着\n"
+	.string "试图展翅高飞的新挑战者！\p"
+	.string "好了，去吧！$"
 
 FortreeCity_Gym_Text_GymGuidePostVictory:
-	.string "You did it!\n"
-	.string "You've achieved liftoff!$"
+	.string "{CHN}你做到了！\n"
+	.string "你成功起飞了！$"
 
 FortreeCity_Gym_Text_JaredIntro:
-	.string "Behold the elegant battle style of\n"
-	.string "BIRD POKéMON!$"
+	.string "{CHN}见识一下\n"
+	.string "鸟宝可梦优雅的战斗风格吧！$"
 
 FortreeCity_Gym_Text_JaredDefeat:
-	.string "You…\n"
-	.string "You're strong…$"
+	.string "{CHN}你……\n"
+	.string "你很强……$"
 
 FortreeCity_Gym_Text_JaredPostBattle:
-	.string "A TRAINER has to be smart to keep\n"
-	.string "up with unexpected turns of events.\p"
-	.string "Do you have the smarts to get to\n"
-	.string "our LEADER?$"
+	.string "{CHN}训练家必须机智才能\n"
+	.string "应对突发状况。\p"
+	.string "你有足够的智慧去见\n"
+	.string "我们的馆主吗？$"
 
 FortreeCity_Gym_Text_EdwardoIntro:
-	.string "The lovers of BIRD POKéMON aspire\n"
-	.string "to join this GYM.\p"
-	.string "As a member of the FORTREE GYM,\n"
-	.string "I'm not allowed to lose!$"
+	.string "{CHN}喜爱鸟宝可梦的人\n"
+	.string "都渴望加入这道馆。\p"
+	.string "作为茵郁道馆的一员，\n"
+	.string "我绝不能输！$"
 
 FortreeCity_Gym_Text_EdwardoDefeat:
-	.string "It was too much of a load for me\n"
-	.string "to bear…$"
+	.string "{CHN}这对我来说\n"
+	.string "负担太重了……$"
 
 FortreeCity_Gym_Text_EdwardoPostBattle:
-	.string "The world is huge, and there are\n"
-	.string "countless tough TRAINERS.\p"
-	.string "I'm going to keep training and make\n"
-	.string "myself even stronger.$"
+	.string "{CHN}世界很大，\n"
+	.string "有无数强大的训练家。\p"
+	.string "我要继续特训，\n"
+	.string "让自己变得更强。$"
 
 FortreeCity_Gym_Text_FlintIntro:
-	.string "There's no need for WINONA, our GYM\n"
-	.string "LEADER, to deal with you!\p"
-	.string "I'm plenty good enough for you!$"
+	.string "{CHN}用不着我们的道馆\n"
+	.string "馆主娜琪亲自出手！\p"
+	.string "我就足够对付你了！$"
 
 FortreeCity_Gym_Text_FlintDefeat:
-	.string "WINONA, I…\n"
-	.string "I lost!$"
+	.string "{CHN}娜琪，我……\n"
+	.string "我输了！$"
 
 FortreeCity_Gym_Text_FlintPostBattle:
-	.string "WINONA is cute and she's strong.\n"
-	.string "She's the ultimate LEADER!\p"
-	.string "Blush…$"
+	.string "{CHN}娜琪又可爱又强大。\n"
+	.string "她是终极的馆主！\p"
+	.string "脸红……$"
 
 FortreeCity_Gym_Text_AshleyIntro:
-	.string "WINONA taught me personally!\n"
-	.string "You can't beat me easily!$"
+	.string "{CHN}娜琪亲自指导过我！\n"
+	.string "你别想轻易打败我！$"
 
 FortreeCity_Gym_Text_AshleyDefeat:
-	.string "I was beaten…$"
+	.string "{CHN}我输了……$"
 
 FortreeCity_Gym_Text_AshleyPostBattle:
-	.string "Thanks to WINONA, the people of\n"
-	.string "FORTREE can live without fear.$"
+	.string "{CHN}多亏了娜琪，\n"
+	.string "茵郁市的居民才能安居无忧。$"
 
 FortreeCity_Gym_Text_HumbertoIntro:
-	.string "When WINONA takes to battle, her face\n"
-	.string "shines with beautiful determination…\p"
-	.string "I'm not letting you witness that\n"
-	.string "lovely sight!$"
+	.string "{CHN}娜琪战斗时，\n"
+	.string "她的脸上闪耀着美丽的决心……\p"
+	.string "我绝不会让你\n"
+	.string "看到那美丽的景象！$"
 
 FortreeCity_Gym_Text_HumbertoDefeat:
-	.string "Urk!\n"
-	.string "I couldn't stop you.$"
+	.string "{CHN}呃！\n"
+	.string "我没能阻止你。$"
 
 FortreeCity_Gym_Text_HumbertoPostBattle:
-	.string "You'd better watch it!\n"
-	.string "Don't get distracted staring at WINONA\l"
-	.string "or you'll go crashing down in a heap!$"
+	.string "{CHN}你最好小心点！\n"
+	.string "别盯着娜琪看得出神，\l"
+	.string "否则你会摔个四脚朝天！$"
 
 FortreeCity_Gym_Text_DariusIntro:
-	.string "You'd better know that there are all\n"
-	.string "sorts of FLYING-type POKéMON.\p"
-	.string "You do know that, right?$"
+	.string "{CHN}你最好知道飞行属性的\n"
+	.string "宝可梦有各种各样。\p"
+	.string "你应该知道吧？$"
 
 FortreeCity_Gym_Text_DariusDefeat:
-	.string "You seem to know your stuff!$"
+	.string "{CHN}看来你挺懂的！$"
 
 FortreeCity_Gym_Text_DariusPostBattle:
-	.string "Sure, you beat me all right.\n"
-	.string "But you'd better watch it! Our LEADER\l"
-	.string "WINONA's POKéMON are all business.$"
+	.string "{CHN}是，你确实打败了我。\n"
+	.string "但你最好小心点！我们的馆主\l"
+	.string "娜琪的宝可梦可不是闹着玩的。$"
 
 FortreeCity_Gym_Text_WinonaIntro:
-	.string "I am WINONA. I am the LEADER of\n"
-	.string "the FORTREE POKéMON GYM.\p"
-	.string "I have become one with BIRD POKéMON\n"
-	.string "and have soared the skies…\p"
-	.string "However grueling the battle, we have\n"
-	.string "triumphed with grace…\p"
-	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "{CHN}我是娜琪。我是\n"
+	.string "茵郁宝可梦道馆的馆主。\p"
+	.string "我与鸟宝可梦合而为一，\n"
+	.string "翱翔于天空……\p"
+	.string "无论战斗多么艰苦，\n"
+	.string "我们都优雅地取得了胜利……\p"
+	.string "见识一下\n"
+	.string "鸟宝可梦与我优雅的舞姿吧！$"
 
 FortreeCity_Gym_Text_WinonaDefeat:
-	.string "Never before have I seen a TRAINER\n"
-	.string "command POKéMON with more grace\l"
-	.string "than I…\p"
-	.string "In recognition of your prowess,\n"
-	.string "I present to you this GYM BADGE.$"
+	.string "{CHN}我从未见过哪位训练家\n"
+	.string "能以比我更优雅的姿态\l"
+	.string "指挥宝可梦……\p"
+	.string "为表彰你的实力，\n"
+	.string "我将这枚道馆徽章授予你。$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
-	.string "{PLAYER} received the FEATHER BADGE\n"
-	.string "from WINONA.$"
+	.string "{CHN}{PLAYER}从娜琪那里\n"
+	.string "获得了羽毛徽章。$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
-	.string "With the FEATHER BADGE, all POKéMON up\n"
-	.string "to LV 70, even those received through\l"
-	.string "trades, will obey your every command.\p"
-	.string "You will also be able to use\n"
-	.string "the HM move FLY outside of battle.\p"
-	.string "And this…\n"
-	.string "This is a gift from me.$"
+	.string "{CHN}有了羽毛徽章，等级在70以下的\n"
+	.string "所有宝可梦，即使是\l"
+	.string "通过交换得到的，也会完全听从你的命令。\p"
+	.string "你还可以在战斗之外\n"
+	.string "使用秘传学习器飞翔。\p"
+	.string "还有这个……\n"
+	.string "这是我送你的礼物。$"
 
 FortreeCity_Gym_Text_ExplainAerialAce:
-	.string "TM40 contains AERIAL ACE.\p"
-	.string "Its speed…\n"
-	.string "No POKéMON should be able to avoid it.\p"
-	.string "… … … … … …$"
+	.string "{CHN}招式学习器40装有燕返。\p"
+	.string "它的速度……\n"
+	.string "没有任何宝可梦能够避开。\p"
+	.string "…… …… …… …… …… ……$"
 
 FortreeCity_Gym_Text_RegisteredWinona:
-	.string "Registered GYM LEADER WINONA\n"
-	.string "in the POKéNAV.$"
+	.string "{CHN}已在宝可梦导航器中\n"
+	.string "登记道馆馆主娜琪。$"
 
 FortreeCity_Gym_Text_WinonaPostBattle:
-	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD POKéMON.$"
+	.string "{CHN}虽然我输给了你，\n"
+	.string "但我仍会致力于鸟宝可梦。$"
 
 FortreeCity_Gym_Text_GymStatue:
-	.string "FORTREE CITY POKéMON GYM$"
+	.string "{CHN}茵郁市宝可梦道馆$"
 
 FortreeCity_Gym_Text_GymStatueCertified:
-	.string "FORTREE CITY POKéMON GYM\p"
-	.string "WINONA'S CERTIFIED TRAINERS:\n"
+	.string "{CHN}茵郁市宝可梦道馆\p"
+	.string "娜琪认证的训练家：\n"
 	.string "{PLAYER}$"
 
 FortreeCity_Gym_Text_WinonaPreRematch:
-	.string "WINONA: We humans can never escape\n"
-	.string "gravity's pull on the ground.\p"
-	.string "But by striving for excellence,\n"
-	.string "we have the power to soar!\p"
-	.string "You have scaled the pinnacle as\n"
-	.string "the reigning CHAMPION.\p"
-	.string "Please, allow me to see your power\n"
-	.string "at full flight!$"
+	.string "{CHN}娜琪：我们人类永远无法\n"
+	.string "摆脱大地的引力。\p"
+	.string "但通过追求卓越，\n"
+	.string "我们拥有了翱翔的力量！\p"
+	.string "你已经作为现任冠军\n"
+	.string "登上了巅峰。\p"
+	.string "请让我见识一下\n"
+	.string "你全力展翅飞翔的力量！$"
 
 FortreeCity_Gym_Text_WinonaRematchDefeat:
-	.string "I failed to reach your height again…$"
+	.string "{CHN}我又一次未能达到你的高度……$"
 
 FortreeCity_Gym_Text_WinonaPostRematch:
-	.string "WINONA: Even though I have lost,\n"
-	.string "the wings of my heart remain unbroken.\p"
-	.string "I can rise and soar again and\n"
-	.string "yet again.\p"
-	.string "I am convinced of it!$"
+	.string "{CHN}娜琪：虽然我输了，\n"
+	.string "但我心中的翅膀依然完好。\p"
+	.string "我可以再次起飞，\n"
+	.string "一次又一次地翱翔。\p"
+	.string "我深信不疑！$"
 
 FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
-	.string "WINONA: We humans can never escape\n"
-	.string "gravity's pull on the ground.\p"
-	.string "But by striving for excellence,\n"
-	.string "we have the power to soar!\p"
-	.string "You have scaled the pinnacle as\n"
-	.string "the reigning CHAMPION.\p"
-	.string "Please, allow me to see your power\n"
-	.string "at full flight!\p"
-	.string "Oh, no… Do you have but one\n"
-	.string "POKéMON with you?\p"
-	.string "Please return with two POKéMON\n"
-	.string "at the very least.$"
+	.string "{CHN}娜琪：我们人类永远无法\n"
+	.string "摆脱大地的引力。\p"
+	.string "但通过追求卓越，\n"
+	.string "我们拥有了翱翔的力量！\p"
+	.string "你已经作为现任冠军\n"
+	.string "登上了巅峰。\p"
+	.string "请让我见识一下\n"
+	.string "你全力展翅飞翔的力量！\p"
+	.string "哎呀，糟糕……你\n"
+	.string "只带了一只宝可梦吗？\p"
+	.string "请至少带两只宝可梦\n"
+	.string "再来吧。$"

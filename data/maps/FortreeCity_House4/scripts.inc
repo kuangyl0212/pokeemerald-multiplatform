@@ -63,33 +63,32 @@ FortreeCity_House4_EventScript_Wingull::
 	end
 
 FortreeCity_House4_Text_BringsWorldCloserTogether:
-	.string "By being together with POKéMON,\n"
-	.string "people make more and more friends.\p"
-	.string "And that brings the world closer\n"
-	.string "together. I think it's wonderful!$"
+	.string "{CHN}通过与宝可梦相伴，\n"
+	.string "人们结交了越来越多的朋友。\p"
+	.string "这让世界\n"
+	.string "更加紧密地联系在一起。我觉得这真是太棒了！$"
 
 FortreeCity_House4_Text_GoBirdPokemon:
-	.string "There!\n"
-	.string "Go, BIRD POKéMON!$"
+	.string "{CHN}去吧！\n"
+	.string "去吧，鸟宝可梦！$"
 
 FortreeCity_House4_Text_AskedWingullToRunErrand:
-	.string "Heheh, I asked my WINGULL to run\n"
-	.string "an errand for me.$"
+	.string "{CHN}嘿嘿，我让我的长翅鸥\n"
+	.string "帮我跑腿去了。$"
 
 FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb:
-	.string "Good!\n"
-	.string "Welcome back, WINGULL!\p"
-	.string "Huh? What is this?\n"
-	.string "What is it holding?\p"
-	.string "A MENTAL HERB?\n"
-	.string "It must have picked it up somewhere.\p"
-	.string "But I'm not a TRAINER, so you can\n"
-	.string "have it.$"
+	.string "{CHN}太好了！\n"
+	.string "欢迎回来，长翅鸥！\p"
+	.string "咦？这是什么？\n"
+	.string "它嘴里叼着什么？\p"
+	.string "精神香草？\n"
+	.string "一定是在哪儿捡到的。\p"
+	.string "但我不是训练家，\n"
+	.string "所以这个就给你吧。$"
 
 FortreeCity_House4_Text_FriendsFarAwayThanksToWingull:
-	.string "Thanks to my WINGULL, I have friends\n"
-	.string "who live far away.$"
+	.string "{CHN}多亏了我的长翅鸥，\n"
+	.string "我才有远方的朋友。$"
 
 FortreeCity_House4_Text_Wingull:
-	.string "WINGULL: Pihyoh!$"
-
+	.string "{CHN}长翅鸥：皮哟！$"

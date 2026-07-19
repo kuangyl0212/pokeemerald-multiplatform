@@ -97,81 +97,81 @@ Route109_SeashoreHouse_EventScript_TrainersNotCompleted::
 	end
 
 Route109_SeashoreHouse_Text_SeashoreHouseIntro:
-	.string "I'm the owner of the SEASHORE HOUSE.\n"
-	.string "But you can call me MR. SEA!\p"
-	.string "What I love above all is to see hot\n"
-	.string "POKéMON battles.\p"
-	.string "Let me see that your heart burns hot!\p"
-	.string "If you can defeat all the TRAINERS\n"
-	.string "here, I'll reward your efforts.$"
+	.string "{CHN}我是海边小屋的老板。\n"
+	.string "但你可以叫我海先生！\p"
+	.string "我最喜欢的就是看到\n"
+	.string "激烈的宝可梦对战。\p"
+	.string "让我看到你火热的心！\p"
+	.string "如果你能打败这里所有的\n"
+	.string "训练家，我会奖励你的努力。$"
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches:
-	.string "Show me some hot matches!\p"
-	.string "I run this SEASHORE HOUSE just for\n"
-	.string "that reason alone!$"
+	.string "{CHN}给我看些激烈的比赛吧！\p"
+	.string "我经营这个海边小屋\n"
+	.string "就是为了这个原因！$"
 
 Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles:
-	.string "You're scorching hot!\n"
-	.string "Those battles blazed!\l"
-	.string "I'm more than just satisfied!\p"
-	.string "As thanks for showing me your hot\n"
-	.string "streak, I want you to take these.\p"
-	.string "It's half a dozen bottles of SODA POP!$"
+	.string "{CHN}你热得发烫！\n"
+	.string "那些对战太火爆了！\l"
+	.string "我非常满意！\p"
+	.string "作为你向我展示\n"
+	.string "热情的感谢，我要你收下这些。\p"
+	.string "这是半打汽水！$"
 
 Route109_SeashoreHouse_Text_BagFull:
-	.string "Oh, but hey, your BAG's jammed full.\n"
-	.string "I'll hang on to these for you.$"
+	.string "{CHN}哦，但是嘿，你的包塞满了。\n"
+	.string "我先替你保管这些。$"
 
 Route109_SeashoreHouse_Text_WantToBuySodaPop:
-	.string "Want to buy some SODA POP?\n"
-	.string "POKéMON love it!\p"
-	.string "Just ¥300 a bottle!\n"
-	.string "Buy some!$"
+	.string "{CHN}想买些汽水吗？\n"
+	.string "宝可梦很喜欢它！\p"
+	.string "只要300元一瓶！\n"
+	.string "买一些吧！$"
 
 Route109_SeashoreHouse_Text_HereYouGo:
-	.string "Here you go!$"
+	.string "{CHN}给你！$"
 
 Route109_SeashoreHouse_Text_NotEnoughMoney:
-	.string "You don't have the money.$"
+	.string "{CHN}你的钱不够。$"
 
 Route109_SeashoreHouse_Text_ThatsTooBad:
-	.string "No?\n"
-	.string "That's too bad.$"
+	.string "{CHN}不买吗？\n"
+	.string "那太可惜了。$"
 
 Route109_SeashoreHouse_Text_DwayneIntro:
-	.string "If you're looking for a battle in the\n"
-	.string "SEASHORE HOUSE, you'll find no\l"
-	.string "hotter TRAINER than me, matey!$"
+	.string "{CHN}如果你在海边小屋\n"
+	.string "找人对战，你找不到比我更\l"
+	.string "热血的训练家了，老兄！$"
 
 Route109_SeashoreHouse_Text_DwayneDefeated:
-	.string "That was a hot battle!\n"
-	.string "I can accept that loss, matey!$"
+	.string "{CHN}那是一场激烈的对战！\n"
+	.string "我可以接受那个失败，老兄！$"
 
 Route109_SeashoreHouse_Text_DwaynePostBattle:
-	.string "Whenever I'm in SLATEPORT, I enjoy\n"
-	.string "hot battles and ice-cold SODA POP!$"
+	.string "{CHN}每当我在凯那市，我都会享受\n"
+	.string "激烈的对战和冰凉的汽水！$"
 
 Route109_SeashoreHouse_Text_JohannaIntro:
-	.string "Boring battles aren't worth the effort.\p"
-	.string "Fiery hot battles are what toughen up\n"
-	.string "TRAINERS and POKéMON!$"
+	.string "{CHN}无聊的对战不值得费力。\p"
+	.string "火热激烈的对战才能让\n"
+	.string "训练家和宝可梦变强！$"
 
 Route109_SeashoreHouse_Text_JohannaDefeated:
-	.string "That's hot!$"
+	.string "{CHN}好火热！$"
 
 Route109_SeashoreHouse_Text_JohannaPostBattle:
-	.string "Whew, I'm all thirsty.\n"
-	.string "Maybe I'll have a SODA POP.$"
+	.string "{CHN}呼，我好渴。\n"
+	.string "也许我该喝瓶汽水。$"
 
 Route109_SeashoreHouse_Text_SimonIntro:
-	.string "I'm going to show you how great\n"
-	.string "my POKéMON are, but don't cry!$"
+	.string "{CHN}我要让你看看我的宝可梦\n"
+	.string "有多厉害，但别哭哦！$"
 
 Route109_SeashoreHouse_Text_SimonDefeated:
-	.string "…I lost, but I won't cry…$"
+	.string "{CHN}……我输了，但我不会哭……$"
 
 Route109_SeashoreHouse_Text_SimonPostBattle:
-	.string "If one of my POKéMON knew the move\n"
-	.string "for carrying me across water on its\l"
-	.string "back, I could get rid of this inner tube.$"
+	.string "{CHN}如果我的宝可梦中有一只会\n"
+	.string "那种能驮着我过水面的\l"
+	.string "招式，我就可以丢掉这个游泳圈了。$"
 

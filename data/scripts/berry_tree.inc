@@ -183,69 +183,69 @@ BerryTree_EventScript_PlantBerry::
 	return
 
 BerryTree_Text_ItsSoftLoamySoil:
-	.string "It's soft, loamy soil.$"
+	.string "{CHN}是松软的土壤。$"
 
 BerryTree_Text_WantToPlant:
-	.string "It's soft, loamy soil.\n"
-	.string "Want to plant a BERRY?$"
+	.string "{CHN}是松软的土壤。\n"
+	.string "要种下树果吗？$"
 
 BerryTree_Text_PlantedOneBerry:
-	.string "{PLAYER} planted one {STR_VAR_1} in\n"
-	.string "the soft, loamy soil.$"
+	.string "{CHN}{PLAYER}在松软的土壤里\n"
+	.string "种下了一颗{STR_VAR_1}。$"
 
 BerryTree_Text_BerryGrowthStage1:
-	.string "One {STR_VAR_1} was planted here.$"
+	.string "{CHN}这里种着一颗{STR_VAR_1}。$"
 
 BerryTree_Text_BerryGrowthStage2:
-	.string "{STR_VAR_1} has sprouted.$"
+	.string "{CHN}{STR_VAR_1}发芽了。$"
 
 BerryTree_Text_BerryGrowthStage3:
-	.string "This {STR_VAR_1} plant is growing taller.$"
+	.string "{CHN}这棵{STR_VAR_1}长高了。$"
 
 BerryTree_Text_BerryGrowthStage4:
-	.string "These {STR_VAR_1} flowers are blooming\n"
-	.string "{STR_VAR_2}.$"
+	.string "{CHN}这些{STR_VAR_1}的花\n"
+	.string "{STR_VAR_2}地绽放着。$"
 
 BerryTree_Text_CareAdverbGreat:
-	.string "very beautifully$"
+	.string "{CHN}非常美丽$"
 
 BerryTree_Text_CareAdverbPoor:
-	.string "cutely$"
+	.string "{CHN}可爱$"
 
 BerryTree_Text_CareAdverbGood:
-	.string "prettily$"
+	.string "{CHN}漂亮$"
 
 BerryTree_Text_WantToPick:
-	.string "You found {STR_VAR_2} {STR_VAR_1}!\p"
-	.string "Do you want to pick the\n"
-	.string "{STR_VAR_1}?$"
+	.string "{CHN}你发现了{STR_VAR_2}个{STR_VAR_1}！\p"
+	.string "你要摘下\n"
+	.string "{STR_VAR_1}吗？$"
 
 BerryTree_Text_PickedTheBerry:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
+	.string "{CHN}{PLAYER}摘下了{STR_VAR_2}个{STR_VAR_1}。$"
 
 BerryTree_Text_PutAwayBerry:
-	.string "{PLAYER} put away the {STR_VAR_1}\n"
-	.string "in the BAG's BERRIES POCKET.\p"
-	.string "The soil returned to its soft and\n"
-	.string "loamy state.$"
+	.string "{CHN}{PLAYER}把{STR_VAR_1}放进了\n"
+	.string "背包的树果口袋里。\p"
+	.string "土壤恢复了松软的\n"
+	.string "状态。$"
 
 BerryTree_Text_BerryPocketFull:
-	.string "The BAG's BERRIES POCKET is full.\p"
-	.string "The {STR_VAR_1} couldn't be taken.$"
+	.string "{CHN}背包的树果口袋已经满了。\p"
+	.string "无法拿走{STR_VAR_1}。$"
 
 BerryTree_Text_BerryLeftUnpicked:
-	.string "{PLAYER} left the {STR_VAR_1}\n"
-	.string "unpicked.$"
+	.string "{CHN}{PLAYER}没有摘下\n"
+	.string "{STR_VAR_1}。$"
 
 BerryTree_Text_WantToWater:
-	.string "Want to water the {STR_VAR_1} with the\n"
-	.string "WAILMER PAIL?$"
+	.string "{CHN}要用吼吼鲸喷壶给{STR_VAR_1}\n"
+	.string "浇水吗？$"
 
 BerryTree_Text_WateredTheBerry:
-	.string "{PLAYER} watered the {STR_VAR_1}.$"
+	.string "{CHN}{PLAYER}给{STR_VAR_1}浇了水。$"
 
 BerryTree_Text_PlantIsDelighted:
-	.string "The plant seems to be delighted.$"
+	.string "{CHN}植物看起来很高兴。$"
 
 BerryTree_Text_ExclamationPoint:
-	.string "!$"
+	.string "{CHN}！$"

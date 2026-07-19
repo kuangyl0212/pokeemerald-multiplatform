@@ -1,96 +1,96 @@
 gContestHallPaintingCaption::
-	.string "{STR_VAR_1}\n"
-	.string "{STR_VAR_2}'s {STR_VAR_3}$"
+	.string "{CHN}{STR_VAR_1}\n"
+	.string "{STR_VAR_2}的{STR_VAR_3}$"
 
 @ Unused
 gContestPaintingContest::
-	.string "CONTEST$"
+	.string "{CHN}选拔赛$"
 
 gContestRankNormal::
-	.string "NORMAL RANK$"
+	.string "{CHN}普通级$"
 
 gContestRankSuper::
-	.string "SUPER RANK$"
+	.string "{CHN}超级级$"
 
 gContestRankHyper::
-	.string "HYPER RANK$"
+	.string "{CHN}高级$"
 
 gContestRankMaster::
-	.string "MASTER RANK$"
+	.string "{CHN}大师级$"
 
 gContestLink::
-	.string "LINK$"
+	.string "{CHN}联机$"
 
 gContestCoolness::
-	.string "COOLNESS$"
+	.string "{CHN}帅气$"
 
 gContestBeauty::
-	.string "BEAUTY$"
+	.string "{CHN}美丽$"
 
 gContestCuteness::
-	.string "CUTENESS$"
+	.string "{CHN}可爱$"
 
 gContestSmartness::
-	.string "SMARTNESS$"
+	.string "{CHN}聪明$"
 
 gContestToughness::
-	.string "TOUGHNESS$"
+	.string "{CHN}强壮$"
 
 gContestPaintingCool1::
-	.string "Nonstop supercool--\n"
-	.string "the inestimable {STR_VAR_1}$"
+	.string "{CHN}不停歇的超级酷——\n"
+	.string "无可估量的{STR_VAR_1}$"
 
 gContestPaintingCool2::
-	.string "Hey, there!\n"
-	.string "The good-looking POKéMON {STR_VAR_1}$"
+	.string "{CHN}嘿，这边！\n"
+	.string "英俊的宝可梦{STR_VAR_1}$"
 
 gContestPaintingCool3::
-	.string "The marvelous, wonderful, and\n"
-	.string "very great {STR_VAR_1}$"
+	.string "{CHN}奇迹般、精彩且\n"
+	.string "非常了不起的{STR_VAR_1}$"
 
 gContestPaintingBeauty1::
-	.string "This century's last Venus--\n"
-	.string "the beautiful {STR_VAR_1}$"
+	.string "{CHN}本世纪最后的维纳斯——\n"
+	.string "美丽的{STR_VAR_1}$"
 
 gContestPaintingBeauty2::
-	.string "{STR_VAR_1}'s dazzling,\n"
-	.string "glittering smile$"
+	.string "{CHN}{STR_VAR_1}那耀眼\n"
+	.string "闪光的笑容$"
 
 gContestPaintingBeauty3::
-	.string "POKéMON CENTER's super idol--\n"
-	.string "the incomparable {STR_VAR_1}$"
+	.string "{CHN}宝可梦中心的超级偶像——\n"
+	.string "无与伦比的{STR_VAR_1}$"
 
 gContestPaintingCute1::
-	.string "The lovely and sweet {STR_VAR_1}$"
+	.string "{CHN}可爱又甜美的{STR_VAR_1}$"
 
 gContestPaintingCute2::
-	.string "The pretty {STR_VAR_1}'s\n"
-	.string "winning portrait$"
+	.string "{CHN}漂亮的{STR_VAR_1}的\n"
+	.string "获奖肖像$"
 
 gContestPaintingCute3::
-	.string "Give us a wink!\n"
-	.string "The cutie POKéMON {STR_VAR_1}$"
+	.string "{CHN}给我们眨眨眼！\n"
+	.string "可爱的宝可梦{STR_VAR_1}$"
 
 gContestPaintingSmart1::
-	.string "The smartness maestro--\n"
-	.string "the wise POKéMON {STR_VAR_1}$"
+	.string "{CHN}聪明的大师——\n"
+	.string "睿智的宝可梦{STR_VAR_1}$"
 
 gContestPaintingSmart2::
-	.string "{STR_VAR_1}--the one chosen\n"
-	.string "above all POKéMON$"
+	.string "{CHN}{STR_VAR_1}——那只\n"
+	.string "在所有宝可梦中被选中的$"
 
 gContestPaintingSmart3::
-	.string "The excellent {STR_VAR_1}'s\n"
-	.string "moment of elegance$"
+	.string "{CHN}出色的{STR_VAR_1}的\n"
+	.string "优雅时刻$"
 
 gContestPaintingTough1::
-	.string "The powerfully muscular\n"
-	.string "speedster {STR_VAR_1}$"
+	.string "{CHN}肌肉发达的\n"
+	.string "速度之星{STR_VAR_1}$"
 
 gContestPaintingTough2::
-	.string "The strong, stronger, and\n"
-	.string "strongest {STR_VAR_1}$"
+	.string "{CHN}强大、更强、\n"
+	.string "最强的{STR_VAR_1}$"
 
 gContestPaintingTough3::
-	.string "The mighty tough\n"
-	.string "hyper POKéMON {STR_VAR_1}$"
+	.string "{CHN}威猛强悍的\n"
+	.string "超级宝可梦{STR_VAR_1}$"

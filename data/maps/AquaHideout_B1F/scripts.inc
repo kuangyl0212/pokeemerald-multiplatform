@@ -107,54 +107,54 @@ AquaHideout_B1F_EventScript_Grunt7::
 	end
 
 AquaHideout_B1F_Text_Grunt2Intro:
-	.string "If you want to know the secret about\n"
-	.string "our HIDEOUT, you have me to beat!$"
+	.string "{CHN}如果你想知道\n"
+	.string "我们基地的秘密，先打败我！$"
 
 AquaHideout_B1F_Text_Grunt2Defeat:
-	.string "I can't win at all…$"
+	.string "{CHN}我根本赢不了…$"
 
 AquaHideout_B1F_Text_Grunt2PostBattle:
-	.string "Our HIDEOUT's secret?\p"
-	.string "Well, let's just say…\n"
-	.string "There's a submarine at the far end!\p"
-	.string "But, by now…\n"
-	.string "Kekekeke…$"
+	.string "{CHN}我们基地的秘密？\p"
+	.string "嗯，这么说吧…\n"
+	.string "最里面有一艘潜水艇！\p"
+	.string "但是，到现在…\n"
+	.string "咯咯咯咯…$"
 
 AquaHideout_B1F_Text_Grunt3Intro:
-	.string "Fuel supply loaded A-OK!\n"
-	.string "In-cruise snacks loaded A-OK!\p"
-	.string "Nothing left to do but KO a pesky\n"
-	.string "meddler!$"
+	.string "{CHN}燃料补给完毕！\n"
+	.string "航行零食也准备好了！\p"
+	.string "现在只剩下打倒讨厌的\n"
+	.string "多管闲事的人了！$"
 
 AquaHideout_B1F_Text_Grunt3Defeat:
-	.string "I took a serious licking!$"
+	.string "{CHN}我被打得很惨！$"
 
 AquaHideout_B1F_Text_Grunt3PostBattle:
-	.string "Humph!\n"
-	.string "This was supposed to happen!\p"
-	.string "My mission was to just hold you up!$"
+	.string "{CHN}哼！\n"
+	.string "这是计划好的！\p"
+	.string "我的任务就是拖住你！$"
 
 AquaHideout_B1F_Text_Grunt5Intro:
-	.string "Yawn… Keeping watch over the\n"
-	.string "HIDEOUT bores me. I'll take you on.$"
+	.string "{CHN}哈欠… 守卫\n"
+	.string "基地真无聊。我来跟你打一场。$"
 
 AquaHideout_B1F_Text_Grunt5Defeat:
-	.string "Yawn…\n"
-	.string "Oh, I lost…$"
+	.string "{CHN}哈欠…\n"
+	.string "哦，我输了…$"
 
 AquaHideout_B1F_Text_Grunt5PostBattle:
-	.string "If you scurry too much, other TEAM\n"
-	.string "AQUA members might get you.$"
+	.string "{CHN}如果你乱跑的话，其他\n"
+	.string "水舰队队员可能会抓住你。$"
 
 AquaHideout_B1F_Text_Grunt7Intro:
-	.string "Hey!\n"
-	.string "You there!\p"
-	.string "Which do you think is cooler?\n"
-	.string "TEAM AQUA's uniform or TEAM MAGMA's?$"
+	.string "{CHN}喂！\n"
+	.string "你这家伙！\p"
+	.string "你觉得哪个更酷？\n"
+	.string "水舰队的制服还是火焰队的？$"
 
 AquaHideout_B1F_Text_Grunt7Defeat:
-	.string "I lost in a cool way…$"
+	.string "{CHN}我输得很酷…$"
 
 AquaHideout_B1F_Text_Grunt7PostBattle:
-	.string "If you have a cool uniform, you look\n"
-	.string "good even in a loss, don't you think?$"
+	.string "{CHN}如果有一身酷制服，即使输了\n"
+	.string "也很帅气，你不觉得吗？$"

@@ -642,205 +642,205 @@ BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanDown:
 	step_end
 
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreToFullHealth:
-	.string "Welcome…\n"
-	.string "You must be commended for your luck…\p"
-	.string "Your POKéMON shall be restored\n"
-	.string "to full health…$"
+	.string "{CHN}欢迎……\n"
+	.string "你的运气值得赞赏……\p"
+	.string "你的宝可梦\n"
+	.string "将恢复到完全健康……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge:
-	.string "I urge you to enjoy the rest of your\n"
-	.string "Battle Choice challenge…$"
+	.string "{CHN}请尽情享受\n"
+	.string "接下来的对战选择挑战……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreOneMon:
-	.string "Ah, you're a lucky one.\n"
-	.string "I'm in somewhat-good spirits now.\p"
-	.string "I will restore one of your POKéMON\n"
-	.string "to full health.$"
+	.string "{CHN}啊，你是个幸运的人。\n"
+	.string "我现在心情还不错。\p"
+	.string "我将为你恢复一只宝可梦\n"
+	.string "至完全健康。$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell:
-	.string "The best of luck to you.\n"
-	.string "Farewell.$"
+	.string "{CHN}祝你好运。\n"
+	.string "再会。$"
 
 /* Seems there was a planned room type where the player could choose to battle and would be healed if they won*/
 /* Possibly replaced/superseded by the hard battle room, which is the same but the battle isnt optional*/
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_CareForBattleWillRestoreMons:
-	.string "Excuse me…\p"
-	.string "Would you care for a battle?\n"
-	.string "I'll restore your POKéMON if you win.$"
+	.string "{CHN}打扰一下……\p"
+	.string "你想来一场对战吗？\n"
+	.string "你赢了的话，我会帮你恢复宝可梦。$"
 
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_NowShallWe:
-	.string "Very well…\n"
-	.string "Now, shall we?$"
+	.string "{CHN}好吧……\n"
+	.string "那么，开始吧？$"
 
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_HowUnsportingOfYou:
-	.string "I see…\n"
-	.string "How unsporting of you…$"
+	.string "{CHN}这样啊……\n"
+	.string "你真不够意思……$"
 
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreMonsAsPromised:
-	.string "Magnificent…\p"
-	.string "As promised, I shall restore your\n"
-	.string "POKéMON to full health.$"
+	.string "{CHN}太精彩了……\p"
+	.string "如约，我将把你的\n"
+	.string "宝可梦恢复至完全健康。$"
 
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell2:
-	.string "The best of luck to you.\n"
-	.string "Farewell.$"
+	.string "{CHN}祝你好运。\n"
+	.string "再会。$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_WatchOut:
-	.string "Oh, my!\p"
-	.string "Watch out!$"
+	.string "{CHN}哎呀！\p"
+	.string "小心！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop:
-	.string "Now, now!\n"
-	.string "KIRLIA, stop that!$"
+	.string "{CHN}好了，好了！\n"
+	.string "奇鲁莉安，住手！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop:
-	.string "Now, now!\n"
-	.string "DUSCLOPS, stop that!$"
+	.string "{CHN}好了，好了！\n"
+	.string "夜巨人，住手！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic:
-	.string "KIRLIA used TOXIC!$"
+	.string "{CHN}奇鲁莉安使用了剧毒！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis:
-	.string "KIRLIA used HYPNOSIS!$"
+	.string "{CHN}奇鲁莉安使用了催眠术！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave:
-	.string "KIRLIA used THUNDER WAVE!$"
+	.string "{CHN}奇鲁莉安使用了电磁波！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp:
-	.string "KIRLIA used WILL-O-WISP!$"
+	.string "{CHN}奇鲁莉安使用了磷火！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp:
-	.string "DUSCLOPS used WILL-O-WISP!$"
+	.string "{CHN}夜巨人使用了磷火！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam:
-	.string "DUSCLOPS used ICE BEAM!$"
+	.string "{CHN}夜巨人使用了冰冻光束！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough:
-	.string "Look here!\n"
-	.string "That's quite enough!$"
+	.string "{CHN}喂！\n"
+	.string "够了！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia:
-	.string "I must apologize to you…\p"
-	.string "My KIRLIA has a TIMID nature…$"
+	.string "{CHN}我必须向你道歉……\p"
+	.string "我的奇鲁莉安是胆小性格……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops:
-	.string "I must apologize to you…\p"
-	.string "My DUSCLOPS has a TIMID nature…$"
+	.string "{CHN}我必须向你道歉……\p"
+	.string "我的夜巨人是胆小性格……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled:
-	.string "It attacks without warning if it is\n"
-	.string "startled by another person…\p"
-	.string "Are you and your POKéMON all right?$"
+	.string "{CHN}它一旦被人惊吓，\n"
+	.string "就会毫无预兆地攻击……\p"
+	.string "你和你的宝可梦没事吧？$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ApologizeHopeMonsAreFine:
-	.string "I do apologize for what happened…\n"
-	.string "I do hope your POKéMON are fine.$"
+	.string "{CHN}我为刚才的事道歉……\n"
+	.string "希望你的宝可梦没事。$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_Silence:
-	.string "… … … … … …\n"
-	.string "… … … … … …$"
+	.string "{CHN}…… …… …… …… …… ……\n"
+	.string "…… …… …… …… …… ……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_BattleSomewhatToughTrainer:
-	.string "Welcome…\p"
-	.string "Here, we will have you battle\n"
-	.string "a somewhat-tough TRAINER…$"
+	.string "{CHN}欢迎……\p"
+	.string "这里会让你与\n"
+	.string "一位稍强的训练家对战……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_RestoreToFullHealth:
-	.string "How wonderful…\p"
-	.string "To honor your victory, your POKéMON\n"
-	.string "shall be restored to full health…$"
+	.string "{CHN}太好了……\p"
+	.string "为祝贺你的胜利，你的宝可梦\n"
+	.string "将恢复至完全健康……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge2:
-	.string "I urge you to enjoy the rest of your\n"
-	.string "Battle Choice challenge…$"
+	.string "{CHN}请尽情享受\n"
+	.string "接下来的对战选择挑战……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen:
-	.string "I am LUCY…\n"
-	.string "I am the law here…\l"
-	.string "For I am the PIKE QUEEN…\p"
-	.string "You already know it, but to advance,\n"
-	.string "you must defeat me…\p"
-	.string "…I'm not one for idle chatter.\n"
-	.string "Hurry. Come on…$"
+	.string "{CHN}我是瓶子……\n"
+	.string "我是这里的法则……\l"
+	.string "因为我就是管道女王……\p"
+	.string "你已经知道了，但要继续前进，\n"
+	.string "你必须击败我……\p"
+	.string "……我不喜欢闲聊。\n"
+	.string "快点。来吧……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_HopeYouDidntUseUpLuck:
-	.string "Your luck…\n"
-	.string "I hope you didn't use it all up here…$"
+	.string "{CHN}你的运气……\n"
+	.string "希望你没有在这里全用光……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_LucyShowMeFrontierPass:
-	.string "LUCY: … … … … … …\n"
-	.string "Show me your FRONTIER PASS…$"
+	.string "{CHN}瓶子：…… …… …… …… …… ……\n"
+	.string "给我看看你的开拓区通行证……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ReceivedLuckSymbol:
-	.string "The Luck Symbol was embossed on\n"
-	.string "the FRONTIER PASS!$"
+	.string "{CHN}幸运标志被印在了\n"
+	.string "开拓区通行证上！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_AllThereIsDisappear:
-	.string "…That's all there is…\n"
-	.string "Disappear already…$"
+	.string "{CHN}……就是这样……\n"
+	.string "快消失吧……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_LucyYouAgain:
-	.string "LUCY: …You again…\p"
-	.string "… … … … … …\p"
-	.string "…I've trampled flowers and braved\n"
-	.string "storms to get to where I am…\p"
-	.string "I don't feel any compulsion to keep\n"
-	.string "losing to the same opponent…\p"
-	.string "… … … … … …\n"
-	.string "Fine… I'll do it…$"
+	.string "{CHN}瓶子：……又是你……\p"
+	.string "…… …… …… …… …… ……\p"
+	.string "……我踏过花朵，\n"
+	.string "历经风暴才走到今天……\p"
+	.string "我不想一直\n"
+	.string "输给同一个对手……\p"
+	.string "…… …… …… …… …… ……\n"
+	.string "好吧……来吧……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_NowComeOn:
-	.string "Now!\n"
-	.string "Come on!$"
+	.string "{CHN}来吧！\n"
+	.string "上啊！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_LucyFrontierPass:
-	.string "LUCY: … … … … … …\p"
-	.string "…FRONTIER PASS…$"
+	.string "{CHN}瓶子：…… …… …… …… …… ……\p"
+	.string "……开拓区通行证……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_LuckSymbolTookGoldenShine:
-	.string "The Luck Symbol took on\n"
-	.string "a golden shine!$"
+	.string "{CHN}幸运标志\n"
+	.string "闪耀着金色的光芒！$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_IWontForget:
-	.string "…You, I won't forget…\n"
-	.string "…Ever…$"
+	.string "{CHN}……你，我不会忘记……\n"
+	.string "……永远……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomNoHeal:
-	.string "I welcome you…\p"
-	.string "Giggle…\n"
-	.string "You seem to be bereft of luck…\p"
-	.string "If only you hadn't chosen this room,\n"
-	.string "your POKéMON could have been healed…$"
+	.string "{CHN}欢迎你……\p"
+	.string "呵呵……\n"
+	.string "你似乎没有运气……\p"
+	.string "要是你没选这个房间，\n"
+	.string "你的宝可梦就能被治愈了……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealOne:
-	.string "I welcome you…\p"
-	.string "Since you have chosen this room, I will\n"
-	.string "restore one POKéMON to full health…$"
+	.string "{CHN}欢迎你……\p"
+	.string "既然你选了这个房间，\n"
+	.string "我会把一只宝可梦恢复至完全健康……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ChoseRoomHealTwo:
-	.string "I welcome you…\p"
-	.string "Since you have chosen this room, I will\n"
-	.string "restore two POKéMON to full health…$"
+	.string "{CHN}欢迎你……\p"
+	.string "既然你选了这个房间，\n"
+	.string "我会把两只宝可梦恢复至完全健康……$"
 
 /* Unused*/
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreAllMons:
-	.string "I welcome you…\p"
-	.string "Giggle…\n"
-	.string "You should thank your lucky stars…\p"
-	.string "Since you have chosen this room,\n"
-	.string "all your POKéMON will be restored…$"
+	.string "{CHN}欢迎你……\p"
+	.string "呵呵……\n"
+	.string "你应该感谢你的幸运星……\p"
+	.string "既然你选了这个房间，\n"
+	.string "你的所有宝可梦都将被恢复……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ShallFetchOurMaster:
-	.string "I shall go fetch our master…$"
+	.string "{CHN}我去请我们的主人过来……$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreTwoMons:
-	.string "Ah, you're a lucky one!\n"
-	.string "I'm in good spirits now.\p"
-	.string "I will restore two of your POKéMON\n"
-	.string "to full health!$"
+	.string "{CHN}啊，你是个幸运的人！\n"
+	.string "我现在心情很好。\p"
+	.string "我将为你恢复两只宝可梦\n"
+	.string "至完全健康！$"
 

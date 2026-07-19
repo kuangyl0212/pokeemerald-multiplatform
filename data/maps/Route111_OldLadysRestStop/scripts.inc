@@ -29,22 +29,22 @@ Route111_OldLadysRestStop_EventScript_DeclineRest::
 	end
 
 Route111_OldLadysRestStop_Text_RestUpHere:
-	.string "Oh, dear, dear.\n"
-	.string "Aren't your POKéMON exhausted?\p"
-	.string "If you'd like, rest up here.\n"
-	.string "That's a fine idea! You should do that.$"
+	.string "{CHN}哎呀，哎呀。\n"
+	.string "你的宝可梦不是累坏了吗？\p"
+	.string "如果你想的话，就在这里休息一下吧。\n"
+	.string "这是个好主意！你应该这么做。$"
 
 Route111_OldLadysRestStop_Text_TakeYourTimeRestUp:
-	.string "That's right.\n"
-	.string "Take your time and rest up!$"
+	.string "{CHN}这就对了。\n"
+	.string "慢慢来，好好休息！$"
 
 Route111_OldLadysRestStop_Text_StillTiredTakeAnotherRest:
-	.string "Oh, dear, dear.\n"
-	.string "Are your POKéMON still tired?\p"
-	.string "You should take another rest here.\n"
-	.string "That's a fine idea. You should do that.$"
+	.string "{CHN}哎呀，哎呀。\n"
+	.string "你的宝可梦还是累吗？\p"
+	.string "你应该再在这里休息一次。\n"
+	.string "这是个好主意。你应该这么做。$"
 
 Route111_OldLadysRestStop_Text_DontNeedToBeShy:
-	.string "Is that so?\n"
-	.string "You don't need to be shy about it.$"
+	.string "{CHN}是这样吗？\n"
+	.string "你不用觉得不好意思。$"
 

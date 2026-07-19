@@ -38,22 +38,22 @@ BattleFrontier_PokemonCenter_1F_EventScript_Skitty::
 	end
 
 BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon:
-	.string "There was someone here using a \n"
-	.string "POKéMON I've never seen before.\p"
-	.string "I never learned about it at\n"
-	.string "TRAINER'S SCHOOL at least.\p"
-	.string "I wonder where you can catch POKéMON\n"
-	.string "like that.$"
+	.string "{CHN}刚才有人在这里使用\n"
+	.string "一只我从未见过的宝可梦。\p"
+	.string "至少我在训练家学校里\n"
+	.string "从没学过这种宝可梦。\p"
+	.string "不知道在哪里才能捕捉到\n"
+	.string "那样的宝可梦呢。$"
 
 BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena:
-	.string "Okay! Next stop, the BATTLE ARENA!\n"
-	.string "I'd better get the right POKéMON from\l"
-	.string "the PC Storage System.$"
+	.string "{CHN}好！下一站，对战竞技场！\n"
+	.string "我得从电脑存储系统里\l"
+	.string "选出合适的宝可梦。$"
 
 BattleFrontier_PokemonCenter_1F_Text_GoingThroughEveryChallenge:
-	.string "Giggle… I'm going to go through every\n"
-	.string "challenge with just this baby!$"
+	.string "{CHN}嘻嘻……我要带着这只小宝贝\n"
+	.string "挑战每一个项目！$"
 
 BattleFrontier_PokemonCenter_1F_Text_Skitty:
-	.string "SKITTY: Mya myaaah!$"
+	.string "{CHN}向尾喵：喵呜喵啊！$"
 

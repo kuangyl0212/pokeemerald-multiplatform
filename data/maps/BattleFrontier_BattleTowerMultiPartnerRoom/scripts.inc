@@ -277,1530 +277,1530 @@ BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner8::
 	end
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner:
-	.string "Please find a partner from out of\n"
-	.string "the TRAINERS gathered here.$"
+	.string "{CHN}请从这里的训练家\n"
+	.string "中找一位搭档。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner:
-	.string "{PLAYER}, you have not found a partner\n"
-	.string "for your tag team.\p"
-	.string "Would you like to quit looking and\n"
-	.string "return to the reception counter?$"
+	.string "{CHN}{PLAYER}，你还没有\n"
+	.string "找到搭档组队。\p"
+	.string "要放弃寻找并返回\n"
+	.string "接待柜台吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner2:
-	.string "Then, please find a partner from\n"
-	.string "the TRAINERS gathered here.$"
+	.string "{CHN}那么，请从这里的\n"
+	.string "训练家中找一位搭档。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ThankYouForChoosingPartner::
-	.string "Thank you for choosing a partner.\p"
-	.string "I will now show you to your\n"
-	.string "MULTI BATTLE ROOM.$"
+	.string "{CHN}感谢你选择了搭档。\p"
+	.string "我现在带你去\n"
+	.string "多人对战室。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Intro::
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
-	.string "You can call me {STR_VAR_3}!$"
+	.string "{CHN}我是{STR_VAR_1}的第{STR_VAR_2}号学徒。\n"
+	.string "你可以叫我{STR_VAR_3}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Mon1::
-	.string "On {STR_VAR_1}'s advice, I brought\n"
-	.string "one {STR_VAR_3} with {STR_VAR_2} and$"
+	.string "{CHN}按照{STR_VAR_1}的建议，\n"
+	.string "我带了一只会{STR_VAR_2}的{STR_VAR_3}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Please, let me join you as a tag team.$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "请让我和你组成双人队伍吧。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Accept::
-	.string "Thank you!\n"
-	.string "I'll go register right now.$"
+	.string "{CHN}谢谢你！\n"
+	.string "我现在就去登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Reject::
-	.string "I really wanted to form a tag team\n"
-	.string "with you, {PLAYER}…$"
+	.string "{CHN}我真的很想和你\n"
+	.string "组成双人队伍，{PLAYER}……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Intro::
-	.string "I am {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
-	.string "My name is {STR_VAR_3}.$"
+	.string "{CHN}我是{STR_VAR_1}的第{STR_VAR_2}号学徒。\n"
+	.string "我的名字是{STR_VAR_3}。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Mon1::
-	.string "I got advice from {STR_VAR_1} and chose\n"
-	.string "one {STR_VAR_3} with {STR_VAR_2} and$"
+	.string "{CHN}我听取了{STR_VAR_1}的建议，\n"
+	.string "选择了一只会{STR_VAR_2}的{STR_VAR_3}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Please, let's form a tag team!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "请让我们组成双人队伍吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Accept::
-	.string "Thank you very much!\n"
-	.string "I'll be done with registration quickly!$"
+	.string "{CHN}非常感谢！\n"
+	.string "我很快就会完成登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice2Reject::
-	.string "{PLAYER}, I was hoping that I could\n"
-	.string "partner up with you…$"
+	.string "{CHN}{PLAYER}，我一直希望能\n"
+	.string "和你搭档……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Intro::
-	.string "Um, my name's {STR_VAR_3}, and I'm\n"
-	.string "{STR_VAR_1}'s no. {STR_VAR_2} apprentice.\p"
-	.string "Snivel…\p"
-	.string "I'm sorry!\n"
-	.string "This tension is making me cry…$"
+	.string "{CHN}嗯，我叫{STR_VAR_3}，\n"
+	.string "是{STR_VAR_1}的第{STR_VAR_2}号学徒。\p"
+	.string "抽噎……\p"
+	.string "对不起！\n"
+	.string "紧张得我都哭了……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Mon1::
-	.string "{STR_VAR_3} advised me, so I have\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}{STR_VAR_3}给我建议，\n"
+	.string "我有一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Snivel…\n"
-	.string "Please, please team up with me!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "抽噎……\n"
+	.string "请、请和我组队吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Accept::
-	.string "Oh, really? You will?\n"
-	.string "Awesome! Wicked! Awoooh!\p"
-	.string "Oh… I'm sorry…\n"
-	.string "I'm so happy, I'm crying…\p"
-	.string "I'll go register right away.\n"
-	.string "Please don't go away!$"
+	.string "{CHN}哦，真的吗？你愿意？\n"
+	.string "太棒了！太厉害了！哇呜！\p"
+	.string "哦……对不起……\n"
+	.string "我太高兴，都哭了……\p"
+	.string "我马上就去登记。\n"
+	.string "请你不要走开哦！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice1Reject::
-	.string "Oh, b-but…\n"
-	.string "Sob… Waaaaah!$"
+	.string "{CHN}哦，可、可是……\n"
+	.string "呜……哇啊啊啊！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Intro::
-	.string "Hi, there! I'm {STR_VAR_3}!\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "{CHN}嗨，你好！我是{STR_VAR_3}！\n"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon1::
-	.string "{STR_VAR_3} recommended my crew.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}{STR_VAR_3}推荐了我的队伍。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's what I have! Cool, huh?\p"
-	.string "So come on!\n"
-	.string "Let's form a tag team!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}，\n"
+	.string "这就是我的队伍！很酷吧？\p"
+	.string "所以来吧！\n"
+	.string "让我们组成双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Accept::
-	.string "Yay! Great!\n"
-	.string "Okay, I'll go register, okay?$"
+	.string "{CHN}耶！太好了！\n"
+	.string "好，我去登记，好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Reject::
-	.string "Aww, why?\n"
-	.string "I wanted to team up, {PLAYER}!$"
+	.string "{CHN}啊，为什么？\n"
+	.string "我想和你组队，{PLAYER}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Intro::
-	.string "I'm {STR_VAR_3}, the no. {STR_VAR_2} apprentice\n"
-	.string "of the famous {STR_VAR_1}!$"
+	.string "{CHN}我是{STR_VAR_3}，是著名的{STR_VAR_1}\n"
+	.string "的第{STR_VAR_2}号学徒！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon1::
-	.string "I looked to {STR_VAR_3} for advice.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}我请教了{STR_VAR_3}。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's my pair.\p"
-	.string "Please, will you join me in\n"
-	.string "a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}，\n"
+	.string "这就是我的组合。\p"
+	.string "请你和我一起\n"
+	.string "组成双人队伍好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Accept::
-	.string "Thank you!\n"
-	.string "I'll register right away!$"
+	.string "{CHN}谢谢你！\n"
+	.string "我马上去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Reject::
-	.string "{PLAYER}, I had been hoping to join\n"
-	.string "you in a tag team…$"
+	.string "{CHN}{PLAYER}，我一直希望能和你\n"
+	.string "组成双人队伍……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Intro::
-	.string "Um… I'm sincerely happy that you\n"
-	.string "would take the time to talk to me.\p"
-	.string "I'm {STR_VAR_3}.\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice…$"
+	.string "{CHN}嗯……我真心高兴你\n"
+	.string "愿意花时间和我说话。\p"
+	.string "我是{STR_VAR_3}。\n"
+	.string "是{STR_VAR_1}的第{STR_VAR_2}号学徒……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Mon1::
-	.string "{STR_VAR_3} gave me advice.\n"
-	.string "I'm very grateful for it.\p"
-	.string "I have a team of one {STR_VAR_2}\n"
-	.string "with {STR_VAR_1} and$"
+	.string "{CHN}{STR_VAR_3}给了我建议。\n"
+	.string "我非常感激。\p"
+	.string "我的队伍是一只会{STR_VAR_1}的{STR_VAR_2}\n"
+	.string "和$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "I know I'm asking a lot…\p"
-	.string "I don't think you'll be willing to,\n"
-	.string "but may I join you as a partner?$"
+	.string "{CHN}一只会{STR_VAR_1}的{STR_VAR_2}。\n"
+	.string "我知道我要求得太多了……\p"
+	.string "我觉得你可能不愿意，\n"
+	.string "但我可以成为你的搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Accept::
-	.string "Really? I can't believe it!\n"
-	.string "I can't believe you'll let me join you!\l"
-	.string "I… I won't let you down!\p"
-	.string "Um… If it's really okay, I'll go register\n"
-	.string "right this instant!$"
+	.string "{CHN}真的吗？我简直不敢相信！\n"
+	.string "不敢相信你愿意让我加入！\l"
+	.string "我……我不会让你失望的！\p"
+	.string "嗯……如果真的可以，我现在\n"
+	.string "就去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Reject::
-	.string "Oh…\n"
-	.string "I didn't think I was good enough…$"
+	.string "{CHN}哦……\n"
+	.string "我就知道我不够好……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Intro::
-	.string "Hi, I'm {STR_VAR_3}.\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "{CHN}嗨，我是{STR_VAR_3}。\n"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Mon1::
-	.string "{STR_VAR_3} told me that it would be\n"
-	.string "good to make this team:\l"
-	.string "one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}{STR_VAR_3}告诉我\n"
+	.string "组成这样的队伍会很好：\l"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Mon2Ask::
-	.string "and one {STR_VAR_2} that knows how\n"
-	.string "to use {STR_VAR_1}.\p"
-	.string "Not bad, huh?\n"
-	.string "Want me to team up with you?$"
+	.string "{CHN}和一只会使用\n"
+	.string "{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "不错吧？\n"
+	.string "你要和我组队吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Accept::
-	.string "Okay, glad to join you!\n"
-	.string "I hope you won't mess things up for me!\l"
-	.string "I'll do my registration now.$"
+	.string "{CHN}好的，很高兴加入你！\n"
+	.string "希望你不会拖我后腿！\l"
+	.string "我现在就去登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice5Reject::
-	.string "Huh? Why did you turn me down?\n"
-	.string "You're no judge of character!$"
+	.string "{CHN}啊？你为什么拒绝我？\n"
+	.string "你真不会看人！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Intro::
-	.string "I'm {STR_VAR_3} and I'm a TRIATHLETE.\n"
-	.string "I'm busy every day what with jogging,\l"
-	.string "training, and rapping.\p"
-	.string "I also happen to be {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "{CHN}我是{STR_VAR_3}，是一名铁人三项选手。\n"
+	.string "我每天都很忙，要慢跑、\l"
+	.string "训练，还要说唱。\p"
+	.string "我同时也是{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon1::
-	.string "This is what {STR_VAR_3} recommended.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}这是{STR_VAR_3}推荐的。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}.\p"
-	.string "I put a lot of effort into raising\n"
-	.string "them, even though I'm busy.\p"
-	.string "Let's form a tag team\n"
-	.string "and give it a go!$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "我虽然很忙，但还是花了很多\n"
+	.string "精力培养它们。\p"
+	.string "让我们组成双人队伍\n"
+	.string "挑战一下吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Accept::
-	.string "Thanks, that's the spirit!\n"
-	.string "Hang tight while I go register, okay?$"
+	.string "{CHN}谢谢，就是这种精神！\n"
+	.string "我去登记，你稍等哦？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Reject::
-	.string "I took time from my busy schedule\n"
-	.string "to be here! Give me a break!$"
+	.string "{CHN}我从百忙之中抽空\n"
+	.string "来这里！你就饶了我吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Intro::
-	.string "Hi!\n"
-	.string "How's it going?\p"
-	.string "I'm {STR_VAR_3}, {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice. Glad to meet you!$"
+	.string "{CHN}嗨！\n"
+	.string "最近怎么样？\p"
+	.string "我是{STR_VAR_3}，是{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒。很高兴认识你！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon1::
-	.string "Listen, listen! You have to hear about\n"
-	.string "the POKéMON {STR_VAR_3} recommended.\l"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}听我说，听我说！你一定要听听\n"
+	.string "{STR_VAR_3}推荐的宝可梦。\l"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "Of course I raised them superbly!\p"
-	.string "So, want to team up?\n"
-	.string "I'm sure it'll be a great combo!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\n"
+	.string "当然我把它们培养得非常出色！\p"
+	.string "所以，要组队吗？\n"
+	.string "我相信这会是个很棒的组合！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Accept::
-	.string "Yay, I think this will be fun!\n"
-	.string "I'll go register!$"
+	.string "{CHN}耶，我觉得这会很有趣！\n"
+	.string "我去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Reject::
-	.string "Oh, you're mean!\n"
-	.string "I come recommended, you know.$"
+	.string "{CHN}哦，你真坏！\n"
+	.string "我可是有人推荐的哦。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Intro::
-	.string "Please let me introduce myself.\n"
-	.string "I am {STR_VAR_3}.\p"
-	.string "I serve as {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "{CHN}请允许我自我介绍。\n"
+	.string "我是{STR_VAR_3}。\p"
+	.string "我担任{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon1::
-	.string "I sought the sage advice of\n"
-	.string "{STR_VAR_3} and raised my team\l"
-	.string "of one {STR_VAR_2} with {STR_VAR_1}$"
+	.string "{CHN}我请教了{STR_VAR_3}\n"
+	.string "的高明建议，培养了我的队伍：\l"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Please agree to a tag team with me!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "请答应和我组成双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Accept::
-	.string "Oh… I'm delighted!\n"
-	.string "I promise to give you my best!\p"
-	.string "Of course I will register us!\n"
-	.string "Please wait!$"
+	.string "{CHN}哦……我太高兴了！\n"
+	.string "我保证会全力以赴！\p"
+	.string "当然我会去登记我们！\n"
+	.string "请稍等！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Reject::
-	.string "I had been hoping to join you,\n"
-	.string "{PLAYER}…$"
+	.string "{CHN}我一直希望能和你组队，\n"
+	.string "{PLAYER}……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Intro::
-	.string "Eek! You spoke to me!\n"
-	.string "I… I'm overjoyed!\p"
-	.string "I'm {STR_VAR_3}! I'm {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice!$"
+	.string "{CHN}哎呀！你跟我说话了！\n"
+	.string "我……我太高兴了！\p"
+	.string "我是{STR_VAR_3}！是{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Mon1::
-	.string "On {STR_VAR_3}'s advice, I trained\n"
-	.string "one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}按照{STR_VAR_3}的建议，\n"
+	.string "我培养了一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}.\p"
-	.string "Please, can you grant me my wish?\n"
-	.string "I want to be your tag-team partner!$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "请你满足我的愿望好吗？\n"
+	.string "我想成为你的双人队伍搭档！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Accept::
-	.string "Eek! I… I feel giddy!\n"
-	.string "Thank you so much!\l"
-	.string "I'll go register us right away!$"
+	.string "{CHN}哎呀！我……我头晕目眩！\n"
+	.string "太感谢你了！\l"
+	.string "我马上就去登记我们！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Reject::
-	.string "Waaah! Don't you feel any pity?\n"
-	.string "But that makes you cooler…$"
+	.string "{CHN}哇！你一点都不同情我吗？\n"
+	.string "但这样你显得更酷了……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Intro::
-	.string "Yeehaw! I'm {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice!\p"
-	.string "{STR_VAR_3}'s my name, hello, hello!$"
+	.string "{CHN}哟嚯！我是{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒！\p"
+	.string "我叫{STR_VAR_3}，你好，你好！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Mon1::
-	.string "My mentor {STR_VAR_3} recommended\n"
-	.string "one {STR_VAR_1}-master {STR_VAR_2}$"
+	.string "{CHN}我的导师{STR_VAR_3}推荐了\n"
+	.string "一只精通{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Mon2Ask::
-	.string "and one {STR_VAR_1}-master\n"
-	.string "{STR_VAR_2}.\p"
-	.string "Good stuff, huh?\n"
-	.string "You'll partner with me, won't you?$"
+	.string "{CHN}和一只精通{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "不错吧？\n"
+	.string "你愿意和我搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Accept::
-	.string "Okay, excellent!\n"
-	.string "I'll get the registration done quickly!$"
+	.string "{CHN}好，太好了！\n"
+	.string "我马上就完成登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Reject::
-	.string "Gwaaah!\n"
-	.string "You're a calculating one, {PLAYER}!$"
+	.string "{CHN}哇啊！\n"
+	.string "你真会算计，{PLAYER}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Intro::
-	.string "Hey! There's big trouble! This is\n"
-	.string "the BATTLE TOWER's last day!\p"
-	.string "… … … … … …\n"
-	.string "I'm only joking!\p"
-	.string "People call me {STR_VAR_3} and I do, too!\n"
-	.string "I'm {STR_VAR_1}'s 1,000th apprentice!\l"
-	.string "Actually, I'm no. {STR_VAR_2}!$"
+	.string "{CHN}嘿！出大事了！今天是\n"
+	.string "对战塔的最后一天！\p"
+	.string "………………\n"
+	.string "我开玩笑的！\p"
+	.string "大家叫我{STR_VAR_3}，我自己也是！\n"
+	.string "我是{STR_VAR_1}的第一千号学徒！\l"
+	.string "其实，我是第{STR_VAR_2}号！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Mon1::
-	.string "{STR_VAR_3} gave me some advice.\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}{STR_VAR_3}给了我建议。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Mon2Ask::
-	.string "{STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "I've got ten of each kind!\l"
-	.string "Actually, just one of each!\p"
-	.string "How about it?\n"
-	.string "Want to try tag battles with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\n"
+	.string "每种我有十只！\l"
+	.string "其实，每种只有一只！\p"
+	.string "怎么样？\n"
+	.string "想不想和我试试双打？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Accept::
-	.string "Yippee!\n"
-	.string "I'll give you a POKéMON as my thanks!\p"
-	.string "Just joking! But I will really go do\n"
-	.string "the registration, okay?$"
+	.string "{CHN}太好了！\n"
+	.string "作为感谢我要送你一只宝可梦！\p"
+	.string "开玩笑的！不过我真的会去\n"
+	.string "登记，好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Reject::
-	.string "Oh, that's so cold! I'll have to wreck\n"
-	.string "the BATTLE TOWER for that!\p"
-	.string "Of course I won't!$"
+	.string "{CHN}哦，太冷酷了！我要为此\n"
+	.string "毁掉对战塔！\p"
+	.string "当然我不会的！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Intro::
-	.string "Hey, there, I'm rockin' and a-rollin'!\n"
-	.string "POKéMON, I be controllin'!\p"
-	.string "I'm {STR_VAR_3} the rappin' SAILOR.\n"
-	.string "Don't be mistakin' me for no wailer!\p"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
-	.string "Me, you shouldn't be quick to dismiss!$"
+	.string "{CHN}嘿，我在摇滚登场！\n"
+	.string "宝可梦，由我掌控！\p"
+	.string "我是说唱水手{STR_VAR_3}。\n"
+	.string "别把我当成只会哭的人！\p"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒。\n"
+	.string "你可不要小看我！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon1::
-	.string "With the advice of {STR_VAR_3} I did\n"
-	.string "abide, put together my team of pride!\l"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}按照{STR_VAR_3}的建议，\n"
+	.string "我组成了我引以为豪的队伍！\l"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}!\p"
-	.string "Our meeting we should commemorate,\n"
-	.string "with a tag-team victory to celebrate!$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}！\p"
+	.string "我们的相遇值得纪念，\n"
+	.string "用双人队伍的胜利来庆祝吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Accept::
-	.string "Hey, hey, I like your style!\n"
-	.string "Our registration, I will go file!$"
+	.string "{CHN}嘿，嘿，我喜欢你的风格！\n"
+	.string "我们的登记，我去办妥！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Reject::
-	.string "Oh, hey, {PLAYER}, now that's cold!\n"
-	.string "If I may be so bold!$"
+	.string "{CHN}哦，嘿，{PLAYER}，那太冷酷了！\n"
+	.string "请恕我大胆直言！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Intro::
-	.string "Yippee-yahoo!\n"
-	.string "Oh, don't run! I was just having fun!\p"
-	.string "Howdy! I'm {STR_VAR_3}!\n"
-	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice!$"
+	.string "{CHN}耶嗬！\n"
+	.string "哦，别跑！我只是开玩笑！\p"
+	.string "你好！我是{STR_VAR_3}！\n"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Mon1::
-	.string "{STR_VAR_3} told me what to do.\n"
-	.string "So one {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}{STR_VAR_3}告诉了我该怎么做。\n"
+	.string "所以我选了一只会{STR_VAR_1}的{STR_VAR_2}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Mon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2}, I did choose.\p"
-	.string "So, what do you say?\n"
-	.string "Come on, make my day!\p"
-	.string "Please, I'm begging you!\n"
-	.string "Let me join you, don't leave me blue!$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "所以，怎么样？\n"
+	.string "来吧，让我开心一下！\p"
+	.string "求你了！\n"
+	.string "让我加入你，别让我难过！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Accept::
-	.string "Yeahah! Luck is with me!\n"
-	.string "It sure makes me happy!\p"
-	.string "Before we go join the fray,\n"
-	.string "I'll go register right away!$"
+	.string "{CHN}耶啊！我运气真好！\n"
+	.string "这真让我开心！\p"
+	.string "在我们上战场之前，\n"
+	.string "我马上去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice13Reject::
-	.string "You're turning me down?\n"
-	.string "{PLAYER}, you're making me frown!$"
+	.string "{CHN}你拒绝我？\n"
+	.string "{PLAYER}，你让我皱眉头了！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Intro::
-	.string "Cough!\p"
-	.string "Oh, sorry, I have a cold.\n"
-	.string "My POKéMON are fine, though.\p"
-	.string "My name's {STR_VAR_3}, {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice. Cough!$"
+	.string "{CHN}咳咳！\p"
+	.string "哦，对不起，我感冒了。\n"
+	.string "不过我的宝可梦没事。\p"
+	.string "我叫{STR_VAR_3}，是{STR_VAR_1}的\n"
+	.string "第{STR_VAR_2}号学徒。咳咳！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Mon1::
-	.string "I took {STR_VAR_3}'s advice to heart\n"
-	.string "and put together my team of\l"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我把{STR_VAR_3}的建议记在心里，\n"
+	.string "组成了我的队伍：\l"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I trained them every day,\n"
-	.string "even in wind and rain.\p"
-	.string "That's why I have this cold,\n"
-	.string "I think.\p"
-	.string "That's what I'm about.\n"
-	.string "Want to be my tag partner?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "我每天都在训练它们，\n"
+	.string "风雨无阻。\p"
+	.string "所以我才感冒了，\n"
+	.string "我想。\p"
+	.string "这就是我。\n"
+	.string "想成为我的双打搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Accept::
-	.string "Thanks, I appreciate this!\n"
-	.string "Cough, cough!\l"
-	.string "Hang on while I go register.$"
+	.string "{CHN}谢谢，我很感激！\n"
+	.string "咳咳，咳咳！\l"
+	.string "稍等，我去登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice14Reject::
-	.string "Oh, you won't?\n"
-	.string "{PLAYER}, I think we'd make a good pair.$"
+	.string "{CHN}哦，你不愿意？\n"
+	.string "{PLAYER}，我觉得我们会是很好的一对。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Intro::
-	.string "Oh, hello!\n"
-	.string "This is nerve-racking.\p"
-	.string "I'm {STR_VAR_3}.\n"
-	.string "I'm the no. {STR_VAR_2} apprentice of {STR_VAR_1}.$"
+	.string "{CHN}哦，你好！\n"
+	.string "这真让人紧张。\p"
+	.string "我是{STR_VAR_3}。\n"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Mon1::
-	.string "{STR_VAR_3} said this team'll be good--\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}{STR_VAR_3}说这支队伍会很好——\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Mon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I'm feeling self-conscious about this,\n"
-	.string "but will you let me join you?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "我对此有点不自在，\n"
+	.string "但你能让我加入你吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Accept::
-	.string "Oh, gee, thank you!\n"
-	.string "I feel bashful, but I'll do my best!\p"
-	.string "I'll go get the registration done.$"
+	.string "{CHN}哦，天哪，谢谢你！\n"
+	.string "我有点害羞，但我会尽力的！\p"
+	.string "我去把登记办好。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice15Reject::
-	.string "Oh, please don't say no!\n"
-	.string "I feel self-conscious enough already…$"
+	.string "{CHN}哦，请不要说不！\n"
+	.string "我已经够不自在的了……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Intro::
-	.string "I am {STR_VAR_3}, and that's no lie.\n"
-	.string "I am {STR_VAR_1}'s no. {STR_VAR_2} apprentice.$"
+	.string "{CHN}我是{STR_VAR_3}，这是实话。\n"
+	.string "我是{STR_VAR_1}的第{STR_VAR_2}号学徒。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Mon1::
-	.string "{STR_VAR_3} recommended my team.\p"
-	.string "Since the advice sounded sincere,\n"
-	.string "I decided to bring with me\l"
-	.string "my {STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}{STR_VAR_3}推荐了我的队伍。\p"
+	.string "因为那建议听起来很真诚，\n"
+	.string "我决定带着\l"
+	.string "我会{STR_VAR_1}的{STR_VAR_2}和$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Mon2Ask::
-	.string "my {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "If possible, I would like you to accept\n"
-	.string "me as your tag-team partner.$"
+	.string "{CHN}我会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "如果可能的话，我希望你能接纳我\n"
+	.string "成为你的双人队伍搭档。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Accept::
-	.string "You really will accept me?\n"
-	.string "It would be too terrible otherwise.\p"
-	.string "But since you've agreed, this is fine.\n"
-	.string "I shall go register the both of us.$"
+	.string "{CHN}你真的愿意接纳我？\n"
+	.string "不然就太糟糕了。\p"
+	.string "既然你答应了，那就没问题。\n"
+	.string "我去登记我们两个。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Reject::
-	.string "Hm? Now why would you refuse?\n"
-	.string "Is this your idea of a joke?$"
+	.string "{CHN}嗯？那你为什么要拒绝？\n"
+	.string "你在开玩笑吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassIntro::
-	.string "I'm {STR_VAR_1}, and I'm a LASS!$"
+	.string "{CHN}我是{STR_VAR_1}，是一名短裙少女！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon1::
-	.string "What I have are one {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and one$"
+	.string "{CHN}我有的是一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon2Ask::
-	.string "{STR_VAR_2} that uses {STR_VAR_1}.\n"
-	.string "Those are what I have with me.\p"
-	.string "Will you be my partner?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\n"
+	.string "这就是我带来的。\p"
+	.string "你愿意成为我的搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassAccept::
-	.string "Thank you!\n"
-	.string "I'll go do the registration!$"
+	.string "{CHN}谢谢你！\n"
+	.string "我去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassReject::
-	.string "You don't want to be my partner?\n"
-	.string "You'll regret it later!$"
+	.string "{CHN}你不想成为我的搭档？\n"
+	.string "你以后会后悔的！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterIntro::
-	.string "Hello!\p"
-	.string "I'm YOUNGSTER {STR_VAR_1}!$"
+	.string "{CHN}你好！\p"
+	.string "我是短裤小子{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon1::
-	.string "Want to know what I have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}想知道我有什么吗？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "You'll be my tag-team partner,\n"
-	.string "won't you?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你会成为我的双人队伍搭档，\n"
+	.string "对吧？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterAccept::
-	.string "Yay!\n"
-	.string "I'll go and register, okay?$"
+	.string "{CHN}耶！\n"
+	.string "我去登记，好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterReject::
-	.string "Aww! If you'd form a tag team with\n"
-	.string "my POKéMON, we'd be unstoppable!$"
+	.string "{CHN}啊！要是你愿意和我的宝可梦\n"
+	.string "组成双人队伍，我们就会无敌！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerIntro::
-	.string "Yahoo!\n"
-	.string "I'm HIKER {STR_VAR_1}!$"
+	.string "{CHN}呀吼！\n"
+	.string "我是登山客{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerMon1::
-	.string "Know what I have with me?\n"
-	.string "My {STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}知道我带了什么吗？\n"
+	.string "我会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerMon2Ask::
-	.string "my {STR_VAR_1}-using {STR_VAR_2}!\p"
-	.string "Sounds good, eh?\n"
-	.string "Want to form a tag team?$"
+	.string "{CHN}和我会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "听起来不错吧？\n"
+	.string "要组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerAccept::
-	.string "Yahoo!\n"
-	.string "I'll go do the registering, then.$"
+	.string "{CHN}呀吼！\n"
+	.string "那我去登记了。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerReject::
-	.string "I would've liked to battle with you\n"
-	.string "at my side.$"
+	.string "{CHN}我本来希望你能和我\n"
+	.string "并肩作战的。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyIntro::
-	.string "Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a BEAUTY!$"
+	.string "{CHN}你好！\n"
+	.string "我是{STR_VAR_1}，是一名美少女！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1::
-	.string "Do you know what I've been raising?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}你知道我在培养什么吗？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "What do you think?\n"
-	.string "Want to make a tag team together?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你觉得怎么样？\n"
+	.string "要不要一起组成双人队伍？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyAccept::
-	.string "Wonderful!\n"
-	.string "I'll get the registration done now!$"
+	.string "{CHN}太好了！\n"
+	.string "我现在就去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyReject::
-	.string "How disappointing!\p"
-	.string "We two together--we would've been\n"
-	.string "the best!$"
+	.string "{CHN}真令人失望！\p"
+	.string "我们两个在一起——本可以\n"
+	.string "成为最强的！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanIntro::
-	.string "Yo!\p"
-	.string "You know who I am?\n"
-	.string "I'm {STR_VAR_1} the FISHERMAN!$"
+	.string "{CHN}哟！\p"
+	.string "你知道我是谁吗？\n"
+	.string "我是钓客{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanMon1::
-	.string "I've got with me a team of one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}我带了一支队伍，\n"
+	.string "有一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "So, how about it?\n"
-	.string "Will you battle at my side?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "那，怎么样？\n"
+	.string "你愿意和我并肩作战吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanAccept::
-	.string "Good, good!\n"
-	.string "Leave it up to me!\p"
-	.string "I'll go and register us now.$"
+	.string "{CHN}好，好！\n"
+	.string "交给我吧！\p"
+	.string "我现在就去登记我们。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanReject::
-	.string "We matched up perfectly, too…$"
+	.string "{CHN}我们本来配合得很完美……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyIntro::
-	.string "Glad to make your acquaintance.\n"
-	.string "I am {STR_VAR_1}, a LADY.$"
+	.string "{CHN}很高兴认识你。\n"
+	.string "我是{STR_VAR_1}，是一位大小姐。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyMon1::
-	.string "I am accompanied by a team of\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我带着一支队伍，\n"
+	.string "有一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "I hope I meet your approval.\n"
-	.string "For I wish to have you as my partner.$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "希望我能让你满意。\n"
+	.string "因为我希望你能成为我的搭档。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyAccept::
-	.string "I thank you sincerely.\n"
-	.string "I shall handle the registration.$"
+	.string "{CHN}我衷心感谢你。\n"
+	.string "我会去办登记手续。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyReject::
-	.string "I'm sure that you will regret not\n"
-	.string "having me as your partner.$"
+	.string "{CHN}我确信你会后悔\n"
+	.string "没有让我做你的搭档。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "{CHN}我是铁人三项选手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1::
-	.string "What I have…\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我有的是……\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\n"
-	.string "That's my pair!\p"
-	.string "Please?\n"
-	.string "Will you form a tag team with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\n"
+	.string "这就是我的组合！\p"
+	.string "拜托？\n"
+	.string "你愿意和我组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFAccept::
-	.string "Gee, thanks!\n"
-	.string "I'll go register at the counter.$"
+	.string "{CHN}天哪，谢谢！\n"
+	.string "我去柜台登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFReject::
-	.string "We two together, we would've been\n"
-	.string "tough for certain!$"
+	.string "{CHN}我们两个在一起，肯定\n"
+	.string "会很强！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherIntro::
-	.string "Hiya!\n"
-	.string "I'm BUG CATCHER {STR_VAR_1}!$"
+	.string "{CHN}嗨！\n"
+	.string "我是捕虫少年{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon1::
-	.string "Check out what I have!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}看看我有什么！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "So, listen!\n"
-	.string "Do you want to form a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "所以，听着！\n"
+	.string "你想组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherAccept::
-	.string "Gotcha!\p"
-	.string "I'll go do the registration stuff\n"
-	.string "at the counter.$"
+	.string "{CHN}收到！\p"
+	.string "我去柜台\n"
+	.string "办登记手续。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherReject::
-	.string "Aww, my POKéMON are awesome.\n"
-	.string "I hope you won't regret this!$"
+	.string "{CHN}啊，我的宝可梦很厉害的。\n"
+	.string "希望你不会后悔！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMIntro::
-	.string "Good day!\n"
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "{CHN}你好！\n"
+	.string "我是男生学生{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon1::
-	.string "What I've been raising are one\n"
-	.string "{STR_VAR_2} that uses {STR_VAR_1}$"
+	.string "{CHN}我培养的是一只\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon2Ask::
-	.string "and one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Not too bad, don't you think?\n"
-	.string "Would you care to form a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "还不错吧，你觉得呢？\n"
+	.string "你愿意组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMAccept::
-	.string "Thank you very much!\n"
-	.string "I'll get done with the registration.$"
+	.string "{CHN}非常感谢！\n"
+	.string "我去把登记办好。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMReject::
-	.string "That's too bad…\p"
-	.string "I was hoping that I could learn\n"
-	.string "from you as your partner…$"
+	.string "{CHN}那太可惜了……\p"
+	.string "我本来希望作为你的搭档\n"
+	.string "向你学习的……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyIntro::
-	.string "Yo! Let me tell you who I am!\n"
-	.string "I'm RICH BOY {STR_VAR_1}!$"
+	.string "{CHN}哟！让我告诉你我是谁！\n"
+	.string "我是富家少爷{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon1::
-	.string "Guess what I got!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}猜猜我有什么！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "I'm willing to offer you the chance\n"
-	.string "to be in a tag team with me.$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "我愿意给你一个机会，\n"
+	.string "和我组成双人队伍。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyAccept::
-	.string "Smart move!\p"
-	.string "I'll finish up the registration\n"
-	.string "process quick!$"
+	.string "{CHN}聪明的选择！\p"
+	.string "我会很快完成\n"
+	.string "登记手续！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyReject::
-	.string "You'd turn me of all people down?\n"
-	.string "You'll regret that decision for sure!$"
+	.string "{CHN}你居然拒绝我这样的人？\n"
+	.string "你肯定会后悔那个决定！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltIntro::
-	.string "Hiyah!\n"
-	.string "I am BLACK BELT {STR_VAR_1}.$"
+	.string "{CHN}嘿！\n"
+	.string "我是空手道王{STR_VAR_1}。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltMon1::
-	.string "As my companions, I have\n"
-	.string "one {STR_VAR_2} using {STR_VAR_1}$"
+	.string "{CHN}作为我的伙伴，我有\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltMon2Ask::
-	.string "and one {STR_VAR_2} using\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Please, grant me my wish!\n"
-	.string "Allow me to be your tag partner!$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}。\p"
+	.string "请满足我的愿望！\n"
+	.string "让我成为你的双打搭档！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltAccept::
-	.string "Hiyah!\n"
-	.string "I will go register forthwith!$"
+	.string "{CHN}嘿！\n"
+	.string "我马上就去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltReject::
-	.string "I see… I hope for an opportunity\n"
-	.string "the next time we meet…$"
+	.string "{CHN}我明白了……希望下次\n"
+	.string "我们再见面时能有机会……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFIntro::
-	.string "Hi, there!\n"
-	.string "I'm {STR_VAR_1}, and I'm a TUBER!$"
+	.string "{CHN}嗨，你好！\n"
+	.string "我是{STR_VAR_1}，是玩水小孩！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon1::
-	.string "I'll tell you what I have.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我告诉你我有什么。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\n"
-	.string "May I please be on your tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\n"
+	.string "我可以加入你的双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFAccept::
-	.string "Thank you!\n"
-	.string "I'll go register us now!$"
+	.string "{CHN}谢谢你！\n"
+	.string "我现在就去登记我们！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFReject::
-	.string "If we'd become partners, we could\n"
-	.string "have been so strong!$"
+	.string "{CHN}如果我们能成为搭档，我们\n"
+	.string "就会变得很强！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacIntro::
-	.string "Greetings…\n"
-	.string "I am HEX MANIAC {STR_VAR_1}…$"
+	.string "{CHN}你好……\n"
+	.string "我是灵异少女{STR_VAR_1}……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon1::
-	.string "I bear with me one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} together with one$"
+	.string "{CHN}我带着一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，还有一只$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon2Ask::
-	.string "{STR_VAR_1}-using {STR_VAR_2}…\p"
-	.string "I beseech you…\n"
-	.string "Join me in a tag team…$"
+	.string "{CHN}会{STR_VAR_1}的{STR_VAR_2}……\p"
+	.string "我恳求你……\n"
+	.string "和我组成双人队伍……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacAccept::
-	.string "I thank you…\n"
-	.string "I shall register us…$"
+	.string "{CHN}我谢谢你……\n"
+	.string "我会去登记我们……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacReject::
-	.string "I so longed to join you…$"
+	.string "{CHN}我多么渴望加入你……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMIntro::
-	.string "How do you do? I'm {STR_VAR_1},\n"
-	.string "and I'm a POKéMON BREEDER!$"
+	.string "{CHN}你好？我是{STR_VAR_1}，\n"
+	.string "是一名宝可梦培育家！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon1::
-	.string "I'm raising a couple good ones!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我在培养几只不错的！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How about it?\n"
-	.string "Feel like making a tag team with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "怎么样？\n"
+	.string "想和我组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMAccept::
-	.string "Thank you kindly!\p"
-	.string "I'll go take care of the registration\n"
-	.string "stuff, so you wait right here!$"
+	.string "{CHN}非常感谢！\p"
+	.string "我去办登记手续，\n"
+	.string "你在这里等着！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMReject::
-	.string "I was looking forward to being\n"
-	.string "your partner…$"
+	.string "{CHN}我本来很期待成为\n"
+	.string "你的搭档……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFIntro::
-	.string "Well, hello!\n"
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "{CHN}哎，你好！\n"
+	.string "我是铁人三项选手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon1::
-	.string "Want to know what I run with?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}想知道我跑的时候带什么吗？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Well?\n"
-	.string "Want to be in a tag team with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "怎么样？\n"
+	.string "想和我组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFAccept::
-	.string "Good going!\p"
-	.string "I'll be quick and get the registration\n"
-	.string "all done!$"
+	.string "{CHN}干得好！\p"
+	.string "我会很快把登记\n"
+	.string "办好！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFReject::
-	.string "You and me, we would've been tops.\n"
-	.string "It's too bad…$"
+	.string "{CHN}你和我，我们本可以成为最棒的。\n"
+	.string "太可惜了……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMIntro::
-	.string "Hey, there! My name's {STR_VAR_1}!\n"
-	.string "I'm a TRIATHLETE!$"
+	.string "{CHN}嘿，你好！我叫{STR_VAR_1}！\n"
+	.string "我是铁人三项选手！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMMon1::
-	.string "I go on runs with my durable team--\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我带着我耐力强的队伍跑步——\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Not too shabby, huh?\n"
-	.string "We should be in a tag team together!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "还不错吧？\n"
+	.string "我们应该一起组成双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMAccept::
-	.string "All right!\n"
-	.string "I'll go register in a flash!$"
+	.string "{CHN}好！\n"
+	.string "我马上去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMReject::
-	.string "I really wanted to battle as your\n"
-	.string "tag-team partner…$"
+	.string "{CHN}我真的想作为你的双人\n"
+	.string "队伍搭档战斗……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlIntro::
-	.string "I'm BATTLE GIRL {STR_VAR_1}!$"
+	.string "{CHN}我是格斗女孩{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon1::
-	.string "I've been toughening up one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}我锻炼了一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}!\p"
-	.string "Do you like that combo?\n"
-	.string "How about you and me join up?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你喜欢这个组合吗？\n"
+	.string "你和我搭档怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlAccept::
-	.string "Why, thanks!\p"
-	.string "I'll get the registration done\n"
-	.string "right now!$"
+	.string "{CHN}哎，谢谢！\p"
+	.string "我现在就去\n"
+	.string "把登记办好！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlReject::
-	.string "With you, I thought we could form\n"
-	.string "the ultimate tag team…$"
+	.string "{CHN}和你在一起，我觉得我们本可以组成\n"
+	.string "最强的双人队伍……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "{CHN}我是铁人三项选手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMMon1::
-	.string "I've been running with one {STR_VAR_2}\n"
-	.string "that knows how to use {STR_VAR_1}$"
+	.string "{CHN}我一直带着一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMMon2Ask::
-	.string "and one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "We could be in a tag team.\n"
-	.string "Wouldn't that be great?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "我们可以组成双人队伍。\n"
+	.string "那不是很好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMAccept::
-	.string "Thank you!\p"
-	.string "I'll go register us, and that's\n"
-	.string "right now!$"
+	.string "{CHN}谢谢你！\p"
+	.string "我去登记我们，\n"
+	.string "现在就去！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMReject::
-	.string "Aww, that's too bad. We would've been\n"
-	.string "the toughest tag team around!$"
+	.string "{CHN}啊，太可惜了。我们本可以成为\n"
+	.string "最强的双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMIntro::
-	.string "Me?\n"
-	.string "I'm TUBER {STR_VAR_1}!$"
+	.string "{CHN}我？\n"
+	.string "我是玩水小孩{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon1::
-	.string "What do I have with me?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我带了什么？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Hey?\n"
-	.string "You'll team up with me, right?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "嘿？\n"
+	.string "你会和我组队，对吧？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMAccept::
-	.string "Okay!\p"
-	.string "I'll go register!\n"
-	.string "Let's be excellent together!$"
+	.string "{CHN}好！\p"
+	.string "我去登记！\n"
+	.string "让我们一起出色吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMReject::
-	.string "My POKéMON are tough for sure…\n"
-	.string "It's too bad you don't want to team up.$"
+	.string "{CHN}我的宝可梦肯定很强……\n"
+	.string "太可惜你不想组队。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristIntro::
-	.string "Yay-hey!\n"
-	.string "Call me GUITARIST {STR_VAR_1}!$"
+	.string "{CHN}耶嘿！\n"
+	.string "叫我吉他手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon1::
-	.string "Check out my entourage!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}看看我的随从！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Yay-hey! Pretty wild, huh?\n"
-	.string "We'll have to do a duet in a tag team!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "耶嘿！挺狂野的吧？\n"
+	.string "我们得在双人队伍里合奏一曲！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristAccept::
-	.string "Yay-hey! Right on!\n"
-	.string "I'll do that registration stuff now!$"
+	.string "{CHN}耶嘿！好极了！\n"
+	.string "我现在就去办登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristReject::
-	.string "My POKéMON rock hard!\n"
-	.string "You'll be sorry, I tell you!$"
+	.string "{CHN}我的宝可梦摇滚得很！\n"
+	.string "你会后悔的，我告诉你！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanIntro::
-	.string "Pleased to meet you.\n"
-	.string "I am {STR_VAR_1}, a GENTLEMAN.$"
+	.string "{CHN}很高兴认识你。\n"
+	.string "我是{STR_VAR_1}，是一位绅士。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanMon1::
-	.string "I am accompanied by my trusted\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}我身边有我信赖的\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "May I ask you to join me in a tag-team\n"
-	.string "partnership arrangement?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "能否请你和我组成双人\n"
+	.string "队伍搭档？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanAccept::
-	.string "Ah, I thank you for your trust.\n"
-	.string "I shall be done with the registration.$"
+	.string "{CHN}啊，感谢你的信任。\n"
+	.string "我会去办登记手续。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GentlemanReject::
-	.string "That is most unfortunate…\p"
-	.string "I shall look forward to the next\n"
-	.string "opportunity…$"
+	.string "{CHN}那真是太遗憾了……\p"
+	.string "我期待下一次\n"
+	.string "机会……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMIntro::
-	.string "Hello, I'm {STR_VAR_1},\n"
-	.string "and I'm a POKéFAN.$"
+	.string "{CHN}你好，我是{STR_VAR_1}，\n"
+	.string "是一名宝可梦粉丝。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMMon1::
-	.string "I have with me now one {STR_VAR_2}\n"
-	.string "that knows the move {STR_VAR_1} and$"
+	.string "{CHN}我现在带着一只\n"
+	.string "会{STR_VAR_1}招式的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Do you like what you see?\n"
-	.string "Why don't you be my tag partner?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "你觉得怎么样？\n"
+	.string "要做我的双打搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMAccept::
-	.string "Thank you!\n"
-	.string "I'll look after the registration!$"
+	.string "{CHN}谢谢你！\n"
+	.string "我会去办登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanMReject::
-	.string "My POKéMON are top grade…\n"
-	.string "It's too bad you can't appreciate that.$"
+	.string "{CHN}我的宝可梦是顶级的……\n"
+	.string "太可惜你不会欣赏。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMIntro::
-	.string "Hm!\n"
-	.string "I am {STR_VAR_1}, and an EXPERT am I!$"
+	.string "{CHN}嗯！\n"
+	.string "我是{STR_VAR_1}，是一名专家！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMMon1::
-	.string "The POKéMON that I've toughened up are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我锻炼的宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "What say you to a tag team with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你觉得和我组成双人队伍怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMAccept::
-	.string "Hm!\n"
-	.string "I shall register us right away!\l"
-	.string "Let us both do our best!$"
+	.string "{CHN}嗯！\n"
+	.string "我马上去登记我们！\l"
+	.string "让我们一起尽力而为！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertMReject::
-	.string "I will hope that your choice is\n"
-	.string "indeed correct…$"
+	.string "{CHN}我希望你的选择\n"
+	.string "确实是正确的……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFIntro::
-	.string "Hello, hello.\n"
-	.string "I'm {STR_VAR_1}, and I'm an EXPERT.$"
+	.string "{CHN}你好，你好。\n"
+	.string "我是{STR_VAR_1}，是一名专家。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon1::
-	.string "I've raised my POKéMON thoroughly.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我彻底地培养了我的宝可梦。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they're what I have.\p"
-	.string "Wouldn't you like to team up with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}——\n"
+	.string "这就是我的队伍。\p"
+	.string "你不想和我组队吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFAccept::
-	.string "Good, good.\n"
-	.string "I'll see to the registration right away.$"
+	.string "{CHN}好，好。\n"
+	.string "我马上去办登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFReject::
-	.string "Perhaps we can form a team the next\n"
-	.string "time we meet.$"
+	.string "{CHN}也许下次我们再见面时\n"
+	.string "可以组成一支队伍。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerIntro::
-	.string "I'm DRAGON TAMER {STR_VAR_1}!$"
+	.string "{CHN}我是龙使者{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon1::
-	.string "The team I've been toughening up is\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我一直在锻炼的队伍是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How about it?\n"
-	.string "Want to be my partner?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "怎么样？\n"
+	.string "想做我的搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerAccept::
-	.string "Okay, I'll give it my best!\n"
-	.string "I'll go register now, all right?$"
+	.string "{CHN}好，我会尽力！\n"
+	.string "我现在去登记，好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerReject::
-	.string "You're not going to find many tougher\n"
-	.string "partners than me!$"
+	.string "{CHN}你找不到多少\n"
+	.string "比我更强的搭档！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperIntro::
-	.string "I'm BIRD KEEPER {STR_VAR_1}!$"
+	.string "{CHN}我是鸟使{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon1::
-	.string "What POKéMON do I have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我有什么宝可梦？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Don't you think we'd make a decent\n"
-	.string "tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "你不觉得我们会是不错的\n"
+	.string "双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperAccept::
-	.string "Great, thanks!\n"
-	.string "I'll look after the registration!$"
+	.string "{CHN}太好了，谢谢！\n"
+	.string "我会去办登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperReject::
-	.string "My POKéMON and I are strong.\n"
-	.string "What a letdown.$"
+	.string "{CHN}我的宝可梦和我都很强。\n"
+	.string "真让人失望。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyIntro::
-	.string "I'm NINJA BOY {STR_VAR_1}!$"
+	.string "{CHN}我是忍者小子{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon1::
-	.string "My POKéMON team consists of one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我的宝可梦队伍有一只\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Let's be in a tag team together!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "让我们一起组成双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyAccept::
-	.string "Yay!\n"
-	.string "Let me go register!$"
+	.string "{CHN}耶！\n"
+	.string "让我去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyReject::
-	.string "You'll regret not having my tough\n"
-	.string "POKéMON on your side!$"
+	.string "{CHN}你会后悔没有我强壮的\n"
+	.string "宝可梦在你身边的！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyIntro::
-	.string "Hello!\n"
-	.string "I'm PARASOL LADY {STR_VAR_1}!$"
+	.string "{CHN}你好！\n"
+	.string "我是阳伞小姐{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyMon1::
-	.string "Escorting me now are my {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and$"
+	.string "{CHN}现在我身边陪伴的是我的\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyMon2Ask::
-	.string "one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "Aren't they nice?\n"
-	.string "Care to join us in a tag team?$"
+	.string "{CHN}和一只会\n"
+	.string "{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "不错吧？\n"
+	.string "愿意和我们一起组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyAccept::
-	.string "Thanks a bunch!\p"
-	.string "I'll go register at the counter.\n"
-	.string "Let's not disappoint each other!$"
+	.string "{CHN}非常感谢！\p"
+	.string "我去柜台登记。\n"
+	.string "让我们不要让彼此失望！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyReject::
-	.string "My POKéMON are tremendously strong.\n"
-	.string "How disappointing…$"
+	.string "{CHN}我的宝可梦非常强。\n"
+	.string "真令人失望……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacIntro::
-	.string "Hello.\n"
-	.string "I'm {STR_VAR_1}, and I'm a BUG MANIAC!$"
+	.string "{CHN}你好。\n"
+	.string "我是{STR_VAR_1}，是一名昆虫狂热者！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon1::
-	.string "I have found my POKéMON, yes.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我找到了我的宝可梦。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they are what I found.\p"
-	.string "Could I interest you in forming\n"
-	.string "a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}——\n"
+	.string "这就是我找到的。\p"
+	.string "我能不能让你有兴趣\n"
+	.string "组成双人队伍？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacAccept::
-	.string "Okay!\n"
-	.string "Understood!\p"
-	.string "I won't be long with the registration!$"
+	.string "{CHN}好！\n"
+	.string "明白了！\p"
+	.string "我很快就会办完登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacReject::
-	.string "With the POKéMON I found, we wouldn't\n"
-	.string "have lost…$"
+	.string "{CHN}有了我找到的宝可梦，我们\n"
+	.string "不会输的……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorIntro::
-	.string "Ahoy, there!\n"
-	.string "I'm SAILOR {STR_VAR_1}!$"
+	.string "{CHN}嘿，你好！\n"
+	.string "我是水手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon1::
-	.string "Let me show you my pride and joy!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}让我给你看看我的骄傲！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Of course you're not going to turn\n"
-	.string "me down. We will team up, right?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你当然不会拒绝\n"
+	.string "我。我们会组队的，对吧？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorAccept::
-	.string "I didn't expect any less!\n"
-	.string "I'll go register now.$"
+	.string "{CHN}我期待的就是这个！\n"
+	.string "我现在去登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorReject::
-	.string "We would've stormed through\n"
-	.string "the opposition! Too bad!$"
+	.string "{CHN}我们本可以横扫\n"
+	.string "对手！太可惜了！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorIntro::
-	.string "Hi, I'm {STR_VAR_1}.\n"
-	.string "I'm a COLLECTOR.$"
+	.string "{CHN}嗨，我是{STR_VAR_1}。\n"
+	.string "我是一名收藏家。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorMon1::
-	.string "The jewels in my collection are\n"
-	.string "my {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我收藏中的宝石是\n"
+	.string "我会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Swell, huh?\n"
-	.string "We should be in a team together.$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "不错吧？\n"
+	.string "我们应该一起组队。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorAccept::
-	.string "Oh, yeah!\p"
-	.string "Well, let's not waste any time.\n"
-	.string "I'll go register the two of us.$"
+	.string "{CHN}哦，好！\p"
+	.string "我们不要浪费时间了。\n"
+	.string "我去登记我们两个。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorReject::
-	.string "Well, that's upsetting.\n"
-	.string "You don't appreciate my POKéMON.$"
+	.string "{CHN}哎，那真令人不快。\n"
+	.string "你不欣赏我的宝可梦。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMIntro::
-	.string "Howdy, I'm {STR_VAR_1}.\n"
-	.string "I'm a POKéMON RANGER.$"
+	.string "{CHN}你好，我是{STR_VAR_1}。\n"
+	.string "我是一名宝可梦护林员。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMMon1::
-	.string "Keeping me company are one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}陪着我的是一只\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Don't you think we'd make an impressive\n"
-	.string "tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你不觉得我们会是不错的\n"
+	.string "双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMAccept::
-	.string "That's super!\n"
-	.string "I'll deal with the registration now.$"
+	.string "{CHN}太棒了！\n"
+	.string "我现在就办登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMReject::
-	.string "Next time, choose my POKéMON,\n"
-	.string "will you?$"
+	.string "{CHN}下次，选我的宝可梦，\n"
+	.string "好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFIntro::
-	.string "My name's {STR_VAR_1}.\n"
-	.string "I'm a POKéMON RANGER!$"
+	.string "{CHN}我叫{STR_VAR_1}。\n"
+	.string "我是宝可梦护林员！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFMon1::
-	.string "Let me tell you about my team. I have\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}让我告诉你我的队伍。我有\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "How would you like to form a tag team\n"
-	.string "with my little posse?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "你愿意和我的小队\n"
+	.string "组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFAccept::
-	.string "We'll be at our best!\n"
-	.string "I'll get the registration done quick!$"
+	.string "{CHN}我们会发挥出最好的水平！\n"
+	.string "我马上就办完登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFReject::
-	.string "I hope you'll choose my POKéMON\n"
-	.string "next time.$"
+	.string "{CHN}我希望下次你能选我的\n"
+	.string "宝可梦。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyIntro::
-	.string "Pleased to meet you. I'm {STR_VAR_1}.\n"
-	.string "I consider myself an AROMA LADY.$"
+	.string "{CHN}很高兴认识你。我是{STR_VAR_1}。\n"
+	.string "我自认是一名芳香姐姐。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyMon1::
-	.string "I travel with one {STR_VAR_2}\n"
-	.string "that uses {STR_VAR_1} and$"
+	.string "{CHN}我和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}一起旅行，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyMon2Ask::
-	.string "one {STR_VAR_2} that uses\n"
-	.string "{STR_VAR_1}.\p"
-	.string "I hope they strike your fancy.\n"
-	.string "Would you care to be my partner?$"
+	.string "{CHN}和一只会\n"
+	.string "{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "希望它们能让你中意。\n"
+	.string "你愿意做我的搭档吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyAccept::
-	.string "I'm honored by your acceptance.\n"
-	.string "I will go register right this instant.$"
+	.string "{CHN}我很荣幸你接受了。\n"
+	.string "我现在就去登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyReject::
-	.string "It would be wonderful if we could form\n"
-	.string "a tag team the next time we meet.$"
+	.string "{CHN}如果下次我们见面时能组成\n"
+	.string "双人队伍，那真是太好了。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacIntro::
-	.string "Want to know who I am?\n"
-	.string "I'm {STR_VAR_1}, the RUIN MANIAC!$"
+	.string "{CHN}想知道我是谁吗？\n"
+	.string "我是{STR_VAR_1}，遗迹狂热者！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacMon1::
-	.string "The POKéMON that I have with me are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我带的宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Intriguing, eh?\n"
-	.string "How about you and I partner up?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "有趣吧？\n"
+	.string "你和我搭档怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacAccept::
-	.string "That's a sound decision!\n"
-	.string "I'll go do the registration paperwork.$"
+	.string "{CHN}那是个明智的决定！\n"
+	.string "我去办登记手续。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacReject::
-	.string "Hmm…\n"
-	.string "I think my POKéMON are tough…$"
+	.string "{CHN}嗯……\n"
+	.string "我觉得我的宝可梦挺强……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "{CHN}我是酷酷训练家{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon1::
-	.string "The POKéMON I have right now are one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我现在有的宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\n"
-	.string "Cool, huh?\p"
-	.string "Don't you think it'd be pretty cool\n"
-	.string "if we made a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\n"
+	.string "酷吧？\p"
+	.string "你不觉得如果我们组成\n"
+	.string "双人队伍会很酷吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMAccept::
-	.string "Cool!\n"
-	.string "I'll go do the registration in a flash!$"
+	.string "{CHN}酷！\n"
+	.string "我马上去办登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMReject::
-	.string "I thought that we'd make just\n"
-	.string "the greatest team ever.$"
+	.string "{CHN}我以为我们会成为\n"
+	.string "史上最棒的队伍。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "{CHN}我是酷酷训练家{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon1::
-	.string "The team I've been raising has one\n"
-	.string "{STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我一直在培养的队伍有一只\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Does that sound okay?\n"
-	.string "How about we become tag partners?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "听起来还行吗？\n"
+	.string "我们成为双打搭档怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFAccept::
-	.string "Sounds A-OK!\n"
-	.string "I'd better do the registration.$"
+	.string "{CHN}听起来没问题！\n"
+	.string "我得去办登记了。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFReject::
-	.string "I was thinking how we would be\n"
-	.string "one tough team…$"
+	.string "{CHN}我在想我们会成为\n"
+	.string "一支很强的队伍……$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacIntro::
-	.string "Heyo!\n"
-	.string "I'm {STR_VAR_1}, the POKéMANIAC!$"
+	.string "{CHN}嘿！\n"
+	.string "我是{STR_VAR_1}，宝可梦狂热者！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon1::
-	.string "What does a guy like me have?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}像我这样的人有什么？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1},\n"
-	.string "that's what!\p"
-	.string "Let's do it!\n"
-	.string "We'll stomp around as a tag team!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}，\n"
+	.string "就是这些！\p"
+	.string "来吧！\n"
+	.string "我们组成双人队伍去闯荡吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacAccept::
-	.string "Good call!\n"
-	.string "I'll register the both of us!$"
+	.string "{CHN}好选择！\n"
+	.string "我去登记我们两个！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacReject::
-	.string "My POKéMON are brutal!\n"
-	.string "It's not my fault if you regret this!$"
+	.string "{CHN}我的宝可梦很凶猛！\n"
+	.string "如果你后悔了可不是我的错！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro::
-	.string "Yo, there!\n"
-	.string "I'm KINDLER {STR_VAR_1}!$"
+	.string "{CHN}哟，你好！\n"
+	.string "我是点火小子{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1::
-	.string "You know what my training cooked up?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}你知道我的训练练出了什么吗？\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Well, what do you say?\n"
-	.string "Want to form a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "怎么样，你觉得呢？\n"
+	.string "想组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerAccept::
-	.string "All right!\n"
-	.string "I'll get on with the registration.$"
+	.string "{CHN}好！\n"
+	.string "我去办登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerReject::
-	.string "Promise you'll partner up with me\n"
-	.string "the next time we run into each other.$"
+	.string "{CHN}答应我下次我们再见面时\n"
+	.string "和我组队。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperIntro::
-	.string "I'm {STR_VAR_1}, and I'm a CAMPER!$"
+	.string "{CHN}我是{STR_VAR_1}，是野营少年！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperMon1::
-	.string "I've been raising one {STR_VAR_1}-\n"
-	.string "using {STR_VAR_2} and one$"
+	.string "{CHN}我在培养一只\n"
+	.string "会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperMon2Ask::
-	.string "{STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "Do you think it'd be fun to team up?\n"
-	.string "I bet it would be!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "你觉得组队会很有趣吗？\n"
+	.string "我敢肯定会的！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperAccept::
-	.string "Yeah!\n"
-	.string "Off I go to register!$"
+	.string "{CHN}耶！\n"
+	.string "我去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperReject::
-	.string "Next time, okay?\n"
-	.string "I want to be on your team.$"
+	.string "{CHN}下次，好吗？\n"
+	.string "我想加入你的队伍。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerIntro::
-	.string "Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a PICNICKER!$"
+	.string "{CHN}你好！\n"
+	.string "我是{STR_VAR_1}，是野餐少女！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerMon1::
-	.string "The POKéMON I've been taking are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我带的宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Are you interested in joining me\n"
-	.string "on a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "你有兴趣和我\n"
+	.string "组成双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerAccept::
-	.string "Why, thank you!\n"
-	.string "I will do the registration now.$"
+	.string "{CHN}哎，谢谢你！\n"
+	.string "我现在去办登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerReject::
-	.string "It would be nice if I could join you\n"
-	.string "some other time.$"
+	.string "{CHN}如果下次能让我加入你\n"
+	.string "就好了。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMIntro::
-	.string "I'm PSYCHIC {STR_VAR_1}!$"
+	.string "{CHN}我是超能力者{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon1::
-	.string "The twosome I've been raising are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我培养的两个是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Would you like to form a tag team\n"
-	.string "with me?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "你愿意和我组成\n"
+	.string "双人队伍吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMAccept::
-	.string "Sure thing!\n"
-	.string "I'll take care of the registration!$"
+	.string "{CHN}当然！\n"
+	.string "我去办登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMReject::
-	.string "If we meet again, that's when I'd like\n"
-	.string "to team up with you.$"
+	.string "{CHN}如果我们再见面，那时我希望能\n"
+	.string "和你组队。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFIntro::
-	.string "I'm {STR_VAR_1}.\n"
-	.string "I'm a PSYCHIC.$"
+	.string "{CHN}我是{STR_VAR_1}。\n"
+	.string "我是一名超能力者。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon1::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}--\n"
-	.string "they're my disciples.\p"
-	.string "Doesn't the idea of forming a tag-team\n"
-	.string "partnership intrigue you?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}——\n"
+	.string "是我的弟子。\p"
+	.string "组成双人队伍搭档\n"
+	.string "这主意不让你感兴趣吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFAccept::
-	.string "Thank you.\n"
-	.string "I'll go deal with the registration.$"
+	.string "{CHN}谢谢你。\n"
+	.string "我去办登记。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFReject::
-	.string "I hope there will be another chance\n"
-	.string "to forge an alliance.$"
+	.string "{CHN}希望下次还有机会\n"
+	.string "结成同盟。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFIntro::
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "{CHN}我是女生学生{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} are my POKéMON pair.\p"
-	.string "May I please be your partner on\n"
-	.string "a tag team?$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，是我的宝可梦组合。\p"
+	.string "请让我成为你的\n"
+	.string "双人队伍搭档好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFAccept::
-	.string "Ooh, thank you!\n"
-	.string "I'll register at the counter right away!$"
+	.string "{CHN}哦，谢谢你！\n"
+	.string "我马上去柜台登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFReject::
-	.string "Please?\n"
-	.string "May I join you the next time?$"
+	.string "{CHN}拜托？\n"
+	.string "下次我可以加入你吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFIntro::
-	.string "Hiya! The name's {STR_VAR_1}!\n"
-	.string "I'm a POKéMON BREEDER!$"
+	.string "{CHN}嗨呀！我叫{STR_VAR_1}！\n"
+	.string "我是一名宝可梦培育家！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon1::
-	.string "The POKéMON I've raised are one\n"
-	.string "{STR_VAR_1}-using {STR_VAR_2} and$"
+	.string "{CHN}我培养的宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon2Ask::
-	.string "one {STR_VAR_1}-using {STR_VAR_2}.\p"
-	.string "Sound interesting?\n"
-	.string "How about we form a tag team, then?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "听起来有趣吗？\n"
+	.string "那我们组成双人队伍怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFAccept::
-	.string "All righty!\n"
-	.string "You leave the registration to me!$"
+	.string "{CHN}好嘞！\n"
+	.string "登记就交给我吧！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFReject::
-	.string "You have to team up with me next time,\n"
-	.string "all right?$"
+	.string "{CHN}下次你一定要和我组队，\n"
+	.string "好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFIntro::
-	.string "I'm {STR_VAR_1}, and I'm proud to say\n"
-	.string "that I am a POKéFAN.$"
+	.string "{CHN}我是{STR_VAR_1}，我很自豪地\n"
+	.string "说我是一名宝可梦粉丝。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFMon1::
-	.string "The darling POKéMON I've raised are\n"
-	.string "one {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我培养的心肝宝可梦是\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}.\p"
-	.string "Aren't they just the cutest?\n"
-	.string "We ought to make a team!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}。\p"
+	.string "它们不是最可爱的吗？\n"
+	.string "我们应该组成一支队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFAccept::
-	.string "Thank you, dear!\n"
-	.string "I'll be on my way to register!$"
+	.string "{CHN}谢谢你，亲爱的！\n"
+	.string "我这就去登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFReject::
-	.string "My darling POKéMON are the best,\n"
-	.string "I'll have you know. How annoying!$"
+	.string "{CHN}我的心肝宝可梦是最棒的，\n"
+	.string "我要让你知道。真讨厌！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFIntro::
-	.string "Hi, I'm SWIMMER {STR_VAR_1}.$"
+	.string "{CHN}嗨，我是游泳女孩{STR_VAR_1}。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "{CHN}一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon2Ask::
-	.string "and one {STR_VAR_1}-using\n"
-	.string "{STR_VAR_2} are what I've trained.\p"
-	.string "You and me, let's make a tag team.$"
+	.string "{CHN}和一只会{STR_VAR_1}的\n"
+	.string "{STR_VAR_2}，是我培养的。\p"
+	.string "你和我，让我们组成双人队伍吧。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFAccept::
-	.string "That's cool!\n"
-	.string "I'll register the two of us.$"
+	.string "{CHN}酷！\n"
+	.string "我去登记我们两个。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFReject::
-	.string "If we meet again, you owe me\n"
-	.string "a tag team!$"
+	.string "{CHN}如果我们再见面，你欠我\n"
+	.string "一支双人队伍！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMIntro::
-	.string "What's happening?\n"
-	.string "I'm {STR_VAR_1}, and I'm a TRIATHLETE.$"
+	.string "{CHN}最近怎么样？\n"
+	.string "我是{STR_VAR_1}，是铁人三项选手。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon1::
-	.string "I got a couple decent POKéMON.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}我有几只不错的宝可梦。\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "It'd be neat if we made a tag team\n"
-	.string "together, so how about it?$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "如果我们能组成双人队伍\n"
+	.string "就好了，怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMAccept::
-	.string "Right on!\n"
-	.string "You wait while I register, okay?$"
+	.string "{CHN}好极了！\n"
+	.string "我登记时你稍等，好吗？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMReject::
-	.string "I expect you'll let me join you\n"
-	.string "next time, how's that?$"
+	.string "{CHN}我希望下次你能让我\n"
+	.string "加入你，怎么样？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFIntro::
-	.string "I'm the TRIATHLETE {STR_VAR_1}!$"
+	.string "{CHN}我是铁人三项选手{STR_VAR_1}！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon1::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon2Ask::
-	.string "another {STR_VAR_2} that knows how\n"
-	.string "to use {STR_VAR_1}. That's my pair.\p"
-	.string "What do you think?\n"
-	.string "We'd make a good team, I'd say.$"
+	.string "{CHN}和另一只会\n"
+	.string "{STR_VAR_1}的{STR_VAR_2}。这就是我的组合。\p"
+	.string "你觉得怎么样？\n"
+	.string "我说，我们会是不错的队伍。$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFAccept::
-	.string "I like that answer!\n"
-	.string "I'll get done with registration fast!$"
+	.string "{CHN}我喜欢这个回答！\n"
+	.string "我会很快办完登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFReject::
-	.string "You'll give me another chance to form\n"
-	.string "a partnership, won't you?$"
+	.string "{CHN}你会再给我一次结成\n"
+	.string "搭档的机会，对吧？$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMIntro::
-	.string "Hi, there! Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a SWIMMER!$"
+	.string "{CHN}嗨，你好！你好！\n"
+	.string "我是{STR_VAR_1}，是游泳男孩！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon1::
-	.string "Check out what I've been raising!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "{CHN}看看我一直在培养什么！\n"
+	.string "一只会{STR_VAR_1}的{STR_VAR_2}，$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon2Ask::
-	.string "one {STR_VAR_2} with {STR_VAR_1}!\p"
-	.string "Sweet, huh?\n"
-	.string "It'd be sweet to form a team, too!$"
+	.string "{CHN}和一只会{STR_VAR_1}的{STR_VAR_2}！\p"
+	.string "不错吧？\n"
+	.string "组队也不错！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMAccept::
-	.string "Much obliged!\n"
-	.string "I'll get this registration thing done!$"
+	.string "{CHN}非常感谢！\n"
+	.string "我去办这个登记！$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMReject::
-	.string "If we meet again, you have to team up\n"
-	.string "with me. You'll do that, right?$"
+	.string "{CHN}如果我们再见面，你必须和我\n"
+	.string "组队。你会的，对吧？$"
 

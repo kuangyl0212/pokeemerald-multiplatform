@@ -40,25 +40,24 @@ LavaridgeTown_HerbShop_EventScript_ExplainCharcoal::
 	end
 
 LavaridgeTown_HerbShop_Text_WelcomeToHerbShop:
-	.string "Welcome to the HERB SHOP, home of\n"
-	.string "effective and inexpensive medicine!$"
+	.string "{CHN}欢迎来到草药店，这里\n"
+	.string "有有效又便宜的药！$"
 
 LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine:
-	.string "You've come to look at herbal medicine\n"
-	.string "in LAVARIDGE?\p"
-	.string "That's rather commendable.\p"
-	.string "I like you! Take this!$"
+	.string "{CHN}你来烟突市\n"
+	.string "看草药？\p"
+	.string "那真值得赞赏。\p"
+	.string "我喜欢你！拿着这个！$"
 
 LavaridgeTown_HerbShop_Text_ExplainCharcoal:
-	.string "That CHARCOAL I gave you, it's used\n"
-	.string "for making herbal medicine.\p"
-	.string "It also does wonders when held by\n"
-	.string "a POKéMON.\p"
-	.string "It intensifies the power of FIRE-type\n"
-	.string "moves.$"
+	.string "{CHN}我给你的那个木炭，是用来\n"
+	.string "制作草药的。\p"
+	.string "宝可梦携带它\n"
+	.string "也有奇效。\p"
+	.string "它能增强火属性\n"
+	.string "招式的威力。$"
 
 LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike:
-	.string "Herbal medicine works impressively well.\n"
-	.string "But your POKéMON will dislike you for it.\l"
-	.string "It must be horribly bitter!$"
-
+	.string "{CHN}草药效果非常好。\n"
+	.string "但你的宝可梦会因此讨厌你。\l"
+	.string "一定苦得要命！$"

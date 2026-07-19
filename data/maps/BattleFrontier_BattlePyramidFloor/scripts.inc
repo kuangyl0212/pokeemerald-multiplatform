@@ -126,606 +126,606 @@ BattlePyramid_Retire::
 
 /* Also used by Trainer Hill*/
 BattleFacility_TrainerBattle_PlaceholderText:
-	.string "This is a sample message.$"
+	.string "{CHN}这是一条示例消息。$"
 
 gText_BattlePyramidConfirmRest::
-	.string "Your BATTLE PYRAMID quest will be\n"
-	.string "saved so that you may quit for now.\l"
-	.string "Is that okay?$"
+	.string "{CHN}你的对战金字塔挑战\n"
+	.string "将被保存，你可以暂时退出。\l"
+	.string "可以吗？$"
 
 gText_BattlePyramidConfirmRetire::
-	.string "Are you sure you want to quit your\n"
-	.string "PYRAMID quest?$"
+	.string "{CHN}你确定要退出\n"
+	.string "金字塔挑战吗？$"
 
 BattlePyramid_Text_ExitHintUp1::
-	.string "This floor's exit is in\n"
-	.string "that direction: {UP_ARROW}$"
+	.string "{CHN}这层的出口在\n"
+	.string "那个方向：{UP_ARROW}$"
 
 BattlePyramid_Text_ExitHintLeft1::
-	.string "This floor's exit is in\n"
-	.string "that direction: {LEFT_ARROW}$"
+	.string "{CHN}这层的出口在\n"
+	.string "那个方向：{LEFT_ARROW}$"
 
 BattlePyramid_Text_ExitHintRight1::
-	.string "This floor's exit is in\n"
-	.string "that direction: {RIGHT_ARROW}$"
+	.string "{CHN}这层的出口在\n"
+	.string "那个方向：{RIGHT_ARROW}$"
 
 BattlePyramid_Text_ExitHintDown1::
-	.string "This floor's exit is in\n"
-	.string "that direction: {DOWN_ARROW}$"
+	.string "{CHN}这层的出口在\n"
+	.string "那个方向：{DOWN_ARROW}$"
 
 BattlePyramid_Text_ExitHintUp2::
-	.string "The exit on this floor is in\n"
-	.string "the {UP_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{UP_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintLeft2::
-	.string "The exit on this floor is in\n"
-	.string "the {LEFT_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{LEFT_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintRight2::
-	.string "The exit on this floor is in\n"
-	.string "the {RIGHT_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{RIGHT_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintDown2::
-	.string "The exit on this floor is in\n"
-	.string "the {DOWN_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{DOWN_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintUp3::
-	.string "The exit is over\n"
-	.string "that {UP_ARROW} way.$"
+	.string "{CHN}出口在\n"
+	.string "{UP_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintLeft3::
-	.string "The exit is over\n"
-	.string "that {LEFT_ARROW} way.$"
+	.string "{CHN}出口在\n"
+	.string "{LEFT_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintRight3::
-	.string "The exit is over\n"
-	.string "that {RIGHT_ARROW} way.$"
+	.string "{CHN}出口在\n"
+	.string "{RIGHT_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintDown3::
-	.string "The exit is over\n"
-	.string "that {DOWN_ARROW} way.$"
+	.string "{CHN}出口在\n"
+	.string "{DOWN_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintUp4::
-	.string "On this floor, the exit is somewhere\n"
-	.string "in the {UP_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{UP_ARROW}方向的某处。$"
 
 BattlePyramid_Text_ExitHintLeft4::
-	.string "On this floor, the exit is somewhere\n"
-	.string "in the {LEFT_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{LEFT_ARROW}方向的某处。$"
 
 BattlePyramid_Text_ExitHintRight4::
-	.string "On this floor, the exit is somewhere\n"
-	.string "in the {RIGHT_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{RIGHT_ARROW}方向的某处。$"
 
 BattlePyramid_Text_ExitHintDown4::
-	.string "On this floor, the exit is somewhere\n"
-	.string "in the {DOWN_ARROW} direction.$"
+	.string "{CHN}这层的出口在\n"
+	.string "{DOWN_ARROW}方向的某处。$"
 
 BattlePyramid_Text_ExitHintUp5::
-	.string "The exit?\n"
-	.string "It's that {UP_ARROW} way.$"
+	.string "{CHN}出口？\n"
+	.string "在{UP_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintLeft5::
-	.string "The exit?\n"
-	.string "It's that {LEFT_ARROW} way.$"
+	.string "{CHN}出口？\n"
+	.string "在{LEFT_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintRight5::
-	.string "The exit?\n"
-	.string "It's that {RIGHT_ARROW} way.$"
+	.string "{CHN}出口？\n"
+	.string "在{RIGHT_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintDown5::
-	.string "The exit?\n"
-	.string "It's that {DOWN_ARROW} way.$"
+	.string "{CHN}出口？\n"
+	.string "在{DOWN_ARROW}那边。$"
 
 BattlePyramid_Text_ExitHintUp6::
-	.string "The exit happens to be in\n"
-	.string "the {UP_ARROW} direction.$"
+	.string "{CHN}出口正好在\n"
+	.string "{UP_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintLeft6::
-	.string "The exit happens to be in\n"
-	.string "the {LEFT_ARROW} direction.$"
+	.string "{CHN}出口正好在\n"
+	.string "{LEFT_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintRight6::
-	.string "The exit happens to be in\n"
-	.string "the {RIGHT_ARROW} direction.$"
+	.string "{CHN}出口正好在\n"
+	.string "{RIGHT_ARROW}方向。$"
 
 BattlePyramid_Text_ExitHintDown6::
-	.string "The exit happens to be in\n"
-	.string "the {DOWN_ARROW} direction.$"
+	.string "{CHN}出口正好在\n"
+	.string "{DOWN_ARROW}方向。$"
 
 BattlePyramid_Text_EightItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are eight items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有八个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_SevenItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are seven items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有七个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_SixItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are six items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有六个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_FiveItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are five items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有五个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_FourItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are four items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有四个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_ThreeItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are three items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有三个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_TwoItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There are two items left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有两个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_OneItemRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There is one item left to\n"
-	.string "be found.$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "还有一个道具\n"
+	.string "等待发现。$"
 
 BattlePyramid_Text_ZeroItemsRemaining1::
-	.string "Are you looking for items?\p"
-	.string "There isn't anything left to\n"
-	.string "be found!$"
+	.string "{CHN}你在找道具吗？\p"
+	.string "已经没有\n"
+	.string "可发现的道具了！$"
 
 BattlePyramid_Text_EightItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are eight items\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "这里有八个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_SevenItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are seven items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有七个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_SixItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are six items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有六个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_FiveItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are five items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有五个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_FourItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are four items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有四个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_ThreeItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are three items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有三个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_TwoItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There are two items left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "还有两个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_OneItemRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There is just one item\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "只剩一个\n"
+	.string "散落的道具。$"
 
 BattlePyramid_Text_ZeroItemsRemaining2::
-	.string "Because you won, I'll tell you\n"
-	.string "a little secret!\p"
-	.string "There isn't anything left\n"
-	.string "lying around here.$"
+	.string "{CHN}因为你赢了，我告诉你\n"
+	.string "一个小秘密！\p"
+	.string "已经没有\n"
+	.string "散落的道具了。$"
 
 BattlePyramid_Text_EightItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are eight items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有八个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_SevenItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are seven items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有七个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_SixItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are six items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有六个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_FiveItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are five items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有五个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_FourItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are four items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有四个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_ThreeItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are three items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有三个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_TwoItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are two items left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层还有两个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_OneItemRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there's but one item left\n"
-	.string "waiting to be found on this floor.$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层只剩一个道具\n"
+	.string "等待被发现。$"
 
 BattlePyramid_Text_ZeroItemsRemaining3::
-	.string "How's your stock of items holding up?\p"
-	.string "I reckon there are no more items\n"
-	.string "waiting to be found on this floor.\l"
-	.string "You take care now!$"
+	.string "{CHN}你的道具储备怎么样了？\p"
+	.string "我估计这层已经没有\n"
+	.string "道具等待被发现了。\l"
+	.string "保重！$"
 
 BattlePyramid_Text_EightItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be eight more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有八个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_SevenItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be seven more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有七个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_SixItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be six more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有六个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_FiveItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be five more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有五个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_FourItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be four more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有四个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_ThreeItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be three more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有三个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_TwoItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be two more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎还有两个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_OneItemRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appears to be only one more\n"
-	.string "item on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎只剩一个\n"
+	.string "道具了。$"
 
 BattlePyramid_Text_ZeroItemsRemaining4::
-	.string "You're strong, so you've earned\n"
-	.string "a hint!\p"
-	.string "There appear to be no more\n"
-	.string "items on the ground.$"
+	.string "{CHN}你很强，所以你赢得了\n"
+	.string "一个提示！\p"
+	.string "地上似乎已经没有\n"
+	.string "道具了。$"
 
 BattlePyramid_Text_EightItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are eight items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有八个道具……$"
 
 BattlePyramid_Text_SevenItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are seven items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有七个道具……$"
 
 BattlePyramid_Text_SixItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are six items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有六个道具……$"
 
 BattlePyramid_Text_FiveItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are five items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有五个道具……$"
 
 BattlePyramid_Text_FourItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are four items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有四个道具……$"
 
 BattlePyramid_Text_ThreeItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are three items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有三个道具……$"
 
 BattlePyramid_Text_TwoItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are two items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有两个道具……$"
 
 BattlePyramid_Text_OneItemRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there is one item…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说有一个道具……$"
 
 BattlePyramid_Text_ZeroItemsRemaining5::
-	.string "On this floor of the PYRAMID,\n"
-	.string "I hear there are no items…$"
+	.string "{CHN}在这层金字塔里，\n"
+	.string "我听说没有道具……$"
 
 BattlePyramid_Text_EightItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are eight more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有八个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_SevenItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are seven more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有七个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_SixItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are six more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有六个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_FiveItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are five more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有五个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_FourItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are four more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有四个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_ThreeItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are three more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有三个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_TwoItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are two more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有两个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_OneItemRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there is one more\n"
-	.string "item on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层还有一个\n"
+	.string "道具。$"
 
 BattlePyramid_Text_ZeroItemsRemaining6::
-	.string "Have you collected any items?\p"
-	.string "I believe there are no more\n"
-	.string "items on this floor.$"
+	.string "{CHN}你收集到道具了吗？\p"
+	.string "我相信这层已经没有\n"
+	.string "道具了。$"
 
 BattlePyramid_Text_SevenTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still seven tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有七位强力的训练家！$"
 
 BattlePyramid_Text_SixTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still six tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有六位强力的训练家！$"
 
 BattlePyramid_Text_FiveTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still five tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有五位强力的训练家！$"
 
 BattlePyramid_Text_FourTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still four tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有四位强力的训练家！$"
 
 BattlePyramid_Text_ThreeTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still three tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有三位强力的训练家！$"
 
 BattlePyramid_Text_TwoTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there are still two tough\n"
-	.string "TRAINERS other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有两位强力的训练家！$"
 
 BattlePyramid_Text_OneTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "But there's still one tough\n"
-	.string "TRAINER other than me!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "但除了我，\n"
+	.string "还有一位强力的训练家！$"
 
 BattlePyramid_Text_ZeroTrainersRemaining1::
-	.string "You were really awesome!\p"
-	.string "There's no one left that\n"
-	.string "can beat you!$"
+	.string "{CHN}你真是太厉害了！\p"
+	.string "已经没有人\n"
+	.string "能打败你了！$"
 
 BattlePyramid_Text_SevenTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are seven TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有七位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_SixTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are six TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有六位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_FiveTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are five TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有五位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_FourTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are four TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有四位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_ThreeTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are three TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有三位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_TwoTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are two TRAINERS left!\n"
-	.string "Someone will humble you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有两位训练家！\n"
+	.string "总有人会让你吃瘪的！$"
 
 BattlePyramid_Text_OneTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there's one TRAINER left!\n"
-	.string "I'm sure you will be humbled!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但还有一位训练家！\n"
+	.string "你一定会吃瘪的！$"
 
 BattlePyramid_Text_ZeroTrainersRemaining2::
-	.string "This is so upsetting!\p"
-	.string "But there are no more TRAINERS\n"
-	.string "who can engage you!$"
+	.string "{CHN}真是太气人了！\p"
+	.string "但已经没有训练家\n"
+	.string "能与你交手了！$"
 
 BattlePyramid_Text_SevenTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are seven more TRAINERS\n"
-	.string "on this floor. Can you beat them all?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有七位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_SixTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are six more TRAINERS\n"
-	.string "on this floor. Can you beat them all?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有六位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_FiveTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are five more TRAINERS\n"
-	.string "on this floor. Can you beat them all?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有五位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_FourTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are four more TRAINERS\n"
-	.string "on this floor. Can you beat them all?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有四位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_ThreeTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are three more TRAINERS\n"
-	.string "on this floor. Can you beat them all?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有三位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_TwoTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there are two more TRAINERS\n"
-	.string "on this floor. Can you beat them both?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有两位训练家。\n"
+	.string "你能全部击败吗？$"
 
 BattlePyramid_Text_OneTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "But there's still one more TRAINER\n"
-	.string "on this floor. Can you prevail?$"
+	.string "{CHN}真了不起！\p"
+	.string "但这层还有一位训练家。\n"
+	.string "你能取胜吗？$"
 
 BattlePyramid_Text_ZeroTrainersRemaining3::
-	.string "That's pretty impressive!\p"
-	.string "You've gone through all the TRAINERS\n"
-	.string "on this floor.$"
+	.string "{CHN}真了不起！\p"
+	.string "你已经击败了这层\n"
+	.string "所有的训练家。$"
 
 BattlePyramid_Text_SevenTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the seven TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的七位训练家。$"
 
 BattlePyramid_Text_SixTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the six TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的六位训练家。$"
 
 BattlePyramid_Text_FiveTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the five TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的五位训练家。$"
 
 BattlePyramid_Text_FourTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the four TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的四位训练家。$"
 
 BattlePyramid_Text_ThreeTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the three TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的三位训练家。$"
 
 BattlePyramid_Text_TwoTrainersRemaining4::
-	.string "Maybe you could sweep through\n"
-	.string "the two TRAINERS left on this floor.$"
+	.string "{CHN}也许你能横扫\n"
+	.string "这层剩下的两位训练家。$"
 
 BattlePyramid_Text_OneTrainersRemaining4::
-	.string "Maybe you could complete your sweep\n"
-	.string "with the one TRAINER left on this floor.$"
+	.string "{CHN}也许你能击败\n"
+	.string "这层最后一位训练家完成横扫。$"
 
 BattlePyramid_Text_ZeroTrainersRemaining4::
-	.string "There isn't a single person left who\n"
-	.string "can defeat you now…$"
+	.string "{CHN}现在已经没有人\n"
+	.string "能击败你了……$"
 
 BattlePyramid_Text_SevenTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the seven expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的七位专家训练家。$"
 
 BattlePyramid_Text_SixTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the six expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的六位专家训练家。$"
 
 BattlePyramid_Text_FiveTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the five expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的五位专家训练家。$"
 
 BattlePyramid_Text_FourTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the four expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的四位专家训练家。$"
 
 BattlePyramid_Text_ThreeTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the three expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的三位专家训练家。$"
 
 BattlePyramid_Text_TwoTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the two expert TRAINERS who remain.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的两位专家训练家。$"
 
 BattlePyramid_Text_OneTrainersRemaining5::
-	.string "You may have what it takes to beat\n"
-	.string "the one expert TRAINER who remains.$"
+	.string "{CHN}你也许有能力击败\n"
+	.string "剩下的那位专家训练家。$"
 
 BattlePyramid_Text_ZeroTrainersRemaining5::
-	.string "Your skills are beyond reproach.\p"
-	.string "There are no more TRAINERS here\n"
-	.string "who have any chance of beating you.$"
+	.string "{CHN}你的实力无可挑剔。\p"
+	.string "这里已经没有训练家\n"
+	.string "有任何机会击败你了。$"
 
 BattlePyramid_Text_SevenTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the seven remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的七位训练家吗？$"
 
 BattlePyramid_Text_SixTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the six remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的六位训练家吗？$"
 
 BattlePyramid_Text_FiveTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the five remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的五位训练家吗？$"
 
 BattlePyramid_Text_FourTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the four remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的四位训练家吗？$"
 
 BattlePyramid_Text_ThreeTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the three remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的三位训练家吗？$"
 
 BattlePyramid_Text_TwoTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the two remaining TRAINERS?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "剩下的两位训练家吗？$"
 
 BattlePyramid_Text_OneTrainersRemaining6::
-	.string "Can you keep winning against\n"
-	.string "the last remaining TRAINER?$"
+	.string "{CHN}你能继续战胜\n"
+	.string "最后那位训练家吗？$"
 
 BattlePyramid_Text_ZeroTrainersRemaining6::
-	.string "There aren't any TRAINERS left that\n"
-	.string "can take you on now…$"
+	.string "{CHN}现在已经没有训练家\n"
+	.string "能与你交手了……$"

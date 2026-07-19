@@ -273,35 +273,35 @@ SlateportCity_BattleTentLobby_EventScript_ExitRules::
 	end
 
 SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
-	.string "So, like, I couldn't find myself any\n"
-	.string "POKéMON that were, like, for me.\p"
-	.string "So, I figured, like, hey, I should file\n"
-	.string "a complaint to the guy there?\p"
-	.string "And he wouldn't hear me out, like, hey!\n"
-	.string "So, like, total bummer, man!\p"
-	.string "Hey, like, you! Zip it, you know?\n"
-	.string "Just, you know, take this!$"
+	.string "{CHN}那个，我找不到\n"
+	.string "适合我的宝可梦。\p"
+	.string "所以我想，我应该向\n"
+	.string "那里的家伙投诉？\p"
+	.string "但是他根本不听我说！\n"
+	.string "真是太倒霉了！\p"
+	.string "喂，你！闭嘴好吗？\n"
+	.string "拿着这个吧！$"
 
 SlateportCity_BattleTentLobby_Text_ExplainTorment:
-	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
-	.string "use the same move twice in a row, see?\p"
-	.string "Hey, now, you listen here, like,\n"
-	.string "I'm not laying a torment on you!$"
+	.string "{CHN}那个是招式学习器41，知道吗？\n"
+	.string "是惩磨难！听到了吗？\p"
+	.string "它不会让对方\n"
+	.string "连续使用同一个招式，懂吗？\p"
+	.string "喂，你听着，\n"
+	.string "我不是在折磨你！$"
 
 SlateportCity_BattleTentLobby_Text_IllTryUsingBugMons:
-	.string "I don't really like BUG POKéMON,\n"
-	.string "but maybe I'll try using some for\l"
-	.string "a change of pace.\p"
-	.string "Who knows, I might even get to like\n"
-	.string "them!$"
+	.string "{CHN}我不太喜欢虫属性宝可梦，\n"
+	.string "但是也许换换口味，\l"
+	.string "试试看用一些。\p"
+	.string "说不定，我甚至会\n"
+	.string "喜欢上它们呢！$"
 
 SlateportCity_BattleTentLobby_Text_BattleEvenWithoutToughMons:
-	.string "You can battle all you want here even\n"
-	.string "if you don't have any tough POKéMON.$"
+	.string "{CHN}即使你没有强大的宝可梦，\n"
+	.string "在这里也可以尽情对战。$"
 
 SlateportCity_BattleTentLobby_Text_NiceIfMoreSelection:
-	.string "Wouldn't it be nice if they had more of\n"
-	.string "a selection?$"
+	.string "{CHN}如果他们有更多选择\n"
+	.string "就太好了，不是吗？$"
 

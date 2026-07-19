@@ -52,44 +52,43 @@ FallarborTown_EventScript_MoveTutorSign::
 	end
 
 FallarborTown_Text_ShadyCharactersCozmosHome:
-	.string "Something's happening,\n"
-	.string "and I don't like it!\p"
-	.string "I've seen shady characters wandering\n"
-	.string "in and out of PROF. COZMO's home…$"
+	.string "{CHN}有些事情正在发生，\n"
+	.string "我不喜欢这样！\p"
+	.string "我看到可疑的人物\n"
+	.string "在小岭博士家进进出出……$"
 
 FallarborTown_Text_RegionKnownForMeteors:
-	.string "This region's been known for meteors\n"
-	.string "since the olden days.\p"
-	.string "They say METEOR FALLS was gouged out\n"
-	.string "by a falling meteorite long ago.$"
+	.string "{CHN}这个地区自古以来\n"
+	.string "就以陨石闻名。\p"
+	.string "据说流星瀑布是很久以前\n"
+	.string "由陨石坠落砸出来的。$"
 
 FallarborTown_Text_MyPreciousAzurill:
-	.string "See! Take a look!\n"
-	.string "This is my precious AZURILL!\p"
-	.string "It's slick and smooth and plushy, too!$"
+	.string "{CHN}看！瞧瞧！\n"
+	.string "这是我珍贵的露力丽！\p"
+	.string "它又滑又顺又柔软！$"
 
 FallarborTown_Text_Azurill:
-	.string "AZURILL: Rooreelooo.$"
+	.string "{CHN}露力丽：噜噜哩哩。$"
 
 FallarborTown_Text_HaveYouChallengedFlannery:
-	.string "Have you already challenged FLANNERY,\n"
-	.string "the LEADER of LAVARIDGE GYM?\p"
-	.string "The girl's grandfather was famous.\n"
-	.string "He was one of the ELITE FOUR in the\l"
-	.string "POKéMON LEAGUE at one point.\p"
-	.string "It wouldn't surprise me to see FLANNERY\n"
-	.string "become a great TRAINER in her own\l"
-	.string "right.$"
+	.string "{CHN}你已经挑战过烟突道馆的馆主\n"
+	.string "亚莎了吗？\p"
+	.string "那女孩的祖父很有名。\n"
+	.string "他曾经是宝可梦联盟\l"
+	.string "四天王的一员。\p"
+	.string "我相信亚莎\n"
+	.string "凭借自己的实力\l"
+	.string "也会成为出色的训练家。$"
 
 FallarborTown_Text_BattleTentSign:
-	.string "BATTLE TENT FALLARBOR SITE\n"
-	.string "“May the Greatest Teams Gather!”$"
+	.string "{CHN}对战帐篷 秋叶镇场地\n"
+	.string "“愿最伟大的队伍齐聚！”$"
 
 FallarborTown_Text_TownSign:
-	.string "FALLARBOR TOWN\n"
-	.string "“A farm community with small gardens.”$"
+	.string "{CHN}秋叶镇\n"
+	.string "“有着小花园的农业小镇。”$"
 
 FallarborTown_Text_MoveTutorSign:
-	.string "MOVE TUTOR'S HOUSE\n"
-	.string "“New moves taught to POKéMON.”$"
-
+	.string "{CHN}招式教学家的家\n"
+	.string "“教会宝可梦新招式。”$"

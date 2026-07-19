@@ -42,40 +42,39 @@ FortreeCity_House2_EventScript_WrongGuess::
 	end
 
 FortreeCity_House2_Text_HiddenPowersArousedByNature:
-	.string "People… POKéMON…\p"
-	.string "Their hidden powers are aroused by\n"
-	.string "living in natural environments…$"
+	.string "{CHN}人类……宝可梦……\p"
+	.string "他们的隐藏力量被\n"
+	.string "自然环境所唤醒……$"
 
 FortreeCity_House2_Text_CoinInWhichHand:
-	.string "Let this old woman see if your hidden\n"
-	.string "power has awoken…\p"
-	.string "I hold a coin in my hand.\p"
-	.string "Now, tell me, have I palmed it in\n"
-	.string "the right hand? Or in the left?$"
+	.string "{CHN}让老婆婆我看看你的隐藏\n"
+	.string "力量有没有觉醒……\p"
+	.string "我手里握着一枚硬币。\p"
+	.string "现在，告诉我，我把它\n"
+	.string "握在右手了？还是左手？$"
 
 FortreeCity_House2_Text_CorrectTryAgainWhichHand:
-	.string "Oh! Yes, correct!\p"
-	.string "We shall try again.\p"
-	.string "In which hand have I palmed the coin?\n"
-	.string "The right or left?$"
+	.string "{CHN}哦！答对了！\p"
+	.string "我们再来一次。\p"
+	.string "我把硬币握在哪只手了？\n"
+	.string "右手还是左手？$"
 
 FortreeCity_House2_Text_CorrectTryAgainWhichHand2:
-	.string "Oh! Yes, correct!\p"
-	.string "We shall try again.\p"
-	.string "In which hand have I palmed the coin?\n"
-	.string "The right or left?$"
+	.string "{CHN}哦！答对了！\p"
+	.string "我们再来一次。\p"
+	.string "我把硬币握在哪只手了？\n"
+	.string "右手还是左手？$"
 
 FortreeCity_House2_Text_YourHiddenPowerHasAwoken:
-	.string "Oh! Splendid!\n"
-	.string "Your hidden power has awoken!\p"
-	.string "Here, take this and awaken the hidden\n"
-	.string "power of your POKéMON.$"
+	.string "{CHN}哦！太棒了！\n"
+	.string "你的隐藏力量觉醒了！\p"
+	.string "来，拿着这个，\n"
+	.string "唤醒你宝可梦的隐藏力量吧。$"
 
 FortreeCity_House2_Text_ExplainHiddenPower:
-	.string "HIDDEN POWER is a move that changes\n"
-	.string "with the POKéMON.$"
+	.string "{CHN}觉醒力量是\n"
+	.string "根据宝可梦而变化的招式。$"
 
 FortreeCity_House2_Text_YouGuessedWrong:
-	.string "No, too bad.\n"
-	.string "You guessed wrong.$"
-
+	.string "{CHN}不对，太可惜了。\n"
+	.string "你猜错了。$"

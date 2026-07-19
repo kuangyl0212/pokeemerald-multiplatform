@@ -63,42 +63,42 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu::
 	end
 
 VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
-	.string "Let me see your POKéMON.\n"
-	.string "I'll check to see how much it likes you.\p"
-	.string "Oh.\n"
-	.string "Your POKéMON…$"
+	.string "{CHN}让我看看你的宝可梦。\n"
+	.string "我来检查一下它有多喜欢你。\p"
+	.string "哦。\n"
+	.string "你的宝可梦…$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:
-	.string "It adores you.\n"
-	.string "It can't possibly love you any more.\l"
-	.string "I even feel happy seeing it.$"
+	.string "{CHN}它非常喜爱你。\n"
+	.string "它对你的喜爱已经到了无以复加的地步。\l"
+	.string "连我看着都觉得幸福。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy:
-	.string "It seems to be very happy.\n"
-	.string "It obviously likes you a whole lot.$"
+	.string "{CHN}它看起来非常幸福。\n"
+	.string "显然它非常喜欢你。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot:
-	.string "It likes you quite a lot.\n"
-	.string "It seems to want to be babied a little.$"
+	.string "{CHN}它相当喜欢你。\n"
+	.string "它似乎想被你娇宠一下。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou:
-	.string "It's getting used to you.\n"
-	.string "It seems to believe in you.$"
+	.string "{CHN}它正在逐渐习惯你。\n"
+	.string "它似乎开始信任你了。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou:
-	.string "It's not very used to you yet.\n"
-	.string "It neither loves nor hates you.$"
+	.string "{CHN}它还不太习惯你。\n"
+	.string "它既不讨厌你也不喜欢你。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryWary:
-	.string "It's very wary.\n"
-	.string "It has scary viciousness in its eyes.\l"
-	.string "It doesn't like you much at all.$"
+	.string "{CHN}它非常警惕。\n"
+	.string "它的眼中透着可怕的凶光。\l"
+	.string "它一点也不喜欢你。$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
-	.string "This is a little hard for me to say…\p"
-	.string "Your POKéMON simply detests you.\n"
-	.string "Doesn't that make you uncomfortable?$"
+	.string "{CHN}这话有点难以启齿…\p"
+	.string "你的宝可梦简直是厌恶你。\n"
+	.string "这不会让你感到不舒服吗？$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
-	.string "PIKACHU: Pika pika!$"
+	.string "{CHN}皮卡丘：皮卡皮卡！$"
 

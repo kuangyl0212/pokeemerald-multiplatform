@@ -22,54 +22,53 @@ MagmaHideout_2F_1R_EventScript_Grunt5::
 	end
 
 MagmaHideout_2F_1R_Text_Grunt14Intro:
-	.string "What, what, what?\p"
-	.string "Only TEAM MAGMA members are supposed\n"
-	.string "to be in here!\p"
-	.string "But you're not dressed in TEAM MAGMA's\n"
-	.string "uniform…\p"
-	.string "You rouse my suspicion!\n"
-	.string "Battle with me!$"
+	.string "{CHN}什么，什么，什么？\p"
+	.string "只有火焰队队员才能\n"
+	.string "在这里！\p"
+	.string "但你穿的\n"
+	.string "不是火焰队的制服…\p"
+	.string "你引起了我的怀疑！\n"
+	.string "跟我打一场！$"
 
 MagmaHideout_2F_1R_Text_Grunt14Defeat:
-	.string "Aiyiyi…\n"
-	.string "My pride as a TEAM MAGMA member…$"
+	.string "{CHN}哎呀呀…\n"
+	.string "我作为火焰队队员的尊严…$"
 
 MagmaHideout_2F_1R_Text_Grunt14PostBattle:
-	.string "If you suffer from chills, you should\n"
-	.string "join TEAM MAGMA.$"
+	.string "{CHN}如果你怕冷，应该\n"
+	.string "加入火焰队。$"
 
 MagmaHideout_2F_1R_Text_Grunt3Intro:
-	.string "Hold it right there!\p"
-	.string "You don't really expect me to keep\n"
-	.string "my trap shut and let you waltz by me?$"
+	.string "{CHN}站住！\p"
+	.string "你不会真以为我会\n"
+	.string "闭嘴让你大摇大摆地过去吧？$"
 
 MagmaHideout_2F_1R_Text_Grunt3Defeat:
-	.string "Ooh wow!\n"
-	.string "I concede!$"
+	.string "{CHN}哇哦！\n"
+	.string "我认输！$"
 
 MagmaHideout_2F_1R_Text_Grunt3PostBattle:
-	.string "Maybe it would've been better if I did\n"
-	.string "just let you go unchallenged…$"
+	.string "{CHN}也许我不拦你\n"
+	.string "让你直接过去更好…$"
 
 MagmaHideout_2F_1R_Text_Grunt4Intro:
-	.string "Ahah!\n"
-	.string "An intruder!$"
+	.string "{CHN}啊哈！\n"
+	.string "入侵者！$"
 
 MagmaHideout_2F_1R_Text_Grunt4Defeat:
-	.string "Graaah!$"
+	.string "{CHN}嘎啊啊！$"
 
 MagmaHideout_2F_1R_Text_Grunt4PostBattle:
-	.string "I've already lost.\p"
-	.string "Do I really need to keep running\n"
-	.string "around in a circle?$"
+	.string "{CHN}我已经输了。\p"
+	.string "我还需要继续\n"
+	.string "兜圈子吗？$"
 
 MagmaHideout_2F_1R_Text_Grunt5Intro:
-	.string "Oh, oh!\n"
-	.string "An intruder!$"
+	.string "{CHN}哦，哦！\n"
+	.string "入侵者！$"
 
 MagmaHideout_2F_1R_Text_Grunt5Defeat:
-	.string "Mutter…$"
+	.string "{CHN}嘟囔…$"
 
 MagmaHideout_2F_1R_Text_Grunt5PostBattle:
-	.string "Actually, I'm no expert at battling…$"
-
+	.string "{CHN}其实，我不擅长战斗…$"

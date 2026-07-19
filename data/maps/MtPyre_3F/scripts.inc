@@ -33,67 +33,65 @@ MtPyre_3F_EventScript_RematchGabrielle::
 	end
 
 MtPyre_3F_Text_WilliamIntro:
-	.string "The rich atmosphere of the mountain\n"
-	.string "has elevated my psychic power!\p"
-	.string "A mere child like you…\n"
-	.string "You dream of winning?$"
+	.string "{CHN}这座山上浓郁的灵气\n"
+	.string "提升了我的超能力！\p"
+	.string "像你这样的小孩子……\n"
+	.string "还妄想获胜吗？$"
 
 MtPyre_3F_Text_WilliamDefeat:
-	.string "I drown in self-pity…$"
+	.string "{CHN}我陷入自怜之中……$"
 
 MtPyre_3F_Text_WilliamPostBattle:
-	.string "My psychic powers have surely\n"
-	.string "grown several times, but…$"
+	.string "{CHN}我的超能力确实\n"
+	.string "增长了好几倍，但是……$"
 
 MtPyre_3F_Text_KaylaIntro:
-	.string "Ahahahaha!\p"
-	.string "This is no place for children, least\n"
-	.string "of all you!$"
+	.string "{CHN}啊哈哈哈！\p"
+	.string "这里可不是小孩子来的地方，\n"
+	.string "尤其是你！$"
 
 MtPyre_3F_Text_KaylaDefeat:
-	.string "I lost that cleanly…$"
+	.string "{CHN}我输得心服口服……$"
 
 MtPyre_3F_Text_KaylaPostBattle:
-	.string "This means my training is still not\n"
-	.string "enough…\p"
-	.string "I've got to keep working toward the\n"
-	.string "summit…\p"
-	.string "Go, me!$"
+	.string "{CHN}这说明我的修行\n"
+	.string "还不够……\p"
+	.string "我必须继续朝着\n"
+	.string "山顶努力……\p"
+	.string "加油，我自己！$"
 
 MtPyre_3F_Text_GabrielleIntro:
-	.string "Why have you come here?$"
+	.string "{CHN}你为什么来这里？$"
 
 MtPyre_3F_Text_GabrielleDefeat:
-	.string "That was amazing!\n"
-	.string "You're a very special TRAINER.$"
+	.string "{CHN}太厉害了！\n"
+	.string "你是个非常特别的训练家。$"
 
 MtPyre_3F_Text_GabriellePostBattle:
-	.string "POKéMON no longer of this world.\n"
-	.string "POKéMON that are with you now.\p"
-	.string "And the POKéMON that you will meet\n"
-	.string "in the future…\p"
-	.string "They are all to be equally cherished.\n"
-	.string "Please remember that.$"
+	.string "{CHN}已经离开这个世界的宝可梦。\n"
+	.string "现在陪在你身边的宝可梦。\p"
+	.string "还有你将来会遇到的宝可梦……\p"
+	.string "它们都同样值得珍惜。\n"
+	.string "请记住这一点。$"
 
 MtPyre_3F_Text_GabrielleRegister:
-	.string "I would like to see your POKéMON\n"
-	.string "when they grow up some more…\p"
-	.string "Please, I need to see your POKéNAV.$"
+	.string "{CHN}我想看看你的宝可梦\n"
+	.string "再长大一些的样子……\p"
+	.string "请让我看看你的宝可梦导航器。$"
 
 MtPyre_3F_Text_GabrielleRematchIntro:
-	.string "Oh, it's you…\p"
-	.string "Have you come to show me your grown\n"
-	.string "POKéMON?$"
+	.string "{CHN}哦，是你啊……\p"
+	.string "你是来给我看你长大了\n"
+	.string "的宝可梦的吗？$"
 
 MtPyre_3F_Text_GabrielleRematchDefeat:
-	.string "How amazing!\n"
-	.string "You are a special person.$"
+	.string "{CHN}太厉害了！\n"
+	.string "你是个特别的人。$"
 
 MtPyre_3F_Text_GabriellePostRematch:
-	.string "POKéMON no longer of this world.\n"
-	.string "POKéMON that are with you now.\p"
-	.string "And the POKéMON that you will meet\n"
-	.string "in the future…\p"
-	.string "They are all to be equally cherished.\n"
-	.string "I see that you've remembered that.$"
+	.string "{CHN}已经离开这个世界的宝可梦。\n"
+	.string "现在陪在你身边的宝可梦。\p"
+	.string "还有你将来会遇到的宝可梦……\p"
+	.string "它们都同样值得珍惜。\n"
+	.string "看来你已经记住了这一点。$"
 

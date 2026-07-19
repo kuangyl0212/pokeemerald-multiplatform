@@ -37,41 +37,41 @@ Route110_TrickHousePuzzle1_EventScript_Robin::
 	end
 
 Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened::
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is fabulous.”\n"
+	.string "{CHN}{PLAYER}在门上\n"
+	.string "写下了暗号。\p"
+	.string "“诡计大师真了不起。”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "咔嗒，锁开了！$"
 
 Route110_TrickHousePuzzle1_Text_SallyIntro:
-	.string "I'll hack and slash my way to victory\n"
-	.string "with the CUT we just learned!$"
+	.string "{CHN}我要用刚学会的居合劈\n"
+	.string "劈砍出一条胜利之路！$"
 
 Route110_TrickHousePuzzle1_Text_SallyDefeat:
-	.string "Why are you so serious?$"
+	.string "{CHN}你怎么这么认真？$"
 
 Route110_TrickHousePuzzle1_Text_SallyPostBattle:
-	.string "I never get tired of hacking\n"
-	.string "and slashing!$"
+	.string "{CHN}我永远都不会厌倦\n"
+	.string "劈劈砍砍！$"
 
 Route110_TrickHousePuzzle1_Text_EddieIntro:
-	.string "I wandered into this weird house\n"
-	.string "by accident…$"
+	.string "{CHN}我迷迷糊糊地\n"
+	.string "闯进了这个奇怪的房子……$"
 
 Route110_TrickHousePuzzle1_Text_EddieDefeat:
-	.string "And now I've lost…$"
+	.string "{CHN}结果我还输了……$"
 
 Route110_TrickHousePuzzle1_Text_EddiePostBattle:
-	.string "I lost my way, I lost a battle, and I'm\n"
-	.string "now even more lost… I can't get out…$"
+	.string "{CHN}我迷了路，输了对战，\n"
+	.string "现在更加迷失了……我出不去了……$"
 
 Route110_TrickHousePuzzle1_Text_RobinIntro:
-	.string "Just who is the TRICK MASTER?$"
+	.string "{CHN}诡计大师到底是什么人？$"
 
 Route110_TrickHousePuzzle1_Text_RobinDefeat:
-	.string "I lost while I was lost in thought!$"
+	.string "{CHN}我正想着出神，结果就输了！$"
 
 Route110_TrickHousePuzzle1_Text_RobinPostBattle:
-	.string "You're strong!\n"
-	.string "Just who are you?$"
+	.string "{CHN}你真强！\n"
+	.string "你到底是谁？$"
 

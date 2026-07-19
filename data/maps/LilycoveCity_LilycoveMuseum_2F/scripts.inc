@@ -215,114 +215,114 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ShowToughPainting::
 	end
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThisIsExhibitHall:
-	.string "This is our special exhibit hall.$"
+	.string "{CHN}这里是我们的特别展厅。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ExplainExhibitHall:
-	.string "As you can plainly see, there is not\n"
-	.string "a single painting on exhibit.\p"
-	.string "Here, I don't wish to exhibit works of\n"
-	.string "so-called classical art.\p"
-	.string "Such classical works you can see on\n"
-	.string "our ground floor.\p"
-	.string "I wish to exhibit work that is far\n"
-	.string "different from the classics.\p"
-	.string "Art, after all, is not restricted to old,\n"
-	.string "famous works!\p"
-	.string "This exhibit hall, I wish to fill it with…\p"
-	.string "Modern and vibrant artworks of\n"
-	.string "POKéMON seemingly ready to spring\l"
-	.string "forth into glorious life!$"
+	.string "{CHN}如你所见，这里一幅\n"
+	.string "展出的画也没有。\p"
+	.string "我不想在这里展出\n"
+	.string "所谓的古典艺术作品。\p"
+	.string "那些古典作品你可以在\n"
+	.string "一楼看到。\p"
+	.string "我想展出与古典作品\n"
+	.string "截然不同的作品。\p"
+	.string "艺术，毕竟不局限于古老的\n"
+	.string "名作！\p"
+	.string "我希望把这个展厅填满……\p"
+	.string "充满活力的现代宝可梦\n"
+	.string "艺术作品，仿佛随时都会\l"
+	.string "跃然而出，栩栩如生！$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_PleaseObtainPaintingsForExhibit:
-	.string "I beg your pardon. I didn't intend\n"
-	.string "to monopolize the conversation.\p"
-	.string "Now, as you are young, and yet\n"
-	.string "obviously well traveled…\p"
-	.string "You must encounter lively POKéMON\n"
-	.string "and works of art depicting them.\p"
-	.string "If you were to come across such\n"
-	.string "a painting, may we ask you to obtain\l"
-	.string "the artist's permission to exhibit\l"
-	.string "it here?$"
+	.string "{CHN}请原谅，我并不想\n"
+	.string "独占话题。\p"
+	.string "你年纪轻轻，却已\n"
+	.string "见多识广……\p"
+	.string "你一定会遇到充满活力的宝可梦\n"
+	.string "以及描绘它们的艺术作品。\p"
+	.string "如果你看到这样的画作，\n"
+	.string "能否请你征得\l"
+	.string "画家的同意，把作品\l"
+	.string "拿到这里展出？$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_WishToFillExhibit:
-	.string "I wish to fill this exhibit hall with\n"
-	.string "modern and vibrant paintings of\l"
-	.string "POKéMON.$"
+	.string "{CHN}我希望能用充满活力的\n"
+	.string "现代宝可梦画作\l"
+	.string "填满这个展厅。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThanksAddedNewPainting:
-	.string "Thanks to you, we've added a new\n"
-	.string "painting to our collection!\p"
-	.string "I've heard it depicts your POKéMON.\n"
-	.string "Truly magnificent!\p"
-	.string "Thank you so very, very much!$"
+	.string "{CHN}多亏了你，我们的收藏\n"
+	.string "又多了一幅新画！\p"
+	.string "我听说画的是你的宝可梦。\n"
+	.string "真是太出色了！\p"
+	.string "真的非常非常感谢你！$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsYouPlayer:
-	.string "Ah! It's you!\n"
-	.string "{PLAYER}!$"
+	.string "{CHN}啊！是你！\n"
+	.string "{PLAYER}！$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_PaintingsAttractedMoreGuests:
-	.string "Isn't this marvelous?\n"
-	.string "This collection of paintings!\p"
-	.string "Each one of them flawless!\n"
-	.string "None better than another!\p"
-	.string "These paintings have attracted\n"
-	.string "more guests to our ART MUSEUM.\p"
-	.string "Sincerely, I thank you, {PLAYER}.\n"
-	.string "This is my dream come true!$"
+	.string "{CHN}这不是太美妙了吗？\n"
+	.string "这些画作收藏！\p"
+	.string "每一幅都完美无瑕！\n"
+	.string "不分伯仲！\p"
+	.string "这些画作吸引了更多客人\n"
+	.string "来到我们美术馆。\p"
+	.string "衷心感谢你，{PLAYER}。\n"
+	.string "我的梦想成真了！$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude:
-	.string "This is merely a token of my gratitude.$"
+	.string "{CHN}这只是我的一点心意。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_KeepThisForYou:
-	.string "I will keep this for you until we\n"
-	.string "meet again.$"
+	.string "{CHN}我会替你保管这个，直到我们\n"
+	.string "再次相见。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_HonorToHaveYouVisit:
-	.string "Ah, so good to see you, {PLAYER}!\p"
-	.string "It's an honor to have you visit us\n"
-	.string "on your busy journeys.\p"
-	.string "Please, relax and do enjoy your\n"
-	.string "visit with us.$"
+	.string "{CHN}啊，见到你真好，{PLAYER}！\p"
+	.string "您在繁忙的旅途中\n"
+	.string "还愿意光临，真是荣幸。\p"
+	.string "请放松心情，好好\n"
+	.string "享受这次参观。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsPinkPictureFrame:
-	.string "It's a picture frame with pink-colored\n"
-	.string "adornments.$"
+	.string "{CHN}这是一个装饰着粉色的\n"
+	.string "画框。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsYellowPictureFrame:
-	.string "It's a picture frame with\n"
-	.string "yellow-colored adornments.$"
+	.string "{CHN}这是一个装饰着黄色的\n"
+	.string "画框。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsBluePictureFrame:
-	.string "It's a picture frame with\n"
-	.string "blue-colored adornments.$"
+	.string "{CHN}这是一个装饰着蓝色的\n"
+	.string "画框。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsRedPictureFrame:
-	.string "It's a picture frame with\n"
-	.string "red-colored adornments.$"
+	.string "{CHN}这是一个装饰着红色的\n"
+	.string "画框。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsGreenPictureFrame:
-	.string "It's a picture frame with\n"
-	.string "green-colored adornments.$"
+	.string "{CHN}这是一个装饰着绿色的\n"
+	.string "画框。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ItsPaintingOfPokemon:
-	.string "It's a painting of POKéMON.$"
+	.string "{CHN}这是一幅宝可梦的画。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_NewPaintingsSurprisedMe:
-	.string "I've been away awhile, so the new\n"
-	.string "paintings up here surprised me.\p"
-	.string "I wish someone would paint my POKéMON\n"
-	.string "this pretty.$"
+	.string "{CHN}我离开了一段时间，所以这里的\n"
+	.string "新画作让我吃了一惊。\p"
+	.string "真希望有人能把我的宝可梦\n"
+	.string "画得这么漂亮。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_NewPaintingsRatherAmusing:
-	.string "Well… So this is where they show\n"
-	.string "the topical POKéMON paintings.\p"
-	.string "I see, these new paintings are indeed\n"
-	.string "rather amusing.$"
+	.string "{CHN}嗯……原来这里就是展出\n"
+	.string "热门宝可梦画作的地方。\p"
+	.string "我明白了，这些新画作确实\n"
+	.string "相当有趣。$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon:
-	.string "Wow, is that right?\n"
-	.string "These paintings are of your POKéMON.\p"
-	.string "Isn't that just the ultimate joy for\n"
-	.string "a TRAINER?$"
+	.string "{CHN}哇，真的吗？\n"
+	.string "这些画的是你的宝可梦。\p"
+	.string "对训练家来说，这难道不是\n"
+	.string "无上的喜悦吗？$"
 

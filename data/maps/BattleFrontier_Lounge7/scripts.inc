@@ -288,192 +288,192 @@ BattleFrontier_Lounge7_EventScript_Gentleman::
 	end
 
 BattleFrontier_Lounge7_Text_LeftTutorIntro:
-	.string "Buhahaha!\p"
-	.string "You couldn't tell it from looking now,\n"
-	.string "but I used to be one tough TRAINER.\p"
-	.string "I had a reputation as the toughest\n"
-	.string "BEAUTY around, I tell you!\p"
-	.string "… … … … … …\p"
-	.string "What is it now?\n"
-	.string "You don't believe me.\p"
-	.string "I'm not like that blowhard woman over\n"
-	.string "there. I'm actually talented!\p"
-	.string "Let me prove it to you.\n"
-	.string "I can teach your POKéMON special and\l"
-	.string "yet cute moves.\p"
-	.string "But my lessons don't come free.\n"
-	.string "How about paying for the moves I teach\l"
-	.string "with a wee bit of Battle Points?$"
+	.string "{CHN}哈哈哈！\p"
+	.string "你现在看不出来，\n"
+	.string "但我以前可是个厉害的训练家。\p"
+	.string "我有最美少女的美名，\n"
+	.string "我告诉你！\p"
+	.string "………………\p"
+	.string "怎么了？\n"
+	.string "你不相信我。\p"
+	.string "我可不像那边那个吹牛的女人。\n"
+	.string "我是真的有才能！\p"
+	.string "让我证明给你看。\n"
+	.string "我能教你的宝可梦特殊又\l"
+	.string "可爱的招式。\p"
+	.string "但我的课不是免费的。\n"
+	.string "用一点对战点数来支付\l"
+	.string "我教的招式怎么样？$"
 
 BattleFrontier_Lounge7_Text_LeftTutorWelcomeBack:
-	.string "Buhahaha!\p"
-	.string "Are you back to learn special and\n"
-	.string "yet cute POKéMON moves?$"
+	.string "{CHN}哈哈哈！\p"
+	.string "你回来学特殊又\n"
+	.string "可爱的宝可梦招式了吗？$"
 
 BattleFrontier_Lounge7_Text_TeachWhichMove:
-	.string "Fine, fine, look here!\n"
-	.string "Which move should I teach?$"
+	.string "{CHN}好好好，看这里！\n"
+	.string "我该教哪个招式呢？$"
 
 BattleFrontier_Lounge7_Text_MoveWillBeXBattlePoints:
-	.string "The move {STR_VAR_1}, is it?\n"
-	.string "That will be {STR_VAR_2} Battle Points, okay?$"
+	.string "{CHN}招式{STR_VAR_1}，是吗？\n"
+	.string "那需要{STR_VAR_2}个对战点数，可以吗？$"
 
 BattleFrontier_Lounge7_Text_TeachMoveToWhichMon:
-	.string "Fine, fine, now pick the POKéMON\n"
-	.string "I should teach the move to.$"
+	.string "{CHN}好好好，现在选出\n"
+	.string "我应该教招式的宝可梦。$"
 
 BattleFrontier_Lounge7_Text_HaventGotEnoughPoints:
-	.string "What the…\n"
-	.string "You haven't got enough Battle Points!$"
+	.string "{CHN}什么……\n"
+	.string "你的对战点数不够！$"
 
 BattleFrontier_Lounge7_Text_IllTakeBattlePoints:
-	.string "Do you see how skilled I am now?\n"
-	.string "I'll take your Battle Points, thanks!$"
+	.string "{CHN}现在你看到我有多熟练了吧？\n"
+	.string "我就收下你的对战点数了，谢谢！$"
 
 BattleFrontier_Lounge7_Text_YouDontWantTo:
-	.string "What's that?\n"
-	.string "You don't want to…\p"
-	.string "If you want to see how skilled I am,\n"
-	.string "you come see me anytime!$"
+	.string "{CHN}什么？\n"
+	.string "你不想……\p"
+	.string "如果你想看我的本领，\n"
+	.string "随时来找我！$"
 
 BattleFrontier_Lounge7_Text_RightTutorIntro:
-	.string "Ihihihi!\p"
-	.string "I know it's hard to see now, but I used\n"
-	.string "to be one fantastic TRAINER.\p"
-	.string "I had a reputation as the most\n"
-	.string "invincible SWIMMER around, I tell you!\p"
-	.string "… … … … … …\p"
-	.string "What's wrong?\n"
-	.string "You don't believe me.\p"
-	.string "I'm not like that buffoonish woman over\n"
-	.string "there. I'm actually experienced!\p"
-	.string "I can prove it to you.\n"
-	.string "I can teach your POKéMON hard and\l"
-	.string "yet pretty moves.\p"
-	.string "But my lessons don't come free.\n"
-	.string "How about paying for the moves I teach\l"
-	.string "with a wee bit of Battle Points?$"
+	.string "{CHN}嘻嘻嘻！\p"
+	.string "我知道现在很难看出来，\n"
+	.string "但我以前可是个了不起的训练家。\p"
+	.string "我有最无敌泳者的美名，\n"
+	.string "我告诉你！\p"
+	.string "………………\p"
+	.string "怎么了？\n"
+	.string "你不相信我。\p"
+	.string "我可不像那边那个愚蠢的女人。\n"
+	.string "我是真的有经验！\p"
+	.string "我可以证明给你看。\n"
+	.string "我能教你的宝可梦强硬又\l"
+	.string "漂亮的招式。\p"
+	.string "但我的课不是免费的。\n"
+	.string "用一点对战点数来支付\l"
+	.string "我教的招式怎么样？$"
 
 BattleFrontier_Lounge7_Text_RightTutorWelcomeBack:
-	.string "Ihihihi!\p"
-	.string "Have you come to learn hard and\n"
-	.string "yet pretty POKéMON moves?$"
+	.string "{CHN}嘻嘻嘻！\p"
+	.string "你来学强硬又\n"
+	.string "漂亮的宝可梦招式了吗？$"
 
 BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong:
-	.string "Those ladies, the way they bad-mouth\n"
-	.string "each other, you probably think that\l"
-	.string "they don't get along.\p"
-	.string "But if that were true, they wouldn't\n"
-	.string "stay out here together, would they?$"
+	.string "{CHN}那些女士们，她们互相说坏话\n"
+	.string "的样子，你大概觉得\l"
+	.string "她们相处不好。\p"
+	.string "但如果是那样的话，她们就不会\n"
+	.string "一起待在这里了，对吧？$"
 
 BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful:
-	.string "When I was just a wee YOUNGSTER,\n"
-	.string "those ladies were strong and beautiful.\p"
-	.string "They were idols among us TRAINERS.\p"
-	.string "Even now, age hasn't dulled their\n"
-	.string "abilities.\p"
-	.string "In fact, their POKéMON moves have\n"
-	.string "grown even more polished.\p"
-	.string "But… For some reason, I can't help\n"
-	.string "but feel this…\p"
-	.string "Time is so cruel…$"
+	.string "{CHN}当我还是个小短裤的时候，\n"
+	.string "那些女士们既强大又美丽。\p"
+	.string "她们是我们训练家中的偶像。\p"
+	.string "即使现在，岁月也没有磨灭\n"
+	.string "她们的实力。\p"
+	.string "事实上，她们的宝可梦招式\n"
+	.string "变得更加精湛了。\p"
+	.string "但是……出于某种原因，\n"
+	.string "我不禁有这样的感觉……\p"
+	.string "时间真是太残酷了……$"
 
 BattleFrontier_Lounge7_Text_SoftboiledDesc::
-	.string "Recovers up to\n"
-	.string "half the user's\n"
-	.string "maximum HP.$"
+	.string "{CHN}恢复最多\n"
+	.string "使用者最大HP的\n"
+	.string "一半。$"
 
 BattleFrontier_Lounge7_Text_SeismicTossDesc::
-	.string "Inflicts damage\n"
-	.string "identical to the\n"
-	.string "user's level.$"
+	.string "{CHN}造成与\n"
+	.string "使用者等级\n"
+	.string "相同的伤害。$"
 
 BattleFrontier_Lounge7_Text_DreamEaterDesc::
-	.string "Recovers half the\n"
-	.string "damage inflicted\n"
-	.string "on a sleeping foe.$"
+	.string "{CHN}恢复对\n"
+	.string "睡眠中的对手\n"
+	.string "造成伤害的一半。$"
 
 BattleFrontier_Lounge7_Text_MegaPunchDesc::
-	.string "A strong punch\n"
-	.string "thrown with\n"
-	.string "incredible power.$"
+	.string "{CHN}用惊人的力量\n"
+	.string "挥出的\n"
+	.string "强力拳击。$"
 
 BattleFrontier_Lounge7_Text_MegaKickDesc::
-	.string "An extremely\n"
-	.string "powerful kick with\n"
-	.string "intense force.$"
+	.string "{CHN}用猛烈力量\n"
+	.string "踢出的极其\n"
+	.string "强大的踢击。$"
 
 BattleFrontier_Lounge7_Text_BodySlamDesc::
-	.string "A full-body slam\n"
-	.string "that may cause\n"
-	.string "paralysis.$"
+	.string "{CHN}用全身撞击，\n"
+	.string "可能造成\n"
+	.string "麻痹。$"
 
 BattleFrontier_Lounge7_Text_RockSlideDesc::
-	.string "Large boulders\n"
-	.string "are hurled. May\n"
-	.string "cause flinching.$"
+	.string "{CHN}投掷巨石。\n"
+	.string "可能造成\n"
+	.string "畏缩。$"
 
 BattleFrontier_Lounge7_Text_CounterDesc::
-	.string "Retaliates any\n"
-	.string "physical hit with\n"
-	.string "double the power.$"
+	.string "{CHN}以两倍的力量\n"
+	.string "反击任何物理\n"
+	.string "攻击。$"
 
 BattleFrontier_Lounge7_Text_ThunderWaveDesc::
-	.string "A weak jolt of\n"
-	.string "electricity that\n"
-	.string "paralyzes the foe.$"
+	.string "{CHN}微弱的电流\n"
+	.string "使对手\n"
+	.string "陷入麻痹。$"
 
 BattleFrontier_Lounge7_Text_SwordsDanceDesc::
-	.string "A fighting dance\n"
-	.string "that sharply\n"
-	.string "raises ATTACK.$"
+	.string "{CHN}战斗之舞，\n"
+	.string "大幅提升\n"
+	.string "攻击。$"
 
 BattleFrontier_Lounge7_Text_DefenseCurlDesc::
-	.string "Curls up to con-\n"
-	.string "ceal weak spots\n"
-	.string "and raise DEFENSE.$"
+	.string "{CHN}蜷缩身体隐藏\n"
+	.string "弱点并提升\n"
+	.string "防御。$"
 
 BattleFrontier_Lounge7_Text_SnoreDesc::
-	.string "A loud attack\n"
-	.string "that can be used\n"
-	.string "only while asleep.$"
+	.string "{CHN}响亮的攻击，\n"
+	.string "只有在睡眠时\n"
+	.string "才能使用。$"
 
 BattleFrontier_Lounge7_Text_MudSlapDesc::
-	.string "Hurls mud in the\n"
-	.string "foe's face to re-\n"
-	.string "duce its accuracy.$"
+	.string "{CHN}向对手脸上\n"
+	.string "泼泥，降低其\n"
+	.string "命中率。$"
 
 BattleFrontier_Lounge7_Text_SwiftDesc::
-	.string "Sprays star-\n"
-	.string "shaped rays\n"
-	.string "that never miss.$"
+	.string "{CHN}喷射星形光线，\n"
+	.string "绝对不会\n"
+	.string "打偏。$"
 
 BattleFrontier_Lounge7_Text_IcyWindDesc::
-	.string "A chilling attack\n"
-	.string "that lowers the\n"
-	.string "foe's SPEED.$"
+	.string "{CHN}冰冷的攻击，\n"
+	.string "降低对手的\n"
+	.string "速度。$"
 
 BattleFrontier_Lounge7_Text_EndureDesc::
-	.string "Endures any at-\n"
-	.string "tack for 1 turn,\n"
-	.string "leaving 1HP.$"
+	.string "{CHN}忍耐一回合内\n"
+	.string "的任何攻击，\n"
+	.string "留下1HP。$"
 
 BattleFrontier_Lounge7_Text_PsychUpDesc::
-	.string "Copies the foe's\n"
-	.string "effect(s) and\n"
-	.string "gives to the user.$"
+	.string "{CHN}复制对手的能力\n"
+	.string "变化效果并\n"
+	.string "加到自己身上。$"
 
 BattleFrontier_Lounge7_Text_IcePunchDesc::
-	.string "An icy punch\n"
-	.string "that may\n"
-	.string "freeze the foe.$"
+	.string "{CHN}冰冷的拳击，\n"
+	.string "可能\n"
+	.string "冻结对手。$"
 
 BattleFrontier_Lounge7_Text_ThunderPunchDesc::
-	.string "An electrified\n"
-	.string "punch that may\n"
-	.string "paralyze the foe.$"
+	.string "{CHN}带电的拳击，\n"
+	.string "可能使对手\n"
+	.string "陷入麻痹。$"
 
 BattleFrontier_Lounge7_Text_FirePunchDesc::
-	.string "A fiery punch\n"
-	.string "that may burn\n"
-	.string "the foe.$"
+	.string "{CHN}火焰的拳击，\n"
+	.string "可能使对手\n"
+	.string "陷入灼伤。$"

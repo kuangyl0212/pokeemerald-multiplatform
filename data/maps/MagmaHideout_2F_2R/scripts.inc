@@ -22,57 +22,56 @@ MagmaHideout_2F_2R_EventScript_Grunt8::
 	end
 
 MagmaHideout_2F_2R_Text_Grunt15Intro:
-	.string "I don't have a bone to pick with you.\n"
-	.string "I'm just following orders!$"
+	.string "{CHN}我跟你无冤无仇。\n"
+	.string "我只是在服从命令！$"
 
 MagmaHideout_2F_2R_Text_Grunt15Defeat:
-	.string "I may have lost, but…$"
+	.string "{CHN}我可能输了，但是…$"
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
-	.string "We dug up something beyond belief!\n"
-	.string "And, we got the BLUE ORB!\p"
-	.string "All that's left is for our leader to…\n"
-	.string "Fufufu… Fwahahaha!$"
+	.string "{CHN}我们挖到了难以置信的东西！\n"
+	.string "而且，我们拿到了蓝色宝珠！\p"
+	.string "现在只剩首领…\n"
+	.string "呼呼呼… 哇哈哈哈！$"
 
 MagmaHideout_2F_2R_Text_Grunt6Intro:
-	.string "I can't stand heat. Maybe I should've\n"
-	.string "joined TEAM AQUA instead…$"
+	.string "{CHN}我受不了热。也许我\n"
+	.string "该加入水舰队才对…$"
 
 MagmaHideout_2F_2R_Text_Grunt6Defeat:
-	.string "Yeah, I really may not be right for\n"
-	.string "TEAM MAGMA…$"
+	.string "{CHN}是啊，我可能真的\n"
+	.string "不适合火焰队…$"
 
 MagmaHideout_2F_2R_Text_Grunt6PostBattle:
-	.string "Don't you get lonely for the sea\n"
-	.string "being in a place like this?$"
+	.string "{CHN}在这种地方待着，\n"
+	.string "你不会想念大海吗？$"
 
 MagmaHideout_2F_2R_Text_Grunt7Intro:
-	.string "You can hear tremors here sometimes.\p"
-	.string "Could it be the volcano rattling?\n"
-	.string "Or is it GROU…\p"
-	.string "Whoops!\n"
-	.string "No, no, never mind!$"
+	.string "{CHN}这里有时能听到震动。\p"
+	.string "是火山在震动吗？\n"
+	.string "还是固拉…\p"
+	.string "哎呀！\n"
+	.string "不，不，当我没说！$"
 
 MagmaHideout_2F_2R_Text_Grunt7Defeat:
-	.string "You're a fiery battler.\n"
-	.string "Just like a volcano!$"
+	.string "{CHN}你是个火热的对手。\n"
+	.string "就像火山一样！$"
 
 MagmaHideout_2F_2R_Text_Grunt7PostBattle:
-	.string "You just happened to win this time,\n"
-	.string "but that doesn't matter.\p"
-	.string "TEAM MAGMA's goal is about to be\n"
-	.string "reached!$"
+	.string "{CHN}你这次只是碰巧赢了，\n"
+	.string "但那不重要。\p"
+	.string "火焰队的目标即将\n"
+	.string "实现了！$"
 
 MagmaHideout_2F_2R_Text_Grunt8Intro:
-	.string "One of our guys was freaking out that\n"
-	.string "he lost his MAGMA EMBLEM…\p"
-	.string "Wait a minute!\n"
-	.string "Was it you who found it?$"
+	.string "{CHN}我们有个家伙慌了神，说\n"
+	.string "他的火焰队徽章丢了…\p"
+	.string "等等！\n"
+	.string "是你找到的吗？$"
 
 MagmaHideout_2F_2R_Text_Grunt8Defeat:
-	.string "I'm having trouble believing this…$"
+	.string "{CHN}我真不敢相信…$"
 
 MagmaHideout_2F_2R_Text_Grunt8PostBattle:
-	.string "I'm getting this feeling that our plan\n"
-	.string "is going to end in failure…$"
-
+	.string "{CHN}我有一种感觉，我们的计划\n"
+	.string "要以失败告终了…$"

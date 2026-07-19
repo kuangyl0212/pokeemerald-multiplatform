@@ -132,24 +132,23 @@ AbandonedShip_HiddenFloorCorridors_EventScript_TheDoorIsOpen::
 	end
 
 AbandonedShip_HiddenFloorCorridors_Text_Rm1DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 1” is painted on the door.$"
+	.string "{CHN}门锁着。\p"
+	.string "门上写着“1号房”。$"
 
 AbandonedShip_HiddenFloorCorridors_Text_Rm2DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 2” is painted on the door.$"
+	.string "{CHN}门锁着。\p"
+	.string "门上写着“2号房”。$"
 
 AbandonedShip_HiddenFloorCorridors_Text_Rm4DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 4” is painted on the door.$"
+	.string "{CHN}门锁着。\p"
+	.string "门上写着“4号房”。$"
 
 AbandonedShip_HiddenFloorCorridors_Text_Rm6DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 6” is painted on the door.$"
+	.string "{CHN}门锁着。\p"
+	.string "门上写着“6号房”。$"
 
 AbandonedShip_HiddenFloorCorridors_Text_InsertedKey:
-	.string "{PLAYER} inserted and turned the\n"
-	.string "KEY.\p"
-	.string "The inserted KEY stuck fast,\n"
-	.string "but the door opened.$"
-
+	.string "{CHN}{PLAYER}插入并转动了\n"
+	.string "钥匙。\p"
+	.string "插入的钥匙卡得很紧，\n"
+	.string "但门还是打开了。$"

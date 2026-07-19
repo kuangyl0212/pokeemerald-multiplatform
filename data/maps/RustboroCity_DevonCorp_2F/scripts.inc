@@ -269,114 +269,114 @@ RustboroCity_DevonCorp_2F_EventScript_WorkOnNext::
 	end
 
 RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon:
-	.string "We're developing a device for talking\n"
-	.string "with POKéMON.\p"
-	.string "But we haven't had much success…$"
+	.string "{CHN}我们正在开发一种能与\n"
+	.string "宝可梦交谈的装置.\p"
+	.string "但目前还没有太大进展…$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls:
-	.string "I'm developing new kinds of\n"
-	.string "POKé BALLS…\p"
-	.string "But I haven't made much headway…$"
+	.string "{CHN}我正在开发新型的\n"
+	.string "精灵球…\p"
+	.string "但还没取得什么进展…$"
 
 RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls:
-	.string "We finally made new kinds of\n"
-	.string "POKé BALLS!\p"
-	.string "The REPEAT BALL makes it easier to\n"
-	.string "catch POKéMON you've caught before.\p"
-	.string "The TIMER BALL gets better at catching\n"
-	.string "POKéMON the longer a battle runs.\p"
-	.string "Both are proudly developed by\n"
-	.string "the DEVON CORPORATION.\p"
-	.string "Please give them a try!$"
+	.string "{CHN}我们终于制造出了新型的\n"
+	.string "精灵球！\p"
+	.string "重复球能更容易地\n"
+	.string "捕捉之前已经捉过的宝可梦.\p"
+	.string "计时球在对战时间越长时，\n"
+	.string "捕捉宝可梦的效果越好.\p"
+	.string "两者都是由得文公司\n"
+	.string "自豪地开发的.\p"
+	.string "请务必试试看！$"
 
 RustboroCity_DevonCorp_2F_Text_IMadePokenav:
-	.string "I made the POKéNAV!\p"
-	.string "As an engineer, I feel blessed to have\n"
-	.string "made something so great!$"
+	.string "{CHN}我制造了宝可梦导航器！\p"
+	.string "作为一名工程师，能做出\n"
+	.string "这么棒的东西，我感到很幸运！$"
 
 RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav:
-	.string "Oh, wow!\n"
-	.string "That's a POKéNAV!\p"
-	.string "It came about as a result of our\n"
-	.string "PRESIDENT's desire to learn about\l"
-	.string "the feelings of POKéMON.\p"
-	.string "Would you like me to describe its\n"
-	.string "features in detail?\p"
-	.string "No, no. I think you'll find out just by\n"
-	.string "trying the POKéNAV out.$"
+	.string "{CHN}哦，哇！\n"
+	.string "那是宝可梦导航器！\p"
+	.string "它的诞生源于我们的\n"
+	.string "董事长想要了解\l"
+	.string "宝可梦感受的愿望.\p"
+	.string "要不要我详细介绍一下\n"
+	.string "它的功能？\p"
+	.string "不，不用了. 我想你只要亲自\n"
+	.string "试用一下宝可梦导航器就知道了.$"
 
 RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams:
-	.string "I'm trying to develop a device that\n"
-	.string "visually reproduces the dreams of\l"
-	.string "POKéMON…\p"
-	.string "But it's not going well.$"
+	.string "{CHN}我正在尝试开发一种装置，\n"
+	.string "能将宝可梦的梦境\l"
+	.string "视觉化呈现…\p"
+	.string "但进展不太顺利.$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
-	.string "I've been trying to develop a device\n"
-	.string "that resurrects POKéMON from fossils…\p"
-	.string "And, it's working!$"
+	.string "{CHN}我一直在尝试开发一种装置，\n"
+	.string "能从化石中复活宝可梦…\p"
+	.string "而且，它成功了！$"
 
 RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife:
-	.string "Wait! That thing you have there…\n"
-	.string "Is that a POKéMON fossil?\p"
-	.string "Would you like to bring that POKéMON\n"
-	.string "back to life?\p"
-	.string "I can with my newly developed\n"
-	.string "FOSSIL REGENERATOR.$"
+	.string "{CHN}等等！你手里那个…\n"
+	.string "是宝可梦的化石吗？\p"
+	.string "你想让那只宝可梦\n"
+	.string "复活吗？\p"
+	.string "我用新开发的\n"
+	.string "化石复活机就能做到.$"
 
 RustboroCity_DevonCorp_2F_Text_OhIsThatSo:
-	.string "Oh, is that so?\p"
-	.string "DEVON's technological expertise\n"
-	.string "is outstanding, I tell you.$"
+	.string "{CHN}哦，是吗？\p"
+	.string "得文的技术实力\n"
+	.string "可是顶尖的，我跟你说.$"
 
 RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne:
-	.string "Oh, now that's a surprise!\n"
-	.string "You have not one, but two, fossils?\p"
-	.string "Unfortunately, my machine can only\n"
-	.string "regenerate one POKéMON at a time.\p"
-	.string "Would you like to pick one of your\n"
-	.string "fossils for regeneration?$"
+	.string "{CHN}哦，真是令人惊讶！\n"
+	.string "你不仅有一块，而是有两块化石？\p"
+	.string "不幸的是，我的机器一次\n"
+	.string "只能复活一只宝可梦.\p"
+	.string "你想选哪一块化石\n"
+	.string "来复活呢?$"
 
 RustboroCity_DevonCorp_2F_Text_HandedFossilToResearcher:
-	.string "Excellent!\n"
-	.string "Let's do this right away.\p"
-	.string "{PLAYER} handed the {STR_VAR_1} to\n"
-	.string "the DEVON RESEARCHER.$"
+	.string "{CHN}太好了！\n"
+	.string "我们马上开始吧.\p"
+	.string "{PLAYER}把{STR_VAR_1}交给\n"
+	.string "了得文研究员.$"
 
 RustboroCity_DevonCorp_2F_Text_FossilRegeneratorTakesTime:
-	.string "The FOSSIL REGENERATOR, which I made,\n"
-	.string "is incredible.\p"
-	.string "But it has one drawback--it takes\n"
-	.string "a long time to work.\p"
-	.string "So, uh… How about you go for a stroll\n"
-	.string "and look around for a while?$"
+	.string "{CHN}我制造的化石复活机\n"
+	.string "非常厉害.\p"
+	.string "但它有一个缺点——需要\n"
+	.string "很长时间才能完成.\p"
+	.string "所以，嗯… 你要不要去散散步，\n"
+	.string "到处转转?$"
 
 RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife:
-	.string "Thanks for waiting!\p"
-	.string "Your fossilized POKéMON has been\n"
-	.string "brought back to life!\p"
-	.string "The fossil was an ancient POKéMON.\n"
-	.string "{STR_VAR_2}, it was!$"
+	.string "{CHN}让你久等了！\p"
+	.string "你的化石宝可梦\n"
+	.string "已经复活了！\p"
+	.string "这块化石是远古宝可梦.\n"
+	.string "是{STR_VAR_2}！$"
 
 RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher:
-	.string "{PLAYER} received {STR_VAR_2} from\n"
-	.string "the DEVON RESEARCHER.$"
+	.string "{CHN}{PLAYER}从得文研究员那里\n"
+	.string "得到了{STR_VAR_2}.$"
 
 /* Unused*/
 RustboroCity_DevonCorp_2F_Text_TooManyPokemon:
-	.string "Uh-oh, you've got too many POKéMON.\n"
-	.string "You have no room for this one.$"
+	.string "{CHN}糟糕，你的宝可梦太多了.\n"
+	.string "你已经没有空间容纳这只了.$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature:
-	.string "I'm trying to develop a new feature\n"
-	.string "for the POKéNAV…\p"
-	.string "But it's not going well.$"
+	.string "{CHN}我正在为宝可梦导航器\n"
+	.string "开发一项新功能…\p"
+	.string "但进展不太顺利.$"
 
 RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext:
-	.string "Well, now what shall I work on\n"
-	.string "developing next?\p"
-	.string "Our company allows us to make our\n"
-	.string "inspirations into reality.\p"
-	.string "One couldn't ask for a better\n"
-	.string "environment as an engineer.$"
+	.string "{CHN}那么，接下来我该\n"
+	.string "开发什么呢？\p"
+	.string "我们公司允许我们\n"
+	.string "将灵感变为现实.\p"
+	.string "作为一名工程师，\n"
+	.string "再没有比这更好的环境了.$"
 

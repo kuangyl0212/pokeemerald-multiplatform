@@ -6,8 +6,7 @@ AbandonedShip_Rooms2_B1F_EventScript_Camper::
 	end
 
 AbandonedShip_Rooms2_B1F_Text_PerfectPlaceToGoExploring:
-	.string "This is a perfect place to go exploring!\n"
-	.string "It's exciting here!\p"
-	.string "I bet there're amazing treasures on\n"
-	.string "board.$"
-
+	.string "{CHN}这里是探险的绝佳场所！\n"
+	.string "这里让人很兴奋！\p"
+	.string "我敢打赌船上一定有\n"
+	.string "了不起的宝藏。$"

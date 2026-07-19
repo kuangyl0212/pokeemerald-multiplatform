@@ -10,16 +10,15 @@ PacifidlogTown_House1_EventScript_Woman::
 	end
 
 PacifidlogTown_House1_Text_RegiStory:
-	.string "In the HOENN region, there are three\n"
-	.string "POKéMON that represent the power of\l"
-	.string "rock, ice, and steel.\p"
-	.string "Each of them is said to hide away deep\n"
-	.string "inside caves.\p"
-	.string "That's the story I heard when I was\n"
-	.string "just a little kid.$"
+	.string "{CHN}在丰缘地区，有三只\n"
+	.string "代表岩石、冰和钢铁之力量的\l"
+	.string "宝可梦。\p"
+	.string "据说它们各自隐藏在\n"
+	.string "深邃的洞穴之中。\p"
+	.string "这是我小时候\n"
+	.string "听来的故事。$"
 
 PacifidlogTown_House1_Text_SixDotsOpenThreeDoors:
-	.string "“Six dots open three doors.”\p"
-	.string "Grandpa used to say that, but I don't\n"
-	.string "know what he meant.$"
-
+	.string "{CHN}“六点开三门。”\p"
+	.string "爷爷过去常这么说，\n"
+	.string "但我不知道他是什么意思。$"

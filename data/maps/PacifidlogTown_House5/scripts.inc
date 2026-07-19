@@ -20,17 +20,16 @@ PacifidlogTown_House5_EventScript_Gentleman::
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
-	.string "I can't see MIRAGE ISLAND today…$"
+	.string "{CHN}今天我看不到幻之岛……$"
 
 PacifidlogTown_House5_Text_CanSeeMirageIslandToday:
-	.string "Oh! Oh my!\n"
-	.string "I can see MIRAGE ISLAND today!$"
+	.string "{CHN}哦！天哪！\n"
+	.string "今天我能看到幻之岛了！$"
 
 PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather:
-	.string "MIRAGE ISLAND…\p"
-	.string "It must become visible and invisible\n"
-	.string "depending on the weather conditions\l"
-	.string "that make mirages appear.\p"
-	.string "Or is it really appearing and\n"
-	.string "disappearing?$"
-
+	.string "{CHN}幻之岛……\p"
+	.string "它一定是根据产生海市蜃楼的\n"
+	.string "天气条件\l"
+	.string "而时隐时现的。\p"
+	.string "还是说它真的在出现和\n"
+	.string "消失？$"

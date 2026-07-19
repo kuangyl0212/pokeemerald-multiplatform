@@ -3,7 +3,7 @@ LilycoveCity_CoveLilyMotel_1F_MapScripts::
 
 LilycoveCity_CoveLilyMotel_1F_EventScript_MotelOwner::
 	lockall
-	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear
+	goto_if_set FLAG_SYS_GAME_CLEAR, LilycoveCity_CoveLilyMotel_1F_EventScript_Gameclear
 	goto_if_set FLAG_BADGE07_GET, LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot, MSGBOX_DEFAULT
 	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
@@ -26,7 +26,7 @@ LilycoveCity_CoveLilyMotel_1F_EventScript_AquaHideoutBusted::
 	releaseall
 	end
 
-LilycoveCity_CoveLilyMotel_1F_EventScript_GameClear::
+LilycoveCity_CoveLilyMotel_1F_EventScript_Gameclear::
 	msgbox LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar, MSGBOX_DEFAULT
 	applymovement LOCALID_MOTEL_OWNER, Common_Movement_FacePlayer
 	waitmovement 0
@@ -74,56 +74,55 @@ LilycoveCity_CoveLilyMotel_1F_Movement_OwnerReturn:
 	step_end
 
 LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot:
-	.string "Hm, so they doubled the guests by\n"
-	.string "using POKéMON as attractions?\p"
-	.string "Hm, well, maybe I should make a cute\n"
-	.string "POKéMON our inn's mascot.\p"
-	.string "I wonder if that will attract more\n"
-	.string "guests to stay with us?$"
+	.string "{CHN}嗯，他们用宝可梦作为\n"
+	.string "招揽手段让客人翻倍了？\p"
+	.string "嗯，也许我该弄一只可爱的\n"
+	.string "宝可梦当我们旅馆的吉祥物。\p"
+	.string "我想这是不是能吸引更多\n"
+	.string "客人来我们这里住呢？$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua:
-	.string "Oh, sorry, sorry!\n"
-	.string "I was too involved in watching TV!\p"
-	.string "Since that TEAM AQUA came to town,\n"
-	.string "the tourists have been staying away.$"
+	.string "{CHN}哦，对不起，对不起！\n"
+	.string "我看电视看得太入迷了！\p"
+	.string "自从那个水舰队来到镇上，\n"
+	.string "游客都不来了。$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV:
-	.string "Hey, down in front!\n"
-	.string "I can't see the TV!$"
+	.string "{CHN}喂，前面的让一让！\n"
+	.string "我看不到电视了！$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem:
-	.string "Amazing! You're telling me a POKéMON\n"
-	.string "found someone's lost item?\p"
-	.string "That's something. If we had some smart\n"
-	.string "POKéMON like that…\p"
-	.string "We could recover anything that our\n"
-	.string "guests mislaid…$"
+	.string "{CHN}了不起！你是说一只宝可梦\n"
+	.string "找到了别人遗失的物品？\p"
+	.string "真了不起。如果我们有这样聪明的\n"
+	.string "宝可梦…\p"
+	.string "我们就能找回客人\n"
+	.string "遗失的任何东西了…$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted:
-	.string "Oh, sorry, sorry!\n"
-	.string "I was too involved in watching TV!\p"
-	.string "I heard that someone busted\n"
-	.string "the TEAM AQUA HIDEOUT.\p"
-	.string "Thanks to that, we just booked\n"
-	.string "a reservation from a big group.\p"
-	.string "It was a company called… Uh…\n"
-	.string "GAME something…$"
+	.string "{CHN}哦，对不起，对不起！\n"
+	.string "我看电视看得太入迷了！\p"
+	.string "我听说有人捣毁了\n"
+	.string "水舰队的藏身处。\p"
+	.string "多亏了这样，我们刚接到了\n"
+	.string "一个大团的预订。\p"
+	.string "那家公司叫…呃…\n"
+	.string "GAME什么的…$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar:
-	.string "Amazing! A house-sitting POKéMON\n"
-	.string "caught a burglar?\p"
-	.string "That's something. If we had a tough\n"
-	.string "POKéMON as a security guard…\p"
-	.string "We would be able to provide our guests\n"
-	.string "with greater safety.$"
+	.string "{CHN}了不起！看家的宝可梦\n"
+	.string "抓住了小偷？\p"
+	.string "真了不起。如果我们有一只强壮的\n"
+	.string "宝可梦当保安…\p"
+	.string "我们就能为客人\n"
+	.string "提供更大的安全保障。$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner:
-	.string "Oh, sorry, sorry!\n"
-	.string "I was too involved in watching TV.\p"
-	.string "Oh, yes. A big group of guests arrived\n"
-	.string "a little while ago.\p"
-	.string "They booked in as GAME FREAK,\n"
-	.string "so I guess they must make games.\p"
-	.string "Uh-oh, I'd better get working on\n"
-	.string "their dinner!$"
-
+	.string "{CHN}哦，对不起，对不起！\n"
+	.string "我看电视看得太入迷了。\p"
+	.string "哦，对了。刚才有一大团客人\n"
+	.string "到达了。\p"
+	.string "他们以GAME FREAK的名字登记入住，\n"
+	.string "我想他们应该是做游戏的。\p"
+	.string "糟了，我得去准备\n"
+	.string "他们的晚餐了！$"

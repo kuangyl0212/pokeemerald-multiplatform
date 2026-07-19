@@ -566,156 +566,156 @@ Route111_EventScript_TrainerHillSign::
 	end
 
 Route111_Text_BattleOurFamily:
-	.string "Hello! I take it you're a traveler.\p"
-	.string "How's this? What do you say to taking\n"
-	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "{CHN}你好！我看你是个旅行者吧。\p"
+	.string "怎么样？要不要和我们家的四个人\n"
+	.string "进行一场宝可梦\l"
+	.string "连续对战呢？$"
 
 Route111_Text_IsThatSo:
-	.string "Is that so?\n"
-	.string "Drop in, if you change your mind!$"
+	.string "{CHN}是这样吗？\n"
+	.string "如果你改变主意，就来找我们吧！$"
 
 Route111_Text_VictorIntro:
-	.string "That's the spirit! I like you!$"
+	.string "{CHN}这才对嘛！我喜欢你！$"
 
 Route111_Text_VictorDefeat:
-	.string "Aiyah!\n"
-	.string "You're a lot tougher than I expected!$"
+	.string "{CHN}哎呀！\n"
+	.string "你比我想象的要强得多！$"
 
 Route111_Text_VictorPostBattle:
-	.string "Hey, all!\n"
-	.string "I've found a pretty strong TRAINER!$"
+	.string "{CHN}喂，大家！\n"
+	.string "我发现了一个很强的训练家！$"
 
 Route111_Text_VictoriaIntro:
-	.string "Oh, my goodness! Aren't you young?\p"
-	.string "You must be quite the TRAINER to beat\n"
-	.string "my husband, though.\p"
-	.string "It's my turn to battle now!$"
+	.string "{CHN}哦，天哪！你这么小啊？\p"
+	.string "能打败我丈夫，\n"
+	.string "你一定是个相当厉害的训练家。\p"
+	.string "现在轮到我出场了！$"
 
 Route111_Text_VictoriaDefeat:
-	.string "Oh, gosh!\n"
-	.string "I can't get over how strong you are!$"
+	.string "{CHN}哦，天哪！\n"
+	.string "你强得让我难以置信！$"
 
 Route111_Text_VictoriaPostBattle:
-	.string "There's a strong TRAINER here!\n"
-	.string "This one's really strong!$"
+	.string "{CHN}这里有个很强的训练家！\n"
+	.string "真的非常强！$"
 
 Route111_Text_ViviIntro:
-	.string "You're stronger than Mommy? Wow!\p"
-	.string "But I'm strong, too!\n"
-	.string "Really! Honestly!$"
+	.string "{CHN}你比妈妈还强？哇！\p"
+	.string "但我也很强哦！\n"
+	.string "真的！不骗你！$"
 
 Route111_Text_ViviDefeat:
-	.string "Huh? Did I just lose?$"
+	.string "{CHN}咦？我刚刚输了吗？$"
 
 Route111_Text_ViviPostBattle:
-	.string "This stinks…\p"
-	.string "…Snivel… Grandma!$"
+	.string "{CHN}真讨厌…\p"
+	.string "…呜呜…奶奶！$"
 
 Route111_Text_VickyIntro:
-	.string "How dare you make my granddaughter\n"
-	.string "cry!\p"
-	.string "For that, I'm going to smack you!\n"
-	.string "Prepare to lose!$"
+	.string "{CHN}你竟敢弄哭我孙女！\n"
+	.string "！\p"
+	.string "为此，我要好好教训你！\n"
+	.string "做好输的准备吧！$"
 
 Route111_Text_VickyDefeat:
-	.string "Kwah! You are strong…\n"
-	.string "My granddaughter was right…$"
+	.string "{CHN}呱！你确实很强…\n"
+	.string "我孙女说得没错…$"
 
 Route111_Text_VickyPostBattle:
-	.string "If you're not in any hurry,\n"
-	.string "visit with us awhile.$"
+	.string "{CHN}如果你不急着赶路，\n"
+	.string "就到家里坐一会儿吧。$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks:
-	.string "If you don't raise your POKéMON some\n"
-	.string "more, it could be tough to keep winning\l"
-	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
-	.string "ELITE FOUR are far stronger than\l"
-	.string "any GYM LEADER.$"
+	.string "{CHN}如果你不进一步培育你的宝可梦，\n"
+	.string "要想在晋级赛中持续获胜\l"
+	.string "可能会很困难。\p"
+	.string "我听说宝可梦联盟的\n"
+	.string "四天王比任何\l"
+	.string "道馆馆主都要强得多。$"
 
 Route111_Text_WinstrateFamilyDestroyedMe:
-	.string "I challenged the WINSTRATE family,\n"
-	.string "but four matches in a row is tough\l"
-	.string "going… They destroyed me.$"
+	.string "{CHN}我挑战了维恩斯特家族，\n"
+	.string "但连续四场对战真是\l"
+	.string "太难了…他们把我打得落花流水。$"
 
 Route111_Text_RouteSignMauville:
-	.string "ROUTE 111\n"
-	.string "{DOWN_ARROW} MAUVILLE CITY$"
+	.string "{CHN}111号道路\n"
+	.string "{DOWN_ARROW} 紫堇市$"
 
 Route111_Text_WinstrateHouseSign:
-	.string "“Our family's hearts beat as one!”\n"
-	.string "THE WINSTRATE'S HOUSE$"
+	.string "{CHN}“我们一家人的心一起跳动！”\n"
+	.string "维恩斯特家族的家$"
 
 Route111_Text_RouteSign112:
-	.string "ROUTE 111\n"
-	.string "{LEFT_ARROW} ROUTE 112$"
+	.string "{CHN}111号道路\n"
+	.string "{LEFT_ARROW} 112号道路$"
 
 Route111_Text_RouteSign113:
-	.string "ROUTE 111\n"
-	.string "{LEFT_ARROW} ROUTE 113$"
+	.string "{CHN}111号道路\n"
+	.string "{LEFT_ARROW} 113号道路$"
 
 Route111_Text_OldLadysRestStopSign:
-	.string "OLD LADY'S REST STOP\n"
-	.string "“Come in and rest your tired bones.”$"
+	.string "{CHN}老奶奶的休息处\n"
+	.string "“进来歇歇你疲惫的骨头吧。”$"
 
 Route111_Text_TrainerTipsSpAtkSpDef:
-	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
-	.string "powerfulness is SP. ATK. It stands for\l"
-	.string "“SPECIAL ATTACK.”\p"
-	.string "Likewise, SP. DEF stands for “SPECIAL\n"
-	.string "DEFENSE.”$"
+	.string "{CHN}训练家小贴士\p"
+	.string "宝可梦强度的指标之一是\n"
+	.string "特攻。它是\l"
+	.string "“特殊攻击”的缩写。\p"
+	.string "同样地，特防代表“特殊\n"
+	.string "防御”。$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
-	.string "There should be a tower made of sand\n"
-	.string "around here somewhere.\p"
-	.string "But for some reason, it can be seen\n"
-	.string "sometimes, and sometimes not.\p"
-	.string "That's why I call it the MIRAGE TOWER.$"
+	.string "{CHN}这附近某处应该有一座\n"
+	.string "沙子做成的塔。\p"
+	.string "但不知为什么，它有时能看见，\n"
+	.string "有时又看不见。\p"
+	.string "所以我把它叫做海市蜃楼塔。$"
 
 Route111_Text_MirageTowerClearlyVisible:
-	.string "I see it!\n"
-	.string "The tower of sand!\p"
-	.string "The sand tower they called a mirage\n"
-	.string "is clearly visible!\p"
-	.string "But it looks so fragile…\n"
-	.string "It could crumble away anytime…\p"
-	.string "I want to go inside it, but I can't\n"
-	.string "get my courage up for it…$"
+	.string "{CHN}我看到了！\n"
+	.string "那座沙之塔！\p"
+	.string "那座被称为海市蜃楼的\n"
+	.string "沙塔清晰可见！\p"
+	.string "但它看起来好脆弱…\n"
+	.string "随时都可能崩塌…\p"
+	.string "我想进去看看，但我\n"
+	.string "怎么也鼓不起勇气…$"
 
 Route111_Text_ThatWasShockingSandRainedDown:
-	.string "Whoa…\n"
-	.string "That was shocking.\p"
-	.string "Sand rained down in chunks all of\n"
-	.string "a sudden.\p"
-	.string "What was it like inside?\n"
-	.string "Were there sandy ghosts and such?$"
+	.string "{CHN}哇…\n"
+	.string "真是太惊人了。\p"
+	.string "沙子突然一块块地\n"
+	.string "像雨一样落下来。\p"
+	.string "里面是什么样子？\n"
+	.string "有沙之幽灵之类的东西吗？$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Since I spoke to you, the tower of sand\n"
-	.string "hasn't been seen.\p"
-	.string "Perhaps it really was\n"
-	.string "the MIRAGE TOWER…$"
+	.string "{CHN}自从和你说过话后，那座沙塔\n"
+	.string "就再也没出现过了。\p"
+	.string "或许它真的是\n"
+	.string "海市蜃楼塔吧…$"
 
 Route111_Text_ClawFossilDisappeared:
-	.string "The CLAW FOSSIL disappeared into\n"
-	.string "the sand…$"
+	.string "{CHN}爪子化石消失在\n"
+	.string "沙子中了…$"
 
 Route111_Text_RootFossilDisappeared:
-	.string "The ROOT FOSSIL disappeared into\n"
-	.string "the sand…$"
+	.string "{CHN}根之化石消失在\n"
+	.string "沙子中了…$"
 
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
-	.string "Oh, no!\p"
-	.string "My uncle in MAUVILLE told me to take\n"
-	.string "ROCK SMASH with me if I was going to\l"
-	.string "ROUTE 111!\p"
-	.string "My uncle? He lives across from\n"
-	.string "the bike shop in MAUVILLE.$"
+	.string "{CHN}糟了！\p"
+	.string "我在紫堇市的叔叔告诉我，\n"
+	.string "如果要去111号道路，\l"
+	.string "就要带上碎岩！\p"
+	.string "我叔叔？他住在紫堇市\n"
+	.string "自行车店对面。$"
 
 Route111_Text_TrainerHillSign:
-	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
-	.string "“Scale the heights, you hot-blooded\n"
-	.string "TRAINERS!”$"
+	.string "{CHN}{RIGHT_ARROW} 训练家之丘 入口\p"
+	.string "“攀登高峰吧，热血的\n"
+	.string "训练家们！”$"
 

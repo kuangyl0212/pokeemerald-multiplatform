@@ -39,20 +39,20 @@ VerdanturfTown_Mart_EventScript_Lass::
 	end
 
 VerdanturfTown_Mart_Text_XSpecialIsCrucial:
-	.string "For any POKéMON match, X SPECIAL\n"
-	.string "is crucial.\p"
-	.string "It jacks up the power of some moves\n"
-	.string "even though it's only for one battle.$"
+	.string "{CHN}在任何宝可梦对战中，特攻提升剂\n"
+	.string "都是至关重要的。\p"
+	.string "它能增强某些招式的威力，\n"
+	.string "尽管只持续一场对战。$"
 
 VerdanturfTown_Mart_Text_NoStrategyGuidesForBattleTent:
-	.string "They don't seem to sell any winning\n"
-	.string "strategy guides for the BATTLE TENT…\p"
-	.string "It seems one must rely on one's\n"
-	.string "own wits after all…$"
+	.string "{CHN}他们似乎不卖任何关于对战帐篷\n"
+	.string "的必胜策略指南…\p"
+	.string "看来还是得依靠自己\n"
+	.string "的智慧啊…$"
 
 VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon:
-	.string "The NEST BALL works better on\n"
-	.string "weakened POKéMON.\p"
-	.string "VERDANTURF is the only place you can\n"
-	.string "buy it.$"
+	.string "{CHN}巢穴球对已经虚弱\n"
+	.string "的宝可梦效果更好。\p"
+	.string "绿荫镇是你唯一能\n"
+	.string "买到它的地方。$"
 

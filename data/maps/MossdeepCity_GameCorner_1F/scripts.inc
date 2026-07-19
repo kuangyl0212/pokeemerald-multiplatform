@@ -39,49 +39,49 @@ RS_MysteryEventsHouse_EventScript_Door::
 	end
 
 RS_MysteryEventsHouse_Text_OldManGreeting:
-	.string "When I was young, I traveled the world\n"
-	.string "as a POKéMON TRAINER.\p"
-	.string "Now that I've become an old buzzard,\n"
-	.string "my only amusement is watching young\l"
-	.string "TRAINERS battle.$"
+	.string "{CHN}我年轻的时候，作为宝可梦训练家\n"
+	.string "周游了世界。\p"
+	.string "现在我成了个老古董，\n"
+	.string "唯一的乐趣就是看年轻\l"
+	.string "训练家们对战了。$"
 
 RS_MysteryEventsHouse_Text_DoorIsLocked:
-	.string "The door appears to be locked.$"
+	.string "{CHN}门好像锁着。$"
 
 RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer:
-	.string "A TRAINER named {STR_VAR_1} is\n"
-	.string "visiting my home.\p"
-	.string "Would you like to challenge\n"
-	.string "{STR_VAR_1}?$"
+	.string "{CHN}一位名叫{STR_VAR_1}的训练家\n"
+	.string "正在拜访我家。\p"
+	.string "你想要挑战\n"
+	.string "{STR_VAR_1}吗？$"
 
 RS_MysteryEventsHouse_Text_YouWontBattle:
-	.string "You won't battle? I'm disappointed\n"
-	.string "that I can't see you battle…$"
+	.string "{CHN}你不战斗吗？我很失望\n"
+	.string "不能看到你战斗……$"
 
 RS_MysteryEventsHouse_Text_KeepItToA3On3:
-	.string "Oh, good, good!\p"
-	.string "But my house isn't all that sturdy.\p"
-	.string "Could I ask you to keep it down to\n"
-	.string "a 3-on-3 match?$"
+	.string "{CHN}哦，好好！\p"
+	.string "但我的房子不是很结实。\p"
+	.string "能不能请你们控制在\n"
+	.string "3对3的比赛呢？$"
 
 RS_MysteryEventsHouse_Text_SaveYourProgress:
-	.string "Before you two battle, you should\n"
-	.string "save your progress.$"
+	.string "{CHN}在你们两个战斗之前，你应该\n"
+	.string "保存你的进度。$"
 
 RS_MysteryEventsHouse_Text_HopeToSeeAGoodMatch:
-	.string "I hope to see a good match!$"
+	.string "{CHN}我希望能看到一场精彩的比赛！$"
 
 RS_MysteryEventsHouse_Text_BattleTie:
-	.string "So, it became a standoff.\p"
-	.string "It was a brilliant match in which\n"
-	.string "neither side conceded a step!$"
+	.string "{CHN}所以，变成了平局。\p"
+	.string "那是一场精彩的比赛，\n"
+	.string "双方都不肯退让一步！$"
 
 RS_MysteryEventsHouse_Text_BattleWon:
-	.string "That was superlative!\p"
-	.string "Why, it was like seeing myself in\n"
-	.string "my youth again!$"
+	.string "{CHN}那太出色了！\p"
+	.string "哇，就像看到了年轻时的\n"
+	.string "我自己！$"
 
 RS_MysteryEventsHouse_Text_BattleLost:
-	.string "Ah, too bad for you!\p"
-	.string "But it was a good match.\n"
-	.string "I hope you can win next time.$"
+	.string "{CHN}啊，你太倒霉了！\p"
+	.string "但这是一场精彩的比赛。\n"
+	.string "希望你下次能赢。$"

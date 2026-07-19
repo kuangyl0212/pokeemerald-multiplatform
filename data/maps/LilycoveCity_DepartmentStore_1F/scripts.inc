@@ -139,45 +139,45 @@ LilycoveCity_DepartmentStore_1F_EventScript_FloorNamesSign::
 	end
 
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore:
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.$"
+	.string "{CHN}欢迎光临彩幽市百货大楼。$"
 
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings:
-	.string "Whenever I come to the DEPARTMENT\n"
-	.string "STORE, I always end up buying all sorts\l"
-	.string "of things because it's so fun.$"
+	.string "{CHN}每次来百货大楼，\n"
+	.string "我总是会忍不住买这买那，\l"
+	.string "因为太有趣了。$"
 
 LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
-	.string "Today, my mom is going to buy me some\n"
-	.string "nice furniture.$"
+	.string "{CHN}今天，妈妈说要给我买些\n"
+	.string "漂亮的家具。$"
 
 LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill:
-	.string "I'm buying something for my AZUMARILL\n"
-	.string "as a reward for winning a CONTEST.$"
+	.string "{CHN}我要给我的玛力露丽买点东西，\n"
+	.string "作为它赢得选拔赛的奖励。$"
 
 LilycoveCity_DepartmentStore_1F_Text_Azumarill:
-	.string "AZUMARILL: Maririroo!$"
+	.string "{CHN}玛力露丽：玛力丽露！$"
 
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
-	.string "1F: SERVICE COUNTER\n"
-	.string "    LOTTERY CORNER\p"
-	.string "2F: TRAINER'S ZONE\p"
-	.string "3F: BATTLE COLLECTION\p"
-	.string "4F: TM CORNER\p"
-	.string "5F: POKé DOLL FLOOR\p"
-	.string "ROOFTOP: ROOFTOP PLAZA$"
+	.string "{CHN}1F：服务台\n"
+	.string "    抽奖角落\p"
+	.string "2F：训练家专区\p"
+	.string "3F：对战收藏品\p"
+	.string "4F：技能学习器专区\p"
+	.string "5F：宝可梦布偶楼层\p"
+	.string "屋顶：屋顶广场$"
 
 /* Unused*/
 LilycoveCity_DepartmentStore_1F_Text_WirelessCommIsFun:
-	.string "Wireless Communication is a\n"
-	.string "lot of fun, isn't it?\p"
-	.string "I think it lets you do things that\n"
-	.string "weren't possible before.\p"
-	.string "For instance, you can now trade\n"
-	.string "with people you couldn't before.\p"
-	.string "I think it's going to be exciting!$"
+	.string "{CHN}无线通信很有趣，\n"
+	.string "不是吗？\p"
+	.string "我觉得它能做到以前\n"
+	.string "做不到的事情。\p"
+	.string "比如，现在可以和以前\n"
+	.string "无法交易的人交易了。\p"
+	.string "我想这一定会很刺激！$"
 
 /* Unused*/
 LilycoveCity_DepartmentStore_1F_Text_SpreadWordAboutWirelessComm:
-	.string "I want to spread the word about how\n"
-	.string "fun Wireless Communication can be.$"
+	.string "{CHN}我想告诉大家无线通信\n"
+	.string "有多么有趣。$"
 

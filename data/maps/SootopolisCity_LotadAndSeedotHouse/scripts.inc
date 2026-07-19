@@ -104,99 +104,99 @@ SootopolisCity_LotadAndSeedotHouse_EventScript_LotadSizeRecord::
 	end
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigSeedot:
-	.string "Do you know the POKéMON SEEDOT?\n"
-	.string "It's hardly ever seen in SOOTOPOLIS.\p"
-	.string "Anyway, I love big SEEDOT.\n"
-	.string "The bigger the better.\p"
-	.string "But my younger brother, he says that\n"
-	.string "LOTAD is bigger.\p"
-	.string "That's silly.\n"
-	.string "SEEDOT has to be bigger than that!\p"
-	.string "Huh? Do you have a SEEDOT with you?\n"
-	.string "P-p-please, show me!$"
+	.string "{CHN}你知道橡实果这种宝可梦吗？\n"
+	.string "在琉璃市很少见到。\p"
+	.string "总之，我喜欢大号的橡实果。\n"
+	.string "越大越好。\p"
+	.string "但是我弟弟说\n"
+	.string "莲叶童子更大。\p"
+	.string "那太傻了。\n"
+	.string "橡实果肯定比那个大！\p"
+	.string "咦？你带着橡实果吗？\n"
+	.string "请、请让我看看！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_GoshMightBeBiggerThanLotad:
-	.string "{STR_VAR_2} inches!\n"
-	.string "Oh, my gosh, this is a big one!\p"
-	.string "It might even beat the big LOTAD\n"
-	.string "my younger brother saw!\p"
-	.string "Thanks for showing me.\n"
-	.string "This is my thanks!$"
+	.string "{CHN}{STR_VAR_2}英寸！\n"
+	.string "哦，天哪，这个真大！\p"
+	.string "说不定比我弟弟见过的\n"
+	.string "大莲叶童子还要大！\p"
+	.string "谢谢你让我看。\n"
+	.string "这是谢礼！$"
 
 /* Unused*/
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion1:
-	.string "{PLAYER} received a POTION.$"
+	.string "{CHN}{PLAYER}得到了伤药。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1:
-	.string "Hunh?\n"
-	.string "Your BAG is crammed full.$"
+	.string "{CHN}咦？\n"
+	.string "你的背包已经满了。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerSeedot:
-	.string "{STR_VAR_2} inches, is it?\p"
-	.string "Hmm… I've seen a bigger SEEDOT\n"
-	.string "than this one.$"
+	.string "{CHN}{STR_VAR_2}英寸是吧？\p"
+	.string "嗯……我见过\n"
+	.string "比这更大的橡实果。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotSeedot:
-	.string "Oh, now this is quite something…\n"
-	.string "But it's not a SEEDOT!$"
+	.string "{CHN}哦，这倒是挺稀奇的……\n"
+	.string "但这不是橡实果啊！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigSeedot:
-	.string "You don't have a big SEEDOT?\n"
-	.string "That's too bad…\p"
-	.string "If you get a big SEEDOT, please\n"
-	.string "come show me.$"
+	.string "{CHN}你没有大号的橡实果吗？\n"
+	.string "那太可惜了……\p"
+	.string "如果你得到了大号橡实果，\n"
+	.string "请来给我看看。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory:
-	.string "The biggest SEEDOT in history!\n"
-	.string "{STR_VAR_2}'s {STR_VAR_3}-inch giant!\p"
-	.string "A SEEDOT bigger than a LOTAD\n"
-	.string "always wanted!$"
+	.string "{CHN}史上最大的橡实果！\n"
+	.string "{STR_VAR_2}的{STR_VAR_3}英寸巨物！\p"
+	.string "一直想要一只\n"
+	.string "比莲叶童子还大的橡实果！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigLotad:
-	.string "Do you know the POKéMON LOTAD?\n"
-	.string "It's rarely seen in SOOTOPOLIS.\p"
-	.string "I love, I mean love, big LOTAD!\p"
-	.string "My big brother says that SEEDOT is\n"
-	.string "bigger.\p"
-	.string "But that's wrong! Everyone knows that\n"
-	.string "LOTAD is a lot bigger.\p"
-	.string "Hunh? Do you have a LOTAD?\n"
-	.string "P-p-please show me!$"
+	.string "{CHN}你知道莲叶童子这种宝可梦吗？\n"
+	.string "在琉璃市很少见。\p"
+	.string "我、我真的很喜欢大号的莲叶童子！\p"
+	.string "我哥哥说\n"
+	.string "橡实果更大。\p"
+	.string "但那不对！谁都知道\n"
+	.string "莲叶童子大得多。\p"
+	.string "咦？你有莲叶童子吗？\n"
+	.string "请、请让我看看！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_WowMightBeBiggerThanSeedot:
-	.string "{STR_VAR_2} inches!\n"
-	.string "Wow, that is big!\p"
-	.string "It might be even bigger than the huge\n"
-	.string "SEEDOT my big brother saw.\p"
-	.string "Thanks for showing me!\n"
-	.string "This is my thanks!$"
+	.string "{CHN}{STR_VAR_2}英寸！\n"
+	.string "哇，真大！\p"
+	.string "说不定比我哥哥见过的\n"
+	.string "巨型橡实果还要大。\p"
+	.string "谢谢你让我看！\n"
+	.string "这是谢礼！$"
 
 /* Unused*/
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion2:
-	.string "{PLAYER} received a POTION.$"
+	.string "{CHN}{PLAYER}得到了伤药。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2:
-	.string "Hunh?\n"
-	.string "Your BAG is crammed full.$"
+	.string "{CHN}咦？\n"
+	.string "你的背包已经满了。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerLotad:
-	.string "{STR_VAR_2} inches?\p"
-	.string "Hmm… I've seen a bigger LOTAD\n"
-	.string "than this one here.$"
+	.string "{CHN}{STR_VAR_2}英寸？\p"
+	.string "嗯……我见过\n"
+	.string "比这只更大的莲叶童子。$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotLotad:
-	.string "Well, isn't this something!\n"
-	.string "But it's no LOTAD!$"
+	.string "{CHN}哎呀，这可真是稀奇！\n"
+	.string "但这不是莲叶童子！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigLotad:
-	.string "Don't you have a big LOTAD?\n"
-	.string "How disappointing…\p"
-	.string "If you get a big LOTAD, please\n"
-	.string "come show me!$"
+	.string "{CHN}你没有大号的莲叶童子吗？\n"
+	.string "真令人失望……\p"
+	.string "如果你得到了大号莲叶童子，\n"
+	.string "请来给我看看！$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BiggestLotadInHistory:
-	.string "The biggest LOTAD in history!\n"
-	.string "{STR_VAR_2}'s {STR_VAR_3}-inch colossus!\p"
-	.string "A LOTAD bigger than a SEEDOT\n"
-	.string "always wanted!$"
+	.string "{CHN}史上最大的莲叶童子！\n"
+	.string "{STR_VAR_2}的{STR_VAR_3}英寸巨无霸！\p"
+	.string "一直想要一只\n"
+	.string "比橡实果还大的莲叶童子！$"
 

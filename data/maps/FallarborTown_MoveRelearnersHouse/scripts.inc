@@ -57,41 +57,40 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBackWithHeartScale::
 	end
 
 FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
-	.string "I'm the MOVE TUTOR.\p"
-	.string "I know all the moves that POKéMON\n"
-	.string "learn--every one of them--and I can\l"
-	.string "teach POKéMON those moves.\p"
-	.string "I can teach a move to a POKéMON\n"
-	.string "of yours if you'd like.\p"
-	.string "I'll do it for a HEART SCALE.\n"
-	.string "I'm collecting those now.$"
+	.string "{CHN}我是招式教学家。\p"
+	.string "我知道宝可梦能学会的所有招式\n"
+	.string "——每一个——我可以\l"
+	.string "教会宝可梦这些招式。\p"
+	.string "如果你愿意，我可以\n"
+	.string "教你的宝可梦一个招式。\p"
+	.string "我要一个心之鳞片作为报酬。\n"
+	.string "我现在正在收集那个。$"
 
 FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
-	.string "Oh! That's it! That's an honest to\n"
-	.string "goodness HEART SCALE!\p"
-	.string "Let me guess, you want me to teach\n"
-	.string "a move?$"
+	.string "{CHN}哦！就是这个！这是真正的\n"
+	.string "心之鳞片！\p"
+	.string "让我猜猜，你想让我教你\n"
+	.string "一个招式？$"
 
 FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
-	.string "Which POKéMON needs tutoring?$"
+	.string "{CHN}哪只宝可梦需要教学？$"
 
 FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
-	.string "Which move should I teach?$"
+	.string "{CHN}我该教哪个招式？$"
 
 FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
-	.string "Sorry…\p"
-	.string "It doesn't appear as if I have any move\n"
-	.string "I can teach that POKéMON.$"
+	.string "{CHN}抱歉……\p"
+	.string "看来我没有任何\n"
+	.string "能教给那只宝可梦的招式。$"
 
 FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
-	.string "{PLAYER} handed over one HEART SCALE\n"
-	.string "in exchange.$"
+	.string "{CHN}{PLAYER}递出了一个心之鳞片\n"
+	.string "作为交换。$"
 
 FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
-	.string "If your POKéMON need to learn a move,\n"
-	.string "come back with a HEART SCALE.$"
+	.string "{CHN}如果你的宝可梦需要学习招式，\n"
+	.string "带着心之鳞片再来吧。$"
 
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
-	.string "Hunh? There isn't a single move that\n"
-	.string "I can teach an EGG.$"
-
+	.string "{CHN}嗯？我一个招式都\n"
+	.string "教不了蛋。$"

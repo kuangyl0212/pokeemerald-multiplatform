@@ -27,8 +27,8 @@ static const s32 sPowersOfTen[] =
 
 u8 *StringCopy_Nickname(u8 *dest, const u8 *src)
 {
-    u8 i;
-    u32 limit = POKEMON_NAME_LENGTH;
+    s32 i;
+    s32 limit = POKEMON_NAME_BUFFER_SIZE;
 
     for (i = 0; i < limit; i++)
     {
@@ -50,6 +50,19 @@ u8 *StringGet_Nickname(u8 *str)
     for (i = 0; i < limit; i++)
         if (str[i] == EOS)
             return &str[i];
+
+    // Truncated: check for incomplete Chinese (0x80) escape at the end.
+    // 0x80 escape = 3 bytes (0x80 + 2 GB2312 bytes).
+    if (i >= 1 && str[i - 1] == 0x80)
+    {
+        str[i - 1] = EOS;
+        return &str[i - 1];
+    }
+    if (i >= 2 && str[i - 2] == 0x80)
+    {
+        str[i - 2] = EOS;
+        return &str[i - 2];
+    }
 
     str[i] = EOS;
     return &str[i];
@@ -369,6 +382,11 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
             default:
                 *dest++ = *src++;
             }
+            break;
+        case 0x80: // Chinese escape: next 2 bytes are GB2312 encoding
+            *dest++ = c;
+            *dest++ = *src++;
+            *dest++ = *src++;
             break;
         case EOS:
             *dest = EOS;
@@ -771,6 +789,14 @@ void StripExtCtrlCodes(u8 *str)
         {
             srcIndex++;
             srcIndex += GetExtCtrlCodeLength(str[srcIndex]);
+        }
+        else if (str[srcIndex] == 0x80) // Chinese escape: copy 3 bytes (0x80 + 2 GB2312 bytes)
+        {
+            str[destIndex++] = str[srcIndex++]; // 0x80
+            if (str[srcIndex] == EOS) break;
+            str[destIndex++] = str[srcIndex++]; // GB2312 byte 1
+            if (str[srcIndex] == EOS) break;
+            str[destIndex++] = str[srcIndex++]; // GB2312 byte 2
         }
         else
         {

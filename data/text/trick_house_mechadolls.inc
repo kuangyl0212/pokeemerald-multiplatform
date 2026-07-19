@@ -1,134 +1,134 @@
 gTrickHouse_Mechadoll_Oddish::
-	.string "ODDISH$"
+	.string "{CHN}走路草$"
 
 gTrickHouse_Mechadoll_Poochyena::
-	.string "POOCHYENA$"
+	.string "{CHN}土狼犬$"
 
 gTrickHouse_Mechadoll_Taillow::
-	.string "TAILLOW$"
+	.string "{CHN}傲骨燕$"
 
 gTrickHouse_Mechadoll_Azurill::
-	.string "AZURILL$"
+	.string "{CHN}露力丽$"
 
 gTrickHouse_Mechadoll_Lotad::
-	.string "LOTAD$"
+	.string "{CHN}莲叶童子$"
 
 gTrickHouse_Mechadoll_Wingull::
-	.string "WINGULL$"
+	.string "{CHN}长翅鸥$"
 
 gTrickHouse_Mechadoll_Dustox::
-	.string "DUSTOX$"
+	.string "{CHN}毒粉蛾$"
 
 gTrickHouse_Mechadoll_Zubat::
-	.string "ZUBAT$"
+	.string "{CHN}超音蝠$"
 
 gTrickHouse_Mechadoll_Nincada::
-	.string "NINCADA$"
+	.string "{CHN}土居忍士$"
 
 gTrickHouse_Mechadoll_Ralts::
-	.string "RALTS$"
+	.string "{CHN}拉鲁拉丝$"
 
 gTrickHouse_Mechadoll_Zigzagoon::
-	.string "ZIGZAGOON$"
+	.string "{CHN}蛇纹熊$"
 
 gTrickHouse_Mechadoll_Slakoth::
-	.string "SLAKOTH$"
+	.string "{CHN}懒人獭$"
 
 gTrickHouse_Mechadoll_Poochyena2::
-	.string "POOCHYENA$"
+	.string "{CHN}土狼犬$"
 
 gTrickHouse_Mechadoll_Shroomish::
-	.string "SHROOMISH$"
+	.string "{CHN}蘑蘑菇$"
 
 gTrickHouse_Mechadoll_Zigzagoon2::
-	.string "ZIGZAGOON$"
+	.string "{CHN}蛇纹熊$"
 
 gTrickHouse_Mechadoll_Poochyena3::
-	.string "POOCHYENA$"
+	.string "{CHN}土狼犬$"
 
 gTrickHouse_Mechadoll_Zubat2::
-	.string "ZUBAT$"
+	.string "{CHN}超音蝠$"
 
 gTrickHouse_Mechadoll_Carvanha::
-	.string "CARVANHA$"
+	.string "{CHN}利牙鱼$"
 
 gTrickHouse_Mechadoll_BurnHeal::
-	.string "BURN HEAL$"
+	.string "{CHN}烧伤药$"
 
 gTrickHouse_Mechadoll_HarborMail::
-	.string "HARBOR MAIL$"
+	.string "{CHN}港口邮件$"
 
 gTrickHouse_Mechadoll_SamePrice::
-	.string "Same price$"
+	.string "{CHN}价格相同$"
 
 gTrickHouse_Mechadoll_60Yen::
-	.string "¥60$"
+	.string "{CHN}¥60$"
 
 gTrickHouse_Mechadoll_55Yen::
-	.string "¥55$"
+	.string "{CHN}¥55$"
 
 gTrickHouse_Mechadoll_Nothing::
-	.string "Nothing$"
+	.string "{CHN}无$"
 
 gTrickHouse_Mechadoll_CostMore::
-	.string "They will cost more.$"
+	.string "{CHN}价格会更高。$"
 
 gTrickHouse_Mechadoll_CostLess::
-	.string "They will cost less.$"
+	.string "{CHN}价格会更低。$"
 
 gTrickHouse_Mechadoll_SamePrice2::
-	.string "Same price$"
+	.string "{CHN}价格相同$"
 
 gTrickHouse_Mechadoll_Male::
-	.string "Male$"
+	.string "{CHN}雄性$"
 
 gTrickHouse_Mechadoll_Female::
-	.string "Female$"
+	.string "{CHN}雌性$"
 
 gTrickHouse_Mechadoll_Neither::
-	.string "Neither$"
+	.string "{CHN}都不是$"
 
 gTrickHouse_Mechadoll_ElderlyMen::
-	.string "Elderly men$"
+	.string "{CHN}老爷爷$"
 
 gTrickHouse_Mechadoll_ElderlyLadies::
-	.string "Elderly ladies$"
+	.string "{CHN}老奶奶$"
 
 gTrickHouse_Mechadoll_SameNumber::
-	.string "Same number$"
+	.string "{CHN}数量相同$"
 
 gTrickHouse_Mechadoll_None::
-	.string "None$"
+	.string "{CHN}没有$"
 
 gTrickHouse_Mechadoll_One::
-	.string "1$"
+	.string "{CHN}1$"
 
 gTrickHouse_Mechadoll_Two::
-	.string "2$"
+	.string "{CHN}2$"
 
 gTrickHouse_Mechadoll_Two2::
-	.string "2$"
+	.string "{CHN}2$"
 
 gTrickHouse_Mechadoll_Three::
-	.string "3$"
+	.string "{CHN}3$"
 
 gTrickHouse_Mechadoll_Four::
-	.string "4$"
+	.string "{CHN}4$"
 
 gTrickHouse_Mechadoll_Six::
-	.string "6$"
+	.string "{CHN}6$"
 
 gTrickHouse_Mechadoll_Seven::
-	.string "7$"
+	.string "{CHN}7$"
 
 gTrickHouse_Mechadoll_Eight::
-	.string "8$"
+	.string "{CHN}8$"
 
 gTrickHouse_Mechadoll_Six2::
-	.string "6$"
+	.string "{CHN}6$"
 
 gTrickHouse_Mechadoll_Seven2::
-	.string "7$"
+	.string "{CHN}7$"
 
 gTrickHouse_Mechadoll_Eight2::
-	.string "8$"
+	.string "{CHN}8$"

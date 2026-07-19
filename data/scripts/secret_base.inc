@@ -1,26 +1,26 @@
 SecretBase_Text_TreeCanBeClimbed:
-	.string "If some vines drop down, this tree can\n"
-	.string "be climbed.$"
+	.string "{CHN}如果有些藤蔓垂下来，这棵树\n"
+	.string "就可以爬上去。$"
 
 SecretBase_Text_TreeUseSecretPower:
-	.string "If some vines drop down, this tree can\n"
-	.string "be climbed.\p"
-	.string "Use the SECRET POWER?$"
+	.string "{CHN}如果有些藤蔓垂下来，这棵树\n"
+	.string "就可以爬上去。\p"
+	.string "要使用秘密力量吗？$"
 
 SecretBase_Text_VineDroppedDown:
-	.string "A thick vine dropped down!$"
+	.string "{CHN}一根粗藤蔓垂下来了！$"
 
 SecretBase_Text_ClumpOfGrass:
-	.string "If this clump of grass can be moved,\n"
-	.string "it might be possible to go inside.$"
+	.string "{CHN}如果这丛草能被移开，\n"
+	.string "说不定可以进去。$"
 
 SecretBase_Text_ClumpUseSecretPower:
-	.string "If this clump of grass can be moved,\n"
-	.string "it might be possible to go inside.\p"
-	.string "Use the SECRET POWER?$"
+	.string "{CHN}如果这丛草能被移开，\n"
+	.string "说不定可以进去。\p"
+	.string "要使用秘密力量吗？$"
 
 SecretBase_Text_DiscoveredSmallEntrance:
-	.string "Discovered a small entrance!$"
+	.string "{CHN}发现了一个小入口！$"
 
 	.include "data/text/secret_base_trainers.inc"
 
@@ -672,66 +672,66 @@ SecretBase_EventScript_CushionInteract::
 	end
 
 SecretBase_Text_AllDecorationsWillBeReturned:
-	.string "All decorations and furniture in your\n"
-	.string "SECRET BASE will be returned to your PC.\p"
-	.string "Is that okay?$"
+	.string "{CHN}你秘密基地里的所有装饰和家具\n"
+	.string "都会退回到你的电脑里。\p"
+	.string "可以吗？$"
 
 SecretBase_Text_WantToRegisterSecretBase:
-	.string "Do you want to register\n"
-	.string "{STR_VAR_1}'s SECRET BASE?$"
+	.string "{CHN}你要登记\n"
+	.string "{STR_VAR_1}的秘密基地吗？$"
 
 SecretBase_Text_AlreadyRegisteredDelete:
-	.string "This data is already registered.\n"
-	.string "Would you like to delete it?$"
+	.string "{CHN}这个数据已经登记过了。\n"
+	.string "你要删除它吗？$"
 
 SecretBase_Text_TooManyBasesDeleteSome:
-	.string "Up to 10 locations can be registered.\p"
-	.string "Delete a location if you want to\n"
-	.string "register another location.$"
+	.string "{CHN}最多可以登记10个地点。\p"
+	.string "如果你想登记其他地点，\n"
+	.string "请删除一个地点。$"
 
 SecretBase_Text_RegistrationCompleted:
-	.string "Registration completed.$"
+	.string "{CHN}登记完成。$"
 
 SecretBase_Text_DataUnregistered:
-	.string "Data has been unregistered.$"
+	.string "{CHN}数据已取消登记。$"
 
 SecretBase_Text_BootUpPC:
-	.string "{PLAYER} booted up the PC.$"
+	.string "{CHN}{PLAYER}打开了电脑。$"
 
 SecretBase_Text_WhatWouldYouLikeToDo:
-	.string "What would you like to do?$"
+	.string "{CHN}你要做什么？$"
 
 SecretBase_Text_RegistryInfo:
-	.string "Once registered, a SECRET BASE will not\n"
-	.string "disappear unless the other TRAINER\l"
-	.string "moves it to a different location.\p"
-	.string "If a SECRET BASE is deleted from the\n"
-	.string "registered list, another one may take\l"
-	.string "its place.\p"
-	.string "Up to ten SECRET BASE locations\n"
-	.string "may be registered.$"
+	.string "{CHN}一旦登记，秘密基地就不会\n"
+	.string "消失，除非其他训练家\l"
+	.string "把它搬到别的地点。\p"
+	.string "如果从登记列表中删除了秘密基地，\n"
+	.string "另一个秘密基地可能会\l"
+	.string "取代它的位置。\p"
+	.string "最多可以登记\n"
+	.string "十个秘密基地地点。$"
 
 SecretBase_Text_BattleTowerShield:
-	.string "A shield of {STR_VAR_2} that marks winning\n"
-	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
+	.string "{CHN}一个{STR_VAR_2}的盾牌，标记着在对战塔\n"
+	.string "连胜{STR_VAR_1}次。$"
 
 SecretBase_Text_ToyTV:
-	.string "A realistic toy TV. It could be easily\n"
-	.string "mistaken for the real thing.$"
+	.string "{CHN}一台逼真的玩具电视。很容易\n"
+	.string "被误认为真品。$"
 
 SecretBase_Text_SeedotTV:
-	.string "A toy TV shaped like a SEEDOT.\n"
-	.string "It looks ready to roll away on its own…$"
+	.string "{CHN}一台橡实果形状的玩具电视。\n"
+	.string "看起来随时会自己滚走……$"
 
 SecretBase_Text_SkittyTV:
-	.string "A toy TV shaped like a SKITTY.\n"
-	.string "It looks ready to stroll away…$"
+	.string "{CHN}一台向尾喵形状的玩具电视。\n"
+	.string "看起来随时会自己溜走……$"
 
 SecretBase_Text_WouldYouLikeToMoveBases:
-	.string "You may only make one SECRET BASE.\p"
-	.string "Would you like to move from the SECRET\n"
-	.string "BASE near {STR_VAR_1}?$"
+	.string "{CHN}你只能拥有一个秘密基地。\p"
+	.string "你要从{STR_VAR_1}附近的秘密\n"
+	.string "基地搬走吗？$"
 
 SecretBase_Text_MovingCompletedUseSecretPower:
-	.string "Moving completed.\p"
-	.string "Would you like to use the SECRET POWER?$"
+	.string "{CHN}搬家完成。\p"
+	.string "你要使用秘密力量吗？$"

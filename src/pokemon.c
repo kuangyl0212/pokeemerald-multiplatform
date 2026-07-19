@@ -3778,11 +3778,39 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
         }
         else
         {
+            s32 lastComplete = 0;
+            s32 pos = 0;
             for (retVal = 0;
                 retVal < POKEMON_NAME_LENGTH;
                 data[retVal] = boxMon->nickname[retVal], retVal++){}
 
             data[retVal] = EOS;
+
+            // Fix incomplete Chinese (0x80) escape sequence at the end.
+            // 0x80 escape = 3 bytes (0x80 + 2 GB2312 bytes).
+            // If truncated mid-escape, the renderer would read past EOS.
+            while (pos < POKEMON_NAME_LENGTH)
+            {
+                if (data[pos] == EOS)
+                    break;
+                if (data[pos] == 0x80)
+                {
+                    if (pos + 2 < POKEMON_NAME_LENGTH)
+                    {
+                        lastComplete = pos + 3;
+                        pos += 3;
+                    }
+                    else
+                        break; // Incomplete escape
+                }
+                else
+                {
+                    lastComplete = pos + 1;
+                    pos++;
+                }
+            }
+            if (lastComplete < POKEMON_NAME_LENGTH && data[lastComplete] != EOS)
+                data[lastComplete] = EOS;
         }
         break;
     }
@@ -4605,16 +4633,36 @@ bool8 IsPokemonStorageFull(void)
 void GetSpeciesName(u8 *name, u16 species)
 {
     s32 i;
+    const u8 *src;
 
-    for (i = 0; i <= POKEMON_NAME_LENGTH; i++)
+    if (species > NUM_SPECIES)
+        src = gSpeciesNames[SPECIES_NONE];
+    else
+        src = gSpeciesNames[species];
+
+    // Skip {CHN} prefix (EXT_CTRL_CODE_BEGIN + EXT_CTRL_CODE_CHN) if present.
+    // This saves 2 bytes, allowing 4 Chinese chars (12 bytes + EOS) to fit in
+    // POKEMON_NAME_LENGTH=13. The 0x80 escape sequences are self-contained
+    // for Chinese rendering and do not require {CHN} mode switch.
+    if (src[0] == EXT_CTRL_CODE_BEGIN && src[1] == EXT_CTRL_CODE_CHN)
+        src += 2;
+
+    for (i = 0; i < POKEMON_NAME_LENGTH; i++)
     {
-        if (species > NUM_SPECIES)
-            name[i] = gSpeciesNames[SPECIES_NONE][i];
-        else
-            name[i] = gSpeciesNames[species][i];
-
+        name[i] = src[i];
         if (name[i] == EOS)
             break;
+    }
+
+    // If truncated (no EOS within POKEMON_NAME_LENGTH bytes),
+    // back up to last complete Chinese character boundary.
+    // Chinese escape: 0x80 + 2 GB2312 bytes = 3 bytes total.
+    if (i == POKEMON_NAME_LENGTH)
+    {
+        if (i >= 1 && name[i - 1] == 0x80)
+            i--;
+        else if (i >= 2 && name[i - 2] == 0x80)
+            i -= 2;
     }
 
     name[i] = EOS;

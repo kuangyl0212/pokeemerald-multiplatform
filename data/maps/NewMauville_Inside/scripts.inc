@@ -246,18 +246,18 @@ NewMauville_Inside_EventScript_DefeatedVoltorb3::
 	end
 
 NewMauville_Inside_Text_GeneratorRadiatingHeat:
-	.string "The generator is radiating heat that\n"
-	.string "can be felt even at a distance.\p"
-	.string "It looks like it should be turned off\n"
-	.string "as soon as possible.$"
+	.string "{CHN}发电机散发着热量，\n"
+	.string "即使在远处也能感觉到。\p"
+	.string "看起来得尽快\n"
+	.string "把它关掉才行。$"
 
 NewMauville_Inside_Text_GeneratorQuietedDown:
-	.string "The generator quieted down.$"
+	.string "{CHN}发电机安静下来了。$"
 
 NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
-	.string "{PLAYER} stepped on the switch.\p"
-	.string "Click…\p"
+	.string "{CHN}{PLAYER}踩下了开关。\p"
+	.string "咔嗒…\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "The generator appears to have\n"
-	.string "stopped…$"
+	.string "发电机似乎\n"
+	.string "停下来了…$"

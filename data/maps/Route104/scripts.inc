@@ -995,174 +995,174 @@ Route104_EventScript_Darian::
 	end
 
 Route104_Text_BrineyLivesInSeasideCottage:
-	.string "That seaside cottage is where\n"
-	.string "MR. BRINEY lives.\p"
-	.string "He was once a mighty sailor who never\n"
-	.string "feared the sea, however stormy.$"
+	.string "{CHN}那座海边的别墅就是\n"
+	.string "布里内先生住的地方。\p"
+	.string "他曾是一位无所畏惧的\n"
+	.string "强悍水手，无论海上风浪多大。$"
 
 Route104_Text_WhatsItLikeAtBottomOfSea:
-	.string "The sea, huh?\p"
-	.string "I wonder what it's like at the bottom\n"
-	.string "of the sea?$"
+	.string "{CHN}大海啊……\p"
+	.string "不知道海底\n"
+	.string "是什么样子呢？$"
 
 Route104_Text_ThrowBallAtWeakenedPokemon:
-	.string "If you're going to throw a POKé BALL,\n"
-	.string "weaken the wild POKéMON first.\p"
-	.string "It will be easier to catch if it's been\n"
-	.string "poisoned, burned, or lulled to sleep.$"
+	.string "{CHN}如果要扔精灵球，\n"
+	.string "先削弱野生宝可梦。\p"
+	.string "如果让它陷入中毒、灼伤或睡眠状态，\n"
+	.string "就更容易捕捉了。$"
 
 Route104_Text_OnlyThrowBallAtWildPokemon:
-	.string "You're a thief if you try to steal\n"
-	.string "someone else's POKéMON.\p"
-	.string "You should throw POKé BALLS only at\n"
-	.string "wild POKéMON.$"
+	.string "{CHN}如果你想偷走\n"
+	.string "别人的宝可梦，那你就是小偷。\p"
+	.string "精灵球只能\n"
+	.string "扔向野生宝可梦。$"
 
 Route104_Text_ImNotATrainer:
-	.string "Oh, no, I'm not a TRAINER.\p"
-	.string "But that's right, if TRAINERS lock eyes,\n"
-	.string "it's a challenge to battle.\p"
-	.string "If you don't want to battle, stay out\n"
-	.string "of their sight.$"
+	.string "{CHN}哦，不，我不是训练家。\p"
+	.string "不过没错，如果训练家们四目相对，\n"
+	.string "那就是对战的挑战。\p"
+	.string "如果你不想对战，就\n"
+	.string "别出现在他们视线里。$"
 
 Route104_Text_LikeFillingMouthWithSeedsTakeThis:
-	.string "I like filling my mouth with seeds,\n"
-	.string "then spitting them out fast!\p"
-	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
-	.string "a move for firing seeds rapidly.$"
+	.string "{CHN}我喜欢把种子塞满嘴巴，\n"
+	.string "然后快速吐出来！\p"
+	.string "这个给你，你也试试看吧！\p"
+	.string "让宝可梦使用它，就能学会\n"
+	.string "连续发射种子的招式。$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "{CHN}给你一句忠告！\p"
+	.string "招式学习器，也就是技能学习器，\n"
+	.string "只能使用一次。\p"
+	.string "一旦使用就消失了。\n"
+	.string "使用前要三思哦！$"
 
 Route104_Text_DontNeedThisTakeIt:
-	.string "This FLOWER SHOP started selling\n"
-	.string "saplings recently.\p"
-	.string "It made me so happy, I went overboard\n"
-	.string "shopping.\p"
-	.string "I don't need this WHITE HERB anymore.\n"
-	.string "Would you take it, please?$"
+	.string "{CHN}这家花店最近开始\n"
+	.string "卖树苗了。\p"
+	.string "我高兴得不得了，\n"
+	.string "买得太多了。\p"
+	.string "我不再需要这颗白色香草了。\n"
+	.string "能请你收下它吗？$"
 
 Route104_Text_FlowerShopSellingSaplings:
-	.string "This FLOWER SHOP started selling\n"
-	.string "saplings recently.\p"
-	.string "It made me so happy, I went overboard\n"
-	.string "shopping. Where should I put them?$"
+	.string "{CHN}这家花店最近开始\n"
+	.string "卖树苗了。\p"
+	.string "我高兴得不得了，\n"
+	.string "买得太多了。该把它们种在哪里呢？$"
 
 Route104_Text_MrBrineysCottage:
-	.string "MR. BRINEY'S COTTAGE$"
+	.string "{CHN}布里内先生的别墅$"
 
 Route104_Text_RouteSignPetalburg:
-	.string "ROUTE 1O4\n"
-	.string "{RIGHT_ARROW} PETALBURG CITY$"
+	.string "{CHN}104号道路\n"
+	.string "{RIGHT_ARROW} 橙华市$"
 
 Route104_Text_RouteSignRustboro:
-	.string "ROUTE 1O4\n"
-	.string "{UP_ARROW} RUSTBORO CITY$"
+	.string "{CHN}104号道路\n"
+	.string "{UP_ARROW} 卡那兹市$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "PRETTY PETAL FLOWER SHOP$"
+	.string "{CHN}美丽花瓣花店$"
 
 Route104_Text_TrainerTipsDoubleBattles:
-	.string "TRAINER TIPS\p"
-	.string "In the HOENN region there are pairs\n"
-	.string "of TRAINERS who challenge others\l"
-	.string "for 2-on-2 POKéMON battles called\l"
-	.string "DOUBLE BATTLES.\p"
-	.string "In a DOUBLE BATTLE, the TRAINER must\n"
-	.string "send out two POKéMON, the one at the\l"
-	.string "left of the list and the top one.\l"
-	.string "Watch how POKéMON are lined up.$"
+	.string "{CHN}训练家小贴士\p"
+	.string "在丰缘地区，有成对的\n"
+	.string "训练家会向他人发起\l"
+	.string "2对2的宝可梦对战，\l"
+	.string "称为双打对战。\p"
+	.string "在双打对战中，训练家必须\n"
+	.string "派出两只宝可梦，分别是名单\l"
+	.string "左侧那只和上方那只。\l"
+	.string "注意宝可梦的排列顺序。$"
 
 Route104_Text_MayWeShouldRegister:
-	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "DEVON upgraded your POKéNAV with\n"
-	.string "the MATCH CALL system, huh?\p"
-	.string "We should register each other so we\n"
-	.string "can get in contact anytime.$"
+	.string "{CHN}小遥：哦，你好，{PLAYER}{KUN}！\p"
+	.string "得文给你的宝可领航员升级了\n"
+	.string "对战呼叫系统，是吧？\p"
+	.string "我们应该互相登记，这样\n"
+	.string "就能随时联系了。$"
 
 Route104_Text_RegisteredMay:
-	.string "{PLAYER} registered MAY\n"
-	.string "in the POKéNAV.$"
+	.string "{CHN}{PLAYER}在小遥的\n"
+	.string "宝可领航员中登记了。$"
 
 Route104_Text_MayHowsYourPokedex:
-	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your POKéDEX coming along?$"
+	.string "{CHN}小遥：哦，对了，{PLAYER}{KUN}，\n"
+	.string "你的宝可梦图鉴进展得怎么样了？$"
 
 Route104_Text_MayMinesDecentLetsBattle:
-	.string "Mine's looking pretty decent.\n"
-	.string "So…\l"
-	.string "How about a little battle?$"
+	.string "{CHN}我的看起来还不错。\n"
+	.string "那么……\l"
+	.string "来一场小小的对战如何？$"
 
 Route104_Text_MayHaventRaisedPokemon:
-	.string "MAY: Oh, what's the matter?\p"
-	.string "Haven't you caught or raised your\n"
-	.string "POKéMON very much?\p"
-	.string "That's not very good for a TRAINER!$"
+	.string "{CHN}小遥：哦，怎么了？\p"
+	.string "你还没有捕捉或培养\n"
+	.string "多少宝可梦吗？\p"
+	.string "作为训练家这可不太好哦！$"
 
 Route104_Text_MayLetsBattle:
-	.string "MAY: So, what do you think?\n"
-	.string "How about a little battle here?$"
+	.string "{CHN}小遥：那么，你觉得怎么样？\n"
+	.string "要不要在这里来场小小的对战？$"
 
 Route104_Text_MayIntro:
-	.string "MAY: You just became a TRAINER,\n"
-	.string "{PLAYER}{KUN}. I'm not going to lose!$"
+	.string "{CHN}小遥：你才刚成为训练家，\n"
+	.string "{PLAYER}{KUN}。我可不会输！$"
 
 Route104_Text_MayDefeat:
-	.string "Yikes!\n"
-	.string "You're better than I expected!$"
+	.string "{CHN}哎呀！\n"
+	.string "你比我想象的还要厉害！$"
 
 Route104_Text_MayPostBattle:
-	.string "MAY: I can tell you've gotten pretty\n"
-	.string "good with the way you handle POKéMON.\p"
-	.string "But instead of only making them\n"
-	.string "battle, you should be like MR. BRINEY.\p"
-	.string "It's important to become friends with\n"
-	.string "POKéMON, too.$"
+	.string "{CHN}小遥：看得出来你\n"
+	.string "操控宝可梦的本事已经很厉害了。\p"
+	.string "但是不要只是\n"
+	.string "让它们对战，你应该像布里内先生那样。\p"
+	.string "和宝可梦\n"
+	.string "成为朋友也很重要。$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your POKéNAV!\p"
-	.string "Let's register each other in our\n"
-	.string "POKéNAVS so we can keep in touch.$"
+	.string "{CHN}佑树：哦，嘿，{PLAYER}！\p"
+	.string "酷哦，你让得文在宝可领航员上\n"
+	.string "安装了对战呼叫系统！\p"
+	.string "我们在宝可领航员里\n"
+	.string "互相登记吧，这样就能保持联系了。$"
 
 Route104_Text_RegisteredBrendan:
-	.string "{PLAYER} registered BRENDAN\n"
-	.string "in the POKéNAV.$"
+	.string "{CHN}{PLAYER}在佑树的\n"
+	.string "宝可领航员中登记了。$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
-	.string "Have you filled in any pages yet?$"
+	.string "{CHN}佑树：{PLAYER}，你的宝可梦图鉴怎么样了？\n"
+	.string "有没有填写新的页面？$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
-	.string "Me, I'm doing great!\p"
-	.string "Want to check out how good I am with\n"
-	.string "a battle?$"
+	.string "{CHN}我嘛，我做得挺棒的！\p"
+	.string "想不想通过一场对战\n"
+	.string "看看我有多厉害？$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "{CHN}佑树：怎么了？对自己的宝可梦\n"
+	.string "没有信心吗？$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
+	.string "{CHN}佑树：怎么样？\n"
+	.string "要不要和我对战一场？$"
 
 Route104_Text_BrendanIntro:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "{CHN}佑树：我知道你才刚成为\n"
+	.string "训练家，但我可不会手软！$"
 
 Route104_Text_BrendanDefeat:
-	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "{CHN}嗯……\n"
+	.string "你还挺厉害的。$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
-	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "{CHN}佑树：你操控宝可梦\n"
+	.string "的本事已经相当不错了。\p"
+	.string "但是，你知道，你不应该\n"
+	.string "只是让宝可梦对战。\p"
+	.string "像布里内先生那样，和\n"
+	.string "你的宝可梦成为朋友也很重要。$"

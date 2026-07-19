@@ -12,25 +12,24 @@ SeafloorCavern_Room1_EventScript_Grunt2::
 	end
 
 SeafloorCavern_Room1_Text_Grunt1Intro:
-	.string "We don't need a kid around!\n"
-	.string "Go on home already!$"
+	.string "{CHN}我们这里不需要小孩！\n"
+	.string "快回家去吧！$"
 
 SeafloorCavern_Room1_Text_Grunt1Defeat:
-	.string "I want to go home…$"
+	.string "{CHN}我想回家…$"
 
 SeafloorCavern_Room1_Text_Grunt1PostBattle:
-	.string "I want to get a promotion so I can\n"
-	.string "boss around the GRUNTS…$"
+	.string "{CHN}我想升职，这样\n"
+	.string "就能指挥队员了…$"
 
 SeafloorCavern_Room1_Text_Grunt2Intro:
-	.string "That submarine… It's tiny inside.\n"
-	.string "I'm sore all over!$"
+	.string "{CHN}那艘潜水艇… 里面太挤了。\n"
+	.string "我浑身都酸痛！$"
 
 SeafloorCavern_Room1_Text_Grunt2Defeat:
-	.string "Losing makes me sore!$"
+	.string "{CHN}输了更酸痛了！$"
 
 SeafloorCavern_Room1_Text_Grunt2PostBattle:
-	.string "That submarine we jacked, man,\n"
-	.string "it's brutal as a ride.\l"
-	.string "It's way too tight in there!$"
-
+	.string "{CHN}我们抢来的那艘潜水艇，天哪，\n"
+	.string "坐起来真要命。\l"
+	.string "里面太挤了！$"

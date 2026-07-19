@@ -51,39 +51,38 @@ PacifidlogTown_House3_EventScript_Girl::
 	end
 
 PacifidlogTown_House3_Text_WillingToTradeIt:
-	.string "Check out this {STR_VAR_2}!\p"
-	.string "It's the {STR_VAR_2} that I caught\n"
-	.string "yesterday to celebrate my birthday!\p"
-	.string "Oh, I can see that you want it!\n"
-	.string "After all, it's priceless!\p"
-	.string "I'll tell you what. I might be willing\n"
-	.string "to trade it for a {STR_VAR_1}.$"
+	.string "{CHN}看看这只{STR_VAR_2}！\p"
+	.string "这是我昨天为了庆祝生日\n"
+	.string "抓到的{STR_VAR_2}！\p"
+	.string "哦，我看得出你想要它！\n"
+	.string "毕竟，它是无价之宝！\p"
+	.string "这样吧，我也许愿意\n"
+	.string "用它换一只{STR_VAR_1}。$"
 
 PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou:
-	.string "Oh, so this is a {STR_VAR_1}?\p"
-	.string "It's sort of like a {STR_VAR_2},\n"
-	.string "and yet it's subtly different.\p"
-	.string "Thank you!$"
+	.string "{CHN}哦，这就是{STR_VAR_1}？\p"
+	.string "它有点像{STR_VAR_2}，\n"
+	.string "但又有些微妙的不同。\p"
+	.string "谢谢你！$"
 
 PacifidlogTown_House3_Text_WontAcceptAnyLessThanRealMon:
-	.string "No, no, no! I won't accept any\n"
-	.string "less than a real {STR_VAR_1}!$"
+	.string "{CHN}不，不，不！我只接受\n"
+	.string "真正的{STR_VAR_1}！$"
 
 PacifidlogTown_House3_Text_NotDesperateOrAnything:
-	.string "Oh, so you're not going to go through\n"
-	.string "with this?\p"
-	.string "That's cool. I'm not desperate to make\n"
-	.string "a trade or anything.$"
+	.string "{CHN}哦，你不想\n"
+	.string "交易了吗？\p"
+	.string "没关系。我也不是\n"
+	.string "非交易不可。$"
 
 PacifidlogTown_House3_Text_ReallyWantedToGetBagon:
-	.string "I know I could go looking for one\n"
-	.string "on my own, but…\p"
-	.string "But I really wanted to get a BAGON\n"
-	.string "that another TRAINER caught…$"
+	.string "{CHN}我知道我可以自己去\n"
+	.string "找一只，但是……\p"
+	.string "但我真的很想要一只\n"
+	.string "其他训练家抓到的甲壳龙……$"
 
 PacifidlogTown_House3_Text_IsThatAPokedex:
-	.string "Is that a POKéDEX?\p"
-	.string "Did you get to meet a lot of different\n"
-	.string "POKéMON?\p"
-	.string "I wish I was like you.$"
-
+	.string "{CHN}那是宝可梦图鉴吗？\p"
+	.string "你遇到了很多不同的\n"
+	.string "宝可梦吗？\p"
+	.string "我真想像你一样。$"

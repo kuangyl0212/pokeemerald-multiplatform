@@ -32,77 +32,76 @@ VictoryRoad_B2F_EventScript_Dianne::
 	end
 
 VictoryRoad_B2F_Text_VitoIntro:
-	.string "I trained together with my whole family,\n"
-	.string "every one of us!\l"
-	.string "I'm not losing to anyone!$"
+	.string "{CHN}我和全家人一起训练，\n"
+	.string "我们每一个人都是！\l"
+	.string "我不会输给任何人的！$"
 
 VictoryRoad_B2F_Text_VitoDefeat:
-	.string "Better than my family?!\n"
-	.string "Is that possible?!$"
+	.string "{CHN}比我的家人还强？！\n"
+	.string "这怎么可能？！$"
 
 VictoryRoad_B2F_Text_VitoPostBattle:
-	.string "I was better than everyone in my\n"
-	.string "family. I've never lost before…\p"
-	.string "I've lost my confidence…\n"
-	.string "Maybe I'll go home…$"
+	.string "{CHN}我比家里的任何人都强。\n"
+	.string "我从来没输过……\p"
+	.string "我失去了自信……\n"
+	.string "也许我该回家了……$"
 
 VictoryRoad_B2F_Text_OwenIntro:
-	.string "I'd heard that there was a tough\n"
-	.string "little kid around. Do they mean you?$"
+	.string "{CHN}我听说这里有个厉害的小鬼。\n"
+	.string "他们说的是你吗？$"
 
 VictoryRoad_B2F_Text_OwenDefeat:
-	.string "The little shrimp is tough!$"
+	.string "{CHN}这小鬼真厉害！$"
 
 VictoryRoad_B2F_Text_OwenPostBattle:
-	.string "The rumors I heard, that tough little\n"
-	.string "kid is from PETALBURG CITY.$"
+	.string "{CHN}我听到的传言中，那个厉害的小鬼\n"
+	.string "来自橙华市。$"
 
 VictoryRoad_B2F_Text_CarolineIntro:
-	.string "You must be getting a little tired.$"
+	.string "{CHN}你一定有点累了吧。$"
 
 VictoryRoad_B2F_Text_CarolineDefeat:
-	.string "No signs of tiring at all!$"
+	.string "{CHN}完全看不出有疲倦的迹象！$"
 
 VictoryRoad_B2F_Text_CarolinePostBattle:
-	.string "VICTORY ROAD and the POKéMON LEAGUE\n"
-	.string "are long and grueling challenges.\l"
-	.string "Beware of fatigue!$"
+	.string "{CHN}冠军之路和宝可梦联盟\n"
+	.string "是漫长而艰苦的挑战。\l"
+	.string "要小心疲劳！$"
 
 VictoryRoad_B2F_Text_JulieIntro:
-	.string "You shouldn't get complacent just\n"
-	.string "because you have a lot of GYM BADGES.\p"
-	.string "There's always going to be someone\n"
-	.string "who's better than you!$"
+	.string "{CHN}你不应该因为有很多道馆徽章\n"
+	.string "就自满。\p"
+	.string "总会有人\n"
+	.string "比你更强！$"
 
 VictoryRoad_B2F_Text_JulieDefeat:
-	.string "You're better than me!$"
+	.string "{CHN}你比我强！$"
 
 VictoryRoad_B2F_Text_JuliePostBattle:
-	.string "Gaze on your collected BADGES and\n"
-	.string "remember the TRAINERS you've faced.$"
+	.string "{CHN}凝视你收集的徽章，\n"
+	.string "回忆你遇到过的训练家吧。$"
 
 VictoryRoad_B2F_Text_FelixIntro:
-	.string "I've come this far, but the tension's\n"
-	.string "giving me awful stomach pain…$"
+	.string "{CHN}我走到这里了，但紧张得\n"
+	.string "胃疼得厉害……$"
 
 VictoryRoad_B2F_Text_FelixDefeat:
-	.string "Ooh…\n"
-	.string "It hurts…$"
+	.string "{CHN}呜……\n"
+	.string "好痛……$"
 
 VictoryRoad_B2F_Text_FelixPostBattle:
-	.string "I can't help getting all tense knowing\n"
-	.string "that I'm nearing the POKéMON LEAGUE.\p"
-	.string "It's all I can do to feign calm.$"
+	.string "{CHN}一想到快到宝可梦联盟了，\n"
+	.string "我就忍不住紧张。\p"
+	.string "我只能强装镇定。$"
 
 VictoryRoad_B2F_Text_DianneIntro:
-	.string "The elite among the elite gather in\n"
-	.string "this cave.\p"
-	.string "How are you finding it?$"
+	.string "{CHN}精英中的精英都聚集在\n"
+	.string "这个洞窟里。\p"
+	.string "你觉得怎么样？$"
 
 VictoryRoad_B2F_Text_DianneDefeat:
-	.string "Not rattled in the least bit!$"
+	.string "{CHN}一点都不慌乱！$"
 
 VictoryRoad_B2F_Text_DiannePostBattle:
-	.string "You do have guts! I like that!\n"
-	.string "Keep it going!$"
-
+	.string "{CHN}你真有胆量！我喜欢！\n"
+	.string "继续保持！$"

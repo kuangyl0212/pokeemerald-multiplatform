@@ -537,51 +537,51 @@ LilycoveCity_Harbor_Movement_SailorBoardWithBrineyEast:
 	step_end
 
 LilycoveCity_Harbor_Text_FerryUnavailable:
-	.string "I beg your pardon?\n"
-	.string "You're looking for a ship?\p"
-	.string "I'm sorry, the ferry service isn't\n"
-	.string "available at present…$"
+	.string "{CHN}不好意思？\n"
+	.string "您在找船吗？\p"
+	.string "非常抱歉，渡轮服务\n"
+	.string "目前暂停……$"
 
 LilycoveCity_Harbor_Text_MayISeeYourTicket:
-	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
+	.string "{CHN}您好，您是来乘渡轮的吗？\n"
+	.string "请出示您的船票。$"
 
 LilycoveCity_Harbor_Text_NoTicket:
-	.string "{PLAYER} doesn't have the TICKET…\p"
-	.string "I'm terribly sorry.\p"
-	.string "You must have a TICKET to board\n"
-	.string "the ferry.$"
+	.string "{CHN}{PLAYER}没有船票……\p"
+	.string "实在非常抱歉。\p"
+	.string "必须持有船票才能\n"
+	.string "搭乘渡轮。$"
 
 LilycoveCity_Harbor_Text_FlashTicketWhereTo:
-	.string "{PLAYER} flashed the TICKET.\p"
-	.string "Perfect! That's all you need!\p"
-	.string "And where would you like to go?$"
+	.string "{CHN}{PLAYER}出示了船票。\p"
+	.string "完美！这就够了！\p"
+	.string "那么您想去哪里呢？$"
 
 LilycoveCity_Harbor_Text_SailAnotherTime:
-	.string "Please sail with us another time!$"
+	.string "{CHN}下次再乘坐我们的渡轮吧！$"
 
 LilycoveCity_Harbor_Text_SlateportItIs:
-	.string "SLATEPORT CITY it is, then!$"
+	.string "{CHN}那就去凯那市吧！$"
 
 LilycoveCity_Harbor_Text_BattleFrontierItIs:
-	.string "BATTLE FRONTIER it is, then!$"
+	.string "{CHN}那就去对战开拓区吧！$"
 
 LilycoveCity_Harbor_Text_PleaseBoard:
-	.string "Please board the ferry and wait for\n"
-	.string "departure.$"
+	.string "{CHN}请登上渡轮，\n"
+	.string "等待出发。$"
 
 LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo:
-	.string "Then, where would you like to go?$"
+	.string "{CHN}那么，您想去哪里呢？$"
 
 LilycoveCity_Harbor_Text_SailorFerryUnavailable:
-	.string "Until they finish making the ferry,\n"
-	.string "we sailors have nothing to do…\p"
-	.string "I wish they'd get a move on, the folks\n"
-	.string "at the SHIPYARD in SLATEPORT.$"
+	.string "{CHN}在造好渡轮之前，\n"
+	.string "我们这些水手都没事干……\p"
+	.string "希望凯那市造船厂的\n"
+	.string "那些家伙能快点。$"
 
 LilycoveCity_Harbor_Text_SailorFerryAvailable:
-	.string "The ferry S.S. TIDAL is finally in\n"
-	.string "operation.\p"
-	.string "The folks at the SHIPYARD in SLATEPORT\n"
-	.string "must've worked extra hard.\p"
-	.string "Well, it's my turn to get busy now!$"
+	.string "{CHN}潮汐号渡轮终于\n"
+	.string "投入运营了。\p"
+	.string "凯那市造船厂的家伙们\n"
+	.string "一定是格外努力了。\p"
+	.string "好啦，现在轮到我忙起来了！$"

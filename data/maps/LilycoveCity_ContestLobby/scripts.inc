@@ -977,104 +977,104 @@ LilycoveCity_ContestLobby_EventScript_LittleGirlHaveCase::
 	end
 
 LilycoveCity_ContestLobby_Text_LadyGaveMePokeblockCase:
-	.string "Yippee!\p"
-	.string "The lady at the reception counter\n"
-	.string "gave me a case for {POKEBLOCK}S!$"
+	.string "{CHN}耶！\p"
+	.string "接待柜台的那位姐姐\n"
+	.string "给了我一个{POKEBLOCK}盒！$"
 
 LilycoveCity_ContestLobby_Text_MakePokeblocksDifferentBerries:
-	.string "Make {POKEBLOCK}S and put them in there.\p"
-	.string "When you make a {POKEBLOCK}, everyone\n"
-	.string "has to put in a different BERRY.$"
+	.string "{CHN}做{POKEBLOCK}放进去吧。\p"
+	.string "做{POKEBLOCK}的时候，每个人\n"
+	.string "都要放入不同的树果。$"
 
 LilycoveCity_ContestLobby_Text_YourPokemonSpurredMeToPaint:
-	.string "Congratulations!\p"
-	.string "I did a painting of your POKéMON to\n"
-	.string "commemorate its victory…\p"
-	.string "Well, your POKéMON's appeals were\n"
-	.string "so fantastic, it spurred me into\l"
-	.string "painting better than I usually do.\l"
-	.string "Look, see?$"
+	.string "{CHN}恭喜！\p"
+	.string "我画了一幅你的宝可梦的画\n"
+	.string "来纪念它的胜利…\p"
+	.string "你的宝可梦的演出\n"
+	.string "太精彩了，激发了我\l"
+	.string "画出比平时更好的作品。\l"
+	.string "瞧，看看吧？$"
 
 LilycoveCity_ContestLobby_Text_ShouldITakePaintingToMuseum:
-	.string "What do you think? I'm confident in\n"
-	.string "what I've done, but do you like it?\p"
-	.string "A work of this caliber, it wouldn't look\n"
-	.string "out of place in an art museum.\p"
-	.string "Huh? An art museum really is looking\n"
-	.string "for paintings?\p"
-	.string "Do you think I should take this there?$"
+	.string "{CHN}你觉得怎么样？我对自己的\n"
+	.string "作品很有信心，你喜欢吗？\p"
+	.string "这种水准的作品，\n"
+	.string "放在美术馆里也不逊色。\p"
+	.string "咦？美术馆真的在\n"
+	.string "寻找画作吗？\p"
+	.string "你觉得我应该把这幅画送过去吗？$"
 
 LilycoveCity_ContestLobby_Text_IllTakePaintingToMuseum:
-	.string "What, really? Then, sure, I will take\n"
-	.string "this painting there right now.\p"
-	.string "I'll give it a proper title, too.\p"
-	.string "I hope they'll like it and consider\n"
-	.string "exhibiting this.\p"
-	.string "Please check if they did accept this.\n"
-	.string "Thank you!$"
+	.string "{CHN}什么，真的吗？那好，我现在\n"
+	.string "就把这幅画送过去。\p"
+	.string "我还会给它起一个合适的名字。\p"
+	.string "希望他们会喜欢\n"
+	.string "并考虑展出这幅画。\p"
+	.string "请帮我确认他们是否接受了。\n"
+	.string "谢谢你！$"
 
 LilycoveCity_ContestLobby_Text_TakeMementoOfPainting:
-	.string "Oh, that's right!\p"
-	.string "As a memento of me painting your\n"
-	.string "POKéMON, please take this.$"
+	.string "{CHN}哦，对了！\p"
+	.string "作为我画你的宝可梦的\n"
+	.string "纪念，请收下这个。$"
 
 LilycoveCity_ContestLobby_Text_ReceivedARibbon:
-	.string "{PLAYER} received a RIBBON.$"
+	.string "{CHN}{PLAYER}获得了一枚勋章。$"
 
 LilycoveCity_ContestLobby_Text_PutTheRibbonOnMon:
-	.string "{PLAYER} put the RIBBON on\n"
-	.string "{STR_VAR_1}.$"
+	.string "{CHN}{PLAYER}把勋章戴在了\n"
+	.string "{STR_VAR_1}身上。$"
 
 LilycoveCity_ContestLobby_Text_OkaySeeYou:
-	.string "Okay, see you!$"
+	.string "{CHN}好的，再见！$"
 
 LilycoveCity_ContestLobby_Text_TakeHomeButIdLikeToTakeToMuseum:
-	.string "Oh… Then, I guess I'll just take\n"
-	.string "this home with me…\p"
-	.string "But, you know, I would like to take\n"
-	.string "this to the art museum… Okay?$"
+	.string "{CHN}哦…那么，我想我只能\n"
+	.string "把这幅画带回家了…\p"
+	.string "不过，你知道吗，我还是想\n"
+	.string "把这幅画送到美术馆…好吗？$"
 
 LilycoveCity_ContestLobby_Text_FineThatsTheWayItIs:
-	.string "Oh, fine, that's the way it is.\n"
-	.string "I will hang this in my own house.\p"
-	.string "I'll just have to try harder next time.\n"
-	.string "Well, be seeing you.$"
+	.string "{CHN}哦，好吧，事情就是这样。\n"
+	.string "我会把这幅画挂在自己家里。\p"
+	.string "下次我只能更努力了。\n"
+	.string "那，再见吧。$"
 
 LilycoveCity_ContestLobby_Text_MasterRankHereICome:
-	.string "Hoo, boy… Master Rank CONTESTS,\n"
-	.string "here I come.\p"
-	.string "The world will know that my dearest\n"
-	.string "POKéMON is the cutest being in all\l"
-	.string "existence. The time has come!\l"
-	.string "Uheheheh.$"
+	.string "{CHN}呼，伙计…大师级的选拔赛，\n"
+	.string "我来了。\p"
+	.string "世界将会知道我最心爱的\n"
+	.string "宝可梦是这世上\l"
+	.string "最可爱的存在。时候到了！\l"
+	.string "嘿嘿嘿。$"
 
 LilycoveCity_ContestLobby_Text_WholeVarietyOfPokemonHere:
-	.string "You can see a whole variety of\n"
-	.string "POKéMON here.\p"
-	.string "That's why I make this place a regular\n"
-	.string "part of my daily stroll.$"
+	.string "{CHN}你能在这里看到\n"
+	.string "各种各样的宝可梦。\p"
+	.string "这就是为什么我把这里作为\n"
+	.string "每日散步的固定路线。$"
 
 LilycoveCity_ContestLobby_Text_ContestFeastForEyes:
-	.string "Wow, coming out to a CONTEST is\n"
-	.string "a feast for these eyes!\p"
-	.string "Would you look at all the POKéMON\n"
-	.string "that just scream to be painted?$"
+	.string "{CHN}哇，来看选拔赛真是\n"
+	.string "大饱眼福啊！\p"
+	.string "你瞧瞧那些\n"
+	.string "简直在呼喊着要被画下来的宝可梦！$"
 
 LilycoveCity_ContestLobby_Text_ToughContestIsExtreme:
-	.string "The TOUGHNESS CONTEST is like\n"
-	.string "extreme, man!\p"
-	.string "Those muscular appeals…\n"
-	.string "Cascading sweat… I swoon!$"
+	.string "{CHN}强壮选拔赛真是\n"
+	.string "太极致了，伙计！\p"
+	.string "那些充满肌肉力量的演出…\n"
+	.string "汗如雨下…我都要晕了！$"
 
 LilycoveCity_ContestLobby_Text_LavishedCareOnMon:
-	.string "Day in and day out, I lavished my care\n"
-	.string "on this POKéMON.\p"
-	.string "Its condition is peaking.\n"
-	.string "Today, victory is mine!$"
+	.string "{CHN}日复一日，我把所有的关爱\n"
+	.string "都倾注在这只宝可梦身上。\p"
+	.string "它的状态已达到巅峰。\n"
+	.string "今天，胜利是我的！$"
 
 LilycoveCity_ContestLobby_Text_MadePokeblocksWithFamily:
-	.string "I made {POKEBLOCK}S with Mom, Dad, and\n"
-	.string "Big Sister. They turned out great!\p"
-	.string "I bet you can make smoother, better\n"
-	.string "{POKEBLOCK}S if you have more people.$"
+	.string "{CHN}我和妈妈、爸爸还有\n"
+	.string "姐姐一起做了{POKEBLOCK}。做得非常好！\p"
+	.string "我打赌如果人更多的话，\n"
+	.string "就能做出更顺滑、更好的{POKEBLOCK}。$"
 

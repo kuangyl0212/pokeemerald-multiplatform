@@ -1,341 +1,341 @@
 BattleDome_Text_Potential1::
-	.string "The best candidate to be a champ!$"
+	.string "{CHN}最有可能成为冠军的候选人！$"
 
 BattleDome_Text_Potential2::
-	.string "A sure-finalist team.$"
+	.string "{CHN}一支稳进决赛的队伍。$"
 
 BattleDome_Text_Potential3::
-	.string "A likely top-three finisher.$"
+	.string "{CHN}有望进入前三名的队伍。$"
 
 BattleDome_Text_Potential4::
-	.string "A candidate to finish first.$"
+	.string "{CHN}有望夺得第一的候选人。$"
 
 BattleDome_Text_Potential5::
-	.string "A team with top-class potential.$"
+	.string "{CHN}一支具有顶级潜力的队伍。$"
 
 BattleDome_Text_Potential6::
-	.string "The dark horse team this tournament.$"
+	.string "{CHN}本届锦标赛的黑马队伍。$"
 
 BattleDome_Text_Potential7::
-	.string "A better-than-average team.$"
+	.string "{CHN}一支高于平均水平的队伍。$"
 
 BattleDome_Text_Potential8::
-	.string "This tournament's average team.$"
+	.string "{CHN}本届锦标赛的平均水平队伍。$"
 
 BattleDome_Text_Potential9::
-	.string "A team with average potential.$"
+	.string "{CHN}一支潜力平平的队伍。$"
 
 BattleDome_Text_Potential10::
-	.string "A weaker-than-average team.$"
+	.string "{CHN}一支低于平均水平的队伍。$"
 
 BattleDome_Text_Potential11::
-	.string "A team looking for its first win.$"
+	.string "{CHN}一支寻求首胜的队伍。$"
 
 BattleDome_Text_Potential12::
-	.string "One win will make this team proud.$"
+	.string "{CHN}赢一场就会让这支队伍自豪。$"
 
 BattleDome_Text_Potential13::
-	.string "Overall, a weak team.$"
+	.string "{CHN}总体而言，一支弱队。$"
 
 BattleDome_Text_Potential14::
-	.string "A team with very low potential.$"
+	.string "{CHN}一支潜力极低的队伍。$"
 
 BattleDome_Text_Potential15::
-	.string "A team unlikely to win the tournament.$"
+	.string "{CHN}一支不太可能赢得锦标赛的队伍。$"
 
 BattleDome_Text_Potential16::
-	.string "The team most unlikely to win.$"
+	.string "{CHN}最不可能获胜的队伍。$"
 
 BattleDome_Text_PotentialDomeAceTucker::
-	.string "The perfect, invincible superstar!$"
+	.string "{CHN}完美无缺、无敌的超级明星！$"
 
 BattleDome_Text_StyleRiskDisaster::
-	.string "Willing to risk total disaster at times.$"
+	.string "{CHN}有时会冒险孤注一掷。$"
 
 BattleDome_Text_StyleEndureLongBattles::
-	.string "Skilled at enduring long battles.$"
+	.string "{CHN}擅长持久战。$"
 
 BattleDome_Text_StyleVariesTactics::
-	.string "Varies tactics to suit the opponent.$"
+	.string "{CHN}根据对手改变战术。$"
 
 BattleDome_Text_StyleToughWinningPattern::
-	.string "Has a tough winning pattern.$"
+	.string "{CHN}有强硬的取胜模式。$"
 
 BattleDome_Text_StyleUsesVeryRareMove::
-	.string "Occasionally uses a very rare move.$"
+	.string "{CHN}偶尔会使用非常稀有的招式。$"
 
 BattleDome_Text_StyleUsesStartlingMoves::
-	.string "Uses startling and disruptive moves.$"
+	.string "{CHN}使用令人震惊的干扰招式。$"
 
 BattleDome_Text_StyleConstantlyWatchesHP::
-	.string "Constantly watches HP in battle.$"
+	.string "{CHN}在对战中时刻关注HP。$"
 
 BattleDome_Text_StyleStoresAndLoosesPower::
-	.string "Good at storing then loosing power.$"
+	.string "{CHN}擅长蓄力后释放力量。$"
 
 BattleDome_Text_StyleEnfeeblesFoes::
-	.string "Skilled at enfeebling foes.$"
+	.string "{CHN}擅长削弱对手。$"
 
 BattleDome_Text_StylePrefersLuckTactics::
-	.string "Prefers tactics that rely on luck.$"
+	.string "{CHN}偏爱依赖运气的战术。$"
 
 BattleDome_Text_StyleRegalAtmosphere::
-	.string "Attacks with a regal atmosphere.$"
+	.string "{CHN}以王者之气发动攻击。$"
 
 BattleDome_Text_StylePowerfulLowPPMoves::
-	.string "Attacks with powerful, low-PP moves.$"
+	.string "{CHN}以威力大、PP少的招式攻击。$"
 
 BattleDome_Text_StyleEnfeebleThenAttack::
-	.string "Skilled at enfeebling, then attacking.$"
+	.string "{CHN}擅长先削弱再攻击。$"
 
 BattleDome_Text_StyleBattlesWhileEnduring::
-	.string "Battles while enduring all attacks.$"
+	.string "{CHN}一边承受攻击一边战斗。$"
 
 BattleDome_Text_StyleUpsetsFoesEmotionally::
-	.string "Skilled at upsetting foes emotionally.$"
+	.string "{CHN}擅长在情绪上扰乱对手。$"
 
 BattleDome_Text_StyleStrongAndStraightforward::
-	.string "Uses strong and straightforward moves.$"
+	.string "{CHN}使用强力且直率的招式。$"
 
 BattleDome_Text_StyleAggressivelyStrongMoves::
-	.string "Aggressively uses strong moves.$"
+	.string "{CHN}积极地使用强力招式。$"
 
 BattleDome_Text_StyleCleverlyDodgesAttacks::
-	.string "Battles while cleverly dodging attacks.$"
+	.string "{CHN}巧妙地闪避攻击进行战斗。$"
 
 BattleDome_Text_StyleUsesUpsettingMoves::
-	.string "Skilled at using upsetting attacks.$"
+	.string "{CHN}擅长使用扰人的攻击。$"
 
 BattleDome_Text_StyleUsesPopularMoves::
-	.string "Uses many popular moves.$"
+	.string "{CHN}使用许多流行的招式。$"
 
 BattleDome_Text_StyleHasPowerfulComboMoves::
-	.string "Has moves for powerful combinations.$"
+	.string "{CHN}拥有强力连招的招式。$"
 
 BattleDome_Text_StyleUsesHighProbabilityMoves::
-	.string "Uses high-probability attacks.$"
+	.string "{CHN}使用高命中率的攻击。$"
 
 BattleDome_Text_StyleAggressivelySpectacularMoves::
-	.string "Aggressively uses spectacular moves.$"
+	.string "{CHN}积极地使用华丽的招式。$"
 
 BattleDome_Text_StyleEmphasizesOffenseOverDefense::
-	.string "Emphasizes offense over defense.$"
+	.string "{CHN}重攻轻守。$"
 
 BattleDome_Text_StyleEmphasizesDefenseOverOffense::
-	.string "Emphasizes defense over offense.$"
+	.string "{CHN}重守轻攻。$"
 
 BattleDome_Text_StyleAttacksQuicklyStrongMoves::
-	.string "Attacks quickly with strong moves.$"
+	.string "{CHN}以强力招式迅速攻击。$"
 
 BattleDome_Text_StyleUsesAddedEffectMoves::
-	.string "Often uses moves with added effects.$"
+	.string "{CHN}经常使用带有追加效果的招式。$"
 
 BattleDome_Text_StyleUsesBalancedMixOfMoves::
-	.string "Uses a well-balanced mix of moves.$"
+	.string "{CHN}使用均衡搭配的招式。$"
 
 BattleDome_Text_StyleSampleMessage1::
-	.string "This is sample message 1.$"
+	.string "{CHN}这是样本消息1。$"
 
 BattleDome_Text_StyleSampleMessage2::
-	.string "This is sample message 2.$"
+	.string "{CHN}这是样本消息2。$"
 
 BattleDome_Text_StyleSampleMessage3::
-	.string "This is sample message 3.$"
+	.string "{CHN}这是样本消息3。$"
 
 BattleDome_Text_StyleSampleMessage4::
-	.string "This is sample message 4.$"
+	.string "{CHN}这是样本消息4。$"
 
 BattleDome_Text_EmphasizesHPAndAtk::
-	.string "Emphasizes HP and ATTACK.$"
+	.string "{CHN}重视HP和攻击。$"
 
 BattleDome_Text_EmphasizesHPAndDef::
-	.string "Emphasizes HP and DEFENSE.$"
+	.string "{CHN}重视HP和防御。$"
 
 BattleDome_Text_EmphasizesHPAndSpeed::
-	.string "Emphasizes HP and SPEED.$"
+	.string "{CHN}重视HP和速度。$"
 
 BattleDome_Text_EmphasizesHPAndSpAtk::
-	.string "Emphasizes HP and SP. ATTACK.$"
+	.string "{CHN}重视HP和特攻。$"
 
 BattleDome_Text_EmphasizesHPAndSpDef::
-	.string "Emphasizes HP and SP. DEFENSE.$"
+	.string "{CHN}重视HP和特防。$"
 
 BattleDome_Text_EmphasizesAtkAndDef::
-	.string "Emphasizes ATTACK and DEFENSE.$"
+	.string "{CHN}重视攻击和防御。$"
 
 BattleDome_Text_EmphasizesAtkAndSpeed::
-	.string "Emphasizes ATTACK and SPEED.$"
+	.string "{CHN}重视攻击和速度。$"
 
 BattleDome_Text_EmphasizesAtkAndSpAtk::
-	.string "Emphasizes ATTACK and SP. ATTACK.$"
+	.string "{CHN}重视攻击和特攻。$"
 
 BattleDome_Text_EmphasizesAtkAndSpDef::
-	.string "Emphasizes ATTACK and SP. DEFENSE.$"
+	.string "{CHN}重视攻击和特防。$"
 
 BattleDome_Text_EmphasizesDefAndSpeed::
-	.string "Emphasizes DEFENSE and SPEED.$"
+	.string "{CHN}重视防御和速度。$"
 
 BattleDome_Text_EmphasizesDefAndSpAtk::
-	.string "Emphasizes DEFENSE and SP. ATTACK.$"
+	.string "{CHN}重视防御和特攻。$"
 
 BattleDome_Text_EmphasizesDefAndSpDef::
-	.string "Emphasizes DEFENSE and SP. DEFENSE.$"
+	.string "{CHN}重视防御和特防。$"
 
 BattleDome_Text_EmphasizesSpeedAndSpAtk::
-	.string "Emphasizes SPEED and SP. ATTACK.$"
+	.string "{CHN}重视速度和特攻。$"
 
 BattleDome_Text_EmphasizesSpeedAndSpDef::
-	.string "Emphasizes SPEED and SP. DEFENSE.$"
+	.string "{CHN}重视速度和特防。$"
 
 BattleDome_Text_EmphasizesSpAtkAndSpDef::
-	.string "Emphasizes SP. ATTACK and SP. DEFENSE.$"
+	.string "{CHN}重视特攻和特防。$"
 
 BattleDome_Text_EmphasizesHP::
-	.string "Emphasizes HP.$"
+	.string "{CHN}重视HP。$"
 
 BattleDome_Text_EmphasizesAtk::
-	.string "Emphasizes ATTACK.$"
+	.string "{CHN}重视攻击。$"
 
 BattleDome_Text_EmphasizesDef::
-	.string "Emphasizes DEFENSE.$"
+	.string "{CHN}重视防御。$"
 
 BattleDome_Text_EmphasizesSpeed::
-	.string "Emphasizes SPEED.$"
+	.string "{CHN}重视速度。$"
 
 BattleDome_Text_EmphasizesSpAtk::
-	.string "Emphasizes SP. ATTACK.$"
+	.string "{CHN}重视特攻。$"
 
 BattleDome_Text_EmphasizesSpDef::
-	.string "Emphasizes SP. DEFENSE.$"
+	.string "{CHN}重视特防。$"
 
 BattleDome_Text_NeglectsHPAndAtk::
-	.string "Neglects HP and ATTACK.$"
+	.string "{CHN}忽视HP和攻击。$"
 
 BattleDome_Text_NeglectsHPAndDef::
-	.string "Neglects HP and DEFENSE.$"
+	.string "{CHN}忽视HP和防御。$"
 
 BattleDome_Text_NeglectsHPAndSpeed::
-	.string "Neglects HP and SPEED.$"
+	.string "{CHN}忽视HP和速度。$"
 
 BattleDome_Text_NeglectsHPAndSpAtk::
-	.string "Neglects HP and SP. ATTACK.$"
+	.string "{CHN}忽视HP和特攻。$"
 
 BattleDome_Text_NeglectsHPAndSpDef::
-	.string "Neglects HP and SP. DEFENSE.$"
+	.string "{CHN}忽视HP和特防。$"
 
 BattleDome_Text_NeglectsAtkAndDef::
-	.string "Neglects ATTACK and DEFENSE.$"
+	.string "{CHN}忽视攻击和防御。$"
 
 BattleDome_Text_NeglectsAtkAndSpeed::
-	.string "Neglects ATTACK and SPEED.$"
+	.string "{CHN}忽视攻击和速度。$"
 
 BattleDome_Text_NeglectsAtkAndSpAtk::
-	.string "Neglects ATTACK and SP. ATTACK.$"
+	.string "{CHN}忽视攻击和特攻。$"
 
 BattleDome_Text_NeglectsAtkAndSpDef::
-	.string "Neglects ATTACK and SP. DEFENSE.$"
+	.string "{CHN}忽视攻击和特防。$"
 
 BattleDome_Text_NeglectsDefAndSpeed::
-	.string "Neglects DEFENSE and SPEED.$"
+	.string "{CHN}忽视防御和速度。$"
 
 BattleDome_Text_NeglectsDefAndSpAtk::
-	.string "Neglects DEFENSE and SP. ATTACK.$"
+	.string "{CHN}忽视防御和特攻。$"
 
 BattleDome_Text_NeglectsDefAndSpDef::
-	.string "Neglects DEFENSE and SP. DEFENSE.$"
+	.string "{CHN}忽视防御和特防。$"
 
 BattleDome_Text_NeglectsSpeedAndSpAtk::
-	.string "Neglects SPEED and SP. ATTACK.$"
+	.string "{CHN}忽视速度和特攻。$"
 
 BattleDome_Text_NeglectsSpeedAndSpDef::
-	.string "Neglects SPEED and SP. DEFENSE.$"
+	.string "{CHN}忽视速度和特防。$"
 
 BattleDome_Text_NeglectsSpAtkAndSpDef::
-	.string "Neglects SP. ATTACK and SP. DEFENSE.$"
+	.string "{CHN}忽视特攻和特防。$"
 
 BattleDome_Text_NeglectsHP::
-	.string "Neglects HP.$"
+	.string "{CHN}忽视HP。$"
 
 BattleDome_Text_NeglectsAtk::
-	.string "Neglects ATTACK.$"
+	.string "{CHN}忽视攻击。$"
 
 BattleDome_Text_NeglectsDef::
-	.string "Neglects DEFENSE.$"
+	.string "{CHN}忽视防御。$"
 
 BattleDome_Text_NeglectsSpeed::
-	.string "Neglects SPEED.$"
+	.string "{CHN}忽视速度。$"
 
 BattleDome_Text_NeglectsSpAtk::
-	.string "Neglects SP. ATTACK.$"
+	.string "{CHN}忽视特攻。$"
 
 BattleDome_Text_NeglectsSpDef::
-	.string "Neglects SP. DEFENSE.$"
+	.string "{CHN}忽视特防。$"
 
 BattleDome_Text_RaisesMonsWellBalanced::
-	.string "Raises POKéMON in a well-balanced way.$"
+	.string "{CHN}以均衡的方式培养宝可梦。$"
 
 BattleDome_Text_LetTheBattleBegin::
-	.string "Let the battle begin!$"
+	.string "{CHN}战斗开始！$"
 
 BattleDome_Text_TrainerWonUsingMove::
-	.string "{STR_VAR_1} won using {STR_VAR_2}!$"
+	.string "{CHN}{STR_VAR_1}使用{STR_VAR_2}获胜了！$"
 
 BattleDome_Text_TrainerBecameChamp::
-	.string "{STR_VAR_1} became the champ!$"
+	.string "{CHN}{STR_VAR_1}成为了冠军！$"
 
 BattleDome_Text_TrainerWonByDefault::
-	.string "{STR_VAR_1} won by default!$"
+	.string "{CHN}{STR_VAR_1}因对手弃权获胜！$"
 
 BattleDome_Text_TrainerWonOutrightByDefault::
-	.string "{STR_VAR_1} won outright by default!$"
+	.string "{CHN}{STR_VAR_1}因对手中途弃权而完胜！$"
 
 BattleDome_Text_TrainerWonNoMoves::
-	.string "{STR_VAR_1} won without using a move!$"
+	.string "{CHN}{STR_VAR_1}未使用任何招式就获胜了！$"
 
 BattleDome_Text_TrainerWonOutrightNoMoves::
-	.string "{STR_VAR_1} won outright with no moves!$"
+	.string "{CHN}{STR_VAR_1}未使用任何招式就完胜了！$"
 
 BattleDome_Text_Round1Match1::
-	.string "Round 1, Match 1$"
+	.string "{CHN}第1轮 第1场$"
 
 BattleDome_Text_Round1Match2::
-	.string "Round 1, Match 2$"
+	.string "{CHN}第1轮 第2场$"
 
 BattleDome_Text_Round1Match3::
-	.string "Round 1, Match 3$"
+	.string "{CHN}第1轮 第3场$"
 
 BattleDome_Text_Round1Match4::
-	.string "Round 1, Match 4$"
+	.string "{CHN}第1轮 第4场$"
 
 BattleDome_Text_Round1Match5::
-	.string "Round 1, Match 5$"
+	.string "{CHN}第1轮 第5场$"
 
 BattleDome_Text_Round1Match6::
-	.string "Round 1, Match 6$"
+	.string "{CHN}第1轮 第6场$"
 
 BattleDome_Text_Round1Match7::
-	.string "Round 1, Match 7$"
+	.string "{CHN}第1轮 第7场$"
 
 BattleDome_Text_Round1Match8::
-	.string "Round 1, Match 8$"
+	.string "{CHN}第1轮 第8场$"
 
 BattleDome_Text_Round2Match1::
-	.string "Round 2, Match 1$"
+	.string "{CHN}第2轮 第1场$"
 
 BattleDome_Text_Round2Match2::
-	.string "Round 2, Match 2$"
+	.string "{CHN}第2轮 第2场$"
 
 BattleDome_Text_Round2Match3::
-	.string "Round 2, Match 3$"
+	.string "{CHN}第2轮 第3场$"
 
 BattleDome_Text_Round2Match4::
-	.string "Round 2, Match 4$"
+	.string "{CHN}第2轮 第4场$"
 
 BattleDome_Text_SemifinalMatch1::
-	.string "Semifinal Match 1$"
+	.string "{CHN}半决赛 第1场$"
 
 BattleDome_Text_SemifinalMatch2::
-	.string "Semifinal Match 2$"
+	.string "{CHN}半决赛 第2场$"
 
 BattleDome_Text_FinalMatch::
-	.string "Final Match$"
+	.string "{CHN}决赛$"

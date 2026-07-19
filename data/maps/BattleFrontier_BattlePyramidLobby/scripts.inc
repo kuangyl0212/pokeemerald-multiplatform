@@ -522,379 +522,378 @@ BattleFrontier_BattlePyramidLobby_EventScript_ExitRules::
 	end
 
 BattleFrontier_BattlePyramidLobby_Text_WelcomeToBattlePyramid:
-	.string "Where the courage of TRAINERS\n"
-	.string "is put to the test!\p"
-	.string "Welcome to the BATTLE PYRAMID!\p"
-	.string "I am your guide to\n"
-	.string "the Battle Quest.$"
+	.string "{CHN}这里是测试训练家勇气之地！\p"
+	.string "欢迎来到对战金字塔！\p"
+	.string "我是你的向导，\n"
+	.string "负责引导你进行战斗探索。$"
 
 BattleFrontier_BattlePyramidLobby_Text_EmbarkOnChallenge:
-	.string "Have you the courage to embark on\n"
-	.string "the Battle Quest challenge?$"
+	.string "{CHN}你有勇气挑战\n"
+	.string "战斗探索吗？$"
 
 BattleFrontier_BattlePyramidLobby_Text_AwaitFutureChallenge:
-	.string "We await your challenge in the future!$"
+	.string "{CHN}我们期待你日后的挑战！$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid:
-	.string "The Battle Quest is a battling\n"
-	.string "event in which you must explore\l"
-	.string "the PYRAMID and try to reach the top.\p"
-	.string "In the PYRAMID are seven floors of\n"
-	.string "mazes, all of them filled with not only\l"
-	.string "skilled TRAINERS but also wild POKéMON.\p"
-	.string "You must enter with three POKéMON,\n"
-	.string "none of them holding an item.\p"
-	.string "On your ascent, you will be provided\n"
-	.string "with a BATTLE BAG for items.\p"
-	.string "If you fail in your challenge, any item\n"
-	.string "placed in the BATTLE BAG disappears.\p"
-	.string "If you want to interrupt your\n"
-	.string "challenge, you must select “REST”\l"
-	.string "and save the game.\p"
-	.string "If you don't save before interrupting,\n"
-	.string "you will be disqualified.$"
+	.string "{CHN}战斗探索是一场战斗活动，\n"
+	.string "你需要探索金字塔\l"
+	.string "并尝试到达顶层。\p"
+	.string "金字塔内有七层迷宫，\n"
+	.string "里面不仅有技艺高超的训练家，\l"
+	.string "还有野生宝可梦。\p"
+	.string "你必须带三只宝可梦进入，\n"
+	.string "且都不能携带道具。\p"
+	.string "在攀登过程中，我们会提供\n"
+	.string "一个战斗背包来装道具。\p"
+	.string "如果挑战失败，\n"
+	.string "战斗背包中的所有道具都会消失。\p"
+	.string "如果想要中断挑战，\n"
+	.string "必须选择“休息”\l"
+	.string "并保存游戏。\p"
+	.string "如果中断前没有保存，\n"
+	.string "你将被取消资格。$"
 
 BattleFrontier_BattlePyramidLobby_Text_WhichLevelMode:
-	.string "The PYRAMID offers two courses,\n"
-	.string "Level 50 and Open Level.\l"
-	.string "Which will you enter?$"
+	.string "{CHN}金字塔提供两种模式，\n"
+	.string "50级和开放等级。\l"
+	.string "你要进入哪一种？$"
 
 BattleFrontier_BattlePyramidLobby_Text_SelectThreeMons:
-	.string "Very good. Now, please select the three\n"
-	.string "POKéMON you wish to accompany you.$"
+	.string "{CHN}很好。那么，请选择\n"
+	.string "三只你想带上的宝可梦。$"
 
 BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLvOpen:
-	.string "A slight problem, adventurer!\p"
-	.string "You seem to not have the three\n"
-	.string "POKéMON qualified for the challenge.\p"
-	.string "Please also remember to take all\n"
-	.string "items from your POKéMON.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
-	.string "When you are ready, please have\n"
-	.string "a word with me.$"
+	.string "{CHN}有点问题，探险家！\p"
+	.string "你似乎没有三只\n"
+	.string "符合挑战条件的宝可梦。\p"
+	.string "也请记得取下宝可梦\n"
+	.string "携带的所有道具。\p"
+	.string "蛋{STR_VAR_1}不符合资格。\p"
+	.string "准备好后，\n"
+	.string "请再来找我。$"
 
 BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLv50:
-	.string "A slight problem, adventurer!\p"
-	.string "You seem to not have the three\n"
-	.string "POKéMON qualified for the challenge.\p"
-	.string "The three POKéMON must be different\n"
-	.string "and each no higher than Level 50.\p"
-	.string "Please also remember to take all\n"
-	.string "items from your POKéMON.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
-	.string "When you are ready, please have\n"
-	.string "a word with me.$"
+	.string "{CHN}有点问题，探险家！\p"
+	.string "你似乎没有三只\n"
+	.string "符合挑战条件的宝可梦。\p"
+	.string "三只宝可梦必须各不相同，\n"
+	.string "且等级均不超过50级。\p"
+	.string "也请记得取下宝可梦\n"
+	.string "携带的所有道具。\p"
+	.string "蛋{STR_VAR_1}不符合资格。\p"
+	.string "准备好后，\n"
+	.string "请再来找我。$"
 
 BattleFrontier_BattlePyramidLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before you enter the BATTLE PYRAMID,\n"
-	.string "the game must be saved. Is that okay?$"
+	.string "{CHN}进入对战金字塔前，\n"
+	.string "必须保存游戏。可以吗？$"
 
 BattleFrontier_BattlePyramidLobby_Text_ShowYouIntoPyramid:
-	.string "Very good. I will now show you into\n"
-	.string "the BATTLE PYRAMID.$"
+	.string "{CHN}很好。我现在就带你\n"
+	.string "进入对战金字塔。$"
 
 BattleFrontier_BattlePyramidLobby_Text_WeWillHoldBagForSafekeeping:
-	.string "We will hold your BAG for safekeeping,\n"
-	.string "{PLAYER}, while you are exploring.$"
+	.string "{CHN}{PLAYER}，在你探索期间，\n"
+	.string "我们会替你保管背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakePreviousBattleBag:
-	.string "In exchange, please take this BATTLE\n"
-	.string "BAG, the one you used previously.$"
+	.string "{CHN}作为交换，请拿上这个战斗背包，\n"
+	.string "就是你上次用过的那个。$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakeThisBattleBag:
-	.string "In exchange, please take this\n"
-	.string "BATTLE BAG.$"
+	.string "{CHN}作为交换，\n"
+	.string "请拿上这个战斗背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExchangedBagForBattleBag:
-	.string "{PLAYER} exchanged the BAG for\n"
-	.string "the BATTLE BAG.$"
+	.string "{CHN}{PLAYER}将背包换成了\n"
+	.string "战斗背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel:
-	.string "When you step on this floor panel,\n"
-	.string "you will be transported to a higher\l"
-	.string "floor in the PYRAMID.\p"
-	.string "I hope for your sake that your\n"
-	.string "quest goes safely!$"
+	.string "{CHN}当你踏上这块地板开关时，\n"
+	.string "就会被传送到金字塔中\l"
+	.string "更高的一层。\p"
+	.string "祝你的探索\n"
+	.string "一路平安！$"
 
 BattleFrontier_BattlePyramidLobby_Text_DidntSaveBeforeQuittingTakeBag:
-	.string "A major problem, explorer!\p"
-	.string "You did not save before ending\n"
-	.string "your challenge the last time.\p"
-	.string "Consequently, your challenge has\n"
-	.string "been disqualified, I'm sorry to say.\p"
-	.string "Here is the BAG we've been holding\n"
-	.string "for you.\p"
-	.string "{PLAYER} got the BAG back.$"
+	.string "{CHN}出大问题了，探险家！\p"
+	.string "你上次结束挑战时\n"
+	.string "没有保存游戏。\p"
+	.string "因此，很遗憾，\n"
+	.string "你的挑战已被取消资格。\p"
+	.string "这是为你保管的\n"
+	.string "背包。\p"
+	.string "{PLAYER}取回了背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_YouveConqueredPyramid:
-	.string "Excellent to see you back!\p"
-	.string "You've conquered the PYRAMID!\n"
-	.string "How splendid!$"
+	.string "{CHN}欢迎回来！\p"
+	.string "你征服了金字塔！\n"
+	.string "太棒了！$"
 
 BattleFrontier_BattlePyramidLobby_Text_MonHoldingItemCannotTake:
-	.string "Ah, a slight problem.\p"
-	.string "At least one POKéMON is holding\n"
-	.string "an item.\p"
-	.string "I'm sorry to say, items obtained in\n"
-	.string "the PYRAMID cannot be taken away.$"
+	.string "{CHN}啊，有个小问题。\p"
+	.string "至少有一只宝可梦\n"
+	.string "携带了道具。\p"
+	.string "很遗憾，在金字塔中\n"
+	.string "获得的道具无法带走。$"
 
 BattleFrontier_BattlePyramidLobby_Text_HeldItemsMovedToBag:
-	.string "All items held by your POKéMON will be\n"
-	.string "moved to your BATTLE BAG, {PLAYER}.$"
+	.string "{CHN}{PLAYER}，你的宝可梦携带的所有道具\n"
+	.string "都会被移到战斗背包里。$"
 
 BattleFrontier_BattlePyramidLobby_Text_BagCannotHoldPickItemsToKeep:
-	.string "The BATTLE BAG cannot hold all your\n"
-	.string "items, I'm sorry to say.\p"
-	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your POKéMON.$"
+	.string "{CHN}很遗憾，战斗背包\n"
+	.string "装不下你所有的道具。\p"
+	.string "请选择要保留在战斗背包里\n"
+	.string "和宝可梦身上的道具。$"
 
 BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem:
-	.string "At least one POKéMON is still\n"
-	.string "holding an item.$"
+	.string "{CHN}至少还有一只宝可梦\n"
+	.string "携带了道具。$"
 
 BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep:
-	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your POKéMON.$"
+	.string "{CHN}请选择要保留在战斗背包里\n"
+	.string "和宝可梦身上的道具。$"
 
 /* Unused*/
 BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld:
-	.string "{PLAYER} returned everything that\n"
-	.string "the POKéMON held.$"
+	.string "{CHN}{PLAYER}归还了宝可梦\n"
+	.string "携带的所有道具。$"
 
 BattleFrontier_BattlePyramidLobby_Text_UsedBattleBagWillBeKept:
-	.string "The BATTLE BAG you used will be kept\n"
-	.string "in readiness for your next challenge.\p"
-	.string "{PLAYER} turned the BATTLE BAG over\n"
-	.string "for the BAG's return.$"
+	.string "{CHN}你使用过的战斗背包会保留下来，\n"
+	.string "以备下次挑战之用。\p"
+	.string "{PLAYER}交出了战斗背包，\n"
+	.string "换回了自己的背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait:
-	.string "I must record your results.\n"
-	.string "Please wait.$"
+	.string "{CHN}我需要记录你的成绩。\n"
+	.string "请稍候。$"
 
 /* Unused*/
 BattleFrontier_BattlePyramidLobby_Text_ForConqueringPyramidTakeThis:
-	.string "As a memento for conquering\n"
-	.string "the BATTLE PYRAMID, please take this.$"
+	.string "{CHN}作为征服对战金字塔的纪念，\n"
+	.string "请收下这个。$"
 
 /* Unused*/
 BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem:
-	.string "{PLAYER} received the prize\n"
-	.string "{STR_VAR_1}.$"
+	.string "{CHN}{PLAYER}获得了奖品\n"
+	.string "{STR_VAR_1}。$"
 
 /* Unused*/
 BattleFrontier_BattlePyramidLobby_Text_BagIsFull:
-	.string "…Ah…\n"
-	.string "Your BAG appears to be filled.\p"
-	.string "Please return after you've organized\n"
-	.string "your BAG's contents.$"
+	.string "{CHN}……啊……\n"
+	.string "你的背包好像已经满了。\p"
+	.string "请整理好背包内容后\n"
+	.string "再来。$"
 
 BattleFrontier_BattlePyramidLobby_Text_DisappointingHereIsBag:
-	.string "How disappointing for you…\p"
-	.string "Here is the BAG we've been holding\n"
-	.string "for you.\p"
-	.string "{PLAYER} got the BAG back.$"
+	.string "{CHN}真令人遗憾……\p"
+	.string "这是为你保管的\n"
+	.string "背包。\p"
+	.string "{PLAYER}取回了背包。$"
 
 BattleFrontier_BattlePyramidLobby_Text_LookForwardToNextChallenge:
-	.string "We look forward to your\n"
-	.string "next challenge!$"
+	.string "{CHN}我们期待你的\n"
+	.string "下一次挑战！$"
 
 /* Unused*/
 BattleFrontier_BattlePyramidLobby_Text_HereIsPrize:
-	.string "We have been looking forward to\n"
-	.string "your arrival!\p"
-	.string "Here is your prize for conquering\n"
-	.string "the PYRAMID.$"
+	.string "{CHN}我们一直期盼\n"
+	.string "你的到来！\p"
+	.string "这是你征服金字塔\n"
+	.string "的奖品。$"
 
 BattleFrontier_BattlePyramidLobby_Text_TellYouWhatMisfortunesAwait:
-	.string "Welcome…\p"
-	.string "I shall be pleased to tell you what\n"
-	.string "misfortunes await in the PYRAMID…$"
+	.string "{CHN}欢迎……\p"
+	.string "我很乐意告诉你\n"
+	.string "金字塔中有什么不幸在等着你……$"
 
 BattleFrontier_BattlePyramidLobby_Text_Aah:
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "… … … … … …\n"
-	.string "Aah!$"
+	.string "{CHN}…… ………… …………\n"
+	.string "…… ………… …………\p"
+	.string "…… ………… …………\n"
+	.string "啊！$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintParalysis:
-	.string "I see a shower of sparks…\p"
-	.string "…And in it, I see your POKéMON\n"
-	.string "struggling with paralysis…$"
+	.string "{CHN}我看到一阵火花飞溅……\p"
+	.string "……其中，我看到你的宝可梦\n"
+	.string "正被麻痹所困扰……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPoison:
-	.string "I see poison…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from the effects of poison…$"
+	.string "{CHN}我看到毒……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受中毒之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintBurn:
-	.string "I see bright red flames…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from burns…$"
+	.string "{CHN}我看到鲜红的火焰……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受灼伤之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPPWaste:
-	.string "I sense the tremendous pressure of\n"
-	.string "unrequited anger…\p"
-	.string "It is a curse…\p"
-	.string "…And, I see your POKéMON drained of\n"
-	.string "Power Points and having no recourse\l"
-	.string "but to use STRUGGLE…$"
+	.string "{CHN}我感到一股\n"
+	.string "无法发泄的强烈愤怒……\p"
+	.string "那是一种诅咒……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "耗尽了招式点数，\l"
+	.string "只能使用挣扎……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintLevitate:
-	.string "I see POKéMON loftily airborne…\p"
-	.string "…And, I see your POKéMON frustrated\n"
-	.string "by powerless GROUND-type moves…$"
+	.string "{CHN}我看到宝可梦高高飘浮在空中……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "因地面属性招式无效而感到挫败……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintTrapAbility:
-	.string "I sense terrific energy rising from\n"
-	.string "the ground below…\p"
-	.string "…And, I see your POKéMON unable to\n"
-	.string "escape the power's clutches…$"
+	.string "{CHN}我感到一股\n"
+	.string "从地面升起的强大能量……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "无法逃脱那股力量的束缚……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintIce:
-	.string "I see ICE-type POKéMON…\p"
-	.string "…And, I see your POKéMON fighting\n"
-	.string "the freezing effects of ice…$"
+	.string "{CHN}我看到冰属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正与冰冻效果搏斗……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintExplosion:
-	.string "I see a flurry of moves that imperil\n"
-	.string "the user…\p"
-	.string "…And, I see your POKéMON falling\n"
-	.string "to them…$"
+	.string "{CHN}我看到一连串\n"
+	.string "危及使用者的招式……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "败在它们手下……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPsychic:
-	.string "I see PSYCHIC-type POKéMON…\p"
-	.string "…And, I see your POKéMON in torment\n"
-	.string "from PSYCHIC moves…$"
+	.string "{CHN}我看到超能力属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正受超能力招式的折磨……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintRock:
-	.string "I see ROCK-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from ROCK moves…$"
+	.string "{CHN}我看到岩石属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受岩石招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintFighting:
-	.string "I see FIGHTING-type POKéMON…\p"
-	.string "…And, I see your POKéMON pummeled\n"
-	.string "by FIGHTING moves…$"
+	.string "{CHN}我看到格斗属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "被格斗招式痛击……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWeather:
-	.string "RAIN DANCE… SUNNY DAY…\n"
-	.string "SANDSTORM… HAIL…\p"
-	.string "I see POKéMON that become stronger\n"
-	.string "with the weather…\p"
-	.string "…And, I see your POKéMON confounded\n"
-	.string "by different types of moves…$"
+	.string "{CHN}求雨……大晴天……\n"
+	.string "沙尘暴……冰雹……\p"
+	.string "我看到宝可梦会随天气\n"
+	.string "变强……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "被各种招式搞得手足无措……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintBug:
-	.string "I see BUG-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from different kinds of attacks…$"
+	.string "{CHN}我看到虫属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受各种攻击之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintDark:
-	.string "I see DARK-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from DARK-type moves…$"
+	.string "{CHN}我看到恶属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受恶属性招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWater:
-	.string "I see WATER-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from WATER-type moves…$"
+	.string "{CHN}我看到水属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受水属性招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintGhost:
-	.string "I see GHOST-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from GHOST-type moves…$"
+	.string "{CHN}我看到幽灵属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受幽灵属性招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintSteel:
-	.string "I see STEEL-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from enormously powerful moves…$"
+	.string "{CHN}我看到钢属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受极其强大的招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintFlyingDragon:
-	.string "I see flying POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from enormously powerful moves…$"
+	.string "{CHN}我看到飞翔的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受极其强大的招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintStoneEvolve:
-	.string "I see those that have evolved from\n"
-	.string "the power of stones…\p"
-	.string "I also sense fire, water,\n"
-	.string "and electricity…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from those three powers…$"
+	.string "{CHN}我看到那些借助\n"
+	.string "石头之力进化的宝可梦……\p"
+	.string "我还感受到火、水、\n"
+	.string "电的力量……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受这三种力量之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintNormal:
-	.string "I see NORMAL-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
-	.string "from enormously powerful moves…$"
+	.string "{CHN}我看到一般属性的宝可梦……\p"
+	.string "……而且，我看到你的宝可梦\n"
+	.string "正遭受极其强大的招式之苦……$"
 
 BattleFrontier_BattlePyramidLobby_Text_BelieveMyFortunesOrNot:
-	.string "Whether you believe my fortunes\n"
-	.string "or not, the choice is yours…\p"
-	.string "The future can be changed anytime…\n"
-	.string "I wish you safe passage…$"
+	.string "{CHN}信不信我的预言，\n"
+	.string "由你自己决定……\p"
+	.string "未来随时可以改变……\n"
+	.string "祝你一路平安……$"
 
 BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning:
-	.string "Did you know?\p"
-	.string "If you run fast, TRAINERS may notice\n"
-	.string "and come after you for a battle.\p"
-	.string "So, if you want to avoid TRAINERS,\n"
-	.string "don't catch their eyes, but sneak\l"
-	.string "cautiously and quietly past them.$"
+	.string "{CHN}你知道吗？\p"
+	.string "如果你跑得快，训练家可能会注意到\n"
+	.string "并追上来和你对战。\p"
+	.string "所以，如果你想避开训练家，\n"
+	.string "不要引起他们的注意，\l"
+	.string "悄悄地从他们身边溜过去。$"
 
 BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems:
-	.string "Awaaaaaaarrrrgh!\p"
-	.string "I had a whole lot of items, but I lost\n"
-	.string "them all when I lost!\p"
-	.string "Awaaaaaaarrrrgh!$"
+	.string "{CHN}哇啊啊啊啊啊！\p"
+	.string "我有好多道具，可是我输了，\n"
+	.string "全都丢了！\p"
+	.string "哇啊啊啊啊啊！$"
 
 BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing:
-	.string "Welcome back!\n"
-	.string "You've done the unthinkable!\p"
-	.string "You've defeated the PYRAMID KING\n"
-	.string "and conquered the BATTLE PYRAMID!$"
+	.string "{CHN}欢迎回来！\n"
+	.string "你做出了不可思议的事！\p"
+	.string "你击败了金字塔之王，\n"
+	.string "征服了对战金字塔！$"
 
 BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints:
-	.string "Young explorer!\n"
-	.string "In commendation of your courage,\l"
-	.string "we give you these Battle Point(s)!$"
+	.string "{CHN}年轻的探险家！\n"
+	.string "为表彰你的勇气，\l"
+	.string "我们赠予你这些对战点数！$"
 
 BattleFrontier_BattlePyramidLobby_Text_RulesAreListed:
-	.string "The Battle Quest rules are listed.$"
+	.string "{CHN}这里列出了战斗探索的规则。$"
 
 BattleFrontier_BattlePyramidLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "{CHN}你想阅读哪一项？$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMonRules:
-	.string "When the PYRAMID is conquered,\n"
-	.string "the wild POKéMON that appear in it\l"
-	.string "are replaced by different kinds.\p"
-	.string "Explore, observe, and learn what kinds\n"
-	.string "of wild POKéMON you may encounter.$"
+	.string "{CHN}当金字塔被征服后，\n"
+	.string "其中出现的野生宝可梦\l"
+	.string "会被替换成其他种类。\p"
+	.string "探索、观察并了解\n"
+	.string "你可能会遇到什么样的野生宝可梦。$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainTrainerRules:
-	.string "TRAINERS are lying in wait for you\n"
-	.string "inside the PYRAMID.\p"
-	.string "On each floor, there are up to\n"
-	.string "eight TRAINERS.\p"
-	.string "When you defeat a TRAINER, you will\n"
-	.string "get a helpful hint for your adventure.$"
+	.string "{CHN}金字塔里\n"
+	.string "有训练家在等着你。\p"
+	.string "每一层最多有\n"
+	.string "八名训练家。\p"
+	.string "击败训练家后，\n"
+	.string "你会获得对探险有用的提示。$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMazeRules:
-	.string "The mazes in the PYRAMID rearrange\n"
-	.string "themselves every time you enter it.\p"
-	.string "The mazes are poorly lit.\n"
-	.string "You must advance with caution.\p"
-	.string "The light grows brighter whenever you\n"
-	.string "defeat a wild POKéMON or a TRAINER.$"
+	.string "{CHN}金字塔里的迷宫\n"
+	.string "每次进入都会重新排列。\p"
+	.string "迷宫内光线昏暗。\n"
+	.string "你必须小心前进。\p"
+	.string "每当你击败野生宝可梦或训练家时，\n"
+	.string "光线就会变亮一些。$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBagRules:
-	.string "The BATTLE BAG serves as your BAG\n"
-	.string "while in the PYRAMID.\p"
-	.string "There are two separate BATTLE BAGS--\n"
-	.string "one each for the Level 50 and\l"
-	.string "Open Level adventures.\p"
-	.string "They each can hold up to 99 pieces\n"
-	.string "of ten kinds of items.\p"
-	.string "The contents of the BATTLE BAG are\n"
-	.string "lost if you fail in your quest.$"
+	.string "{CHN}在金字塔中，战斗背包\n"
+	.string "就充当你的背包。\p"
+	.string "战斗背包有两种——\n"
+	.string "50级和开放等级\l"
+	.string "各一种。\p"
+	.string "每种都能装下十种道具，\n"
+	.string "每种最多99个。\p"
+	.string "如果挑战失败，\n"
+	.string "战斗背包里的东西就会全部丢失。$"
 

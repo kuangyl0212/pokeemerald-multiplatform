@@ -29,6 +29,8 @@ static void DecompressGlyph_Short(u16, bool32);
 static void DecompressGlyph_Narrow(u16, bool32);
 static void DecompressGlyph_SmallNarrow(u16, bool32);
 static void DecompressGlyph_Bold(u16);
+static void DecompressGlyph_Chinese(u16);
+static u16 GB2312ToGlyphIndex(u16);
 static u32 GetGlyphWidth_Small(u16, bool32);
 static u32 GetGlyphWidth_Normal(u16, bool32);
 static u32 GetGlyphWidth_Short(u16, bool32);
@@ -1097,6 +1099,9 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             case EXT_CTRL_CODE_ENG:
                 textPrinter->japanese = FALSE;
                 return RENDER_REPEAT;
+            case EXT_CTRL_CODE_CHN:
+                textPrinter->japanese = 2;
+                return RENDER_REPEAT;
             }
             break;
         case CHAR_PROMPT_CLEAR:
@@ -1116,32 +1121,54 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, textPrinter->printerTemplate.currentX, textPrinter->printerTemplate.currentY);
             textPrinter->printerTemplate.currentX += gCurGlyph.width + textPrinter->printerTemplate.letterSpacing;
             return RENDER_PRINT;
+        case 0x80: // Chinese escape: next 2 bytes are GB2312 encoding
+            if (*textPrinter->printerTemplate.currentChar == EOS)
+            {
+                currChar = EOS;
+                break;
+            }
+            currChar = (*textPrinter->printerTemplate.currentChar << 8);
+            textPrinter->printerTemplate.currentChar++;
+            if (*textPrinter->printerTemplate.currentChar == EOS)
+            {
+                currChar = EOS;
+                break;
+            }
+            currChar |= *textPrinter->printerTemplate.currentChar;
+            textPrinter->printerTemplate.currentChar++;
+            break;
         case EOS:
             return RENDER_FINISH;
         }
 
-        switch (subStruct->fontId)
+        // GB2312 characters (0x8100-0xFEFE) always use Chinese font
+        if (currChar >= 0x8100)
+            DecompressGlyph_Chinese(currChar);
+        else
         {
-        case FONT_SMALL:
-            DecompressGlyph_Small(currChar, textPrinter->japanese);
-            break;
-        case FONT_NORMAL:
-            DecompressGlyph_Normal(currChar, textPrinter->japanese);
-            break;
-        case FONT_SHORT:
-        case FONT_SHORT_COPY_1:
-        case FONT_SHORT_COPY_2:
-        case FONT_SHORT_COPY_3:
-            DecompressGlyph_Short(currChar, textPrinter->japanese);
-            break;
-        case FONT_NARROW:
-            DecompressGlyph_Narrow(currChar, textPrinter->japanese);
-            break;
-        case FONT_SMALL_NARROW:
-            DecompressGlyph_SmallNarrow(currChar, textPrinter->japanese);
-            break;
-        case FONT_BRAILLE:
-            break;
+            switch (subStruct->fontId)
+            {
+            case FONT_SMALL:
+                DecompressGlyph_Small(currChar, textPrinter->japanese);
+                break;
+            case FONT_NORMAL:
+                DecompressGlyph_Normal(currChar, textPrinter->japanese);
+                break;
+            case FONT_SHORT:
+            case FONT_SHORT_COPY_1:
+            case FONT_SHORT_COPY_2:
+            case FONT_SHORT_COPY_3:
+                DecompressGlyph_Short(currChar, textPrinter->japanese);
+                break;
+            case FONT_NARROW:
+                DecompressGlyph_Narrow(currChar, textPrinter->japanese);
+                break;
+            case FONT_SMALL_NARROW:
+                DecompressGlyph_SmallNarrow(currChar, textPrinter->japanese);
+                break;
+            case FONT_BRAILLE:
+                break;
+            }
         }
 
         CopyGlyphToWindow(textPrinter);
@@ -1291,6 +1318,10 @@ static u32 UNUSED GetStringWidthFixedWidthFont(const u8 *str, u8 fontId, u8 lett
         case PLACEHOLDER_BEGIN:
             ++strPos;
             break;
+        case 0x80: // Chinese escape: next 2 bytes are GB2312 encoding
+            strPos += 2;
+            width += 2; // Chinese chars are full-width (2 cells)
+            break;
         case CHAR_PROMPT_SCROLL:
         case CHAR_PROMPT_CLEAR:
             break;
@@ -1327,7 +1358,7 @@ static u32 (*GetFontWidthFunc(u8 fontId))(u16, bool32)
 
 s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
 {
-    bool8 isJapanese;
+    u8 isJapanese;
     int minGlyphWidth;
     u32 (*func)(u16 fontId, bool32 isJapanese);
     int localLetterSpacing;
@@ -1442,6 +1473,9 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
             case EXT_CTRL_CODE_ENG:
                 isJapanese = 0;
                 break;
+            case EXT_CTRL_CODE_CHN:
+                isJapanese = 2;
+                break;
             case EXT_CTRL_CODE_RESET_FONT:
             case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
             case EXT_CTRL_CODE_WAIT_SE:
@@ -1473,6 +1507,23 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
         case CHAR_PROMPT_SCROLL:
         case CHAR_PROMPT_CLEAR:
             break;
+        case 0x80: // Chinese escape: next 2 bytes are GB2312 encoding
+        {
+            u16 gb2312 = (str[1] << 8) | str[2];
+            glyphWidth = gFontChineseWidths[GB2312ToGlyphIndex(gb2312)];
+            str += 2; // skip 2 GB2312 bytes (third increment at end of loop)
+            if (minGlyphWidth > 0)
+            {
+                if (glyphWidth < minGlyphWidth)
+                    glyphWidth = minGlyphWidth;
+                lineWidth += glyphWidth;
+            }
+            else
+            {
+                lineWidth += glyphWidth;
+            }
+            break;
+        }
         default:
             glyphWidth = func(*str, isJapanese);
             if (minGlyphWidth > 0)
@@ -1577,6 +1628,9 @@ u8 RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str)
         case CHAR_EXTRA_SYMBOL:
         case PLACEHOLDER_BEGIN:
             ++strPos;
+            break;
+        case 0x80: // Chinese escape: skip 2 GB2312 bytes (bold font buffer is 8x8, not suited for 16x16 Chinese glyphs)
+            strPos += 2;
             break;
         case CHAR_PROMPT_SCROLL:
         case CHAR_PROMPT_CLEAR:
@@ -1684,6 +1738,11 @@ static void DecompressGlyph_Small(u16 glyphId, bool32 isJapanese)
 {
     const u16 *glyphs;
 
+    if (isJapanese == 2 && glyphId >= 0x8100)
+    {
+        DecompressGlyph_Chinese(glyphId);
+        return;
+    }
     if (isJapanese == 1)
     {
         glyphs = gFontSmallJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId & 0xF));
@@ -1716,6 +1775,8 @@ static void DecompressGlyph_Small(u16 glyphId, bool32 isJapanese)
 
 static u32 GetGlyphWidth_Small(u16 glyphId, bool32 isJapanese)
 {
+    if (isJapanese == 2 && glyphId >= 0x8100)
+        return gFontChineseWidths[GB2312ToGlyphIndex(glyphId)];
     if (isJapanese == TRUE)
         return 8;
     else
@@ -1726,6 +1787,11 @@ static void DecompressGlyph_Narrow(u16 glyphId, bool32 isJapanese)
 {
     const u16 *glyphs;
 
+    if (isJapanese == 2 && glyphId >= 0x8100)
+    {
+        DecompressGlyph_Chinese(glyphId);
+        return;
+    }
     if (isJapanese == TRUE)
     {
         glyphs = gFontNormalJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId % 0x10));
@@ -1758,6 +1824,8 @@ static void DecompressGlyph_Narrow(u16 glyphId, bool32 isJapanese)
 
 static u32 GetGlyphWidth_Narrow(u16 glyphId, bool32 isJapanese)
 {
+    if (isJapanese == 2 && glyphId >= 0x8100)
+        return gFontChineseWidths[GB2312ToGlyphIndex(glyphId)];
     if (isJapanese == TRUE)
         return 8;
     else
@@ -1768,6 +1836,11 @@ static void DecompressGlyph_SmallNarrow(u16 glyphId, bool32 isJapanese)
 {
     const u16 *glyphs;
 
+    if (isJapanese == 2 && glyphId >= 0x8100)
+    {
+        DecompressGlyph_Chinese(glyphId);
+        return;
+    }
     if (isJapanese == TRUE)
     {
         glyphs = gFontSmallJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId & 0xF));
@@ -1800,6 +1873,8 @@ static void DecompressGlyph_SmallNarrow(u16 glyphId, bool32 isJapanese)
 
 static u32 GetGlyphWidth_SmallNarrow(u16 glyphId, bool32 isJapanese)
 {
+    if (isJapanese == 2 && glyphId >= 0x8100)
+        return gFontChineseWidths[GB2312ToGlyphIndex(glyphId)];
     if (isJapanese == TRUE)
         return 8;
     else
@@ -1810,6 +1885,11 @@ static void DecompressGlyph_Short(u16 glyphId, bool32 isJapanese)
 {
     const u16 *glyphs;
 
+    if (isJapanese == 2 && glyphId >= 0x8100)
+    {
+        DecompressGlyph_Chinese(glyphId);
+        return;
+    }
     if (isJapanese == TRUE)
     {
         glyphs = gFontShortJapaneseGlyphs + (0x100 * (glyphId >> 0x3)) + (0x10 * (glyphId & 0x7));
@@ -1844,6 +1924,8 @@ static void DecompressGlyph_Short(u16 glyphId, bool32 isJapanese)
 
 static u32 GetGlyphWidth_Short(u16 glyphId, bool32 isJapanese)
 {
+    if (isJapanese == 2 && glyphId >= 0x8100)
+        return gFontChineseWidths[GB2312ToGlyphIndex(glyphId)];
     if (isJapanese == TRUE)
         return gFontShortJapaneseGlyphWidths[glyphId];
     else
@@ -1854,6 +1936,11 @@ static void DecompressGlyph_Normal(u16 glyphId, bool32 isJapanese)
 {
     const u16 *glyphs;
 
+    if (isJapanese == 2 && glyphId >= 0x8100)
+    {
+        DecompressGlyph_Chinese(glyphId);
+        return;
+    }
     if (isJapanese == TRUE)
     {
         glyphs = gFontNormalJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId % 0x10));
@@ -1886,6 +1973,8 @@ static void DecompressGlyph_Normal(u16 glyphId, bool32 isJapanese)
 
 static u32 GetGlyphWidth_Normal(u16 glyphId, bool32 isJapanese)
 {
+    if (isJapanese == 2 && glyphId >= 0x8100)
+        return gFontChineseWidths[GB2312ToGlyphIndex(glyphId)];
     if (isJapanese == TRUE)
         return 8;
     else
@@ -1900,5 +1989,35 @@ static void DecompressGlyph_Bold(u16 glyphId)
     DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
     DecompressGlyphTile(glyphs + 0x80, gCurGlyph.gfxBufferBottom);
     gCurGlyph.width = 8;
+    gCurGlyph.height = 12;
+}
+
+// Convert GB2312 double-byte encoding to font table index.
+// glyphId format: (b1 << 8) | b2, where b1=0x81-0xFE, b2=0x40-0xFE (skip 0x7F)
+static u16 GB2312ToGlyphIndex(u16 glyphId)
+{
+    u8 b1 = (glyphId >> 8) & 0xFF;
+    u8 b2 = glyphId & 0xFF;
+    u16 zone = b1 - 0x81;
+    u16 pos = b2 - 0x40;
+    if (b2 > 0x7F)
+        pos--;
+    return zone * 190 + pos;
+}
+
+// Decompress a Chinese (GB2312) glyph.
+// Each glyph is 64 bytes (32 u16 = 0x20 u16) = 4 tiles of 8x8 2bpp.
+// Tile layout: TL, TR, BL, BR (same as wide Latin characters).
+static void DecompressGlyph_Chinese(u16 glyphId)
+{
+    const u16 *glyphs;
+    u16 idx = GB2312ToGlyphIndex(glyphId);
+
+    glyphs = gFontChineseGlyphs + (0x20 * idx);
+    DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
+    DecompressGlyphTile(glyphs + 0x8, gCurGlyph.gfxBufferTop + 8);
+    DecompressGlyphTile(glyphs + 0x10, gCurGlyph.gfxBufferBottom);
+    DecompressGlyphTile(glyphs + 0x18, gCurGlyph.gfxBufferBottom + 8);
+    gCurGlyph.width = gFontChineseWidths[idx];
     gCurGlyph.height = 12;
 }

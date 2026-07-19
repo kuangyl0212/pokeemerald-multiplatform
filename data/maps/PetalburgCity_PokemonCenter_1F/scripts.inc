@@ -53,42 +53,42 @@ PetalburgCity_PokemonCenter_1F_EventScript_SayMudkipType::
 	return
 
 PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem:
-	.string "That PC-based POKéMON Storage\n"
-	.string "System…\p"
-	.string "Whoever made it must be some kind\n"
-	.string "of a scientific wizard!$"
+	.string "{CHN}那个电脑上的宝可梦\n"
+	.string "存储系统……\p"
+	.string "能做出它的\n"
+	.string "人一定是位科学天才吧！$"
 
 PetalburgCity_PokemonCenter_1F_Text_OranBerryRegainedHP:
-	.string "When my POKéMON ate an\n"
-	.string "ORAN BERRY, it regained HP!$"
+	.string "{CHN}我的宝可梦吃了一颗\n"
+	.string "橙橙果后，HP就恢复了！$"
 
 PetalburgCity_PokemonCenter_1F_Text_ManyTypesOfPokemon:
-	.string "There are many types of POKéMON.\p"
-	.string "All types have their strengths and\n"
-	.string "weaknesses against other types.\p"
-	.string "Depending on the types of POKéMON,\n"
-	.string "a battle could be easy or hard.$"
+	.string "{CHN}宝可梦有很多种属性。\p"
+	.string "每种属性对其他属性\n"
+	.string "都有它的强项和弱点。\p"
+	.string "根据宝可梦的属性，\n"
+	.string "对战可能轻松也可能艰难。$"
 
 PetalburgCity_PokemonCenter_1F_Text_TreeckoIsGrassType:
-	.string "For example, your TREECKO\n"
-	.string "is a GRASS type.\p"
-	.string "It's strong against the WATER and\n"
-	.string "GROUND types.\p"
-	.string "But, it's weak against FIRE-type\n"
-	.string "POKéMON.$"
+	.string "{CHN}比如说，你的木守宫\n"
+	.string "是草属性的。\p"
+	.string "它对水属性和\n"
+	.string "地面属性很强。\p"
+	.string "但是，它对火属性\n"
+	.string "宝可梦很弱。$"
 
 PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType:
-	.string "For example, your TORCHIC\n"
-	.string "is a FIRE type.\p"
-	.string "It's strong against the GRASS and\n"
-	.string "BUG types.\p"
-	.string "But, it's weak against WATER-type\n"
-	.string "POKéMON.$"
+	.string "{CHN}比如说，你的火稚鸡\n"
+	.string "是火属性的。\p"
+	.string "它对草属性和\n"
+	.string "虫属性很强。\p"
+	.string "但是，它对水属性\n"
+	.string "宝可梦很弱。$"
 
 PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType:
-	.string "For example, your MUDKIP\n"
-	.string "is a WATER type.\p"
-	.string "It's strong against the FIRE type.\p"
-	.string "But, it's weak against GRASS-type\n"
-	.string "and ELECTRIC-type POKéMON.$"
+	.string "{CHN}比如说，你的水跃鱼\n"
+	.string "是水属性的。\p"
+	.string "它对火属性很强。\p"
+	.string "但是，它对草属性\n"
+	.string "和电属性宝可梦很弱。$"
 

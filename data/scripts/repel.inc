@@ -3,4 +3,4 @@ EventScript_RepelWoreOff::
 	end
 
 Text_RepelWoreOff:
-	.string "REPEL's effect wore off…$"
+	.string "{CHN}喷雾的效果消失了……$"

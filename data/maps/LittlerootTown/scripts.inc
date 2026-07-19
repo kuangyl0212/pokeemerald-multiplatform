@@ -905,112 +905,112 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "{CHN}妈妈：{PLAYER}，我们到了，亲爱的！\p"
+	.string "和我们的行李一起坐在\n"
+	.string "搬家卡车里一定很累吧。\p"
+	.string "这里就是未白镇了。\p"
+	.string "你觉得怎么样？\n"
+	.string "这就是我们的新家！\p"
+	.string "感觉很有古朴的味道，\n"
+	.string "住起来应该很舒服，你觉得呢？\p"
+	.string "而且，你有自己的房间了，{PLAYER}！\n"
+	.string "我们进去吧。$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MOM: Wait, {PLAYER}!$"
+	.string "{CHN}妈妈：等等，{PLAYER}！$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
-	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "{CHN}妈妈：{PLAYER}！{PLAYER}！你向\n"
+	.string "小田卷博士自我介绍了吗？\p"
+	.string "哦！好可爱的宝可梦！\n"
+	.string "是你从小田卷博士那里得到的吧。真棒！\p"
+	.string "不愧是你爸爸的孩子。\n"
+	.string "你和宝可梦看起来很搭！\p"
+	.string "来，亲爱的！你要出去\n"
+	.string "冒险的话，穿上这双跑鞋吧。\p"
+	.string "它会让你走路带风！$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "{CHN}{PLAYER}把鞋子换成了\n"
+	.string "跑鞋。$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "{CHN}妈妈：{PLAYER}，那双鞋子\n"
+	.string "附带了说明书。\p"
+	.string "“穿上这双跑鞋后按下B键，\n"
+	.string "就能跑得飞快！\p"
+	.string "“穿上跑鞋，\n"
+	.string "在广阔的户外奔跑吧！”$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
-	.string "To think that you have your very own\n"
-	.string "POKéMON now…\l"
-	.string "Your father will be overjoyed.\p"
-	.string "…But please be careful.\n"
-	.string "If anything happens, you can come home.\p"
-	.string "Go on, go get them, honey!$"
+	.string "{CHN}…… …… …… ……\n"
+	.string "…… …… …… ……”\p"
+	.string "想想你现在\n"
+	.string "有了自己的宝可梦……\l"
+	.string "你爸爸一定会很高兴的。\p"
+	.string "……不过请小心。\n"
+	.string "如果发生什么事，随时可以回家。\p"
+	.string "去吧，加油，亲爱的！$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
-	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
-	.string "The power of science is staggering!$"
+	.string "{CHN}如果使用个人电脑，就可以\n"
+	.string "存放道具和宝可梦。\p"
+	.string "科学的力量真是惊人！$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
-	.string "PROF. BIRCH spends days in his LAB\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
-	.string "at home?$"
+	.string "{CHN}小田卷博士整天待在研究所里\n"
+	.string "研究，然后又会突然跑到\l"
+	.string "野外去做更多调查……\p"
+	.string "小田卷博士什么时候\n"
+	.string "才有时间回家呢？$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
-	.string "Um, um, um!\p"
-	.string "If you go outside and go in the grass,\n"
-	.string "wild POKéMON will jump out!$"
+	.string "{CHN}那个，那个，那个！\p"
+	.string "如果你走到外面的草丛里，\n"
+	.string "野生的宝可梦会跳出来！$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
-	.string "It's dangerous if you don't have\n"
-	.string "your own POKéMON.$"
+	.string "{CHN}如果没有\n"
+	.string "自己的宝可梦，会很危险的。$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
-	.string "Um, hi!\p"
-	.string "There are scary POKéMON outside!\n"
-	.string "I can hear their cries!\p"
-	.string "I want to go see what's going on,\n"
-	.string "but I don't have any POKéMON…\p"
-	.string "Can you go see what's happening\n"
-	.string "for me?$"
+	.string "{CHN}那个，你好！\p"
+	.string "外面有可怕的宝可梦！\n"
+	.string "我能听到它们的叫声！\p"
+	.string "我想去看看怎么回事，\n"
+	.string "可是我没有宝可梦……\p"
+	.string "你能替我去\n"
+	.string "看看发生了什么吗？$"
 
 LittlerootTown_Text_YouSavedBirch:
-	.string "You saved PROF. BIRCH!\n"
-	.string "I'm so glad!$"
+	.string "{CHN}你救了小田卷博士！\n"
+	.string "太好了！$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
-	.string "Are you going to catch POKéMON?\n"
-	.string "Good luck!$"
+	.string "{CHN}你要去捕捉宝可梦吗？\n"
+	.string "祝你好运！$"
 
 LittlerootTown_Text_TownSign:
-	.string "LITTLEROOT TOWN\n"
-	.string "“A town that can't be shaded any hue.”$"
+	.string "{CHN}未白镇\n"
+	.string "“无法被任何色彩遮盖的小镇。”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "{CHN}小田卷博士的宝可梦研究所$"
 
 LittlerootTown_Text_PlayersHouse:
-	.string "{PLAYER}'s HOUSE$"
+	.string "{CHN}{PLAYER}的家$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "PROF. BIRCH'S HOUSE$"
+	.string "{CHN}小田卷博士的家$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
-	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
-	.string "That was good work out there!\p"
-	.string "I knew there was something special\n"
-	.string "about you when I first saw you,\l"
-	.string "but I never expected this.\p"
-	.string "Oh, yes. Do you still have the POKéDEX\n"
-	.string "I gave you?\p"
-	.string "I have something to show you.\n"
-	.string "Let's go to my LAB.$"
+	.string "{CHN}小田卷博士：哎呀，{PLAYER}{KUN}！\n"
+	.string "刚才干得漂亮！\p"
+	.string "我第一次见到你时就觉得\n"
+	.string "你有什么特别之处，\l"
+	.string "但没想到会这么厉害。\p"
+	.string "哦，对了。我给你的宝可梦图鉴\n"
+	.string "还在身上吗？\p"
+	.string "我有东西要给你看。\n"
+	.string "来我的研究所吧。$"
 

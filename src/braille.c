@@ -57,6 +57,9 @@ u16 FontFunc_Braille(struct TextPrinter *textPrinter)
         case PLACEHOLDER_BEGIN:
             textPrinter->printerTemplate.currentChar++;
             return RENDER_REPEAT;
+        case 0x80: // Chinese escape: skip 2 GB2312 bytes
+            textPrinter->printerTemplate.currentChar += 2;
+            return RENDER_REPEAT;
         case EXT_CTRL_CODE_BEGIN:
             char_ = *textPrinter->printerTemplate.currentChar++;
             switch (char_)

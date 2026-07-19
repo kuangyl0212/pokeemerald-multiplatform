@@ -62,64 +62,64 @@ VerdanturfTown_EventScript_RusturfTunnelSign::
 	end
 
 VerdanturfTown_Text_ManTryingToDigTunnel:
-	.string "My papa told me.\p"
-	.string "He says this tunnel is full of\n"
-	.string "timid POKéMON.\p"
-	.string "They get all scared of loud noise and\n"
-	.string "make a big uproar.\p"
-	.string "So they had to stop the big tunnel\n"
-	.string "project.\p"
-	.string "But there's one man. He's trying to dig\n"
-	.string "the tunnel by himself!$"
+	.string "{CHN}我爸爸告诉过我。\p"
+	.string "他说这条隧道里满是\n"
+	.string "胆小的宝可梦。\p"
+	.string "它们一听到大的响声就会害怕，\n"
+	.string "并引起大骚动。\p"
+	.string "所以他们不得不停止大型隧道\n"
+	.string "工程。\p"
+	.string "但有一个人，他正试图独自\n"
+	.string "挖通这条隧道！$"
 
 VerdanturfTown_Text_ManDugTunnelForLove:
-	.string "There was a man who dug a tunnel for\n"
-	.string "a lady he loved.\p"
-	.string "I don't really get it, but hey!$"
+	.string "{CHN}有个男人为了他爱的女士\n"
+	.string "挖了一条隧道。\p"
+	.string "我不太懂，但是，嘿！$"
 
 VerdanturfTown_Text_AirCleanHere:
-	.string "The way the winds blow, volcanic ash\n"
-	.string "is never blown in this direction.\p"
-	.string "The air is clean and delicious here.\n"
-	.string "Living here should do wonders for even\l"
-	.string "frail and sickly people.$"
+	.string "{CHN}由于风吹的方向，火山灰\n"
+	.string "从不会被吹到这边来。\p"
+	.string "这里的空气清新怡人。\n"
+	.string "住在这里即使对体弱多病的人\l"
+	.string "也会有奇效。$"
 
 VerdanturfTown_Text_MakeBattleTentDebut:
-	.string "My POKéMON and I, we've been riding\n"
-	.string "a hot winning streak.\p"
-	.string "So I decided to make my BATTLE TENT\n"
-	.string "debut in this town.$"
+	.string "{CHN}我的宝可梦和我，我们正保持着\n"
+	.string "连胜的势头。\p"
+	.string "所以我决定在这个镇上的对战帐篷\n"
+	.string "初次登场。$"
 
 VerdanturfTown_Text_GuyTryingToBustThroughCave:
-	.string "Did you see the cave next to the\n"
-	.string "POKéMON MART?\p"
-	.string "There's a guy in there who's trying to\n"
-	.string "bust up boulders so he can bust out\l"
-	.string "through to the other side.\p"
-	.string "It'd be great if we could go through…\n"
-	.string "It'll make it easy to visit RUSTBORO.$"
+	.string "{CHN}你看到宝可梦商店旁边的\n"
+	.string "那个洞穴了吗？\p"
+	.string "里面有个人正试图\n"
+	.string "砸碎石块，好冲到\l"
+	.string "另一边去。\p"
+	.string "如果我们能穿过去就好了…\n"
+	.string "那样去橙华市就方便了。$"
 
 VerdanturfTown_Text_EasyToGetToRustboroNow:
-	.string "That cave next to the POKéMON MART\n"
-	.string "is now a tunnel to the other side.\p"
-	.string "It's great--it's easy to go shop for\n"
-	.string "new DEVON products in RUSTBORO now.$"
+	.string "{CHN}宝可梦商店旁边的那个洞穴\n"
+	.string "现在变成了通往另一边的隧道。\p"
+	.string "太棒了——现在去橙华市\n"
+	.string "购买新的得文产品很方便。$"
 
 VerdanturfTown_Text_TownSign:
-	.string "VERDANTURF TOWN\p"
-	.string "“The windswept highlands with the\n"
-	.string "sweet fragrance of grass.”$"
+	.string "{CHN}绿荫镇\p"
+	.string "“风吹拂的高地，\n"
+	.string "飘荡着青草的甜蜜芬芳。”$"
 
 VerdanturfTown_Text_WandasHouse:
-	.string "WANDA'S HOUSE$"
+	.string "{CHN}琳达的家$"
 
 VerdanturfTown_Text_BattleTentSign:
-	.string "BATTLE TENT VERDANTURF SITE\n"
-	.string "“Feast Your Eyes on Battles!”$"
+	.string "{CHN}对战帐篷 绿荫镇会场\n"
+	.string "“大饱眼福的对战！”$"
 
 VerdanturfTown_Text_RusturfTunnelSign:
-	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
-	.string "“The tunnel project has been\n"
-	.string "canceled.”$"
+	.string "{CHN}橙华隧道\n"
+	.string "“连接橙华市和绿荫镇”\p"
+	.string "“隧道工程已\n"
+	.string "取消。”$"
 

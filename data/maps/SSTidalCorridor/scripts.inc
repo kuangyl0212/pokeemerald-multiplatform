@@ -251,87 +251,87 @@ SSTidalCorridor_Movement_SailorReturn:
 	step_end
 
 SSTidalCorridor_Text_ScottBattleFrontierInvite:
-	.string "SCOTT: Well, hi, hi!\n"
-	.string "{PLAYER}{KUN}, {PLAYER}{KUN}!\p"
-	.string "Something's come up, so I have to\n"
-	.string "disembark, but am I glad to see you!\p"
-	.string "Congratulations, LEAGUE CHAMPION!\p"
-	.string "There's a place I'd like to invite\n"
-	.string "someone like you.\p"
-	.string "It's the…\n"
-	.string "BATTLE FRONTIER!\p"
-	.string "What's the place like?\n"
-	.string "You'll understand when you see it!\p"
-	.string "I've spoken with the ship's CAPTAIN\n"
-	.string "about this.\p"
-	.string "The next time you take a ferry,\n"
-	.string "you should be able to sail to\l"
-	.string "the BATTLE FRONTIER.\p"
-	.string "Okay, {PLAYER}{KUN}, I'll be waiting for you\n"
-	.string "at the BATTLE FRONTIER!$"
+	.string "{CHN}水木：哎呀，你好你好！\n"
+	.string "{PLAYER}{KUN}，{PLAYER}{KUN}！\p"
+	.string "出了点事，我得下船了，\n"
+	.string "不过见到你真是太好了！\p"
+	.string "恭喜你，联盟冠军！\p"
+	.string "有个地方我想邀请\n"
+	.string "像你这样的人去。\p"
+	.string "那就是……\n"
+	.string "对战开拓区！\p"
+	.string "那是个什么样的地方？\n"
+	.string "你去了就知道了！\p"
+	.string "我已经和这艘船的船长\n"
+	.string "谈过这件事了。\p"
+	.string "下次你坐船的时候，\n"
+	.string "应该就可以航行到\l"
+	.string "对战开拓区了。\p"
+	.string "好的，{PLAYER}{KUN}，我在对战开拓区\n"
+	.string "等你哦！$"
 
 SSTidal_Text_FastCurrentsHopeYouEnjoyVoyage:
-	.string "This ferry is built to plow through\n"
-	.string "fast-running currents.\p"
-	.string "We hope you enjoy your voyage with us.\n"
-	.string "Feel free to explore the ship.$"
+	.string "{CHN}这艘渡轮是为冲破\n"
+	.string "急流而建造的。\p"
+	.string "希望您享受与我们的航程。\n"
+	.string "请随意参观这艘船。$"
 
 SSTidal_Text_HopeYouEnjoyVoyage:
-	.string "We hope you enjoy your voyage on\n"
-	.string "our ferry.$"
+	.string "{CHN}希望您在我们的渡轮上\n"
+	.string "度过愉快的航程。$"
 
 SSTidal_Text_MadeLandInSlateport:
-	.string "We have made land in SLATEPORT CITY.\n"
-	.string "Thank you for sailing with us.$"
+	.string "{CHN}我们已抵达凯那市。\n"
+	.string "感谢您乘坐我们的渡轮。$"
 
 SSTidal_Text_MadeLandInLilycove:
-	.string "We have made land in LILYCOVE CITY.\n"
-	.string "Thank you for sailing with us.$"
+	.string "{CHN}我们已抵达水静市。\n"
+	.string "感谢您乘坐我们的渡轮。$"
 
 SSTidalCorridor_Text_CanRestInCabin2:
-	.string "It'll be some time before we make land,\n"
-	.string "I reckon.\p"
-	.string "You can rest up in your cabin if you'd\n"
-	.string "like. Your cabin's No. 2.\p"
-	.string "The bed in there is soft and plushy.\n"
-	.string "I can attest to how comfy it is!$"
+	.string "{CHN}我想，我们还得过一会儿\n"
+	.string "才能靠岸。\p"
+	.string "您可以去舱房里休息一下\n"
+	.string "您的舱房是2号。\p"
+	.string "那里的床又软又厚实。\n"
+	.string "我可以保证它有多舒服！$"
 
 SSTidalCorridor_Text_WeveArrived:
-	.string "We've arrived!$"
+	.string "{CHN}我们到了！$"
 
 SSTidalCorridor_Text_VisitOtherCabins:
-	.string "Go visit other cabins.\n"
-	.string "TRAINERS bored of the boat trip will\l"
-	.string "be itching to battle.$"
+	.string "{CHN}去其他舱房看看吧。\n"
+	.string "厌倦了乘船的训练家们\l"
+	.string "正手痒想对战呢。$"
 
 SSTidalCorridor_Text_EnjoyYourCruise:
-	.string "Enjoy your cruise!$"
+	.string "{CHN}祝您航程愉快！$"
 
 SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole:
-	.string "The horizon spreads beyond\n"
-	.string "the porthole.$"
+	.string "{CHN}地平线在舷窗的\n"
+	.string "另一端延伸。$"
 
 SSTidalCorridor_Text_BrineyWelcomeAboard:
-	.string "MR. BRINEY: Welcome aboard, {PLAYER}{KUN}!\p"
-	.string "They made me honorary captain of\n"
-	.string "the S.S. TIDAL!\p"
-	.string "You can call me CAPTAIN BRINEY now!\p"
-	.string "You know, I retired once before,\n"
-	.string "but when I saw this majestic ship…\p"
-	.string "Let me just say, it stirred my sleeping\n"
-	.string "soul as a sailor!$"
+	.string "{CHN}布林先生：欢迎登船，{PLAYER}{KUN}！\p"
+	.string "他们让我当了潮汐号的\n"
+	.string "名誉船长！\p"
+	.string "现在你可以叫我布林船长了！\p"
+	.string "你知道的，我以前退过一次休，\n"
+	.string "但当我看到这艘雄伟的船……\p"
+	.string "这么说吧，它唤醒了我\n"
+	.string "身为水手沉睡的灵魂！$"
 
 SSTidalCorridor_Text_Peeko:
-	.string "PEEKO: Pihyo pihyohyo…$"
+	.string "{CHN}皮可：皮皮皮皮……$"
 
 SSTidalCorridor_Text_Cabin1:
-	.string "Cabin 1$"
+	.string "{CHN}1号舱房$"
 
 SSTidalCorridor_Text_Cabin2:
-	.string "Cabin 2$"
+	.string "{CHN}2号舱房$"
 
 SSTidalCorridor_Text_Cabin3:
-	.string "Cabin 3$"
+	.string "{CHN}3号舱房$"
 
 SSTidalCorridor_Text_Cabin4:
-	.string "Cabin 4$"
+	.string "{CHN}4号舱房$"

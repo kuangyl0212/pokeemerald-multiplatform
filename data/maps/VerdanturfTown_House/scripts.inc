@@ -10,16 +10,16 @@ VerdanturfTown_House_EventScript_Woman2::
 	end
 
 VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague:
-	.string "Far away, deep in EVER GRANDE CITY,\n"
-	.string "is the POKéMON LEAGUE.\p"
-	.string "The TRAINERS who gather there are\n"
-	.string "all frighteningly well skilled.$"
+	.string "{CHN}在遥远的彩幽市深处，\n"
+	.string "就是宝可梦联盟。\p"
+	.string "聚集在那里的训练家\n"
+	.string "都拥有令人恐惧的高超技艺。$"
 
 VerdanturfTown_House_Text_DefeatEliteFourInARow:
-	.string "In the POKéMON LEAGUE, I think the\n"
-	.string "rules say that you have to battle the\l"
-	.string "ELITE FOUR all in a row.\p"
-	.string "If you lose to any of them, you have\n"
-	.string "to begin your challenge again from the\l"
-	.string "first one.$"
+	.string "{CHN}在宝可梦联盟，我记得\n"
+	.string "规则是必须连续挑战\l"
+	.string "四天王。\p"
+	.string "如果输给其中任何一个，就必须\n"
+	.string "从第一个开始重新\l"
+	.string "挑战。$"
 

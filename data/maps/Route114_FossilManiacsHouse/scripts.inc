@@ -31,24 +31,24 @@ Route114_FossilManiacsHouse_EventScript_Bookshelf::
 	end
 
 Route114_FossilManiacsHouse_Text_HaveThisToDigLikeMyBrother:
-	.string "My big brother's the FOSSIL MANIAC…\n"
-	.string "He's a nice guy who loves FOSSILS…\p"
-	.string "He loves digging holes, too…\n"
-	.string "He dug this hole by himself…\p"
-	.string "You can have this, so you can DIG\n"
-	.string "holes just like my big brother…$"
+	.string "{CHN}我大哥是化石狂人……\n"
+	.string "他是个喜欢化石的好人……\p"
+	.string "他也喜欢挖洞……\n"
+	.string "这个洞就是他自己挖的……\p"
+	.string "这个给你，这样你也能像我大哥\n"
+	.string "一样挖洞……$"
 
 Route114_FossilManiacsHouse_Text_DigReturnsYouToEntrance:
-	.string "If you make a POKéMON DIG inside a\n"
-	.string "cave, you're returned to the entrance…$"
+	.string "{CHN}如果你让宝可梦在洞窟里使用挖洞，\n"
+	.string "你就会被送回入口……$"
 
 Route114_FossilManiacsHouse_Text_RocksFillDisplayCase:
-	.string "Rocks in peculiar shapes fill\n"
-	.string "the display case…$"
+	.string "{CHN}展示柜里装满了\n"
+	.string "形状奇特的岩石……$"
 
 Route114_FossilManiacsHouse_Text_CrammedWithBooks:
-	.string "THE COMPOSITION OF STRATA…\n"
-	.string "HOW RAIN SHAPES THE LAND…\l"
-	.string "STONES, SOIL, AND ROCK…\p"
-	.string "It's crammed with books.$"
+	.string "{CHN}地层的构成……\n"
+	.string "雨水如何塑造大地……\l"
+	.string "石头、土壤和岩石……\p"
+	.string "塞满了各种书籍。$"
 

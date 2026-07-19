@@ -25,16 +25,16 @@ SlateportCity_PokemonCenter_1F_EventScript_Woman::
 	end
 
 SlateportCity_PokemonCenter_1F_Text_RaiseDifferentTypesOfPokemon:
-	.string "Want a tip for battling?\p"
-	.string "I'd say it's raising different kinds\n"
-	.string "of POKéMON in a balanced manner.\p"
-	.string "It's no good to make just one\n"
-	.string "POKéMON strong.\p"
-	.string "If it has a type disadvantage,\n"
-	.string "it might not stand a chance.$"
+	.string "{CHN}想要对战的技巧吗？\p"
+	.string "我认为应该均衡地培养不同种类\n"
+	.string "的宝可梦。\p"
+	.string "只让一只宝可梦变强\n"
+	.string "是不行的。\p"
+	.string "如果它有属性劣势，\n"
+	.string "可能就毫无胜算了。$"
 
 SlateportCity_PokemonCenter_1F_Text_TradedMonWithFriend:
-	.string "I trade POKéMON with my friends.\p"
-	.string "If a traded POKéMON is holding an\n"
-	.string "item, it makes me twice as happy!$"
+	.string "{CHN}我和朋友们交换宝可梦。\p"
+	.string "如果交换来的宝可梦携带了道具，\n"
+	.string "我会加倍开心！$"
 

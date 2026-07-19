@@ -159,133 +159,133 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FatMan::
 	end
 
 LilycoveCity_LilycoveMuseum_1F_Text_WelcomeToLilycoveMuseum:
-	.string "Welcome to LILYCOVE MUSEUM.\p"
-	.string "Please take the time to enjoy our\n"
-	.string "collection of fantastic artwork\l"
-	.string "featuring POKéMON.$"
+	.string "{CHN}欢迎光临彩幽市博物馆。\p"
+	.string "请慢慢欣赏我们收藏的\n"
+	.string "以宝可梦为主题的\l"
+	.string "精彩艺术品。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_ImCuratorHaveYouViewedOurPaintings:
-	.string "I'm the CURATOR of this MUSEUM of\n"
-	.string "fine arts.\p"
-	.string "It's heartening to see someone so\n"
-	.string "young as you in our MUSEUM.\p"
-	.string "Have you viewed our collection of\n"
-	.string "paintings already?$"
+	.string "{CHN}我是这座美术馆的\n"
+	.string "馆长。\p"
+	.string "能看到像你这样年轻的客人\n"
+	.string "来到我们博物馆，真是令人欣慰。\p"
+	.string "你已经看过我们的\n"
+	.string "画作收藏了吗？$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_NotDisturbYouTakeYourTime:
-	.string "Ah, then let me not disturb you.\n"
-	.string "Please, do take your time.$"
+	.string "{CHN}啊，那我就不打扰你了。\n"
+	.string "请慢慢看吧。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_HaveYouAnInterestInPaintings:
-	.string "Oh? I do believe that you seem to\n"
-	.string "be a POKéMON TRAINER.\p"
-	.string "Have you an interest in paintings,\n"
-	.string "too?$"
+	.string "{CHN}哦？我看你似乎\n"
+	.string "是一位宝可梦训练家。\p"
+	.string "你对画作也\n"
+	.string "有兴趣吗？$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_HonoredYoudVisitInSpiteOfThat:
-	.string "I see…\p"
-	.string "I'm honored that you would visit\n"
-	.string "us in spite of that.$"
+	.string "{CHN}这样啊……\p"
+	.string "尽管如此，您还愿意光临\n"
+	.string "我们真是倍感荣幸。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_ExcellentCanYouComeWithMe:
-	.string "Ah, excellent!\n"
-	.string "You do like paintings!\p"
-	.string "Then, may I ask you to come with me?$"
+	.string "{CHN}啊，太好了！\n"
+	.string "您果然喜欢画作！\p"
+	.string "那么，能否请您跟我来？$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_VeryOldPainting:
-	.string "It's a very old painting.\n"
-	.string "The paint is peeling here and there.$"
+	.string "{CHN}这是一幅非常古老的画。\n"
+	.string "颜料到处都在剥落。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_OddLandscapeFantasticScenery:
-	.string "It's an odd landscape with bizarre\n"
-	.string "and fantastic scenery.$"
+	.string "{CHN}这是一幅奇异的风景画，\n"
+	.string "景色怪诞又奇妙。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBeautifulWoman:
-	.string "It's a painting of a beautiful, smiling\n"
-	.string "woman with a POKéMON on her lap.$"
+	.string "{CHN}画中是一位面带微笑的美丽女子，\n"
+	.string "腿上坐着一只宝可梦。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfLegendaryPokemon:
-	.string "It's a painting of a legendary POKéMON\n"
-	.string "from long ago.\p"
-	.string "The artist painted this from\n"
-	.string "imagination.$"
+	.string "{CHN}这是一幅很久以前的\n"
+	.string "传说宝可梦的画。\p"
+	.string "画家是凭想象\n"
+	.string "画出来的。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfGrassPokemon:
-	.string "It's a painting of GRASS POKéMON\n"
-	.string "swaying in a breeze.\p"
-	.string "They appear to be enjoying the wind's\n"
-	.string "gentle caress.$"
+	.string "{CHN}画中是在微风中摇曳的\n"
+	.string "草属性宝可梦。\p"
+	.string "它们似乎很享受\n"
+	.string "风儿的轻抚。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBerries:
-	.string "It's a delicious-looking painting\n"
-	.string "of BERRIES.\p"
-	.string "This painting could make you hungry!$"
+	.string "{CHN}这是一幅让人垂涎欲滴的\n"
+	.string "树果画。\p"
+	.string "看这幅画会让人肚子饿呢！$"
 
 LilycoveCity_LilycoveMuseum_Text_BirdPokemonSculptureReplica:
-	.string "It's a replica of a famous sculpture.\p"
-	.string "It depicts an ancient BIRD POKéMON.$"
+	.string "{CHN}这是一座著名雕塑的复制品。\p"
+	.string "描绘的是一只古代的鸟宝可梦。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_BigPokeBallCarvedFromStone:
-	.string "It's a big POKé BALL carved from\n"
-	.string "a black stone.\p"
-	.string "It was apparently used in festivals\n"
-	.string "in the olden days.$"
+	.string "{CHN}这是一个用黑色石头\n"
+	.string "雕刻而成的大精灵球。\p"
+	.string "据说在古代的节日中\n"
+	.string "会被使用。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_StoneTabletWithAncientText:
-	.string "It's a huge stone tablet inscribed\n"
-	.string "with POKéMON and dense text in the\l"
-	.string "small characters of an ancient,\l"
-	.string "unreadable language.$"
+	.string "{CHN}这是一块巨大的石碑，\n"
+	.string "上面刻着宝可梦和密密麻麻的\l"
+	.string "古代文字，\l"
+	.string "无法辨认。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_WorksOfMagnificence:
-	.string "Hmmm…\n"
-	.string "What works of great magnificence…$"
+	.string "{CHN}嗯……\n"
+	.string "多么宏伟的作品啊……$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_MustntForgetLoveForFineArts:
-	.string "Battling with POKéMON is fun,\n"
-	.string "I'll grant you that.\p"
-	.string "But one mustn't forget our love for\n"
-	.string "the fine arts.$"
+	.string "{CHN}和宝可梦对战很有趣，\n"
+	.string "这点我承认。\p"
+	.string "但也不能忘记我们对\n"
+	.string "美术的热爱。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_ThisMuseumIsInspiration:
-	.string "This ART MUSEUM… Well, you could\n"
-	.string "see many fantastic paintings.\p"
-	.string "And the CURATOR is a wonderful person.\p"
-	.string "Among artists like myself, this MUSEUM\n"
-	.string "is an inspiration.$"
+	.string "{CHN}这座美术馆……嗯，可以看到\n"
+	.string "许多精彩的画作。\p"
+	.string "而且馆长是个了不起的人。\p"
+	.string "对我们这些艺术家来说，这座博物馆\n"
+	.string "是灵感的源泉。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_ThisLadyIsPretty:
-	.string "This lady is pretty!\n"
-	.string "She's like Mommy!$"
+	.string "{CHN}这位大姐姐真漂亮！\n"
+	.string "就像妈妈一样！$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_ThisPokemonIsAdorable:
-	.string "This POKéMON is adorable!\n"
-	.string "Just like our little boy!$"
+	.string "{CHN}这只宝可梦真可爱！\n"
+	.string "就像我们家的小宝贝！$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_HeardMuseumGotNewPaintings:
-	.string "I'd heard that this ART MUSEUM got\n"
-	.string "in some new paintings.\p"
-	.string "So, naturally I hurried over.\p"
-	.string "Are the new paintings up on\n"
-	.string "the second floor?$"
+	.string "{CHN}我听说这座美术馆\n"
+	.string "进了些新画作。\p"
+	.string "所以我马上赶过来了。\p"
+	.string "新画作是挂在\n"
+	.string "二楼吗？$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_CuratorHasBeenCheerful:
-	.string "Lately, the CURATOR has been\n"
-	.string "unusually cheerful.\p"
-	.string "I bet something good happened for him.\n"
-	.string "Definitely.$"
+	.string "{CHN}最近馆长异常地\n"
+	.string "心情愉快。\p"
+	.string "我敢说一定是发生了什么好事。\n"
+	.string "肯定的。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_AimToSeeGreatPaintings:
-	.string "I aim to see many great paintings\n"
-	.string "here and learn from them.\p"
-	.string "I have this dream of one day having\n"
-	.string "my artwork exhibited here.$"
+	.string "{CHN}我希望能在这里看到许多伟大的画作，\n"
+	.string "并从中学习。\p"
+	.string "我的梦想是有朝一日\n"
+	.string "能让自己的作品在这里展出。$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_MuseumTouristDestination:
-	.string "The ART MUSEUM has become a favorite\n"
-	.string "tourist destination.\p"
-	.string "It's great for LILYCOVE…\n"
-	.string "No, great for the HOENN region!\p"
-	.string "This is what I've heard--a lone TRAINER\n"
-	.string "procured all the paintings upstairs.$"
+	.string "{CHN}这座美术馆已经成为\n"
+	.string "热门的旅游胜地。\p"
+	.string "这对彩幽市来说是好事……\n"
+	.string "不，对整个丰缘地区都是好事！\p"
+	.string "我听说——楼上所有的画作\n"
+	.string "都是一位训练家独自弄来的。$"
 

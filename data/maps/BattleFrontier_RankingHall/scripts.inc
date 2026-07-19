@@ -101,34 +101,34 @@ BattleFrontier_RankingHall_EventScript_Boy::
 	end
 
 BattleFrontier_RankingHall_Text_ExplainRankingHall:
-	.string "This is the RANKING HALL.\p"
-	.string "This is where we recognize the immortal\n"
-	.string "TRAINERS who left great records in\l"
-	.string "BATTLE FRONTIER events.$"
+	.string "{CHN}这里是名人堂。\p"
+	.string "我们在这里表彰那些在对战开拓区\n"
+	.string "项目中留下伟大记录的\l"
+	.string "不朽训练家。$"
 
 BattleFrontier_RankingHall_Text_DomePikeFactoryRecords:
-	.string "BATTLE DOME, BATTLE PIKE,\n"
-	.string "and BATTLE FACTORY Records$"
+	.string "{CHN}对战巨蛋、对战管道\n"
+	.string "和对战工厂的记录$"
 
 BattleFrontier_RankingHall_Text_PalaceArenaPyramidRecords:
-	.string "BATTLE PALACE, BATTLE ARENA,\n"
-	.string "and BATTLE PYRAMID Records$"
+	.string "{CHN}对战宫殿、对战竞技场\n"
+	.string "和对战金字塔的记录$"
 
 BattleFrontier_RankingHall_Text_IsYourNameOnThisList:
-	.string "Hi, is your name on this list?$"
+	.string "{CHN}嗨，你的名字在这个名单上吗？$"
 
 BattleFrontier_RankingHall_Text_WowThatsSuper:
-	.string "Wow, that's super!\n"
-	.string "I'll have to try harder, too!$"
+	.string "{CHN}哇，太厉害了！\n"
+	.string "我也要更加努力！$"
 
 BattleFrontier_RankingHall_Text_WorkHarderIfYouSawFriendsName:
-	.string "Oh, is that right?\p"
-	.string "If you saw your friend's name up here,\n"
-	.string "I bet it would make you work harder!$"
+	.string "{CHN}哦，是吗？\p"
+	.string "如果你在这里看到朋友的名字，\n"
+	.string "我猜你一定会更拼命努力的！$"
 
 BattleFrontier_RankingHall_Text_MyNamesNotUpThere:
-	.string "Hmm…\n"
-	.string "My name's not up there…\p"
-	.string "Well, it's only natural since I haven't\n"
-	.string "taken any challenges yet.$"
+	.string "{CHN}嗯……\n"
+	.string "我的名字不在上面……\p"
+	.string "也是理所当然的，毕竟我\n"
+	.string "还没有参加过任何挑战。$"
 

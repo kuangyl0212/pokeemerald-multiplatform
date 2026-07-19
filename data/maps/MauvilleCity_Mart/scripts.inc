@@ -36,16 +36,15 @@ MauvilleCity_Mart_EventScript_Man::
 	end
 
 MauvilleCity_Mart_Text_ItemsToTemporarilyElevateStats:
-	.string "There are items that temporarily\n"
-	.string "elevate the stats of POKéMON.\p"
-	.string "The ones I know you use in battle\n"
-	.string "are X ATTACK and X DEFEND…\p"
-	.string "I do believe that there are others\n"
-	.string "like them.$"
+	.string "{CHN}有些道具可以临时\n"
+	.string "提升宝可梦的能力。\p"
+	.string "我知道你在对战中使用的\n"
+	.string "有攻击强化和防御强化……\p"
+	.string "我相信还有其他\n"
+	.string "类似的道具。$"
 
 MauvilleCity_Mart_Text_DecisionsDetermineBattle:
-	.string "Use a certain move, or use an item\n"
-	.string "instead…\p"
-	.string "The TRAINER's decisions determine how\n"
-	.string "battles turn out, I think.$"
-
+	.string "{CHN}使用某个招式，或者使用道具\n"
+	.string "代替……\p"
+	.string "训练家的决定\n"
+	.string "决定着对战的走向，我是这么想的。$"

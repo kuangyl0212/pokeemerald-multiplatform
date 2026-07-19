@@ -20,16 +20,15 @@ FortreeCity_House5_EventScript_Zigzagoon::
 	end
 
 FortreeCity_House5_Text_TreeHousesAreGreat:
-	.string "The tree houses of FORTREE are great!\p"
-	.string "I think it's the number one town for\n"
-	.string "living together with POKéMON.$"
+	.string "{CHN}茵郁的树屋真棒！\p"
+	.string "我觉得这里是\n"
+	.string "和宝可梦一起生活的第一城市。$"
 
 FortreeCity_House5_Text_AdaptedToNature:
-	.string "POKéMON and people have adapted to\n"
-	.string "nature for survival.\p"
-	.string "There's no need to make nature\n"
-	.string "conform to the way we want to live.$"
+	.string "{CHN}宝可梦和人类\n"
+	.string "为了生存而适应自然。\p"
+	.string "没有必要让自然\n"
+	.string "屈从于我们想要的生活方式。$"
 
 FortreeCity_House5_Text_Zigzagoon:
-	.string "ZIGZAGOON: Bufuu!$"
-
+	.string "{CHN}蛇纹熊：噗呼！$"

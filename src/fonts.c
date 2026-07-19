@@ -183,6 +183,9 @@ ALIGNED(4) const u8 gFontNormalLatinGlyphWidths[] = {
 ALIGNED(4) const u16 gFontSmallJapaneseGlyphs[] = INCBIN_U16("graphics/fonts/small.hwjpnfont");
 ALIGNED(4) const u16 gFontNormalJapaneseGlyphs[] = INCBIN_U16("graphics/fonts/normal.hwjpnfont");
 
+ALIGNED(4) const u16 gFontChineseGlyphs[] = INCBIN_U16("graphics/fonts/chinese.latfont");
+ALIGNED(4) const u8 gFontChineseWidths[] = INCBIN_U8("graphics/fonts/chinese_widths.bin");
+
 ALIGNED(4) const u16 gFontFRLGMaleJapaneseGlyphs[] = INCBIN_U16("graphics/fonts/frlg_male.fwjpnfont");
 ALIGNED(4) const u8 gFontFRLGMaleJapaneseGlyphWidths[] = {
     0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,

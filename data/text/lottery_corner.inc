@@ -1,77 +1,77 @@
 LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket:
-	.string "This is the POKéMON LOTTERY CORNER.\p"
-	.string "All shoppers at our DEPARTMENT STORE\n"
-	.string "get to draw a POKéMON LOTO TICKET.\p"
-	.string "If the LOTO TICKET's number matches\n"
-	.string "the ID number of any of your POKéMON,\l"
-	.string "you will receive a fabulous gift.\p"
-	.string "Would you like to draw a POKéMON\n"
-	.string "LOTO TICKET?$"
+	.string "{CHN}这里是宝可梦抽奖角落。\p"
+	.string "在我们百货商店购物的所有顾客\n"
+	.string "都可以抽取一张宝可梦抽奖券。\p"
+	.string "如果抽奖券的号码与您任何一只\n"
+	.string "宝可梦的ID号码一致，\l"
+	.string "您将获得一份精美礼物。\p"
+	.string "您想抽取一张宝可梦\n"
+	.string "抽奖券吗？$"
 
 LilycoveCity_DepartmentStore_1F_Text_ComeBackTomorrow:
-	.string "Please come back tomorrow.$"
+	.string "{CHN}请明天再来。$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain:
-	.string "Please do visit again.$"
+	.string "{CHN}请再次光临。$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleasePickTicket:
-	.string "Please pick a LOTO TICKET.\n"
+	.string "{CHN}请抽取一张抽奖券。\n"
 	.string "…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketNumberIsXPleaseWait:
-	.string "The LOTO TICKET number is {STR_VAR_1}.\p"
-	.string "I need to run a check on this number\n"
-	.string "to see if it matches any of your\l"
-	.string "POKéMON's ID numbers. Please wait.$"
+	.string "{CHN}抽奖券号码是{STR_VAR_1}。\p"
+	.string "我需要核对一下这个号码\n"
+	.string "看看是否与您任何一只\l"
+	.string "宝可梦的ID号码一致。请稍候。$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon:
-	.string "Congratulations!\p"
-	.string "The ID number of your team's\n"
-	.string "{STR_VAR_1} matches your\l"
-	.string "LOTO TICKET's number!$"
+	.string "{CHN}恭喜您！\p"
+	.string "您队伍中\n"
+	.string "{STR_VAR_1}的ID号码与您的\l"
+	.string "抽奖券号码一致！$"
 
 LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPCMon:
-	.string "Congratulations!\p"
-	.string "The ID number of your PC-boxed\n"
-	.string "{STR_VAR_1} matches your\l"
-	.string "LOTO TICKET's number!$"
+	.string "{CHN}恭喜您！\p"
+	.string "您电脑盒子里的\n"
+	.string "{STR_VAR_1}的ID号码与您的\l"
+	.string "抽奖券号码一致！$"
 
 LilycoveCity_DepartmentStore_1F_Text_NoNumbersMatched:
-	.string "I'm sorry.\n"
-	.string "None of the numbers matched.$"
+	.string "{CHN}很抱歉。\n"
+	.string "没有一个号码匹配。$"
 
 LilycoveCity_DepartmentStore_1F_Text_TwoDigitsMatched:
-	.string "Two digits matched, so you win the\n"
-	.string "third prize!\l"
-	.string "You've won the {STR_VAR_1}!$"
+	.string "{CHN}有两位数字匹配，所以您获得了\n"
+	.string "三等奖！\l"
+	.string "您赢得了{STR_VAR_1}！$"
 
 LilycoveCity_DepartmentStore_1F_Text_ThreeDigitsMatched:
-	.string "Three digits matched, so you win the\n"
-	.string "second prize!\l"
-	.string "You've won the {STR_VAR_1}!$"
+	.string "{CHN}有三位数字匹配，所以您获得了\n"
+	.string "二等奖！\l"
+	.string "您赢得了{STR_VAR_1}！$"
 
 LilycoveCity_DepartmentStore_1F_Text_FourDigitsMatched:
-	.string "Four digits matched, so you win the\n"
-	.string "first prize!\l"
-	.string "You've won the {STR_VAR_1}!$"
+	.string "{CHN}有四位数字匹配，所以您获得了\n"
+	.string "一等奖！\l"
+	.string "您赢得了{STR_VAR_1}！$"
 
 LilycoveCity_DepartmentStore_1F_Text_AllFiveDigitsMatched:
-	.string "Oh, my goodness, all five digits\n"
-	.string "matched!\p"
-	.string "You've won the jackpot prize!\n"
-	.string "You've won the {STR_VAR_1}!$"
+	.string "{CHN}天哪，五位数字\n"
+	.string "全部匹配！\p"
+	.string "您赢得了头奖！\n"
+	.string "您赢得了{STR_VAR_1}！$"
 
 LilycoveCity_DepartmentStore_1F_Text_NoRoomForThis:
-	.string "Oh?\n"
-	.string "You seem to have no room for this.\p"
-	.string "Please make room in your BAG and\n"
-	.string "let me know.$"
+	.string "{CHN}哦？\n"
+	.string "您似乎没有空间放这个。\p"
+	.string "请在您的背包里腾出空间\n"
+	.string "然后告诉我。$"
 
 LilycoveCity_DepartmentStore_1F_Text_PrizeWeveBeenHolding:
-	.string "{PLAYER}?\n"
-	.string "Yes, I've been expecting you.\p"
-	.string "This is the prize we've been holding\n"
-	.string "for you.$"
+	.string "{CHN}{PLAYER}？\n"
+	.string "是的，我一直在等您。\p"
+	.string "这是我们一直为您保留的\n"
+	.string "奖品。$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain2:
-	.string "Please do visit again.$"
+	.string "{CHN}请再次光临。$"

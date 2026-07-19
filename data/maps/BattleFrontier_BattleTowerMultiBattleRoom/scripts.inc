@@ -440,63 +440,63 @@ BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft:
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor2ndOpponentSet:
-	.string "The 2nd set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第2组对手。\n"
+	.string "准备好了吗？$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor3rdOpponentSet:
-	.string "The 3rd set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第3组对手。\n"
+	.string "准备好了吗？$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor4thOpponentSet:
-	.string "The 4th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第4组对手。\n"
+	.string "准备好了吗？$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor5thOpponentSet:
-	.string "The 5th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第5组对手。\n"
+	.string "准备好了吗？$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor6thOpponentSet:
-	.string "The 6th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第6组对手。\n"
+	.string "准备好了吗？$"
 
 BattleFrontier_BattleTowerMultiBattleRoom_Text_ReadyFor7thOpponentSet:
-	.string "The 7th set of opponents is next.\n"
-	.string "Are you ready?$"
+	.string "{CHN}下一组是第7组对手。\n"
+	.string "准备好了吗？$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_2ndOpponentSetNext:
-	.string "The 2nd set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第2组对手。\n"
+	.string "加油！$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_3rdOpponentSetNext:
-	.string "The 3rd set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第3组对手。\n"
+	.string "加油！$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_4thOpponentSetNext:
-	.string "The 4th set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第4组对手。\n"
+	.string "加油！$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_5thOpponentSetNext:
-	.string "The 5th set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第5组对手。\n"
+	.string "加油！$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_6thOpponentSetNext:
-	.string "The 6th set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第6组对手。\n"
+	.string "加油！$"
 
 /* Unused*/
 BattleFrontier_BattleTowerMultiBattleRoom_Text_7thOpponentSetNext:
-	.string "The 7th set of opponents is next.\n"
-	.string "Do your best!$"
+	.string "{CHN}下一组是第7组对手。\n"
+	.string "加油！$"
 
 gText_LinkStandby3::
-	.string "Link standby…$"
+	.string "{CHN}联机待机中……$"
 
 gText_YourPartnerHasRetired::
-	.string "Your partner has retired.\p"
-	.string "Your BATTLE ROOM challenge\n"
-	.string "will be canceled.$"
+	.string "{CHN}你的搭档已退出挑战。\p"
+	.string "你的对战室挑战\n"
+	.string "将被取消。$"

@@ -287,67 +287,67 @@ Route103_EventScript_Isabelle::
 	end
 
 Route103_Text_MayRoute103Pokemon:
-	.string "MAY: Let's see… The POKéMON found\n"
-	.string "on ROUTE 103 include…$"
+	.string "{CHN}小遥：让我看看……103号道路\n"
+	.string "出现的宝可梦有……$"
 
 Route103_Text_MayLetsBattle:
-	.string "Oh, hi, {PLAYER}{KUN}!\p"
-	.string "…Oh, I see, my dad gave you\n"
-	.string "a POKéMON as a gift.\p"
-	.string "Since we're here, let's have a quick\n"
-	.string "battle!\p"
-	.string "I'll give you a taste of what being\n"
-	.string "a TRAINER is like.$"
+	.string "{CHN}哦，你好，{PLAYER}{KUN}！\p"
+	.string "……哦，我明白了，爸爸送了\n"
+	.string "你一只宝可梦当礼物。\p"
+	.string "既然我们都在这里，来一场\n"
+	.string "小小的对战吧！\p"
+	.string "我让你体验一下\n"
+	.string "当训练家的感觉。$"
 
 Route103_Text_MayDefeated:
-	.string "Wow! That's great!\n"
-	.string "{PLAYER}{KUN}, you're pretty good!$"
+	.string "{CHN}哇！太厉害了！\n"
+	.string "{PLAYER}{KUN}，你挺厉害的！$"
 
 Route103_Text_MayTimeToHeadBack:
-	.string "MAY: I think I know why my dad has\n"
-	.string "an eye out for you now.\p"
-	.string "I mean, you just got that POKéMON,\n"
-	.string "but it already likes you.\p"
-	.string "You might be able to befriend any\n"
-	.string "kind of POKéMON easily.\p"
-	.string "Well, it's time to head back to\n"
-	.string "the LAB.$"
+	.string "{CHN}小遥：我想我明白为什么爸爸\n"
+	.string "会注意到你了。\p"
+	.string "你看，你才刚得到那只宝可梦，\n"
+	.string "但它就已经喜欢上你了。\p"
+	.string "你也许能轻松地\n"
+	.string "和任何宝可梦成为朋友。\p"
+	.string "好了，该回\n"
+	.string "研究所了。$"
 
 Route103_Text_BrendanRoute103Pokemon:
-	.string "BRENDAN: Okay, so it's this one and\n"
-	.string "that one that live on ROUTE 103…$"
+	.string "{CHN}佑树：好的，103号道路\n"
+	.string "栖息的是这种和那种宝可梦……$"
 
 Route103_Text_BrendanLetsBattle:
-	.string "Hey, it's {PLAYER}!\p"
-	.string "…Oh, yeah, Dad gave you a POKéMON.\p"
-	.string "Since we're here, how about a little\n"
-	.string "battle?\p"
-	.string "I'll teach you what being a TRAINER's\n"
-	.string "about!$"
+	.string "{CHN}嘿，是{PLAYER}！\p"
+	.string "……哦，对了，爸爸送了你一只宝可梦。\p"
+	.string "既然我们都在这里，来一场\n"
+	.string "小小的对战如何？\p"
+	.string "我来教教你当训练家\n"
+	.string "是怎么回事！$"
 
 Route103_Text_BrendanDefeated:
-	.string "Huh, {PLAYER}, you're not too shabby.$"
+	.string "{CHN}哼，{PLAYER}，你还挺厉害的。$"
 
 Route103_Text_BrendanTimeToHeadBack:
-	.string "BRENDAN: I think I get it.\n"
-	.string "I think I know why my dad has his eye\l"
-	.string "out for you now.\p"
-	.string "Look, your POKéMON already likes you,\n"
-	.string "even though you just got it.\p"
-	.string "{PLAYER}, I get the feeling that you\n"
-	.string "could befriend any POKéMON with ease.\p"
-	.string "We should head back to the LAB.$"
+	.string "{CHN}佑树：我明白了。\n"
+	.string "我想我知道为什么爸爸\l"
+	.string "会注意到你了。\p"
+	.string "你看，你的宝可梦已经喜欢上你了，\n"
+	.string "虽然你才刚得到它。\p"
+	.string "{PLAYER}，我觉得你\n"
+	.string "能轻松地和任何宝可梦成为朋友。\p"
+	.string "我们该回研究所了。$"
 
 Route103_Text_ShouldHaveBroughtPotion:
-	.string "My POKéMON is staggeringly tired…\n"
-	.string "I should have brought a POTION…$"
+	.string "{CHN}我的宝可梦累得不行……\n"
+	.string "我应该带瓶伤药来的……$"
 
 Route103_Text_ShortcutToOldale:
-	.string "If you cross the sea from here,\n"
-	.string "it'll be a shortcut to OLDALE TOWN.\p"
-	.string "Fufufu, that's useful, isn't it?$"
+	.string "{CHN}从这里渡海的话，\n"
+	.string "就是去古辰镇的捷径。\p"
+	.string "呼呼呼，这很有用，不是吗？$"
 
 Route103_Text_RouteSign:
-	.string "ROUTE 103\n"
-	.string "{DOWN_ARROW} OLDALE TOWN$"
+	.string "{CHN}103号道路\n"
+	.string "{DOWN_ARROW} 古辰镇$"
 

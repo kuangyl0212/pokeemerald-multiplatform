@@ -59,26 +59,25 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+	.string "{CHN}啊哈哈！\p"
+	.string "我是四天王的芙蓉。\n"
+	.string "我在送神山上进行修炼。\p"
+	.string "在修炼的过程中，我获得了\n"
+	.string "与幽灵属性宝可梦沟通的能力。\p"
+	.string "是的，我与宝可梦之间的羁绊\n"
+	.string "无比紧密。\p"
+	.string "所以，来吧，看看你能否\n"
+	.string "对我的宝可梦造成伤害！$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "{CHN}哎呀，糟糕。\n"
+	.string "我输了。$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
-	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
-
+	.string "{CHN}你和你的宝可梦之间，\n"
+	.string "也有着坚实的羁绊。\p"
+	.string "我没有察觉到这一点，\n"
+	.string "所以我输了也是理所当然。\p"
+	.string "嗯，我想看看你的羁绊\n"
+	.string "能带你走多远。\p"
+	.string "去吧，前往下一个房间。$"

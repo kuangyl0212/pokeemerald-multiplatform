@@ -134,33 +134,33 @@ Route113_EventScript_Wyatt::
 	end
 
 Route113_Text_AshCanBeFashionedIntoGlass:
-	.string "Wahahaha! Today's technology is a\n"
-	.string "wondrous thing!\p"
-	.string "Take this volcanic ash here.\n"
-	.string "It can be fashioned into glass.$"
+	.string "{CHN}哇哈哈哈！现在的科技\n"
+	.string "真是了不起！\p"
+	.string "就拿这火山灰来说吧。\n"
+	.string "它可以被加工成玻璃。$"
 
 Route113_Text_FunWalkingThroughAsh:
-	.string "It's fun walking through the volcano's\n"
-	.string "ashes on the ground and grass.\p"
-	.string "You can see where you walked--it's\n"
-	.string "really neat!$"
+	.string "{CHN}在地面和草地上\n"
+	.string "踩着火山灰走路真有意思。\p"
+	.string "你能看到自己走过的地方——\n"
+	.string "真的很有趣！$"
 
 Route113_Text_RouteSign111:
-	.string "ROUTE 113\n"
-	.string "{RIGHT_ARROW} ROUTE 111$"
+	.string "{CHN}113号道路\n"
+	.string "{RIGHT_ARROW} 111号道路$"
 
 Route113_Text_RouteSignFallarbor:
-	.string "ROUTE 113\n"
-	.string "{LEFT_ARROW} FALLARBOR TOWN$"
+	.string "{CHN}113号道路\n"
+	.string "{LEFT_ARROW} 秋叶镇$"
 
 Route113_Text_TrainerTipsRegisterKeyItems:
-	.string "TRAINER TIPS\p"
-	.string "You may register one of the KEY ITEMS\n"
-	.string "in your BAG as SELECT.\p"
-	.string "Simply press SELECT to use\n"
-	.string "the registered item conveniently.$"
+	.string "{CHN}训练家小贴士\p"
+	.string "你可以将包包中的重要物品\n"
+	.string "之一注册为SELECT键。\p"
+	.string "只需按下SELECT键就能\n"
+	.string "方便地使用注册的物品。$"
 
 Route113_Text_GlassWorkshopSign:
-	.string "GLASS WORKSHOP\n"
-	.string "“Turning Volcanic Ash into Glass Items”$"
+	.string "{CHN}玻璃工房\n"
+	.string "“将火山灰变成玻璃制品”$"
 

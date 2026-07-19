@@ -179,28 +179,28 @@ Route117_EventScript_Aisha::
 	end
 
 Route117_Text_DayCarePokemonHadNewMove:
-	.string "I left my POKéMON at the DAY CARE.\p"
-	.string "When I got it back, it had a new move\n"
-	.string "that I didn't teach it.\l"
-	.string "I was really, really surprised.$"
+	.string "{CHN}我把我的宝可梦寄放在寄放屋了。\p"
+	.string "当我领回它时，它学会了一个\n"
+	.string "我没教过的新招式。\l"
+	.string "我真是又惊又喜。$"
 
 Route117_Text_ArentTheseFlowersPretty:
-	.string "What do you think?\n"
-	.string "Aren't these flowers pretty?\p"
-	.string "I planted them all!$"
+	.string "{CHN}你觉得怎么样？\n"
+	.string "这些花漂亮吗？\p"
+	.string "全都是我种的！$"
 
 Route117_Text_AirIsTastyHere:
-	.string "The air is tasty here!$"
+	.string "{CHN}这里的空气真香甜！$"
 
 Route117_Text_RouteSignVerdanturf:
-	.string "ROUTE 117\n"
-	.string "{LEFT_ARROW} VERDANTURF TOWN$"
+	.string "{CHN}117号道路\n"
+	.string "{LEFT_ARROW} 绿荫镇$"
 
 Route117_Text_RouteSignMauville:
-	.string "ROUTE 117\n"
-	.string "{RIGHT_ARROW} MAUVILLE CITY$"
+	.string "{CHN}117号道路\n"
+	.string "{RIGHT_ARROW} 紫堇市$"
 
 Route117_Text_DayCareSign:
-	.string "POKéMON DAY CARE\n"
-	.string "“Let us raise your POKéMON.”$"
+	.string "{CHN}宝可梦寄放屋\n"
+	.string "“让我们帮你培育宝可梦。”$"
 
