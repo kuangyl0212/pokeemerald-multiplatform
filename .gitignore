@@ -30,6 +30,9 @@ build/
 .cxx/
 android/.gradle/
 android/local.properties
+# Generated gradle wrapper at android/ level; upstream uses SDL2's wrapper instead
+/android/gradlew
+/android/gradle/
 /pokeemerald
 /pokeemerald.sav
 .DS_Store
@@ -49,3 +52,43 @@ prefabs.json
 /pc-border-template-1280x720.png
 /pokeemerald.cfg
 .worktrees/
+
+# ROM dumps and derived analysis (copyrighted material - never commit)
+/CHS/
+DumpRom.bin
+extracted_chs_strings.txt
+*.bin.dump
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary debug / analysis scripts (root level)
+/_*.py
+/_*.c
+/check_*.py
+/verify_*.py
+/translate_*.py
+/test_postincr*
+
+# Temporary debug / analysis scripts (tools level)
+/tools/_*.py
+/tools/check_char.py
+/tools/check_conflicts.py
+/tools/check_widths.py
+/tools/debug_*.py
+/tools/diagnose_*.py
+/tools/extract_chs_precise.py
+/tools/fix_charmap.py
+/tools/fix_chn_*.py
+/tools/fix_quotes.py
+/tools/fix_right_quotes.py
+/tools/fix_trainers_quotes.py
+/tools/gen_charmap_entries.py
+/tools/simulate_render.py
+/tools/strip_bom.py
+/tools/test_chn.c
+/tools/update_charmap.py
+/tools/verify_fix.py
+/tools/visualize_glyph.py

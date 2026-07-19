@@ -4,6 +4,8 @@ An experimental Windows, Linux, and Android port of the [Pokemon Emerald decompi
 
 The project runs the decompiled game code directly. It is not a bundled GBA emulator and does not include a commercial ROM.
 
+> This fork adds a **Simplified Chinese (zh-CN) localization** on top of the multiplatform port. See [中文汉化](#中文汉化) below for details.
+
 ## Platform Status
 
 | Platform | Status | Output |
@@ -132,15 +134,38 @@ Android includes a labeled multitouch overlay for the D-pad, A, B, Start, Select
 
 ## Upstream Project
 
-This repository is based on the Pokémon Emerald decompilation. The upstream project builds the following ROM:
+This repository is a fork of [gradenGnostic/pokeemerald-multiplatform](https://github.com/gradenGnostic/pokeemerald-multiplatform), which is itself based on the Pokémon Emerald decompilation. The upstream decompilation project builds the following ROM:
 
 - `pokeemerald.gba`
 - SHA-1: `f3ae088181bf583e55daf962a92bb46f4f1d07b7`
 
 See [INSTALL.md](INSTALL.md) for the original decompilation setup and [pret.github.io](https://pret.github.io/) for other pret projects.
 
+## 中文汉化
+
+本 fork 在多平台移植基础上新增了简体中文（zh-CN）汉化，主要工作包括：
+
+- **字体系统**：基于 [Fusion Pixel Font 12px zh_hans](https://github.com/TakWolf/fusion-pixel-font) 生成 12×12 中文点阵字体，覆盖 GB2312 字符集；对缺失字符使用系统字体（如 SimSun）回退。中文字形添加 1px 右下阴影以匹配英文字体风格，垂直基线对齐英文。
+- **字符编码**：使用 GB2312 编码，通过 `{CHN}` 控制码（0x80 前缀 + 2 字节 GB2312）切换中文渲染模式。`charmap.txt` 中定义了字符映射。
+- **字符串处理**：在 `string_util.c`、`text.c`、`braille.c`、`battle_message.c` 等文件的多个字符串函数中添加 0x80 转义序列处理，避免 GB2312 字节被误判为控制码。
+- **已汉化内容**：地图名、招式描述、道具描述、特性名称与描述、性格名称、训练家职业名称、对手呼叫信息、对战金字塔楼层名、PC 相关文本等共 1200+ 条字符串。
+- **构建工具**：`tools/generate_chinese_font.py` 生成中文字体文件，`tools/translate_map_names.py` 翻译地图名，`tools/fix_all_quotes.py` 转换引号，`tools/check_gb2312.py` 校验 GB2312 合规性。
+
+### 已知限制
+
+- Battle Frontier 训练家名受 `PLAYER_NAME_LENGTH+1=8` 字节限制，无法完整汉化（仅容纳 1 个中文字）。
+- 部分内容（如 Easy Chat 词汇、部分 NPC 对话）尚未汉化。
+
+### 构建说明
+
+Windows 构建使用 `Makefile_pc`，构建前需将 `SDL2.dll` 放置在可执行文件旁。汉化字体文件 `chinese.latfont` 会在构建时自动生成。
+
+```sh
+make -f Makefile_pc -j4
+```
+
 ## Legal
 
 Pokémon and Pokémon Emerald are trademarks of Nintendo, Creatures Inc., and GAME FREAK inc. This is an unofficial fan project and is not affiliated with or endorsed by those companies.
 
-The scoped license in [LICENSE](LICENSE) applies only to original multiplatform-port modifications contributed through this fork. It does not relicense upstream code, third-party components, or copyrighted game assets.
+The scoped license in [LICENSE](LICENSE) applies only to original multiplatform-port modifications and Simplified Chinese localization modifications contributed through this fork. It does not relicense upstream code, third-party components, or copyrighted game assets. No game ROM, copyrighted asset, or derivative of the Pokémon Emerald ROM is distributed with this repository.
