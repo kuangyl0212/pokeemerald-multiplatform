@@ -321,8 +321,8 @@ class TestBaselineAlignment(unittest.TestCase):
 class TestFontFallback(unittest.TestCase):
     """Test font fallback for characters missing from primary font.
 
-    The Ark-Pixel 12px font covers most but not all GB2312 characters
-    (515 are missing, including '徽', '搬', '奖'). For these missing
+    The primary pixel font (Fusion Pixel 12px zh_hans) covers most but
+    not all GB2312 characters (147 rare chars missing). For these missing
     characters, the generator must fall back to a system font (e.g.
     SimSun) so the rendered glyph is the actual character instead of
     a .notdef rectangle box (which renders as □ in-game).
@@ -333,14 +333,31 @@ class TestFontFallback(unittest.TestCase):
         font = find_font_for_char('的')
         self.assertIsNotNone(font, "find_font_for_char returned None")
 
+    def test_primary_font_covers_user_reported_chars(self):
+        """User-reported missing chars must be in the primary font.
+
+        Previous Ark-Pixel font was missing '徽', '搬', '奖' etc. The new
+        Fusion Pixel font must cover all these characters so they render
+        in pixel style (not blurry SimSun fallback).
+        """
+        from generate_chinese_font import _build_font_cache
+        cache = _build_font_cache()
+        self.assertTrue(cache, "No fonts loaded")
+        primary_cmap = cache[0][2]
+        for ch in ['徽', '搬', '奖', '待', '的', '啊', '家', '过', '去']:
+            self.assertIn(ord(ch), primary_cmap,
+                          f"Primary font missing '{ch}' — will fall back to "
+                          f"non-pixel system font (blurry rendering)")
+
     def test_missing_char_finds_fallback_font(self):
-        """'徽' is missing from Ark-Pixel but must find a fallback font."""
-        font = find_font_for_char('徽')
+        """Rare chars missing from primary must find a fallback font."""
+        # '鼗' is a rare char missing from Fusion Pixel
+        font = find_font_for_char('鼗')
         self.assertIsNotNone(font,
-                             "No fallback font found for '徽'")
+                             "No fallback font found for '鼗'")
 
     def test_fallback_renders_actual_glyph_not_box(self):
-        """'徽' rendered via fallback must NOT be a hollow rectangle.
+        """'徽' rendered via primary font must NOT be a hollow rectangle.
 
         The .notdef glyph renders as a square outline (top + bottom rows
         all FG, left + right columns all FG, interior all BG). A real

@@ -62,13 +62,20 @@ TOTAL_SLOTS = TOTAL_ZONES * POS_PER_ZONE  # 23940
 # Full-width character width
 FULL_WIDTH = 12
 
-# Font search paths (project-bundled Ark-Pixel-Font takes priority)
+# Font search paths (project-bundled Fusion-Pixel-Font takes priority)
+# Fusion Pixel 12px zh_hans was chosen over Ark-Pixel because it covers
+# ~7300/7445 GB2312 hanzi (vs Ark-Pixel's ~6900/7445), including all
+# user-reported missing chars ('徽', '搬', '奖'). The remaining 147 rare
+# chars (鼗、赝、劐 etc.) fall back to system fonts.
 _FONT_DIR = os.path.dirname(os.path.abspath(__file__))
 _PROJECT_ROOT = os.path.dirname(_FONT_DIR)
 FONT_PATHS = [
-    # Project-bundled pixel font (preferred — matches GBA aesthetic)
+    # Project-bundled pixel font (preferred — full pixel style + best coverage)
+    os.path.join(_FONT_DIR, 'fonts', 'fusion-pixel-12px',
+                 'fusion-pixel-12px-monospaced-zh_hans.ttf'),
+    # Legacy pixel font (smaller coverage but kept as secondary pixel fallback)
     os.path.join(_FONT_DIR, 'fonts', 'ark-pixel-12px-monospaced-zh_cn.ttf'),
-    # System fallbacks
+    # System fallbacks (non-pixel, only for chars missing from all pixel fonts)
     '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc',
     '/usr/share/fonts/truetype/wqy/wqy-microhei.ttc',
     '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
