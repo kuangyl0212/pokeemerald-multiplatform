@@ -1431,7 +1431,7 @@ static const u8 sSapphireDesc[] = _(
 static const u8 sMagmaEmblemDesc[] = _(
     "{CHN}与火岩队标志\n"
     "相同形状的\n"
-    "奖牌状道具。");
+    "勋章状道具。");
 
 static const u8 sOldSeaMapDesc[] = _(
     "{CHN}褪色的海图，\n"

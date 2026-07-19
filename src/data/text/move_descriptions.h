@@ -970,7 +970,7 @@ static const u8 sCrunchDescription[] = _(
     "有时降低特防。");
 
 static const u8 sMirrorCoatDescription[] = _(
-    "{CHN}受特殊攻击时\n"
+    "{CHN}受特攻时\n"
     "以双倍力量反击。");
 
 static const u8 sPsychUpDescription[] = _(
