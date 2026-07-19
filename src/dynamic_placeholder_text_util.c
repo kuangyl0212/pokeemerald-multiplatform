@@ -32,7 +32,15 @@ u8 *DynamicPlaceholderTextUtil_ExpandPlaceholders(u8 *dest, const u8 *src)
 {
     while (*src != EOS)
     {
-        if (*src != CHAR_DYNAMIC)
+        if (*src == 0x80) // Chinese escape: copy 3 bytes as a unit
+        {
+            if (src[1] == EOS || src[2] == EOS)
+                break;
+            *dest++ = *src++;
+            *dest++ = *src++;
+            *dest++ = *src++;
+        }
+        else if (*src != CHAR_DYNAMIC)
         {
             *dest++ = *src++;
         }

@@ -602,6 +602,14 @@ u8 *StringCopyN_Multibyte(u8 *dest, u8 *src, u32 n)
         {
             break;
         }
+        else if (*src == 0x80) // Chinese escape: copy 3 bytes as one char
+        {
+            if (src[1] == EOS || src[2] == EOS)
+                break;
+            *dest++ = *src++;
+            *dest++ = *src++;
+            *dest++ = *src++;
+        }
         else
         {
             *dest++ = *src++;
@@ -620,9 +628,20 @@ u32 StringLength_Multibyte(const u8 *str)
 
     while (*str != EOS)
     {
-        if (*str == CHAR_EXTRA_SYMBOL)
+        if (*str == 0x80) // Chinese escape: counts as 1 char, 3 bytes
+        {
+            if (str[1] == EOS || str[2] == EOS)
+                break;
+            str += 3;
+        }
+        else if (*str == CHAR_EXTRA_SYMBOL)
+        {
+            str += 2;
+        }
+        else
+        {
             str++;
-        str++;
+        }
         length++;
     }
 
@@ -660,10 +679,22 @@ bool32 IsStringJapanese(u8 *str)
 {
     while (*str != EOS)
     {
-        if (*str <= JAPANESE_CHAR_END)
+        if (*str == 0x80) // Chinese escape: skip 2 GB2312 bytes
+        {
+            if (str[1] == EOS || str[2] == EOS)
+                break;
+            str += 3;
+        }
+        else if (*str <= JAPANESE_CHAR_END)
+        {
             if (*str != CHAR_SPACE)
                 return TRUE;
-        str++;
+            str++;
+        }
+        else
+        {
+            str++;
+        }
     }
 
     return FALSE;
@@ -723,6 +754,12 @@ u8 GetExtCtrlCodeLength(u8 code)
 
 static const u8 *SkipExtCtrlCode(const u8 *s)
 {
+    // Chinese escape: 0x80 + 2 GB2312 bytes. 0xFC (EXT_CTRL_CODE_BEGIN)
+    // is a valid GB2312 byte, so check 0x80 first to avoid misinterpreting
+    // Chinese characters as ext ctrl codes.
+    if (*s == 0x80)
+        return s + 3;
+
     while (*s == EXT_CTRL_CODE_BEGIN)
     {
         s++;

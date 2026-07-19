@@ -635,8 +635,18 @@ static void Task_BardSong(u8 taskId)
             && *str != EXT_CTRL_CODE_BEGIN
             && *str != EOS)
         {
-            str++;
-            wordLen++;
+            if (*str == 0x80) // Chinese escape: skip 3 bytes as one char
+            {
+                if (str[1] == EOS || str[2] == EOS)
+                    break;
+                str += 3;
+                wordLen++;
+            }
+            else
+            {
+                str++;
+                wordLen++;
+            }
         }
 
         // sUnusedPitchTableIndex is never read. For debugging perhaps, or one of the other languages.
@@ -702,6 +712,12 @@ static void Task_BardSong(u8 taskId)
             task->tCharIndex += 2;  // skip over control codes
             task->tState = BARD_STATE_GET_WORD;
             task->tDelay = 8;
+        }
+        else if (gStringVar4[task->tCharIndex] == 0x80)
+        {
+            // Chinese escape: skip 3 bytes (0x80 + 2 GB2312 bytes)
+            task->tCharIndex += 3;
+            task->tDelay = 0;
         }
         else if (gStringVar4[task->tCharIndex] == CHAR_BARD_WORD_DELIMIT)
         {

@@ -2325,7 +2325,19 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
 
     while (*src != EOS)
     {
-        if (*src == PLACEHOLDER_BEGIN)
+        if (*src == 0x80) // Chinese escape: next 2 bytes are GB2312 encoding
+        {
+            // Copy 3 bytes as a unit. Without this, the GB2312 second byte
+            // (e.g. 0xFD in "升" = 0x80 0xC9 0xFD) would be mistaken for
+            // PLACEHOLDER_BEGIN, causing byte misalignment and garbled text.
+            if (src[1] == EOS || src[2] == EOS)
+                break; // truncated escape, stop safely
+            dst[dstID++] = src[0];
+            dst[dstID++] = src[1];
+            dst[dstID++] = src[2];
+            src += 3;
+        }
+        else if (*src == PLACEHOLDER_BEGIN)
         {
             src++;
             switch (*src)
