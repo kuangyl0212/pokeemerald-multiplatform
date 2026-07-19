@@ -919,8 +919,8 @@ gText_SorryWirelessClubAdjustments::
 	.string "undergoing adjustments now.$"
 
 gText_UndergoingAdjustments::
-	.string "It appears to be undergoing\n"
-	.string "adjustments…$"
+	.string "{CHN}似乎正在\n"
+	.string "调整中…$"
 
 /* Unused*/
 gText_SorryTradeCenterInspections::
