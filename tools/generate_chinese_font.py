@@ -55,8 +55,13 @@ TOTAL_SLOTS = TOTAL_ZONES * POS_PER_ZONE  # 23940
 # Full-width character width
 FULL_WIDTH = 12
 
-# Font search paths
+# Font search paths (project-bundled Ark-Pixel-Font takes priority)
+_FONT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = os.path.dirname(_FONT_DIR)
 FONT_PATHS = [
+    # Project-bundled pixel font (preferred — matches GBA aesthetic)
+    os.path.join(_FONT_DIR, 'fonts', 'ark-pixel-12px-monospaced-zh_cn.ttf'),
+    # System fallbacks
     '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc',
     '/usr/share/fonts/truetype/wqy/wqy-microhei.ttc',
     '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
@@ -66,6 +71,11 @@ FONT_PATHS = [
     'C:/Windows/Fonts/msyh.ttc',
     'C:/Windows/Fonts/Deng.ttf',
 ]
+
+# Drop-shadow offset (in pixels). The English latin_normal.png font uses a
+# 1px bottom-right shadow; replicate that for Chinese to match the style.
+SHADOW_OFFSET_X = 1
+SHADOW_OFFSET_Y = 1
 
 # 2bpp pixel values
 BG = 0
@@ -91,8 +101,13 @@ def find_font():
 
 
 def _pixel_to_2bpp(pixel):
-    """Convert boolean pixel (True=ink) to 2bpp value."""
-    return FG if pixel else BG
+    """Convert grayscale pixel value to 2bpp.
+
+    Pixel value 0 = BG, any non-zero value is kept as-is (FG=1 or SHADOW=2).
+    """
+    if pixel == 0:
+        return BG
+    return pixel if pixel in (FG, SHADOW) else FG
 
 
 def _pack_4_pixels_to_byte(pixels):
@@ -109,7 +124,7 @@ def _pack_4_pixels_to_byte(pixels):
 
 
 def render_glyph_2bpp(char, font, img, draw):
-    """Render a single character to 16x16 2bpp bitmap.
+    """Render a single character to 16x16 2bpp bitmap with drop shadow.
 
     Returns:
         Tuple of (glyph_bytes, width) where glyph_bytes is 64 bytes
@@ -123,11 +138,16 @@ def render_glyph_2bpp(char, font, img, draw):
     char_w = bbox[2] - bbox[0] if bbox[2] > bbox[0] else CHAR_WIDTH
     char_h = bbox[3] - bbox[1] if bbox[3] > bbox[1] else CHAR_HEIGHT
 
-    # Center character in 12x12 region (offset 2,2 within 16x16 canvas)
+    # Center character in 12x12 region (offset 0,0 within 16x16 canvas)
     x_off = CHAR_OFFSET_X + (CHAR_WIDTH - char_w) // 2 - bbox[0]
     y_off = CHAR_OFFSET_Y + (CHAR_HEIGHT - char_h) // 2 - bbox[1]
 
-    draw.text((x_off, y_off), char, fill=1, font=font)
+    # Draw drop shadow first (bottom-right offset), then foreground on top.
+    # FG (1) overwrites SHADOW (2) where they overlap, leaving a 1px shadow
+    # on the bottom-right edge — matching the english latin_normal.png style.
+    draw.text((x_off + SHADOW_OFFSET_X, y_off + SHADOW_OFFSET_Y), char,
+              fill=SHADOW, font=font)
+    draw.text((x_off, y_off), char, fill=FG, font=font)
 
     # Extract 16x16 pixel grid
     px = img.load()
@@ -196,9 +216,10 @@ def generate_font(glyph_path, width_path, font_path=None):
         sys.exit(1)
 
     print(f"Loading font: {font_path}")
-    # Render at 12px to fit in 12x12 region
+    # Render at 12px to fit in 12x12 region.
+    # Use 'L' (8-bit grayscale) mode to support FG + SHADOW pixel values.
     font = ImageFont.truetype(font_path, CHAR_HEIGHT)
-    img = Image.new('1', (CANVAS_WIDTH, CANVAS_HEIGHT), 0)
+    img = Image.new('L', (CANVAS_WIDTH, CANVAS_HEIGHT), 0)
     draw = ImageDraw.Draw(img)
 
     count = 0
