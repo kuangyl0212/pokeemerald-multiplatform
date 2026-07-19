@@ -2336,6 +2336,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
             dst[dstID++] = src[1];
             dst[dstID++] = src[2];
             src += 3;
+            continue; // skip the trailing src++ below (already advanced 3 bytes)
         }
         else if (*src == PLACEHOLDER_BEGIN)
         {
