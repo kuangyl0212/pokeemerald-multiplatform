@@ -1528,7 +1528,7 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId)
     }
     else if (trainerId == TRAINER_STEVEN_PARTNER)
     {
-        for (i = 0; i < PLAYER_NAME_LENGTH; i++)
+        for (i = 0; i < TRAINER_NAME_LENGTH; i++)
             dst[i] = gTrainers[TRAINER_STEVEN].trainerName[i];
     }
     else if (trainerId < FRONTIER_TRAINERS_COUNT)
