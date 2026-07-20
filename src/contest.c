@@ -6021,7 +6021,7 @@ static u8 GetMonNicknameLanguage(u8 *nickname)
     if (nickname[0] == EXT_CTRL_CODE_BEGIN && nickname[1] == EXT_CTRL_CODE_JPN)
         return GAME_LANGUAGE;
 
-    if (StringLength(nickname) <= 5)
+    if (StringLength_Multibyte(nickname) <= 5)
     {
         // Name is short enough that it might be Japanese.
         // Make sure  all the character values are valid latin name characters.

@@ -809,7 +809,7 @@ static void ReceiveDaycareMailData(struct RecordMixingDaycareMail *records, size
             if (anyRS)
             {
                 // Handle OT name language
-                if (StringLength(daycareMail->otName) <= 5)
+                if (StringLength_Multibyte(daycareMail->otName) <= 5)
                 {
                     otNameLanguage = LANGUAGE_JAPANESE;
                 }

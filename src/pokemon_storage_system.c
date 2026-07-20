@@ -8002,7 +8002,7 @@ static void SetMenuText(u8 textId)
 
         menu->text = sMenuTexts[textId];
         menu->textId = textId;
-        len = StringLength(menu->text);
+        len = StringLength_Multibyte(menu->text);
         if (len > sStorage->menuWidth)
             sStorage->menuWidth = len;
 

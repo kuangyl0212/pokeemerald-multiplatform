@@ -657,7 +657,7 @@ static void BufferMailText(void)
     {
         // Never reached
         StringCopy(ptr, gText_FromSpace); // Odd, "From" text is already printed in PrintMailText
-        sMailRead->signatureWidth = sMailRead->layout->signatureWidth - (StringLength(sMailRead->playerName) * 8 - 96);
+        sMailRead->signatureWidth = sMailRead->layout->signatureWidth - (StringLength_Multibyte(sMailRead->playerName) * 8 - 96);
     }
     else
     {

@@ -1541,7 +1541,7 @@ void PutNameRaterShowOnTheAir(void)
     if (gSpecialVar_Result != 1)
     {
         GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar1);
-        if (StringLength(gSaveBlock2Ptr->playerName) > 1 && StringLength(gStringVar1) > 1)
+        if (StringLength_Multibyte(gSaveBlock2Ptr->playerName) > 1 && StringLength_Multibyte(gStringVar1) > 1)
         {
             show = &gSaveBlock1Ptr->tvShows[sCurTVShowSlot];
             show->nameRaterShow.kind = TVSHOW_NAME_RATER_SHOW;

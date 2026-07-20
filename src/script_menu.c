@@ -75,7 +75,7 @@ static u16 UNUSED GetLengthWithExpandedPlayerName(const u8 *str)
             str++;
             if (*str == PLACEHOLDER_ID_PLAYER)
             {
-                length += StringLength(gSaveBlock2Ptr->playerName);
+                length += StringLength_Multibyte(gSaveBlock2Ptr->playerName);
                 str++;
             }
         }
