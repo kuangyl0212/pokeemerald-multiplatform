@@ -6170,7 +6170,7 @@ static void CopyDomeBrainTrainerName(u8 *str)
 {
     int i;
 
-    for (i = 0; i < PLAYER_NAME_LENGTH; i++)
+    for (i = 0; i < TRAINER_NAME_LENGTH; i++)
         str[i] = gTrainers[TRAINER_TUCKER].trainerName[i];
     str[i] = EOS;
 }
