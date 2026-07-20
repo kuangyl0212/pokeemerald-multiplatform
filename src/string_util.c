@@ -567,20 +567,37 @@ u8 *StringFill(u8 *dest, u8 c, u16 n)
 
 u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n)
 {
-    while (*src != EOS)
-    {
-        *dest++ = *src++;
+    u16 charsWritten = 0;
 
-        if (n)
-            n--;
+    while (*src != EOS && charsWritten < n)
+    {
+        if (*src == 0x80) // Chinese escape: copy 3 bytes as one char
+        {
+            if (src[1] == EOS || src[2] == EOS)
+                break;
+            *dest++ = *src++;
+            *dest++ = *src++;
+            *dest++ = *src++;
+            charsWritten++;
+        }
+        else if (*src == EXT_CTRL_CODE_BEGIN) // Control code: 2 bytes, not counted as a char
+        {
+            if (src[1] == EOS)
+                break;
+            *dest++ = *src++;
+            *dest++ = *src++;
+        }
+        else // Single-byte character
+        {
+            *dest++ = *src++;
+            charsWritten++;
+        }
     }
 
-    n--;
-
-    while (n != (u16)-1)
+    while (charsWritten < n)
     {
         *dest++ = c;
-        n--;
+        charsWritten++;
     }
 
     *dest = EOS;
