@@ -2085,7 +2085,7 @@ const struct Item gItems[] =
 
     [ITEM_PETAYA_BERRY] =
     {
-        .name = _("桃金娘果"),
+        .name = _("桃金果"),
         .itemId = ITEM_PETAYA_BERRY,
         .price = 20,
         .holdEffect = HOLD_EFFECT_SP_ATTACK_UP,
@@ -2098,7 +2098,7 @@ const struct Item gItems[] =
 
     [ITEM_APICOT_BERRY] =
     {
-        .name = _("杏果"),
+        .name = _("杏子果"),
         .itemId = ITEM_APICOT_BERRY,
         .price = 20,
         .holdEffect = HOLD_EFFECT_SP_DEFENSE_UP,
