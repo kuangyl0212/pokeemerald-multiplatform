@@ -873,6 +873,10 @@ static u16 SanitizeItemId(u16 itemId)
 
 const u8 *GetItemName(u16 itemId)
 {
+    // Item names are stored without {CHN} prefix to save 2 bytes, allowing
+    // 4 Chinese chars (12 bytes + EOS) to fit in ITEM_NAME_LENGTH=14.
+    // The 0x80 escape sequences are self-contained for Chinese rendering
+    // and do not require {CHN} mode switch (mirrors GetSpeciesName pattern).
     return gItems[SanitizeItemId(itemId)].name;
 }
 
