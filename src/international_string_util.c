@@ -124,7 +124,7 @@ void PadNameString(u8 *dest, u8 padChar)
     u8 length;
 
     StripExtCtrlCodes(dest);
-    length = StringLength(dest);
+    length = StringLength_Multibyte(dest);
     if (padChar == EXT_CTRL_CODE_BEGIN)
     {
         while (length < PLAYER_NAME_LENGTH - 1)
@@ -148,7 +148,7 @@ void PadNameString(u8 *dest, u8 padChar)
 
 void ConvertInternationalPlayerName(u8 *str)
 {
-    if (StringLength(str) < PLAYER_NAME_LENGTH - 1)
+    if (StringLength_Multibyte(str) < PLAYER_NAME_LENGTH - 1)
         ConvertInternationalString(str, LANGUAGE_JAPANESE);
     else
         StripExtCtrlCodes(str);
@@ -157,7 +157,7 @@ void ConvertInternationalPlayerName(u8 *str)
 void ConvertInternationalPlayerNameStripChar(u8 *str, u8 removeChar)
 {
     u8 *buffer;
-    if (StringLength(str) < PLAYER_NAME_LENGTH - 1)
+    if (StringLength_Multibyte(str) < PLAYER_NAME_LENGTH - 1)
     {
         ConvertInternationalString(str, LANGUAGE_JAPANESE);
     }
