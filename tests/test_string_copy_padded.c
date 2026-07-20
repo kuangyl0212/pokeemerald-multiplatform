@@ -38,6 +38,26 @@ typedef uint32_t u32;
 
 #define PAD_CHAR ' '
 
+/*
+ * ============================================================
+ * WARNING: SYNCHRONIZATION CONSTRAINT
+ * ============================================================
+ * The function `StringCopyPadded_Fixed` below is a CODE COPY of
+ * `StringCopyPadded` in `../src/string_util.c`. It is duplicated
+ * here because the original file depends on GBA-specific headers
+ * (global.h, EWRAM_DATA macro, etc.) that cannot be compiled on PC.
+ *
+ * ANY CHANGE to `StringCopyPadded` in `src/string_util.c` MUST be
+ * mirrored in `StringCopyPadded_Fixed` below, and vice versa.
+ *
+ * The test cases in this file validate the behavior of
+ * StringCopyPadded_Fixed. If the two implementations diverge,
+ * the tests may pass while the real code is broken.
+ *
+ * Last synchronized with: src/string_util.c (commit 3025b53)
+ * ============================================================
+ */
+
 static int tests_passed = 0;
 static int tests_failed = 0;
 
@@ -78,6 +98,7 @@ u8 *StringCopyPadded_Buggy(u8 *dest, const u8 *src, u8 c, u16 n)
  * up to n characters, then writes EOS. If src ends early, the rest
  * is padding. If src is longer than n, it is truncated at n chars.
  * ============================================================= */
+/* MUST be kept in sync with StringCopyPadded in src/string_util.c */
 u8 *StringCopyPadded_Fixed(u8 *dest, const u8 *src, u8 c, u16 n)
 {
     u16 charsWritten = 0;

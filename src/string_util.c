@@ -565,6 +565,8 @@ u8 *StringFill(u8 *dest, u8 c, u16 n)
     return dest;
 }
 
+// NOTE: This function has a PC-testable copy in tests/test_string_copy_padded.c
+//       (StringCopyPadded_Fixed). Any change here MUST be mirrored there.
 u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n)
 {
     u16 charsWritten = 0;
