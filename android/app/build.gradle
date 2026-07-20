@@ -2,6 +2,16 @@ plugins {
     id 'com.android.application'
 }
 
+// Reads keystore credentials from a properties file outside the repo
+// (e.g. ~/.keystore/pokeemerald.properties). If the file is missing,
+// release builds fall back to the debug signing config so that local
+// builds without credentials still work.
+def keystoreProps = new Properties()
+def keystorePropsFile = file("${System.getProperty('user.home')}/.keystore/pokeemerald.properties")
+if (keystorePropsFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystorePropsFile))
+}
+
 android {
     namespace 'com.pokeemerald.experimental'
     compileSdk 36
@@ -22,6 +32,24 @@ android {
             cmake {
                 arguments '-DANDROID_STL=c++_static'
             }
+        }
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropsFile.exists()) {
+                storeFile file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig keystorePropsFile.exists() ? signingConfigs.release : signingConfigs.debug
+            minifyEnabled false
         }
     }
 
