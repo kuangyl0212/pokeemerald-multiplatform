@@ -55,6 +55,24 @@ tasks.register('copyBorderAsset', Sync) {
     into layout.buildDirectory.dir('generated/borderAssets')
 }
 
+// Android 端 SDL2 不带 SDL2_image，需将 Border.png 预转换为带 alpha 的 BMP4 格式，
+// 以便 C 代码用 SDL_LoadBMP_RW 加载边框纹理并保留半透明效果。
+// 依赖系统已安装 ImageMagick (magick 命令)。WSL Ubuntu 默认含此命令。
+tasks.register('convertBorderToBmp', Exec) {
+    def srcPng = rootProject.file('../Border.png').absolutePath
+    def dstBmp = layout.buildDirectory.file('generated/borderAssets/Border.bmp').get().asFile
+    inputs.file srcPng
+    outputs.file dstBmp
+    doFirst {
+        dstBmp.parentFile.mkdirs()
+    }
+    commandLine 'magick', srcPng, '-define', 'bmp:format=bmp4', dstBmp.absolutePath
+}
+
+tasks.named('copyBorderAsset').configure {
+    dependsOn tasks.named('convertBorderToBmp')
+}
+
 tasks.named('preBuild').configure {
     dependsOn tasks.named('copyBorderAsset')
 }

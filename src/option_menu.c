@@ -449,7 +449,9 @@ static void HighlightOptionMenuItem(u8 index)
 
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 {
-    u8 dst[16];
+    // 缓冲区需容纳：{COLOR}{SHADOW}{CHN} 等控制码前缀（最多约 8 字节）+ 多个中文字符（每字 4 字节：0x80 + 2字节GB2312 + 备用）+ EOS。
+    // 例如 "{COLOR GREEN}{SHADOW LIGHT_GREEN}{CHN}点对点" = 3+3+2+9+1 = 18 字节，故 16 不够，扩大到 32。
+    u8 dst[32];
     u16 i;
 
     for (i = 0; *text != EOS && i < ARRAY_COUNT(dst) - 1; i++)

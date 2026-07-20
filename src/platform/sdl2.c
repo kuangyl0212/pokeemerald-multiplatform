@@ -38,6 +38,8 @@ SDL_Texture *sdlTexture;
 #if defined(NATIVE_LINUX) || defined(_WIN32)
 #define MAX_BORDER_BACKGROUNDS 15
 SDL_Texture *sdlBackgroundTextures[MAX_BORDER_BACKGROUNDS];
+#endif
+#if defined(NATIVE_LINUX) || defined(_WIN32) || defined(__ANDROID__)
 SDL_Texture *sdlBorderTexture;
 #endif
 static u8 sBorderBackgroundCount = 1;
@@ -234,8 +236,32 @@ int main(int argc, char **argv)
     // Android：根据 displayMode 决定是否启用整数缩放。
     //   displayMode=0（最大化）：浮点缩放，保持 3:2 比例，最多两侧黑边
     //   displayMode=1（点对点）：整数缩放，每像素清晰，可能四周黑边
-    SDL_RenderSetLogicalSize(sdlRenderer, DISPLAY_WIDTH, DISPLAY_HEIGHT);
-    SDL_RenderSetIntegerScale(sdlRenderer, sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] ? SDL_TRUE : SDL_FALSE);
+    // 注：边框由渲染循环中按 gameViewport 手动绘制，故这里禁用 logical size
+    //     以便 SDL_GetRendererOutputSize 返回真实输出尺寸用于计算 viewport。
+    SDL_RenderSetLogicalSize(sdlRenderer, 0, 0);
+    // Android 无 SDL2_image，加载构建期由 ImageMagick 转换的 Border.bmp（带 alpha 的 BMP4）
+    {
+        SDL_RWops *borderFile = SDL_RWFromFile("Border.bmp", "rb");
+        if (borderFile != NULL)
+        {
+            SDL_Surface *borderSurface = SDL_LoadBMP_RW(borderFile, 1);
+            if (borderSurface != NULL)
+            {
+                sdlBorderTexture = SDL_CreateTextureFromSurface(sdlRenderer, borderSurface);
+                if (sdlBorderTexture == NULL)
+                    SDL_Log("Border texture could not be created: %s", SDL_GetError());
+                SDL_FreeSurface(borderSurface);
+            }
+            else
+            {
+                SDL_Log("Border.bmp could not be loaded: %s", SDL_GetError());
+            }
+        }
+        else
+        {
+            SDL_Log("Border.bmp could not be opened: %s", SDL_GetError());
+        }
+    }
 #endif
     ApplyPlatformSettings();
 
@@ -349,6 +375,53 @@ int main(int argc, char **argv)
                         };
                         SDL_RenderCopy(sdlRenderer, sdlBorderTexture, &borderSource, &borderViewport);
                     }
+#elif defined(__ANDROID__)
+                    // Android：手动计算 gameViewport 并绘制边框。
+                    //   displayMode=0（最大化）：浮点缩放，保持 3:2 比例，最多两侧黑边
+                    //   displayMode=1（点对点）：整数缩放，每像素清晰，可能四周黑边
+                    int outputWidth;
+                    int outputHeight;
+                    SDL_GetRendererOutputSize(sdlRenderer, &outputWidth, &outputHeight);
+                    int gameHeight;
+                    int gameWidth;
+                    if (sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE])
+                    {
+                        int scale = outputWidth / DISPLAY_WIDTH;
+                        if (outputHeight / DISPLAY_HEIGHT < scale)
+                            scale = outputHeight / DISPLAY_HEIGHT;
+                        if (scale < 1)
+                            scale = 1;
+                        gameWidth = DISPLAY_WIDTH * scale;
+                        gameHeight = DISPLAY_HEIGHT * scale;
+                    }
+                    else
+                    {
+                        // 最大化：以 outputHeight 为基准按 3:2 计算宽度，若宽度超出则反过来
+                        gameHeight = outputHeight;
+                        gameWidth = gameHeight * 3 / 2;
+                        if (gameWidth > outputWidth)
+                        {
+                            gameWidth = outputWidth;
+                            gameHeight = gameWidth * 2 / 3;
+                        }
+                    }
+                    SDL_Rect gameViewport = {(outputWidth - gameWidth) / 2,
+                                             (outputHeight - gameHeight) / 2,
+                                             gameWidth, gameHeight};
+                    SDL_RenderCopy(sdlRenderer, sdlTexture, NULL, &gameViewport);
+                    if (sPlatformSettings[PLATFORM_SETTING_BORDER] && sdlBorderTexture != NULL)
+                    {
+                        SDL_Rect borderSource = {141, 18, 1000, 683};
+                        int innerWidth = gameViewport.w - 2;
+                        int innerHeight = gameViewport.h - 2;
+                        SDL_Rect borderViewport = {
+                            gameViewport.x + 1 - innerWidth * 19 / 961,
+                            gameViewport.y + 1 - innerHeight * 20 / 643,
+                            innerWidth * 1000 / 961,
+                            innerHeight * 683 / 643
+                        };
+                        SDL_RenderCopy(sdlRenderer, sdlBorderTexture, &borderSource, &borderViewport);
+                    }
 #else
                     SDL_RenderCopy(sdlRenderer, sdlTexture, NULL, NULL);
 #endif
@@ -387,6 +460,8 @@ int main(int argc, char **argv)
 #if defined(NATIVE_LINUX) || defined(_WIN32)
     for (int i = 0; i < sBorderBackgroundCount; i++)
         SDL_DestroyTexture(sdlBackgroundTextures[i]);
+#endif
+#if defined(NATIVE_LINUX) || defined(_WIN32) || defined(__ANDROID__)
     SDL_DestroyTexture(sdlBorderTexture);
 #endif
 #ifdef NATIVE_LINUX
@@ -499,10 +574,8 @@ static void ApplyPlatformSettings(void)
         SDL_SetWindowSize(sdlWindow, 320 * scale, 180 * scale);
         SDL_SetWindowPosition(sdlWindow, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     }
-#elif defined(__ANDROID__)
-    // displayMode=1（点对点）启用整数缩放，displayMode=0（最大化）浮点缩放保持 3:2 比例
-    SDL_RenderSetIntegerScale(sdlRenderer, sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] ? SDL_TRUE : SDL_FALSE);
 #endif
+    // Android：displayMode/border 的变更由渲染循环每帧动态计算，无需在此处调用 SDL API
 }
 
 static void StoreSaveFile()
@@ -609,10 +682,7 @@ void Platform_SetSetting(enum PlatformSetting setting, u8 value)
         SDL_SetWindowPosition(sdlWindow, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     }
 #endif
-#ifdef __ANDROID__
-    else if (setting == PLATFORM_SETTING_DISPLAY_MODE)
-        SDL_RenderSetIntegerScale(sdlRenderer, value ? SDL_TRUE : SDL_FALSE);
-#endif
+    // Android：displayMode/border 切换由渲染循环每帧动态读取 sPlatformSettings，无需在此处调用 SDL API
     StoreConfigFile();
 }
 
