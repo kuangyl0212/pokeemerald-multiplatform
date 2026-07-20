@@ -570,24 +570,61 @@ u8 *StringFill(u8 *dest, u8 c, u16 n)
 u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n)
 {
     u16 charsWritten = 0;
+    bool8 truncated = FALSE;
 
-    while (*src != EOS && charsWritten < n)
+    // Order matters: 0xFC (EXT_CTRL_CODE_BEGIN) is a valid GB2312 byte,
+    // so 0x80 (Chinese escape) must be checked first. See SkipExtCtrlCode.
+    while (*src != EOS && charsWritten < n && !truncated)
     {
-        if (*src == 0x80) // Chinese escape: copy 3 bytes as one char
+        if (*src == 0x80) // Chinese escape: 3 bytes = 1 char
         {
             if (src[1] == EOS || src[2] == EOS)
+            {
+                truncated = TRUE;
                 break;
+            }
             *dest++ = *src++;
             *dest++ = *src++;
             *dest++ = *src++;
             charsWritten++;
         }
-        else if (*src == EXT_CTRL_CODE_BEGIN) // Control code: 2 bytes, not counted as a char
+        else if (*src == EXT_CTRL_CODE_BEGIN) // Control code: variable length, not counted as a char
+        {
+            u8 ctrlCode = src[1];
+            u8 ctrlLen = GetExtCtrlCodeLength(ctrlCode);
+            u16 totalLen;
+            u16 k;
+
+            if (ctrlLen == 0)
+                totalLen = 2; // Unknown control code (e.g. EXT_CTRL_CODE_CHN), treat as 2 bytes
+            else
+                totalLen = 1 + ctrlLen; // 0xFC + params
+
+            // Defensive: ensure we don't read past EOS
+            for (k = 1; k < totalLen; k++)
+            {
+                if (src[k] == EOS)
+                {
+                    truncated = TRUE;
+                    break;
+                }
+            }
+            if (truncated)
+                break;
+
+            for (k = 0; k < totalLen; k++)
+                *dest++ = *src++;
+        }
+        else if (*src == CHAR_EXTRA_SYMBOL) // Extra symbol: 2 bytes = 1 char
         {
             if (src[1] == EOS)
+            {
+                truncated = TRUE;
                 break;
+            }
             *dest++ = *src++;
             *dest++ = *src++;
+            charsWritten++;
         }
         else // Single-byte character
         {
