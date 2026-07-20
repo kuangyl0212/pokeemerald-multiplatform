@@ -20,6 +20,9 @@ enum PlatformSetting
     PLATFORM_SETTING_VSYNC,
     PLATFORM_SETTING_BORDER,
     PLATFORM_SETTING_VOLUME,
+#ifdef __ANDROID__
+    PLATFORM_SETTING_DISPLAY_MODE, // 0 = 最大化（浮点缩放，保持 3:2 比例，最多两侧黑边），1 = 点对点（整数缩放，可能四周黑边）
+#endif
     PLATFORM_SETTING_COUNT,
 };
 

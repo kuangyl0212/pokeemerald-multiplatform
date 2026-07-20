@@ -327,6 +327,9 @@ extern const u8 gText_VSync[];
 extern const u8 gText_BorderFrame[];
 extern const u8 gText_Volume[];
 extern const u8 gText_Back[];
+extern const u8 gText_DisplayMode[];
+extern const u8 gText_DisplayModeMax[];
+extern const u8 gText_DisplayModeInteger[];
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];

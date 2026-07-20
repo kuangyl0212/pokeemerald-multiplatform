@@ -32,6 +32,7 @@
 #define tVSync data[12]
 #define tBorderFrame data[13]
 #define tVolume data[14]
+#define tDisplayMode data[15]
 
 #define OPTION_ROW_HEIGHT 14
 
@@ -69,6 +70,8 @@ enum
     DISPLAY_WINDOW_SCALE,
     DISPLAY_INTEGER_SCALE,
     DISPLAY_VSYNC,
+#else
+    DISPLAY_DISPLAY_MODE, // Android：显示模式（最大化/点对点）
 #endif
     DISPLAY_BORDER_FRAME,
     DISPLAY_BACKGROUND,
@@ -283,6 +286,9 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].tVSync = Platform_GetSetting(PLATFORM_SETTING_VSYNC);
         gTasks[taskId].tBorderFrame = Platform_GetSetting(PLATFORM_SETTING_BORDER);
         gTasks[taskId].tVolume = Platform_GetSetting(PLATFORM_SETTING_VOLUME);
+#ifdef __ANDROID__
+        gTasks[taskId].tDisplayMode = Platform_GetSetting(PLATFORM_SETTING_DISPLAY_MODE);
+#endif
 #else
         gTasks[taskId].tWindowScale = 4;
         gTasks[taskId].tBorderFrame = 1;
@@ -781,6 +787,9 @@ static void DrawDisplaySettings(u8 taskId)
     DrawDisplaySettingChoice(row++, gTasks[taskId].tIntegerScale ? gText_BattleSceneOn : gText_BattleSceneOff);
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_VSync, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     DrawDisplaySettingChoice(row++, gTasks[taskId].tVSync ? gText_BattleSceneOn : gText_BattleSceneOff);
+#else
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_DisplayMode, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    DrawDisplaySettingChoice(row++, gTasks[taskId].tDisplayMode ? gText_DisplayModeInteger : gText_DisplayModeMax);
 #endif
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_BorderFrame, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     DrawDisplaySettingChoice(row++, gTasks[taskId].tBorderFrame ? gText_BattleSceneOn : gText_BattleSceneOff);
@@ -831,6 +840,11 @@ static void ProcessDisplaySettingsInput(u8 taskId)
         case DISPLAY_VSYNC:
             gTasks[taskId].tVSync ^= 1;
             Platform_SetSetting(PLATFORM_SETTING_VSYNC, gTasks[taskId].tVSync);
+            break;
+#else
+        case DISPLAY_DISPLAY_MODE:
+            gTasks[taskId].tDisplayMode ^= 1;
+            Platform_SetSetting(PLATFORM_SETTING_DISPLAY_MODE, gTasks[taskId].tDisplayMode);
             break;
 #endif
         case DISPLAY_BORDER_FRAME:

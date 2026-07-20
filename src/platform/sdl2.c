@@ -231,8 +231,11 @@ int main(int argc, char **argv)
         SDL_FreeSurface(borderSurface);
     }
 #else
+    // Android：根据 displayMode 决定是否启用整数缩放。
+    //   displayMode=0（最大化）：浮点缩放，保持 3:2 比例，最多两侧黑边
+    //   displayMode=1（点对点）：整数缩放，每像素清晰，可能四周黑边
     SDL_RenderSetLogicalSize(sdlRenderer, DISPLAY_WIDTH, DISPLAY_HEIGHT);
-    SDL_RenderSetIntegerScale(sdlRenderer, SDL_TRUE);
+    SDL_RenderSetIntegerScale(sdlRenderer, sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] ? SDL_TRUE : SDL_FALSE);
 #endif
     ApplyPlatformSettings();
 
@@ -456,6 +459,10 @@ static void ReadConfigFile(void)
             sPlatformSettings[PLATFORM_SETTING_BORDER] = value != 0;
         else if (sscanf(line, "volume=%u", &value) == 1 && value <= 10)
             sPlatformSettings[PLATFORM_SETTING_VOLUME] = value;
+#ifdef __ANDROID__
+        else if (sscanf(line, "displayMode=%u", &value) == 1 && value <= 1)
+            sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] = value;
+#endif
     }
     fclose(configFile);
 }
@@ -474,6 +481,9 @@ static void StoreConfigFile(void)
     fprintf(configFile, "vsync=%u\n", sPlatformSettings[PLATFORM_SETTING_VSYNC]);
     fprintf(configFile, "border=%u\n", sPlatformSettings[PLATFORM_SETTING_BORDER]);
     fprintf(configFile, "volume=%u\n", sPlatformSettings[PLATFORM_SETTING_VOLUME]);
+#ifdef __ANDROID__
+    fprintf(configFile, "displayMode=%u\n", sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE]);
+#endif
     fclose(configFile);
 }
 
@@ -489,6 +499,9 @@ static void ApplyPlatformSettings(void)
         SDL_SetWindowSize(sdlWindow, 320 * scale, 180 * scale);
         SDL_SetWindowPosition(sdlWindow, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     }
+#elif defined(__ANDROID__)
+    // displayMode=1（点对点）启用整数缩放，displayMode=0（最大化）浮点缩放保持 3:2 比例
+    SDL_RenderSetIntegerScale(sdlRenderer, sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] ? SDL_TRUE : SDL_FALSE);
 #endif
 }
 
@@ -595,6 +608,10 @@ void Platform_SetSetting(enum PlatformSetting setting, u8 value)
         SDL_SetWindowSize(sdlWindow, 320 * value, 180 * value);
         SDL_SetWindowPosition(sdlWindow, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     }
+#endif
+#ifdef __ANDROID__
+    else if (setting == PLATFORM_SETTING_DISPLAY_MODE)
+        SDL_RenderSetIntegerScale(sdlRenderer, value ? SDL_TRUE : SDL_FALSE);
 #endif
     StoreConfigFile();
 }
