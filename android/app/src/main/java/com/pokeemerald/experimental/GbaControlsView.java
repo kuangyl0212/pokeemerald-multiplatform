@@ -139,6 +139,18 @@ public final class GbaControlsView extends View {
         invalidate();
     }
 
+    /**
+     * 释放所有当前按下的虚拟按键。
+     *
+     * 在隐藏虚拟按键前调用，避免手柄接入时虚拟按键的"按下"状态卡住
+     * （因为隐藏后不会再收到 ACTION_UP 事件）。
+     */
+    void releaseAll() {
+        if (pressed != 0) {
+            setPressed(0);
+        }
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getActionMasked() == MotionEvent.ACTION_CANCEL) {

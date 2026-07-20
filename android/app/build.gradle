@@ -34,6 +34,17 @@ android {
 
     sourceSets.main.java.srcDirs += '../SDL2/android-project/app/src/main/java'
     sourceSets.main.assets.srcDir(layout.buildDirectory.dir('generated/borderAssets'))
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.12.0'
 }
 
 tasks.register('copyBorderAsset', Sync) {
