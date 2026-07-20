@@ -2422,7 +2422,10 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
 
 static void CreateMonDexNum(u16 entryNum, u8 left, u8 top, u16 unused)
 {
-    u8 text[6];
+    // 汉化版 {NO} = 80 F9 08（3 字节），_("{NO}000") 编译后为
+    // 80 F9 08 30 30 30 FF（7 字节含 EOS）。原 text[6] 缺少 EOS，
+    // 导致渲染时 0x80 被识别为中文转义码，越界读取产生乱码。
+    u8 text[7];
     u16 dexNum;
 
     memcpy(text, sText_No000, ARRAY_COUNT(text));
@@ -2453,7 +2456,8 @@ static u8 CreateMonName(u16 num, u8 left, u8 top)
     else
         str = sText_TenDashes;
     PrintMonDexNumAndName(0, FONT_NARROW, str, left, top);
-    return StringLength(str);
+    // 使用 StringLength_Multibyte 正确处理中文多字节字符（commit 1412b8b75 遗漏）
+    return StringLength_Multibyte(str);
 }
 
 static void ClearMonListEntry(u8 x, u8 y, u16 unused)
