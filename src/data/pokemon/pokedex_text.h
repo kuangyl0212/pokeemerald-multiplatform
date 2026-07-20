@@ -5,910 +5,756 @@ const u8 gDummyPokedexText[] = _(
     "at this time.");
 
 const u8 gBulbasaurPokedexText[] = _(
-    "BULBASAUR can be seen napping in bright\n"
-    "sunlight. There is a seed on its back.\n"
-    "By soaking up the sun's rays, the seed\n"
-    "grows progressively larger.");
+    "{CHN}妙蛙种子会在明媚的阳光下打盹。\n"
+    "它的背上有一颗种子。\n"
+    "通过吸收阳光，种子会逐渐长大。");
 
 const u8 gIvysaurPokedexText[] = _(
-    "To support its bulb, IVYSAUR's legs\n"
-    "grow sturdy. If it spends more time lying in\n"
-    "the sunlight, the bud will soon bloom into\n"
-    "a large flower.");
+    "{CHN}为了支撑球根，妙蛙草的腿\n"
+    "变得粗壮。如果多晒太阳，\n"
+    "花蕾很快就会绽放成一朵大花。");
 
 const u8 gVenusaurPokedexText[] = _(
-    "VENUSAUR's flower is said to take on vivid\n"
-    "colors if it gets plenty of nutrition and\n"
-    "sunlight. The flower's aroma soothes the\n"
-    "emotions of people.");
+    "{CHN}据说妙蛙花得到充足的营养\n"
+    "和阳光，花会呈现鲜艳的颜色。\n"
+    "花香能安抚人的情绪。");
 
 const u8 gCharmanderPokedexText[] = _(
-    "The flame that burns at the tip of its\n"
-    "tail is an indication of its emotions.\n"
-    "The flame wavers when CHARMANDER is\n"
-    "happy, and blazes when it is enraged.");
+    "{CHN}它尾巴尖端燃烧的火焰是\n"
+    "情绪的标志。小火龙高兴时\n"
+    "火焰摇曳，愤怒时燃烧得更旺。");
 
 const u8 gCharmeleonPokedexText[] = _(
-    "Without pity, its sharp claws destroy foes.\n"
-    "If it encounters a strong enemy, it\n"
-    "becomes agitated, and the flame on its\n"
-    "tail flares with a bluish white color.");
+    "{CHN}它毫不留情地用利爪摧毁敌人。\n"
+    "遇到强敌时，它变得焦躁，\n"
+    "尾巴上的火焰燃烧成蓝白色。");
 
 const u8 gCharizardPokedexText[] = _(
-    "A CHARIZARD flies about in search of\n"
-    "strong opponents. It breathes intense\n"
-    "flames that can melt any material. However,\n"
-    "it will never torch a weaker foe.");
+    "{CHN}喷火龙四处飞行寻找强敌。\n"
+    "它能喷出熔化任何物质的烈焰。\n"
+    "但绝不会对弱小的敌人喷火。");
 
 const u8 gSquirtlePokedexText[] = _(
-    "Its shell is not just for protection.\n"
-    "Its rounded shape and the grooves on its\n"
-    "surface minimize resistance in water,\n"
-    "enabling SQUIRTLE to swim at high speeds.");
+    "{CHN}它的甲壳不仅用于保护。\n"
+    "圆润的形状和表面的凹槽能\n"
+    "减少水中阻力，使杰尼龟能高速游泳。");
 
 const u8 gWartortlePokedexText[] = _(
-    "Its large tail is covered with rich, thick\n"
-    "fur that deepens in color with age.\n"
-    "The scratches on its shell are evidence\n"
-    "of this POKéMON's toughness in battle.");
+    "{CHN}它的大尾巴覆盖着浓密的毛，\n"
+    "颜色随年龄加深。甲壳上的伤痕\n"
+    "证明这只宝可梦在战斗中很坚韧。");
 
 const u8 gBlastoisePokedexText[] = _(
-    "The waterspouts that protrude from its\n"
-    "shell are highly accurate. Their bullets of\n"
-    "water can precisely nail tin cans from\n"
-    "a distance of over 160 feet.");
+    "{CHN}从它甲壳伸出的水柱精度极高。\n"
+    "水弹能从50米外准确击中罐头。");
 
 const u8 gCaterpiePokedexText[] = _(
-    "Its voracious appetite compels it to\n"
-    "devour leaves bigger than itself without\n"
-    "hesitation. It releases a terribly strong\n"
-    "odor from its antennae.");
+    "{CHN}它贪吃的胃口驱使其毫不犹豫\n"
+    "地吞食比身体还大的叶子。\n"
+    "它从触角释放出极强的臭味。");
 
 const u8 gMetapodPokedexText[] = _(
-    "Its shell is as hard as an iron slab.\n"
-    "A METAPOD does not move very much\n"
-    "because it is preparing its soft innards\n"
-    "for evolution inside the shell.");
+    "{CHN}它的甲壳像铁板一样硬。\n"
+    "铁甲蛹不太活动，因为它正在\n"
+    "甲壳内为进化准备柔软的内脏。");
 
 const u8 gButterfreePokedexText[] = _(
-    "It has a superior ability to search for\n"
-    "delicious honey from flowers. It can seek,\n"
-    "extract, and carry honey from flowers\n"
-    "blooming over six miles away.");
+    "{CHN}它有出色的寻找美味花蜜的能力。\n"
+    "它能寻找、提取并搬运十公里外\n"
+    "盛开的花朵的花蜜。");
 
 const u8 gWeedlePokedexText[] = _(
-    "A WEEDLE has an extremely acute sense\n"
-    "of smell. It distinguishes its favorite\n"
-    "kinds of leaves from those it dislikes by\n"
-    "sniffing with its big red proboscis (nose).");
+    "{CHN}独角虫有极其敏锐的嗅觉。\n"
+    "它用红色大鼻子嗅出自己喜欢\n"
+    "的叶子和讨厌的叶子。");
 
 const u8 gKakunaPokedexText[] = _(
-    "It remains virtually immobile while it\n"
-    "clings to a tree. However, on the inside,\n"
-    "it busily prepares for evolution. This is\n"
-    "evident from how hot its shell becomes.");
+    "{CHN}它攀在树上一动不动。\n"
+    "但在内部，它正忙着为进化做准备。\n"
+    "从它变热的甲壳就能看出来。");
 
 const u8 gBeedrillPokedexText[] = _(
-    "A BEEDRILL is extremely territorial.\n"
-    "For safety reasons, no one should \n"
-    "ever approach its nest. If angered,\n"
-    "they will attack in a swarm.");
+    "{CHN}大针蜂有极强的地盘意识。\n"
+    "为安全起见，绝不可靠近它的巢。\n"
+    "一旦被激怒，它们会群起攻击。");
 
 const u8 gPidgeyPokedexText[] = _(
-    "It has an extremely sharp sense of\n"
-    "direction. It can unerringly return home to\n"
-    "its nest, however far it may be removed\n"
-    "from its familiar surroundings.");
+    "{CHN}它有极其敏锐的方向感。\n"
+    "无论被带到离熟悉环境多远的地方，\n"
+    "都能准确无误地飞回巢穴。");
 
 const u8 gPidgeottoPokedexText[] = _(
-    "This POKéMON flies around, patrolling its\n"
-    "large territory. If its living space is\n"
-    "violated, it shows no mercy in thoroughly\n"
-    "punishing the foe with its sharp claws.");
+    "{CHN}这种宝可梦会四处飞行\n"
+    "巡视自己广阔的领地。如果生存\n"
+    "空间被侵犯，它会用利爪惩罚对手。");
 
 const u8 gPidgeotPokedexText[] = _(
-    "This POKéMON has gorgeous, glossy\n"
-    "feathers. Many TRAINERS are so captivated\n"
-    "by the beautiful feathers on its head that\n"
-    "they choose PIDGEOT as their POKéMON.");
+    "{CHN}这种宝可梦有华丽光滑的羽毛。\n"
+    "许多训练家被它头上美丽的羽毛\n"
+    "所吸引，选择大比鸟作为宝可梦。");
 
 const u8 gRattataPokedexText[] = _(
-    "A RATTATA is cautious in the extreme.\n"
-    "Even while it is asleep, it constantly\n"
-    "moves its ears and listens for danger.\n"
-    "It will make its nest anywhere.");
+    "{CHN}小拉达极其谨慎。即使睡着了，\n"
+    "它也会不停转动耳朵聆听危险。\n"
+    "它会在任何地方筑巢。");
 
 const u8 gRaticatePokedexText[] = _(
-    "A RATICATE's sturdy fangs grow steadily.\n"
-    "To keep them ground down, it gnaws on\n"
-    "rocks and logs. It may even chew on the\n"
-    "walls of houses.");
+    "{CHN}拉达坚固的獠牙不断生长。\n"
+    "为了磨牙，它会啃咬岩石和木头。\n"
+    "它甚至可能啃咬房屋的墙壁。");
 
 const u8 gSpearowPokedexText[] = _(
-    "Its loud cry can be heard over half a mile\n"
-    "away. If its high, keening cry is heard\n"
-    "echoing all around, it is a sign that they\n"
-    "are warning each other of danger.");
+    "{CHN}它响亮的叫声在一公里外\n"
+    "都能听到。如果到处回荡着尖锐\n"
+    "的叫声，那是它们警告危险的信号。");
 
 const u8 gFearowPokedexText[] = _(
-    "Its long neck and elongated beak are\n"
-    "ideal for catching prey in soil or water.\n"
-    "It deftly moves this extended and skinny\n"
-    "beak to pluck prey.");
+    "{CHN}它长长的脖子和细长的喙\n"
+    "非常适合在土壤或水中捕捉猎物。\n"
+    "它灵巧地用细长的喙啄取猎物。");
 
 const u8 gEkansPokedexText[] = _(
-    "An EKANS curls itself up in a spiral while\n"
-    "it rests. This position allows it to quickly\n"
-    "respond to an enemy from any direction\n"
-    "with a threat from its upraised head.");
+    "{CHN}阿柏蛇休息时会把身体卷成\n"
+    "螺旋状。这个姿势使它能从任何\n"
+    "方向迅速抬头威吓来犯的敌人。");
 
 const u8 gArbokPokedexText[] = _(
-    "This POKéMON has a terrifically strong\n"
-    "constricting power. It can even flatten\n"
-    "steel oil drums. Once it wraps its body\n"
-    "around its foe, escaping is impossible.");
+    "{CHN}这种宝可梦有极强的缠绕力。\n"
+    "它甚至能压扁钢制油桶。一旦\n"
+    "被它的身体缠住，猎物就无法逃脱。");
 
 const u8 gPikachuPokedexText[] = _(
-    "It stores electricity in the electric sacs\n"
-    "on its cheeks. When it releases pent-up\n"
-    "energy in a burst, the electric power is\n"
-    "equal to a lightning bolt.");
+    "{CHN}它把电储存在脸颊的电囊中。\n"
+    "当它一口气释放积聚的能量时，\n"
+    "电力相当于一道闪电。");
 
 const u8 gRaichuPokedexText[] = _(
-    "If it stores too much electricity, its\n"
-    "behavior turns aggressive. To avoid this,\n"
-    "it occasionally discharges excess energy\n"
-    "and calms itself down.");
+    "{CHN}如果储存了过多的电力，\n"
+    "它的行为会变得暴躁。为避免\n"
+    "这种情况，它会释放多余电量。");
 
 const u8 gSandshrewPokedexText[] = _(
-    "When it curls up in a ball, it can make any\n"
-    "attack bounce off harmlessly. Its hide has\n"
-    "turned tough and solid as a result of\n"
-    "living in the desert.");
+    "{CHN}当它卷成一团时，任何攻击\n"
+    "都会被弹开。由于生活在沙漠中，\n"
+    "它的皮变得坚韧结实。");
 
 const u8 gSandslashPokedexText[] = _(
-    "It curls up in a ball to protect itself from\n"
-    "enemy attacks. It also curls up to prevent\n"
-    "heatstroke during the daytime when\n"
-    "temperatures rise sharply.");
+    "{CHN}它会卷成一团保护自己\n"
+    "免受敌人攻击。白天气温急剧\n"
+    "升高时，它也会卷起来防止中暑。");
 
 const u8 gNidoranFPokedexText[] = _(
-    "Its highly toxic barbs are thought to have\n"
-    "developed as protection for this small-\n"
-    "bodied POKéMON. When enraged, it releases\n"
-    "a horrible toxin from its horn.");
+    "{CHN}它剧毒的尖刺被认为是为保护\n"
+    "这种小体型宝可梦而进化出来的。\n"
+    "愤怒时，它会从角上释放毒素。");
 
 const u8 gNidorinaPokedexText[] = _(
-    "When it is with its friends or\n"
-    "family, its barbs are tucked away to\n"
-    "prevent injury. It appears to become\n"
-    "nervous if separated from the others.");
+    "{CHN}当它和朋友或家人在一起时，\n"
+    "会收起尖刺以免误伤。如果和\n"
+    "其他伙伴分开，它会显得紧张不安。");
 
 const u8 gNidoqueenPokedexText[] = _(
-    "It is adept at sending foes flying with\n"
-    "harsh tackles using its tough, scaly body.\n"
-    "This POKéMON is at its strongest when\n"
-    "it is defending its young.");
+    "{CHN}它擅长用布满鳞片的坚硬身体\n"
+    "猛烈撞击对手。这种宝可梦在\n"
+    "保护孩子时最为强大。");
 
 const u8 gNidoranMPokedexText[] = _(
-    "The male NIDORAN has developed muscles\n"
-    "that freely move its ears in any direction.\n"
-    "Even the slightest sound does not escape\n"
-    "this POKéMON's notice.");
+    "{CHN}雄性尼多朗的肌肉让耳朵能\n"
+    "自由转向任何方向。再细微的声音\n"
+    "也逃不过这种宝可梦的耳朵。");
 
 const u8 gNidorinoPokedexText[] = _(
-    "Its horn is harder than a diamond.\n"
-    "If it senses a hostile presence, all the\n"
-    "barbs on its back bristle up at once, and it\n"
-    "challenges the foe with all its might.");
+    "{CHN}它的角比钻石还硬。如果感觉\n"
+    "到敌意，它背上的尖刺会全部竖起，\n"
+    "拼尽全力挑战对手。");
 
 const u8 gNidokingPokedexText[] = _(
-    "A NIDOKING's thick tail packs enormously\n"
-    "destructive power capable of toppling\n"
-    "a metal transmission tower. Once it goes\n"
-    "on a rampage, there is no stopping it.");
+    "{CHN}尼多王粗壮的尾巴具有巨大的\n"
+    "破坏力，能推倒金属输电塔。\n"
+    "一旦发狂就再也停不下来。");
 
 const u8 gClefairyPokedexText[] = _(
-    "On every night of a full moon, they come\n"
-    "out to play. When dawn arrives, the tired\n"
-    "CLEFAIRY go to sleep nestled up against\n"
-    "each other in deep and quiet mountains.");
+    "{CHN}每个月圆之夜，它们就会出来\n"
+    "玩耍。黎明到来时，疲惫的皮皮\n"
+    "会互相依偎着在深山中入睡。");
 
 const u8 gClefablePokedexText[] = _(
-    "A CLEFABLE uses its wings to skip lightly \n"
-    "as if it were flying. Its bouncy step\n"
-    "lets it even walk on water. On quiet,\n"
-    "moonlit nights, it strolls on lakes.");
+    "{CHN}皮可西用翅膀轻盈地跳跃，\n"
+    "就像在飞翔一样。它富有弹性的\n"
+    "步伐甚至能在水上行走。");
 
 const u8 gVulpixPokedexText[] = _(
-    "It can freely control fire, making fiery\n"
-    "orbs fly like will-o'-the-wisps. Just\n"
-    "before evolution, its six tails grow hot \n"
-    "as if on fire.");
+    "{CHN}它能自由控制火焰，\n"
+    "让火球像鬼火一样飞舞。就在\n"
+    "进化之前，它的六条尾巴会变烫。");
 
 const u8 gNinetalesPokedexText[] = _(
-    "It has long been said that each of the\n"
-    "nine tails embody an enchanted power.\n"
-    "A long-lived NINETALES will have fur that\n"
-    "shines like gold.");
+    "{CHN}自古以来就有传说，九条尾巴\n"
+    "各蕴含着神奇的力量。长寿的九尾\n"
+    "会拥有金光闪闪的毛发。");
 
 const u8 gJigglypuffPokedexText[] = _(
-    "Nothing can avoid falling asleep hearing a\n"
-    "JIGGLYPUFF's song. The sound waves of its\n"
-    "singing voice match the brain waves of\n"
-    "someone in a deep sleep.");
+    "{CHN}听到胖丁的歌声，没有任何\n"
+    "东西能保持清醒。它歌声的声波\n"
+    "与熟睡者的脑波一致。");
 
 const u8 gWigglytuffPokedexText[] = _(
-    "Its fur is the ultimate in luxuriousness.\n"
-    "Sleeping alongside a WIGGLYTUFF is simply\n"
-    "divine. Its body expands seemingly without\n"
-    "end when it inhales.");
+    "{CHN}它的毛发是极致的奢华。\n"
+    "和胖可丁一起睡觉简直是一种享受。\n"
+    "吸气时身体会无限膨胀。");
 
 const u8 gZubatPokedexText[] = _(
-    "While living in pitch-black caverns, their\n"
-    "eyes gradually grew shut and deprived\n"
-    "them of vision. They use ultrasonic waves\n"
-    "to detect obstacles.");
+    "{CHN}生活在漆黑洞穴中，\n"
+    "它们的眼睛逐渐退化闭合。\n"
+    "它们用超声波来探测障碍物。");
 
 const u8 gGolbatPokedexText[] = _(
-    "Its fangs easily puncture even thick\n"
-    "animal hide. It loves to feast on the blood\n"
-    "of people and POKéMON. It flits about in\n"
-    "darkness and strikes from behind.");
+    "{CHN}它的獠牙能轻易刺穿厚厚的兽皮。\n"
+    "它喜欢吸食人和宝可梦的血液。\n"
+    "它在黑暗中飞来飞去，从背后攻击。");
 
 const u8 gOddishPokedexText[] = _(
-    "This POKéMON grows by absorbing moonlight.\n"
-    "During the daytime, it buries itself in the\n"
-    "ground, leaving only its leaves exposed to\n"
-    "avoid detection by its enemies.");
+    "{CHN}这种宝可梦通过吸收月光来生长。\n"
+    "白天它会把自己埋在土里，\n"
+    "只露出叶子以躲避敌人的发现。");
 
 const u8 gGloomPokedexText[] = _(
-    "A horribly noxious honey drools from its\n"
-    "mouth. One whiff of the honey can result\n"
-    "in memory loss. Some fans are said to\n"
-    "enjoy this overwhelming stink, however.");
+    "{CHN}它嘴里流着剧毒的蜜。\n"
+    "闻一下这种蜜可能导致失忆。\n"
+    "但据说有些人就是喜欢这种臭味。");
 
 const u8 gVileplumePokedexText[] = _(
-    "In seasons when it produces more pollen,\n"
-    "the air around a VILEPLUME turns yellow\n"
-    "with the powder as it walks. The pollen is\n"
-    "highly toxic and causes paralysis.");
+    "{CHN}在花粉较多的季节，霸王花\n"
+    "走过之处，空气会被染成黄色。\n"
+    "花粉有剧毒，会引发麻痹。");
 
 const u8 gParasPokedexText[] = _(
-    "A PARAS has parasitic tochukaso\n"
-    "mushrooms growing on its back. They grow\n"
-    "by drawing nutrients from the host. They\n"
-    "are valued as a medicine for long life.");
+    "{CHN}派拉斯的背上长着寄生蘑菇\n"
+    "冬虫夏草。蘑菇靠吸收宿主的\n"
+    "养分生长，被视为延年益寿的药材。");
 
 const u8 gParasectPokedexText[] = _(
-    "PARASECT are known to infest the roots of\n"
-    "large trees en masse and drain nutrients.\n"
-    "When an infested tree dies, they move\n"
-    "onto another tree all at once.");
+    "{CHN}派拉斯特会成群结队寄生在\n"
+    "大树的根部吸取养分。被寄生的\n"
+    "树死后，它们会迁移到另一棵树。");
 
 const u8 gVenonatPokedexText[] = _(
-    "Its coat of thin, stiff hair that covers\n"
-    "its entire body is said to have evolved\n"
-    "for protection. Its large eyes never fail\n"
-    "to spot even miniscule prey.");
+    "{CHN}它全身覆盖的细硬毛发据说\n"
+    "为保护而进化。它的大眼睛\n"
+    "能发现再小的猎物。");
 
 const u8 gVenomothPokedexText[] = _(
-    "VENOMOTH are nocturnal--they only are\n"
-    "active at night. Their favorite prey are\n"
-    "insects that gather around streetlights,\n"
-    "attracted by the light in the darkness.");
+    "{CHN}摩鲁蛾是夜行性的，只在夜间\n"
+    "活动。它们最爱的猎物是被灯光\n"
+    "吸引到路灯周围的昆虫。");
 
 const u8 gDiglettPokedexText[] = _(
-    "DIGLETT are raised in most farms.\n"
-    "The reason is simple--wherever they\n"
-    "burrow, the soil is left perfectly tilled\n"
-    "for growing delicious crops.");
+    "{CHN}大多数农场都会饲养地鼠。\n"
+    "原因很简单——它们钻过的地方，\n"
+    "土壤都被翻得松软，适合种植作物。");
 
 const u8 gDugtrioPokedexText[] = _(
-    "Because the triplets originally split from\n"
-    "one body, they think exactly alike.\n"
-    "They work cooperatively to burrow\n"
-    "endlessly through the ground.");
+    "{CHN}因为三胞胎原本由一个身体\n"
+    "分裂而来，他们的想法完全一致。\n"
+    "它们合作无间，能不停地在地下挖掘。");
 
 const u8 gMeowthPokedexText[] = _(
-    "MEOWTH withdraw their sharp claws into\n"
-    "their paws to silently sneak about.\n"
-    "For some reason, this POKéMON loves\n"
-    "shiny coins that glitter with light.");
+    "{CHN}喵喵把利爪缩进肉垫里悄悄行动。\n"
+    "不知为何，这种宝可梦喜欢\n"
+    "闪闪发光的硬币。");
 
 const u8 gPersianPokedexText[] = _(
-    "A PERSIAN's six bold whiskers sense air\n"
-    "movements to determine what is in its\n"
-    "vicinity. It becomes docile if grabbed\n"
-    "by the whiskers.");
+    "{CHN}猫老大的六根粗胡须能感知\n"
+    "空气流动来判断周围的事物。\n"
+    "被抓住胡须就会变得温顺。");
 
 const u8 gPsyduckPokedexText[] = _(
-    "When its headache intensifies, it starts\n"
-    "using strange powers. However, it has no\n"
-    "recollection of its powers, so it always\n"
-    "looks befuddled and bewildered.");
+    "{CHN}当头痛加剧时，它开始使用\n"
+    "奇异的力量。但它对自己使用过\n"
+    "力量毫无记忆，所以总是一副困惑样。");
 
 const u8 gGolduckPokedexText[] = _(
-    "A GOLDUCK is an adept swimmer.\n"
-    "It sometimes joins competitive swimmers\n"
-    "in training. It uses psychic powers when\n"
-    "its forehead shimmers with light.");
+    "{CHN}哥达鸭是游泳高手。\n"
+    "它有时会和游泳运动员一起训练。\n"
+    "当前额闪烁光芒时，它能使用精神力量。");
 
 const u8 gMankeyPokedexText[] = _(
-    "When it starts shaking and its nasal\n"
-    "breathing turns rough, it's a sure sign\n"
-    "of anger. However, since this happens\n"
-    "instantly, there is no time to flee.");
+    "{CHN}当它开始发抖、鼻呼吸变得\n"
+    "粗重时，那是愤怒的信号。\n"
+    "但这发生在一瞬间，根本没时间逃跑。");
 
 const u8 gPrimeapePokedexText[] = _(
-    "When it becomes furious, its blood\n"
-    "circulation becomes more robust, and\n"
-    "its muscles are made stronger. But it\n"
-    "also becomes much less intelligent.");
+    "{CHN}它发怒时血液循环加强，\n"
+    "肌肉也变得更强壮。\n"
+    "但与此同时，它的智力会大幅下降。");
 
 const u8 gGrowlithePokedexText[] = _(
-    "Its superb sense of smell ensures that\n"
-    "this POKéMON won't forget any scent,\n"
-    "no matter what. It uses its sense of smell\n"
-    "to detect the emotions of others.");
+    "{CHN}它出色的嗅觉使这种宝可梦\n"
+    "不会忘记任何气味。它用嗅觉\n"
+    "来察觉他人的情绪。");
 
 const u8 gArcaninePokedexText[] = _(
-    "This fleet-footed POKéMON is said to run\n"
-    "over 6,200 miles in a single day and night.\n"
-    "The fire that blazes wildly within its body\n"
-    "is its source of power.");
+    "{CHN}据说这种跑得飞快的宝可梦\n"
+    "一昼夜能跑一万公里。它体内\n"
+    "熊熊燃烧的火焰是它的力量之源。");
 
 const u8 gPoliwagPokedexText[] = _(
-    "It is possible to see this POKéMON's spiral\n"
-    "innards right through its thin skin.\n"
-    "However, the skin is also very flexible.\n"
-    "Even sharp fangs bounce right off it.");
+    "{CHN}透过薄薄的皮肤能清楚看到\n"
+    "这种宝可梦螺旋状的内脏。但这层\n"
+    "皮肤也很有弹性，连利牙都会被弹开。");
 
 const u8 gPoliwhirlPokedexText[] = _(
-    "Its body surface is always wet and slick\n"
-    "with an oily fluid. Because of this greasy\n"
-    "covering, it can easily slip and slide out\n"
-    "of the clutches of any enemy in battle.");
+    "{CHN}它的体表总是湿润光滑，\n"
+    "覆盖着油状液体。由于这层油膜，\n"
+    "它在战斗中能轻松从敌人爪中滑脱。");
 
 const u8 gPoliwrathPokedexText[] = _(
-    "Its highly developed muscles never grow\n"
-    "fatigued, however much it exercises.\n"
-    "This POKéMON can swim back and forth\n"
-    "across the Pacific Ocean without effort.");
+    "{CHN}它发达的肌肉无论怎么运动\n"
+    "都不会疲劳。这种宝可梦能\n"
+    "毫不费力地横渡太平洋。");
 
 const u8 gAbraPokedexText[] = _(
-    "A POKéMON that sleeps 18 hours a day.\n"
-    "Observation revealed that it uses\n"
-    "TELEPORT to change its location once\n"
-    "every hour.");
+    "{CHN}这种宝可梦一天睡18个小时。\n"
+    "观察发现它每小时用瞬间移动\n"
+    "改变一次位置。");
 
 const u8 gKadabraPokedexText[] = _(
-    "It is rumored that a boy with psychic\n"
-    "abilities suddenly transformed into\n"
-    "KADABRA while he was assisting research\n"
-    "into extrasensory powers.");
+    "{CHN}传说一个拥有超能力的少年\n"
+    "在协助研究超能力时突然\n"
+    "变成了勇吉拉。");
 
 const u8 gAlakazamPokedexText[] = _(
-    "While it has strong psychic abilities and\n"
-    "high intelligence, an ALAKAZAM's muscles\n"
-    "are very weak. It uses psychic power to\n"
-    "move its body.");
+    "{CHN}虽然胡地有强大的精神力量\n"
+    "和高智商，但它的肌肉非常弱。\n"
+    "它用精神力量来移动身体。");
 
 const u8 gMachopPokedexText[] = _(
-    "It continually undertakes strenuous\n"
-    "training to master all forms of martial\n"
-    "arts. Its strength lets it easily hoist\n"
-    "a sumo wrestler onto its shoulders.");
+    "{CHN}它不断进行艰苦的训练\n"
+    "以掌握各种武术。它的力量\n"
+    "能轻松举起一个相扑选手。");
 
 const u8 gMachokePokedexText[] = _(
-    "A belt is worn by a MACHOKE to keep its\n"
-    "overwhelming power under control.\n"
-    "Because it is so dangerous, no one has\n"
-    "ever removed the belt.");
+    "{CHN}豪力戴着一根腰带来控制\n"
+    "自己强大的力量。因为非常危险，\n"
+    "从没有人敢取下它的腰带。");
 
 const u8 gMachampPokedexText[] = _(
-    "It is impossible to defend against punches\n"
-    "and chops doled out by its four arms.\n"
-    "Its fighting spirit flares up when it faces\n"
-    "a tough opponent.");
+    "{CHN}它四条手臂打出的拳劈\n"
+    "无法防御。面对强大的对手时，\n"
+    "它的斗志会燃烧起来。");
 
 const u8 gBellsproutPokedexText[] = _(
-    "A BELLSPROUT's thin and flexible body lets\n"
-    "it bend and sway to avoid any attack,\n"
-    "however strong it may be. From its mouth,\n"
-    "it leaks a fluid that melts even iron.");
+    "{CHN}喇叭芽细长灵活的身体能弯曲\n"
+    "摇摆以躲避任何攻击。它嘴里\n"
+    "能流出熔化铁的液体。");
 
 const u8 gWeepinbellPokedexText[] = _(
-    "At night, a WEEPINBELL hangs on to a tree\n"
-    "branch with its hooked rear and sleeps.\n"
-    "If it moves around in its sleep, it may\n"
-    "wake up to find itself on the ground.");
+    "{CHN}夜晚，口呆花用钩状的后部\n"
+    "挂在树枝上睡觉。如果睡觉时\n"
+    "乱动，醒来可能发现自己掉在地上。");
 
 const u8 gVictreebelPokedexText[] = _(
-    "The long vine extending from its head is\n"
-    "waved about as if it were a living thing to\n"
-    "attract prey. When an unsuspecting victim\n"
-    "approaches, it is swallowed whole.");
+    "{CHN}它头顶伸出的长藤蔓像活物\n"
+    "一样摆动以吸引猎物。当毫无防备\n"
+    "的猎物靠近时，会被整个吞下。");
 
 const u8 gTentacoolPokedexText[] = _(
-    "Its body is almost entirely composed of\n"
-    "water. It ensnares its foe with its two\n"
-    "long tentacles, then stabs with the poison\n"
-    "stingers at their tips.");
+    "{CHN}它的身体几乎全由水构成。\n"
+    "它用两条长触手缠住猎物，\n"
+    "然后用尖端的毒刺刺击。");
 
 const u8 gTentacruelPokedexText[] = _(
-    "It lives in complex rock formations on\n"
-    "the ocean floor and traps prey using its\n"
-    "80 tentacles. Its red orbs glow when it\n"
-    "grows excited or agitated.");
+    "{CHN}它生活在海底复杂的岩层中，\n"
+    "用80条触手捕捉猎物。当它兴奋\n"
+    "或激动时，红色的球体会发光。");
 
 const u8 gGeodudePokedexText[] = _(
-    "It climbs mountain paths using only the\n"
-    "power of its arms. Because they look just\n"
-    "like boulders lining paths, hikers may step\n"
-    "on them without noticing.");
+    "{CHN}它只用双臂的力量攀登山路。\n"
+    "因为长得就像路边的圆石，\n"
+    "登山者可能不知不觉踩到它们。");
 
 const u8 gGravelerPokedexText[] = _(
-    "They descend from mountains by tumbling\n"
-    "down steep slopes. They are so brutal,\n"
-    "they smash aside obstructing trees and\n"
-    "massive boulders with thunderous tackles.");
+    "{CHN}它们从陡坡滚下来下山。\n"
+    "它们非常凶猛，用雷鸣般的撞击\n"
+    "撞开挡路的大树和巨石。");
 
 const u8 gGolemPokedexText[] = _(
-    "It is said to live in volcanic craters\n"
-    "on mountain peaks. Once a year, it sheds\n"
-    "its hide and grows larger. The shed hide\n"
-    "crumbles and returns to the soil.");
+    "{CHN}据说它住在山顶的火山口中。\n"
+    "它每年蜕一次皮并长大。\n"
+    "蜕下的皮会碎裂回归土壤。");
 
 const u8 gPonytaPokedexText[] = _(
-    "A PONYTA is very weak at birth. It can\n"
-    "barely stand up. Its legs become stronger\n"
-    "as it stumbles and falls while trying to\n"
-    "keep up with its parent.");
+    "{CHN}小火马出生时非常虚弱，\n"
+    "几乎站不起来。它跌跌撞撞地\n"
+    "跟着父母，腿才会变得强壮。");
 
 const u8 gRapidashPokedexText[] = _(
-    "It usually canters casually in the fields\n"
-    "and plains. But once a RAPIDASH turns\n"
-    "serious, its fiery manes flare and blaze\n"
-    "as it gallops its way up to 150 mph.");
+    "{CHN}它通常在田野和草原上慢跑。\n"
+    "但烈焰马一旦认真起来，鬃毛会\n"
+    "燃烧烈火，以240公里的时速飞奔。");
 
 const u8 gSlowpokePokedexText[] = _(
-    "It catches prey by dipping its tail in\n"
-    "water at the side of a river. But it often\n"
-    "forgets what it is doing and spends entire\n"
-    "days just loafing at water's edge.");
+    "{CHN}它在河边把尾巴浸入水中\n"
+    "捕捉猎物。但它经常忘记自己在\n"
+    "做什么，整天在水边发呆。");
 
 const u8 gSlowbroPokedexText[] = _(
-    "Its tail has a SHELLDER firmly attached\n"
-    "with a bite. As a result, the tail can't be\n"
-    "used for fishing anymore. This forces it\n"
-    "to reluctantly swim and catch prey.");
+    "{CHN}它的尾巴被大舌贝紧紧咬住。\n"
+    "结果，尾巴再也不能用来钓鱼了。\n"
+    "它只能不情愿地游泳捕捉猎物。");
 
 const u8 gMagnemitePokedexText[] = _(
-    "The units at its sides are extremely\n"
-    "powerful magnets. They generate enough\n"
-    "magnetism to draw in iron objects from\n"
-    "over 300 feet away.");
+    "{CHN}它两侧的部件是极强的磁铁。\n"
+    "它们能产生足够强的磁力，\n"
+    "从100米外吸住铁制品。");
 
 const u8 gMagnetonPokedexText[] = _(
-    "It is actually three MAGNEMITE linked\n"
-    "by magnetism. It generates powerful radio\n"
-    "waves that raise temperatures by 3.6\n"
-    "degrees F within a 3,300-foot radius.");
+    "{CHN}它其实是三只小磁怪通过磁力\n"
+    "连接而成。它产生强大的电磁波，\n"
+    "使1公里范围内的温度升高2度。");
 
 const u8 gFarfetchdPokedexText[] = _(
-    "It is always seen with a stick from a plant.\n"
-    "Apparently, there are good sticks and bad\n"
-    "sticks. This POKéMON occasionally fights\n"
-    "with others over choice sticks.");
+    "{CHN}它总是带着一根植物茎。\n"
+    "似乎有好的茎和坏的茎。\n"
+    "这种宝可梦有时会为争夺好茎而打架。");
 
 const u8 gDoduoPokedexText[] = _(
-    "Even while eating or sleeping, one of the\n"
-    "heads remains always vigilant for any sign\n"
-    "of danger. When threatened, it flees at\n"
-    "over 60 miles per hour.");
+    "{CHN}即使在吃东西或睡觉时，\n"
+    "也会有一个头保持警惕。\n"
+    "受到威胁时，它会以100公里的时速逃跑。");
 
 const u8 gDodrioPokedexText[] = _(
-    "A peculiar POKéMON species with three\n"
-    "heads. It vigorously races across grassy\n"
-    "plains even in arid seasons with little\n"
-    "rainfall.");
+    "{CHN}这是一种长着三个头的奇特\n"
+    "宝可梦。即使在少雨的旱季，\n"
+    "它也会在草原上飞奔。");
 
 const u8 gSeelPokedexText[] = _(
-    "SEEL hunt for prey in frigid, ice-covered\n"
-    "seas. When it needs to breathe, it punches\n"
-    "a hole through the ice with the sharply\n"
-    "protruding section of its head.");
+    "{CHN}小海狮在冰封的寒冷海域捕食。\n"
+    "需要呼吸时，它会用头上尖尖的\n"
+    "突起部分在冰上凿洞。");
 
 const u8 gDewgongPokedexText[] = _(
-    "It loves to snooze on bitterly cold ice.\n"
-    "The sight of this POKéMON sleeping on\n"
-    "a glacier was mistakenly thought to be\n"
-    "a mermaid by a mariner long ago.");
+    "{CHN}它喜欢在严寒的冰上打盹。\n"
+    "很久以前，一位水手误把在冰川上\n"
+    "睡觉的这种宝可梦当成了美人鱼。");
 
 const u8 gGrimerPokedexText[] = _(
-    "Born from polluted sludge in the sea,\n"
-    "GRIMER's favorite food is anything filthy.\n"
-    "They feed on wastewater pumped out from\n"
-    "factories.");
+    "{CHN}臭泥诞生于海洋中受污染的\n"
+    "污泥，最喜欢的食物就是污物。\n"
+    "它们以工厂排出的废水为食。");
 
 const u8 gMukPokedexText[] = _(
-    "It prefers warm and humid habitats.\n"
-    "In the summertime, the toxic substances\n"
-    "in its body intensify, making MUK reek like\n"
-    "putrid kitchen garbage.");
+    "{CHN}它喜欢温暖潮湿的栖息地。\n"
+    "夏天时，体内的毒素会增强，\n"
+    "让臭臭泥散发着腐臭垃圾般的恶臭。");
 
 const u8 gShellderPokedexText[] = _(
-    "At night, it burrows a hole in the seafloor\n"
-    "with its broad tongue to make a place to\n"
-    "sleep. While asleep, it closes its shell,\n"
-    "but leaves its tongue hanging out.");
+    "{CHN}夜晚，它用宽大的舌头在海底\n"
+    "挖一个洞作为睡觉的地方。睡觉时\n"
+    "它会合上壳，但舌头还伸在外面。");
 
 const u8 gCloysterPokedexText[] = _(
-    "It swims in the sea by swallowing water,\n"
-    "then jetting it out toward the rear.\n"
-    "The CLOYSTER shoots spikes from its\n"
-    "shell using the same system.");
+    "{CHN}它吞入海水再向后喷出以在海中\n"
+    "游动。刺甲贝也用同样的方式\n"
+    "从壳中射出尖刺。");
 
 const u8 gGastlyPokedexText[] = _(
-    "When exposed to a strong wind, a GASTLY's\n"
-    "gaseous body quickly dwindles away.\n"
-    "They cluster under the eaves of houses\n"
-    "to escape the ravages of wind.");
+    "{CHN}强风吹过时，鬼斯气态的身体\n"
+    "会迅速变小。它们聚集在屋檐下\n"
+    "躲避风害。");
 
 const u8 gHaunterPokedexText[] = _(
-    "If a HAUNTER beckons you while it is\n"
-    "floating in darkness, don't approach it.\n"
-    "This POKéMON will try to lick you with its\n"
-    "tongue and steal your life away.");
+    "{CHN}如果鬼斯通在黑暗中向你招手，\n"
+    "千万不要靠近。这种宝可梦会用\n"
+    "舌头舔你并夺走你的生命。");
 
 const u8 gGengarPokedexText[] = _(
-    "Deep in the night, your shadow cast by\n"
-    "a streetlight may suddenly overtake you.\n"
-    "It is actually a GENGAR running past\n"
-    "you, pretending to be your shadow.");
+    "{CHN}深夜，路灯下你的影子可能突然\n"
+    "追上你。那其实是耿鬼假装成你的\n"
+    "影子跑过你身边。");
 
 const u8 gOnixPokedexText[] = _(
-    "There is a magnet in its brain that\n"
-    "prevents an ONIX from losing direction\n"
-    "while tunneling. As it grows older, its body\n"
-    "becomes steadily rounder and smoother.");
+    "{CHN}它脑中有一块磁铁，使大岩蛇\n"
+    "在挖洞时不会迷失方向。随着年龄\n"
+    "增长，它的身体会越来越圆滑。");
 
 const u8 gDrowzeePokedexText[] = _(
-    "If your nose becomes itchy while you are\n"
-    "sleeping, it's a sure sign that a DROWZEE is\n"
-    "standing above your pillow and trying to\n"
-    "eat your dream through your nostrils.");
+    "{CHN}如果睡觉时鼻子发痒，那一定是\n"
+    "素利普站在你枕边，想从鼻孔里\n"
+    "吃掉你的梦。");
 
 const u8 gHypnoPokedexText[] = _(
-    "The arcing movement and glitter of the\n"
-    "pendulum in a HYPNO's hand lull the foe\n"
-    "into deep hypnosis. While searching for\n"
-    "prey, it polishes the pendulum.");
+    "{CHN}素利拍手中钟摆的摆动和闪光\n"
+    "能让对手陷入深度催眠。\n"
+    "寻找猎物时，它会打磨钟摆。");
 
 const u8 gKrabbyPokedexText[] = _(
-    "KRABBY live in holes dug into beaches.\n"
-    "On sandy shores with little in the way\n"
-    "of food, they can be seen squabbling with\n"
-    "each other over territory.");
+    "{CHN}大钳蟹住在海滩上挖的洞里。\n"
+    "在食物稀少的沙滩上，能看到它们\n"
+    "为争夺地盘而吵架。");
 
 const u8 gKinglerPokedexText[] = _(
-    "It waves its huge, oversized claw in the\n"
-    "air to communicate with others.\n"
-    "But since the claw is so heavy, this\n"
-    "POKéMON quickly tires.");
+    "{CHN}它在空中挥舞巨大的钳子和\n"
+    "其他伙伴交流。但因为钳子太重，\n"
+    "这种宝可梦很快就会累。");
 
 const u8 gVoltorbPokedexText[] = _(
-    "It bears an uncanny and unexplained\n"
-    "resemblance to a POKé BALL. Because it\n"
-    "explodes at the slightest shock, even\n"
-    "veteran TRAINERS treat it with caution.");
+    "{CHN}它和精灵球有着不可思议的相似。\n"
+    "因为稍受冲击就会爆炸，即使是\n"
+    "资深训练家也小心翼翼地对待它。");
 
 const u8 gElectrodePokedexText[] = _(
-    "They appear in great numbers at electric\n"
-    "power plants. Because they feed on\n"
-    "electricity, they cause massive and\n"
-    "chaotic blackouts in nearby cities.");
+    "{CHN}它们成群结队出现在发电厂。\n"
+    "因为以电力为食，它们会导致\n"
+    "附近城市大规模停电。");
 
 const u8 gExeggcutePokedexText[] = _(
-    "It consists of six eggs that care for each\n"
-    "other. The eggs attract each other and\n"
-    "spin around. When cracks increasingly\n"
-    "appear, it is close to evolution.");
+    "{CHN}它由六个互相照顾的蛋组成。\n"
+    "蛋之间互相吸引并旋转。\n"
+    "当裂缝越来越多时，它就快进化了。");
 
 const u8 gExeggutorPokedexText[] = _(
-    "Originally from the tropics, EXEGGUTOR's\n"
-    "heads grow larger from exposure to strong\n"
-    "sunlight. It is said that when the heads\n"
-    "fall, they group to form an EXEGGCUTE.");
+    "{CHN}椰蛋树原产于热带，它的头在\n"
+    "强烈阳光照射下会变大。据说头\n"
+    "掉落后会聚集形成蛋蛋。");
 
 const u8 gCubonePokedexText[] = _(
-    "It pines for the mother it will never see\n"
-    "again. Seeing a likeness of its mother in\n"
-    "the full moon, it cries. The stains on the\n"
-    "skull it wears are from its tears.");
+    "{CHN}它思念再也见不到的母亲。\n"
+    "看到满月中母亲的身影，它就会哭泣。\n"
+    "它戴着的头骨上的污渍就是它的眼泪。");
 
 const u8 gMarowakPokedexText[] = _(
-    "A MAROWAK is the evolved form of a CUBONE\n"
-    "that has grown tough by overcoming the\n"
-    "grief of losing its mother. Its tempered\n"
-    "and hardened spirit is not easily broken.");
+    "{CHN}嘎啦嘎啦是卡拉卡拉克服丧母\n"
+    "之痛变强后进化而成的。它锤炼出\n"
+    "的坚强意志不会轻易被击垮。");
 
 const u8 gHitmonleePokedexText[] = _(
-    "Its legs freely stretch and contract.\n"
-    "Using these springlike limbs, it bowls over\n"
-    "foes with devastating kicks. After battle,\n"
-    "it rubs down its tired legs.");
+    "{CHN}它的腿能自由伸缩。用这些\n"
+    "像弹簧一样的腿，它能用毁灭性\n"
+    "的踢击打倒敌人。战后会按摩腿。");
 
 const u8 gHitmonchanPokedexText[] = _(
-    "A HITMONCHAN is said to possess the\n"
-    "spirit of a boxer who aimed to become the\n"
-    "world champion. Having an indomitable\n"
-    "spirit means that it will never give up.");
+    "{CHN}据说快拳郎拥有立志成为世界\n"
+    "冠军的拳击手的精神。拥有不屈\n"
+    "不挠的精神意味着它永不放弃。");
 
 const u8 gLickitungPokedexText[] = _(
-    "Whenever it sees something unfamiliar,\n"
-    "it always licks the object because it\n"
-    "memorizes things by texture and taste.\n"
-    "It is somewhat put off by sour things.");
+    "{CHN}每当看到不熟悉的东西，\n"
+    "它总会去舔一舔，因为它通过触感\n"
+    "和味道来记忆。它有点不喜欢酸的。");
 
 const u8 gKoffingPokedexText[] = _(
-    "Getting up close to a KOFFING will give\n"
-    "you a chance to observe, through its thin\n"
-    "skin, the toxic gases swirling inside. It\n"
-    "blows up at the slightest stimulation.");
+    "{CHN}靠近瓦斯弹就能透过薄薄的\n"
+    "皮肤看到体内流动的毒气。\n"
+    "稍受刺激它就会爆炸。");
 
 const u8 gWeezingPokedexText[] = _(
-    "By diluting its toxic gases with a special\n"
-    "process, the highest grade of perfume can\n"
-    "be extracted. To WEEZING, gases emanating\n"
-    "from garbage are the ultimate feast.");
+    "{CHN}用特殊方法稀释它的毒气，\n"
+    "能提取出最高级的香水。对双弹瓦斯\n"
+    "来说，垃圾散发的气体是极致的盛宴。");
 
 const u8 gRhyhornPokedexText[] = _(
-    "Once it starts running, it doesn't stop.\n"
-    "Its tiny brain makes it so stupid that it\n"
-    "can't remember why it started running in\n"
-    "the first place.");
+    "{CHN}它一旦开始跑就停不下来。\n"
+    "它的小脑袋使它愚蠢到记不清\n"
+    "自己为什么开始跑。");
 
 const u8 gRhydonPokedexText[] = _(
-    "Its horn, which rotates like a drill,\n"
-    "destroys tall buildings with one strike.\n"
-    "It stands on its hind legs, and its brain\n"
-    "is well developed.");
+    "{CHN}它像钻头一样旋转的角一击\n"
+    "就能摧毁高楼。它用后腿站立，\n"
+    "大脑很发达。");
 
 const u8 gChanseyPokedexText[] = _(
-    "CHANSEY lay nutritionally excellent eggs\n"
-    "every day. The eggs are so delicious, they\n"
-    "are eagerly devoured by even those people\n"
-    "who have lost their appetite.");
+    "{CHN}吉利蛋每天产下营养丰富的蛋。\n"
+    "蛋美味到连失去食欲的人\n"
+    "也会狼吞虎咽。");
 
 const u8 gTangelaPokedexText[] = _(
-    "Its vines snap off easily and painlessly\n"
-    "if they are grabbed, allowing it to make a\n"
-    "quick getaway. The lost vines are replaced\n"
-    "by new growth the very next day.");
+    "{CHN}它的藤蔓被抓住时能轻松无痛\n"
+    "地折断，使它能迅速逃脱。失去的\n"
+    "藤蔓第二天就会长出新的。");
 
 const u8 gKangaskhanPokedexText[] = _(
-    "If you come across a young KANGASKHAN\n"
-    "playing by itself, never try to catch it.\n"
-    "The baby's parent is sure to be in the area,\n"
-    "and it will become violently enraged.");
+    "{CHN}如果你看到小袋兽独自玩耍，\n"
+    "千万别想抓它。它的父母一定就在\n"
+    "附近，并会变得狂暴愤怒。");
 
 const u8 gHorseaPokedexText[] = _(
-    "By cleverly flicking the fins on its back\n"
-    "side to side, it moves in any direction\n"
-    "while facing forward. It spits ink to\n"
-    "escape if it senses danger.");
+    "{CHN}它巧妙地左右摆动背鳍，\n"
+    "能面向前方朝任何方向移动。\n"
+    "如果感到危险，它会喷墨逃跑。");
 
 const u8 gSeadraPokedexText[] = _(
-    "The poisonous barbs all over its body are\n"
-    "highly valued as ingredients for making\n"
-    "traditional herbal medicine. It shows no\n"
-    "mercy to anything approaching its nest.");
+    "{CHN}它全身的毒刺被珍视为制作\n"
+    "中药的原料。对任何靠近它\n"
+    "巢穴的东西，它都毫不留情。");
 
 const u8 gGoldeenPokedexText[] = _(
-    "In the springtime, schools of GOLDEEN\n"
-    "can be seen swimming up falls and rivers.\n"
-    "It metes out staggering damage with its\n"
-    "single horn.");
+    "{CHN}春天时，成群的角金鱼会逆流\n"
+    "而上。它用独角造成惊人的伤害。");
 
 const u8 gSeakingPokedexText[] = _(
-    "It punches holes in boulders on stream-\n"
-    "beds. This is a clever innovation that\n"
-    "prevents its eggs from being attacked or\n"
-    "washed away by the current.");
+    "{CHN}它在河床的岩石上凿洞。\n"
+    "这是防止它的蛋被攻击或被\n"
+    "水流冲走的聪明方法。");
 
 const u8 gStaryuPokedexText[] = _(
-    "It gathers with others in the night and\n"
-    "makes its red core glow on and off with\n"
-    "the twinkling stars. It can regenerate\n"
-    "limbs if they are severed from its body.");
+    "{CHN}它在夜晚聚集在一起，让红色\n"
+    "的核心和闪烁的星星一起一明一暗。\n"
+    "如果它的身体被切断，能再生出新的。");
 
 const u8 gStarmiePokedexText[] = _(
-    "People in ancient times imagined that\n"
-    "STARMIE were transformed from the\n"
-    "reflections of stars that twinkled on\n"
-    "gentle waves at night.");
+    "{CHN}古人想象宝石海星是夜晚微波\n"
+    "荡漾上闪烁的星星的倒影变幻而成的。");
 
 const u8 gMrMimePokedexText[] = _(
-    "A MR. MIME is a master of pantomime. It can\n"
-    "convince others that something unseeable\n"
-    "actually exists. Once believed, the\n"
-    "imaginary object does become real.");
+    "{CHN}魔墙人偶是哑剧大师。它能让\n"
+    "别人相信看不见的东西确实存在。\n"
+    "一旦相信，那件假想的东西就出现了。");
 
 const u8 gScytherPokedexText[] = _(
-    "Its blindingly fast speed adds to the\n"
-    "sharpness of its twin forearm scythes.\n"
-    "The scythes can slice through thick logs\n"
-    "in one wicked stroke.");
+    "{CHN}它快得让人眼花的速度增加了\n"
+    "双臂镰刀的锋利度。镰刀能一刀\n"
+    "斩断粗大的圆木。");
 
 const u8 gJynxPokedexText[] = _(
-    "A JYNX sashays rhythmically as if it were\n"
-    "dancing. Its motions are so bouncingly\n"
-    "alluring, people seeing it are compelled to\n"
-    "shake their hips without noticing.");
+    "{CHN}迷唇姐有节奏地摇摆，\n"
+    "像在跳舞一样。它的动作极富弹性\n"
+    "魅力，看到它的人会不自觉跟着扭动。");
 
 const u8 gElectabuzzPokedexText[] = _(
-    "When a storm approaches, it competes with\n"
-    "others to scale heights that are likely to\n"
-    "be stricken by lightning. Some towns use\n"
-    "ELECTABUZZ in place of lightning rods.");
+    "{CHN}暴风雨来临时，它会和其他伙伴\n"
+    "争相爬上可能被雷击的高处。\n"
+    "有些城镇用电击兽代替避雷针。");
 
 const u8 gMagmarPokedexText[] = _(
-    "In battle, it blows out intense flames from\n"
-    "all over its body to intimidate its foe.\n"
-    "These fiery bursts create heat waves that\n"
-    "ignite grass and trees in the area.");
+    "{CHN}战斗时，它从全身喷出强烈的\n"
+    "火焰来威吓对手。这些火焰会形成\n"
+    "热浪，点燃周围的草木。");
 
 const u8 gPinsirPokedexText[] = _(
-    "Their pincers are strong enough to\n"
-    "shatter thick logs. Because they dislike\n"
-    "cold, PINSIR burrow and sleep under\n"
-    "the ground on chilly nights.");
+    "{CHN}它们的钳子强到能夹碎粗大的\n"
+    "圆木。因为怕冷，凯罗斯在寒夜\n"
+    "会钻到地下睡觉。");
 
 const u8 gTaurosPokedexText[] = _(
-    "It is not satisfied unless it is rampaging\n"
-    "at all times. If there is no opponent for\n"
-    "TAUROS to battle, it will charge at thick\n"
-    "trees and knock them down to calm itself.");
+    "{CHN}它必须时刻狂奔才能满足。\n"
+    "如果没有对手和肯泰罗战斗，\n"
+    "它会撞倒大树来让自己平静。");
 
 const u8 gMagikarpPokedexText[] = _(
-    "Its swimming muscles are weak, so it is\n"
-    "easily washed away by currents. In places\n"
-    "where water pools, you can see many\n"
-    "MAGIKARP deposited there by the flow.");
+    "{CHN}它的游泳肌肉很弱，所以很\n"
+    "容易被水流冲走。在水洼处，\n"
+    "能看到许多被水流带来的鲤鱼王。");
 
 const u8 gGyaradosPokedexText[] = _(
-    "It is an extremely vicious and violent\n"
-    "POKéMON. When humans begin to fight,\n"
-    "it will appear and burn everything to the\n"
-    "ground with intensely hot flames.");
+    "{CHN}它是一种极其凶暴的宝可梦。\n"
+    "当人类开始打斗时，它会现身\n"
+    "并用炽热的火焰把一切烧成灰烬。");
 
 const u8 gLaprasPokedexText[] = _(
-    "People have driven LAPRAS almost to the\n"
-    "point of extinction. In the evenings,\n"
-    "it is said to sing plaintively as it seeks\n"
-    "what few others of its kind still remain.");
+    "{CHN}人类几乎把拉普拉斯逼到了\n"
+    "灭绝的边缘。据说傍晚时分，\n"
+    "它会哀伤地歌唱，寻找仅存的同类。");
 
 const u8 gDittoPokedexText[] = _(
-    "A DITTO rearranges its cell structure to\n"
-    "transform itself. However, if it tries to\n"
-    "change based on its memory, it will get\n"
-    "details wrong.");
+    "{CHN}百变怪会重新排列细胞结构\n"
+    "来变身。但如果它靠记忆变身，\n"
+    "会弄错一些细节。");
 
 const u8 gEeveePokedexText[] = _(
-    "An EEVEE has an unstable genetic makeup\n"
-    "that suddenly mutates due to its\n"
-    "environment. Radiation from various\n"
-    "STONES causes this POKéMON to evolve.");
+    "{CHN}伊布的基因不稳定，会因环境\n"
+    "而突然变异。各种石头发出的辐射\n"
+    "会使这种宝可梦进化。");
 
 const u8 gVaporeonPokedexText[] = _(
-    "VAPOREON underwent a spontaneous\n"
-    "mutation and grew fins and gills that\n"
-    "allow them to live underwater. They have\n"
-    "the ability to freely control water.");
+    "{CHN}水伊布经过自发突变，长出了\n"
+    "能在水下生活的鳍和鳃。它们有\n"
+    "自由控制水的能力。");
 
 const u8 gJolteonPokedexText[] = _(
-    "Its cells generate weak power that is\n"
-    "amplified by its fur's static electricity\n"
-    "to drop thunderbolts. The bristling fur is\n"
-    "made of electrically charged needles.");
+    "{CHN}它的细胞发出微弱的电力，\n"
+    "被毛发的静电放大后变成落雷。\n"
+    "竖起的毛发由带电的针组成。");
 
 const u8 gFlareonPokedexText[] = _(
-    "FLAREON's fluffy fur releases heat into\n"
-    "the air so that its body does not get\n"
-    "excessively hot. Its body temperature can\n"
-    "rise to a maximum of 1,650 degrees F.");
+    "{CHN}火伊布蓬松的毛发会把热量\n"
+    "释放到空气中，让身体不会过热。\n"
+    "它的体温最高可达900度。");
 
 const u8 gPorygonPokedexText[] = _(
-    "It is capable of reverting itself entirely\n"
-    "back to program data in order to enter\n"
-    "cyberspace. A PORYGON is copy-\n"
-    "protected so it cannot be duplicated.");
+    "{CHN}它能完全还原成程序数据\n"
+    "进入网络空间。多边兽有版权保护，\n"
+    "无法被复制。");
 
 const u8 gOmanytePokedexText[] = _(
-    "One of the ancient and long-since-extinct\n"
-    "POKéMON that have been regenerated\n"
-    "from fossils by humans. If attacked,\n"
-    "it withdraws into its hard shell.");
+    "{CHN}它是由人类从化石复活的远古\n"
+    "已灭绝的宝可梦之一。被攻击时，\n"
+    "它会缩进坚硬的壳里。");
 
 const u8 gOmastarPokedexText[] = _(
-    "An OMASTAR uses its tentacles to capture\n"
-    "its prey. It is believed to have become\n"
-    "extinct because its shell grew too large,\n"
-    "making its movements slow and ponderous.");
+    "{CHN}多刺菊石兽用触手捕捉猎物。\n"
+    "据说它灭绝的原因是壳长得太大，\n"
+    "使行动变得迟缓。");
 
 const u8 gKabutoPokedexText[] = _(
-    "It is a POKéMON that has been regenerated\n"
-    "from a fossil. However, in rare cases, living\n"
-    "examples have been discovered. KABUTO\n"
-    "have not changed for 300 million years.");
+    "{CHN}它是从化石复活的宝可梦。\n"
+    "但在罕见的情况下，也发现了活着\n"
+    "的化石盔。化石盔3亿年来从未改变。");
 
 const u8 gKabutopsPokedexText[] = _(
-    "KABUTOPS once swam underwater to hunt \n"
-    "for prey. It was apparently evolving from\n"
-    "being a water dweller to living on land as\n"
-    "evident from changes in its gills and legs.");
+    "{CHN}镰刀盔曾经在水中游泳捕猎。\n"
+    "从它的鳃和腿的变化看，它显然\n"
+    "正在从水生向陆生进化。");
 
 const u8 gAerodactylPokedexText[] = _(
-    "AERODACTYL is a POKéMON from the age\n"
-    "of dinosaurs. It was regenerated from DNA\n"
-    "extracted from amber. It is imagined to\n"
-    "have been the king of the skies.");
+    "{CHN}化石翼龙是恐龙时代的宝可梦。\n"
+    "它从琥珀中提取的DNA复活而来。\n"
+    "据想象它曾是天空之王。");
 
 const u8 gSnorlaxPokedexText[] = _(
-    "SNORLAX's typical day consists of nothing\n"
-    "more than eating and sleeping. It is such\n"
-    "a docile POKéMON that there are children\n"
-    "who use its big belly as a place to play.");
+    "{CHN}卡比兽典型的一天除了吃就是睡。\n"
+    "它是如此温顺的宝可梦，有些孩子\n"
+    "把它的大肚子当游乐场。");
 
 const u8 gArticunoPokedexText[] = _(
-    "ARTICUNO is a legendary bird POKéMON that\n"
-    "can control ice. The flapping of its wings\n"
-    "chills the air. As a result, it is said that\n"
-    "when this POKéMON flies, snow will fall.");
+    "{CHN}急冻鸟是能控制冰的传说中的\n"
+    "鸟宝可梦。它拍打翅膀会让空气变冷。\n"
+    "据说这种宝可梦飞过时会下雪。");
 
 const u8 gZapdosPokedexText[] = _(
-    "ZAPDOS is a legendary bird POKéMON that\n"
-    "has the ability to control electricity.\n"
-    "It usually lives in thunderclouds. It gains\n"
-    "power if it is stricken by lightning bolts.");
+    "{CHN}闪电鸟是能控制电的传说中的\n"
+    "鸟宝可梦。它通常生活在雷云中。\n"
+    "被雷击中它会获得力量。");
 
 const u8 gMoltresPokedexText[] = _(
-    "MOLTRES is a legendary bird POKéMON\n"
-    "that can control fire. If injured, it is said\n"
-    "to dip its body in the molten magma of\n"
-    "a volcano to burn and heal itself.");
+    "{CHN}火焰鸟是能控制火的传说中的\n"
+    "鸟宝可梦。据说受伤时，它会把身体\n"
+    "浸入火山的熔岩中燃烧治愈自己。");
 
 const u8 gDratiniPokedexText[] = _(
-    "A DRATINI continually molts and sloughs\n"
-    "off its old skin. It does so because the\n"
-    "life energy within its body steadily builds\n"
-    "to reach uncontrollable levels.");
+    "{CHN}迷你龙不断蜕皮。它这样做\n"
+    "是因为体内的生命能量不断积聚\n"
+    "到难以控制的程度。");
 
 const u8 gDragonairPokedexText[] = _(
-    "A DRAGONAIR stores an enormous amount of\n"
-    "energy inside its body. It is said to alter\n"
-    "the weather around it by loosing energy\n"
-    "from the crystals on its neck and tail.");
+    "{CHN}哈克龙在体内储存着大量的能量。\n"
+    "据说它通过从颈部和尾部的水晶释放\n"
+    "能量来改变周围的天气。");
 
 const u8 gDragonitePokedexText[] = _(
-    "It can circle the globe in just 16 hours.\n"
-    "It is a kindhearted POKéMON that leads\n"
-    "lost and foundering ships in a storm\n"
-    "to the safety of land.");
+    "{CHN}它只需16小时就能绕地球一圈。\n"
+    "它是心地善良的宝可梦，会在暴风雨\n"
+    "中引领迷失的船只安全返航。");
 
 const u8 gMewtwoPokedexText[] = _(
-    "A POKéMON that was created by genetic\n"
-    "manipulation. However, even though the\n"
-    "scientific power of humans made its body,\n"
-    "they failed to give it a warm heart.");
+    "{CHN}这是一种由基因操作创造出的\n"
+    "宝可梦。尽管人类的科学力量制造了\n"
+    "它的身体，却没能给它一颗温暖的心。");
 
 const u8 gMewPokedexText[] = _(
-    "A MEW is said to possess the genes of all\n"
-    "POKéMON. It is capable of making itself\n"
-    "invisible at will, so it entirely avoids\n"
-    "notice even if it approaches people.");
+    "{CHN}据说梦幻拥有所有宝可梦的基因。\n"
+    "它能随意隐身，所以即使靠近人\n"
+    "也不会被发现。");
 
 const u8 gChikoritaPokedexText[] = _(
     "It waves its leaf around to keep foes\n"
