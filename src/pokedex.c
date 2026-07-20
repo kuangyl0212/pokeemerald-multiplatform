@@ -4158,91 +4158,81 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
 static void PrintMonHeight(u16 height, u8 left, u8 top)
 {
     u8 buffer[16];
-    u32 inches, feet;
+    u32 meters, decimeters;
     u8 i = 0;
 
-    inches = (height * 10000) / 254;
-    if (inches % 10 >= 5)
-        inches += 10;
-    feet = inches / 120;
-    inches = (inches - (feet * 120)) / 10;
+    // height 单位是分米（0.1 米），转换为米
+    meters = height / 10;
+    decimeters = height % 10;
 
+    // {CHN} 控制码切换到中文模式
     buffer[i++] = EXT_CTRL_CODE_BEGIN;
-    buffer[i++] = EXT_CTRL_CODE_CLEAR_TO;
-    if (feet / 10 == 0)
+    buffer[i++] = EXT_CTRL_CODE_CHN;
+
+    if (meters >= 10)
     {
-        buffer[i++] = 18;
-        buffer[i++] = feet + CHAR_0;
+        buffer[i++] = CHAR_0 + (meters / 10);
+        buffer[i++] = CHAR_0 + (meters % 10);
     }
     else
     {
-        buffer[i++] = 12;
-        buffer[i++] = feet / 10 + CHAR_0;
-        buffer[i++] = (feet % 10) + CHAR_0;
+        buffer[i++] = CHAR_0 + meters;
     }
-    buffer[i++] = CHAR_SGL_QUOTE_RIGHT;
-    buffer[i++] = (inches / 10) + CHAR_0;
-    buffer[i++] = (inches % 10) + CHAR_0;
-    buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
-    buffer[i++] = EOS;
+    buffer[i++] = CHAR_PERIOD;
+    buffer[i++] = CHAR_0 + decimeters;
+    buffer[i++] = CHAR_SPACE;
+
+    // "米" 字（GB2312: 0xC3 0xD7）
+    buffer[i++] = 0x80;
+    buffer[i++] = 0xC3;
+    buffer[i++] = 0xD7;
+    buffer[i] = EOS;
+
     PrintInfoScreenText(buffer, left, top);
 }
 
 static void PrintMonWeight(u16 weight, u8 left, u8 top)
 {
-    u8 buffer[16];
-    bool8 output;
-    u8 i;
-    u32 lbs = (weight * 100000) / 4536;
+    u8 buffer[20];
+    u32 kg, hectograms;
+    u8 i = 0;
 
-    if (lbs % 10u >= 5)
-        lbs += 10;
-    i = 0;
-    output = FALSE;
+    // weight 单位是百克（0.1 千克），转换为千克
+    kg = weight / 10;
+    hectograms = weight % 10;
 
-    if ((buffer[i] = (lbs / 100000) + CHAR_0) == CHAR_0 && !output)
+    // {CHN} 控制码切换到中文模式
+    buffer[i++] = EXT_CTRL_CODE_BEGIN;
+    buffer[i++] = EXT_CTRL_CODE_CHN;
+
+    if (kg >= 100)
     {
-        buffer[i++] = CHAR_SPACER;
+        buffer[i++] = CHAR_0 + (kg / 100);
+        buffer[i++] = CHAR_0 + ((kg / 10) % 10);
+        buffer[i++] = CHAR_0 + (kg % 10);
+    }
+    else if (kg >= 10)
+    {
+        buffer[i++] = CHAR_0 + (kg / 10);
+        buffer[i++] = CHAR_0 + (kg % 10);
     }
     else
     {
-        output = TRUE;
-        i++;
+        buffer[i++] = CHAR_0 + kg;
     }
-
-    lbs %= 100000;
-    if ((buffer[i] = (lbs / 10000) + CHAR_0) == CHAR_0 && !output)
-    {
-        buffer[i++] = CHAR_SPACER;
-    }
-    else
-    {
-        output = TRUE;
-        i++;
-    }
-
-    lbs %= 10000;
-    if ((buffer[i] = (lbs / 1000) + CHAR_0) == CHAR_0 && !output)
-    {
-        buffer[i++] = CHAR_SPACER;
-    }
-    else
-    {
-        output = TRUE;
-        i++;
-    }
-
-    lbs %= 1000;
-    buffer[i++] = (lbs / 100) + CHAR_0;
-    lbs %= 100;
     buffer[i++] = CHAR_PERIOD;
-    buffer[i++] = (lbs / 10) + CHAR_0;
+    buffer[i++] = CHAR_0 + hectograms;
     buffer[i++] = CHAR_SPACE;
-    buffer[i++] = CHAR_l;
-    buffer[i++] = CHAR_b;
-    buffer[i++] = CHAR_s;
-    buffer[i++] = CHAR_PERIOD;
-    buffer[i++] = EOS;
+
+    // "千克"（GB2312: 千=C7A7, 克=BFCB）
+    buffer[i++] = 0x80;
+    buffer[i++] = 0xC7;
+    buffer[i++] = 0xA7;
+    buffer[i++] = 0x80;
+    buffer[i++] = 0xBF;
+    buffer[i++] = 0xCB;
+    buffer[i] = EOS;
+
     PrintInfoScreenText(buffer, left, top);
 }
 
