@@ -149,6 +149,10 @@ int main(int argc, char **argv)
 
 #ifdef __ANDROID__
     sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_ACCELERATED);
+#elif defined(_WIN32)
+    // 某些 Windows 显卡驱动在创建硬件加速/垂直同步渲染器（PRESENTVSYNC）时会直接崩溃
+    // 而非返回 NULL，故 Windows 上改用软件渲染器以确保稳定运行。
+    sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_SOFTWARE);
 #else
     sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_PRESENTVSYNC);
 #endif
