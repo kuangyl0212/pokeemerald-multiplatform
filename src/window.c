@@ -265,6 +265,8 @@ void FreeAllWindowBuffers(void)
 
 void CopyWindowToVram(u8 windowId, u8 mode)
 {
+    if (windowId >= WINDOWS_MAX)
+        return;
     struct Window windowLocal = gWindows[windowId];
     u16 windowSize = 32 * (windowLocal.window.width * windowLocal.window.height);
 
@@ -318,6 +320,8 @@ void CopyWindowRectToVram(u32 windowId, u32 mode, u32 x, u32 y, u32 w, u32 h)
 
 void PutWindowTilemap(u8 windowId)
 {
+    if (windowId >= WINDOWS_MAX)
+        return;
     struct Window windowLocal = gWindows[windowId];
 
     WriteSequenceToBgTilemapBuffer(
@@ -683,6 +687,8 @@ void BlitBitmapRectToWindow4BitTo8Bit(u8 windowId, const u8 *pixels, u16 srcX, u
 
 void CopyWindowToVram8Bit(u8 windowId, u8 mode)
 {
+    if (windowId >= WINDOWS_MAX)
+        return;
     sWindowPtr = &gWindows[windowId];
     sWindowSize = 64 * (sWindowPtr->window.width * sWindowPtr->window.height);
 
