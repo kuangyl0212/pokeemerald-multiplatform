@@ -95,6 +95,7 @@ else
 # Windows only
 ifneq ($(NO_STD_LIB),1)
 	PLATFORM_INCLUDES += -lmingw32
+        PLATFORM_INCLUDES += -lws2_32
 endif
 
 ifeq ($(TARGET_PLATFORM), PLATFORM_SDL2)
