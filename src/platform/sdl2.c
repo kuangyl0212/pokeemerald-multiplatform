@@ -98,8 +98,63 @@ static void HandleTouchEvent(const SDL_TouchFingerEvent *event);
 static void DrawTouchControls(void);
 #endif
 
+#ifdef _WIN32
+// Process-wide crash catcher: the GBA core runs on a secondary SDL thread, so
+// SetUnhandledExceptionFilter (main-thread only) is useless for it. A vectored
+// handler sees exceptions on every thread and lets us dump the faulting address
+// plus raw stack words to crash.log before the process dies, pinning down silent
+// save-path crashes the LAN log can't see. The PC build is -O3 (frame-pointer
+// omitted), so we don't chase EBP chains; instead we print the stack around ESP,
+// where the return addresses for the active call stack live.
+static LONG WINAPI CrashLogHandler(struct _EXCEPTION_POINTERS *ep)
+{
+    static int sHandled = FALSE;
+    if (sHandled)
+        return EXCEPTION_CONTINUE_SEARCH;
+    sHandled = TRUE;
+
+    char fname[64];
+    SYSTEMTIME st;
+    GetLocalTime(&st);
+    snprintf(fname, sizeof(fname), "crash_%04d%02d%02d_%02d%02d%02d.log",
+             st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
+    FILE *f = fopen(fname, "w");
+    if (f != NULL)
+    {
+        fprintf(f, "Unhandled exception code=0x%08lX addr=0x%08lX\n",
+                (unsigned long)ep->ExceptionRecord->ExceptionCode,
+                (unsigned long)ep->ExceptionRecord->ExceptionAddress);
+        fprintf(f, "Registers Eip=0x%08lX Esp=0x%08lX Ebp=0x%08lX\n",
+                (unsigned long)ep->ContextRecord->Eip,
+                (unsigned long)ep->ContextRecord->Esp,
+                (unsigned long)ep->ContextRecord->Ebp);
+        {
+            unsigned long imgBase = (unsigned long)GetModuleHandle(NULL);
+            fprintf(f, "ImageBase=0x%08lX Eip_off=0x%08lX\n",
+                    imgBase, (unsigned long)ep->ContextRecord->Eip - imgBase);
+        }
+        unsigned long *sp = (unsigned long *)ep->ContextRecord->Esp;
+        /* Top of stack view: the first several dwords below ESP are usually the
+         * return addresses of the active call chain, even with frame pointers
+         * omitted. Addresses inside the game's 0x00400000-0x007FFFFF text range
+         * are the interesting ones for addr2line/nm decode. */
+        for (int i = 0; i < 48; i++)
+        {
+            unsigned long v = ((unsigned long *)sp)[i];
+            fprintf(f, "  [esp+%02d] 0x%08lX%s\n", i * 4, v,
+                    (v >= 0x00400000 && v <= 0x007FFFFF) ? "  <code>" : "");
+        }
+        fclose(f);
+    }
+    return EXCEPTION_CONTINUE_SEARCH;
+}
+#endif
+
 int main(int argc, char **argv)
 {
+#ifdef _WIN32
+    AddVectoredExceptionHandler(1, CrashLogHandler);
+#endif
     // Open an output console on Windows
 #ifdef _WIN32
     AllocConsole() ;

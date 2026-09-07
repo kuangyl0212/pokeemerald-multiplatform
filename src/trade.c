@@ -2742,6 +2742,12 @@ static void SetTradeGpuRegs(void)
 
 static void VBlankCB_TradeAnim(void)
 {
+    // CB2_FreeTradeAnim frees sTradeAnim but the VBlank callback stays
+    // installed until the next CB2 swaps it. On GBA the NULL+0xE4 access
+    // lands in the read-only BIOS region so it goes unnoticed; on the PC
+    // build it faults. Guard the one-frame window.
+    if (sTradeAnim == NULL)
+        return;
     SetTradeGpuRegs();
     LoadOam();
     ProcessSpriteCopyRequests();
