@@ -1784,6 +1784,107 @@ void LinkPlayerFromBlock(u32 who)
         SetMainCallback2(CB2_LinkError);
 }
 
+#ifdef PORTABLE
+#include "lnet_link.h"
+
+static LNetLink *sPortableLanLink;
+
+void LanLinkOpenAsHost(u16 port)
+{
+    int err;
+
+    if (sPortableLanLink != NULL)
+    {
+        lnet_link_close(sPortableLanLink);
+        sPortableLanLink = NULL;
+    }
+    sPortableLanLink = lnet_link_host(port, &err);
+}
+
+void LanLinkOpenAsClient(const char *host, u16 port)
+{
+    int err;
+
+    if (sPortableLanLink != NULL)
+    {
+        lnet_link_close(sPortableLanLink);
+        sPortableLanLink = NULL;
+    }
+    sPortableLanLink = lnet_link_join(host, port, &err);
+}
+
+void LanLinkClose(void)
+{
+    if (sPortableLanLink != NULL)
+    {
+        lnet_link_close(sPortableLanLink);
+        sPortableLanLink = NULL;
+    }
+}
+
+bool32 IsLanLinkLive(void)
+{
+    return sPortableLanLink != NULL && lnet_link_live(sPortableLanLink);
+}
+
+// Set the multi-player SIO uart role so LinkMain1's CheckMasterOrSlave and
+// SerialCB see the same host/client topology as a 2-player GBA cable.
+static void PortableLanConfigRegisters(void)
+{
+    if (IsLanLinkLive() && lnet_link_role(sPortableLanLink) == LNET_ROLE_HOST)
+    {
+        SIO_MULTI_CNT->id = 0;
+        SIO_MULTI_CNT->sd = 1; // master holds SD high, SI low
+        SIO_MULTI_CNT->si = 0;
+    }
+    else
+    {
+        SIO_MULTI_CNT->id = 1;
+        SIO_MULTI_CNT->sd = 0;
+        SIO_MULTI_CNT->si = 1;
+    }
+}
+
+// Drive one SIO slot transaction over the LAN session, feeding the game's
+// existing serial engine (DoHandshake / DoRecv / DoSend) exactly as the GBA
+// serial interrupt would after SIO_START.
+static void PortableLanSlot(void)
+{
+    u16 mySend;
+    u16 peerSend;
+    u64 recvView;
+
+    if (!IsLanLinkLive())
+        return;
+
+    if (gLink.state != LINK_STATE_HANDSHAKE && gLink.state != LINK_STATE_CONN_ESTABLISHED)
+        return;
+
+    mySend = REG_SIOMLT_SEND;
+    if (lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView))
+    {
+        REG_SIOMLT_RECV = (vu64)recvView;
+        if (gMain.serialCallback)
+            gMain.serialCallback();
+    }
+}
+
+// When this function returns TRUE the callbacks are skipped
+bool8 HandleLinkConnection(void)
+{
+    if (gWirelessCommType == 0)
+    {
+        PortableLanConfigRegisters();
+        gLinkStatus = LinkMain1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
+        PortableLanSlot();
+        LinkMain2(&gMain.heldKeys);
+        if ((gLinkStatus & LINK_STAT_RECEIVED_NOTHING) && IsSendingKeysOverCable() == TRUE)
+            return TRUE;
+    }
+    return FALSE;
+}
+#endif
+
 #ifndef PORTABLE
 // When this function returns TRUE the callbacks are skipped
 bool8 HandleLinkConnection(void)

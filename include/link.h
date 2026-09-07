@@ -289,6 +289,12 @@ void SetLinkStandbyCallback(void);
 void SetWirelessCommType1(void);
 void CheckShouldAdvanceLinkState(void);
 void SetCloseLinkCallback(void);
+#ifdef PORTABLE
+void LanLinkOpenAsHost(u16 port);
+void LanLinkOpenAsClient(const char *host, u16 port);
+void LanLinkClose(void);
+bool32 IsLanLinkLive(void);
+#endif
 bool8 HandleLinkConnection(void);
 void SetLinkDebugValues(u32 seed, u32 flags);
 void SetBerryBlenderLinkCallback(void);

@@ -78,7 +78,7 @@ ROM := pokeemerald.exe
 OBJ_DIR := build/pc
 endif
 
-CPPFLAGS := -std=gnu99 -iquote include -iquote $(GFLIB_SUBDIR) -Wno-trigraphs -D NONMATCHING -D PORTABLE -D $(TARGET_PLATFORM) -D $(TILE_RENDERER) -D MODERN=$(MODERN) -D UBFIX
+CPPFLAGS := -std=gnu99 -iquote include -iquote $(GFLIB_SUBDIR) -iquote src/lnet -Wno-trigraphs -D NONMATCHING -D PORTABLE -D $(TARGET_PLATFORM) -D $(TILE_RENDERER) -D MODERN=$(MODERN) -D UBFIX
 ifeq ($(NATIVE_LINUX),1)
 CPPFLAGS += -m32 -D NATIVE_LINUX $(shell pkg-config --cflags sdl2 SDL2_image)
 else
