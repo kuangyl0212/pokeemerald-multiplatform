@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #ifdef _WIN32
@@ -30,6 +31,8 @@
 #include "platform/framedraw.h"
 
 extern void (*const gIntrTable[])(void);
+
+#include "link.h"
 
 SDL_Thread *mainLoopThread;
 SDL_Window *sdlWindow;
@@ -97,6 +100,49 @@ int main(int argc, char **argv)
     AttachConsole( GetCurrentProcessId() ) ;
     freopen( "CON", "w", stdout ) ;
 #endif
+
+    // LAN multiplayer debug entry for automated validation. Example usage:
+    //   pokeemerald.exe --lan-host=45678 --lan-log=host.log
+    //   pokeemerald.exe --lan-client=127.0.0.1:45678 --lan-log=client.log
+    // The log file is looked up first so connect diagnostics land in it too.
+    for (int i = 1; i < argc; i++)
+    {
+        if (strcmp(argv[i], "--lan-log") == 0 && i + 1 < argc)
+            PortLanSetLogFile(argv[i + 1]);
+    }
+    for (int i = 1; i < argc; i++)
+    {
+        if (strcmp(argv[i], "--lan-log") == 0)
+        {
+            i++;
+            continue;
+        }
+        if (strncmp(argv[i], "--lan-host=", 11) == 0)
+        {
+            u16 port = (u16)strtoul(argv[i] + 11, NULL, 10);
+            PortLanRequestHost(port);
+        }
+        else if (strncmp(argv[i], "--lan-client=", 13) == 0)
+        {
+            const char *spec = argv[i] + 13;
+            const char *colon = strrchr(spec, ':');
+            char host[64];
+            u16 port;
+            if (colon == NULL)
+                continue;
+            size_t len = (size_t)(colon - spec);
+            if (len >= sizeof(host))
+                len = sizeof(host) - 1;
+            memcpy(host, spec, len);
+            host[len] = '\0';
+            port = (u16)strtoul(colon + 1, NULL, 10);
+            PortLanRequestClient(host, port);
+        }
+        else if (strcmp(argv[i], "--lan-link") == 0)
+        {
+            PortLanRequestOpenLink();
+        }
+    }
 
 #ifdef __ANDROID__
     SDL_setenv("SDL_AUDIODRIVER", "openslES", 1);

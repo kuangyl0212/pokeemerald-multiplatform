@@ -138,6 +138,7 @@ int main(void)
     for (k = 0; k < ROUND; k++)
     {
         unsigned long long expect = (unsigned long long)g_hSend[k] | ((unsigned long long)g_cSend[k] << 16);
+        expect |= 0xFFFFFFFF00000000ULL; /* unused multi-SIO slots idle high */
         char msg[96];
 
         snprintf(msg, sizeof(msg), "host heard peer SEND slot %d", k);

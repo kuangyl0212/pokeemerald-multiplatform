@@ -157,6 +157,7 @@ static void CheckMasterOrSlave(void);
 static void InitTimer(void);
 static void EnqueueSendCmd(u16 *sendCmd);
 static void DequeueRecvCmds(u16 (*recvCmds)[CMD_LENGTH]);
+static void PortLanLog(const char *fmt, ...);
 
 static void StartTransfer(void);
 static bool8 DoHandshake(void);
@@ -371,6 +372,8 @@ void OpenLink(void)
 {
     int i;
 
+    if (IsLanLinkLive())
+        PortLanLog("[LAN] OpenLink called\n");
     if (!gWirelessCommType)
     {
         ResetSerial();
@@ -403,6 +406,8 @@ void OpenLink(void)
 void CloseLink(void)
 {
     gReceivedRemoteLinkPlayers = FALSE;
+    if (IsLanLinkLive())
+        PortLanLog("[LAN] CloseLink called\n");
     if (gWirelessCommType)
         LinkRfu_Shutdown();
     sLinkOpen = FALSE;
@@ -1567,6 +1572,8 @@ static void TrySetLinkErrorBuffer(void)
     // Check if a link error has occurred
     if (sLinkOpen && EXTRACT_LINK_ERRORS(gLinkStatus))
     {
+        PortLanLog("[LAN] LINK ERROR: gLinkStatus=%08X errors=%u\n",
+                   (unsigned)gLinkStatus, (unsigned)EXTRACT_LINK_ERRORS(gLinkStatus));
         // Link error has occurred, handle message details if
         // necessary, then stop the link.
         if (!gSuppressLinkErrorMessage)
@@ -1785,9 +1792,206 @@ void LinkPlayerFromBlock(u32 who)
 }
 
 #ifdef PORTABLE
+#include <stdarg.h>
 #include "lnet_link.h"
 
 static LNetLink *sPortableLanLink;
+
+// LAN debug entry for the PC build. A pending connect recorded here (via
+// command-line args) is realized on the first game-frame pump so TCP setup
+// happens inside the emulated game's own thread and frame cadence.
+typedef struct
+{
+    bool32 queued;
+    u8     role; // 1 host, 2 client
+    u16    port;
+    char   host[64];
+} PortLanAutoRequest;
+
+static PortLanAutoRequest sLanAuto;
+static s32 sLanLastLive = -1;
+static bool32 sLanLoggedHandshake;
+static const char *sLanLogPath;
+static bool32 sLanOpenLink;
+static bool32 sLanLinkOpened;
+static s32 sLanLastState = -999;
+static s32 sLanLastIsMaster = -999;
+static s32 sLanLastPlayerCount = -999;
+static s32 sLanLastAdvance = -999;
+static s32 sLanLastSerialCb = -1;
+static s32 sLanLastRx = -1;
+static s32 sLanLastTx = -1;
+static s32 sLanLastWireless = -1;
+static s32 sLanLastQueueFull = -1;
+static s32 sLanLastSendIdx = -1;
+static s32 sLanLastRecvIdx = -1;
+
+static void PortLanLog(const char *fmt, ...);
+
+void PortLanSetLogFile(const char *path)
+{
+    sLanLogPath = path;
+}
+
+void PortLanRequestOpenLink(void)
+{
+    sLanOpenLink = TRUE;
+    sLanLinkOpened = FALSE;
+    PortLanLog("[LAN] serial link requested\n");
+}
+
+static void PortLanLog(const char *fmt, ...)
+{
+    va_list args;
+    FILE *fp;
+
+    va_start(args, fmt);
+    if (sLanLogPath != NULL)
+        fp = fopen(sLanLogPath, "a");
+    else
+        fp = NULL;
+    if (fp != NULL)
+    {
+        vfprintf(fp, fmt, args);
+        fclose(fp);
+    }
+    va_end(args);
+
+    va_start(args, fmt);
+    vprintf(fmt, args);
+    va_end(args);
+}
+
+void PortLanRequestHost(u16 port)
+{
+    LanLinkClose();
+    sLanAuto.queued = TRUE;
+    sLanAuto.role = 1;
+    sLanAuto.port = port;
+    sLanAuto.host[0] = '\0';
+    sLanLastLive = -1;
+    sLanLoggedHandshake = FALSE;
+    PortLanLog("[LAN] queued: host on port %u\n", (unsigned)port);
+}
+
+void PortLanRequestClient(const char *host, u16 port)
+{
+    LanLinkClose();
+    sLanAuto.queued = TRUE;
+    sLanAuto.role = 2;
+    sLanAuto.port = port;
+    sLanAuto.host[0] = '\0';
+    (void)strncpy(sLanAuto.host, host, sizeof(sLanAuto.host) - 1);
+    sLanAuto.host[sizeof(sLanAuto.host) - 1] = '\0';
+    sLanLastLive = -1;
+    sLanLoggedHandshake = FALSE;
+    PortLanLog("[LAN] queued: client -> %s:%u\n", host, (unsigned)port);
+}
+
+static void PortLanDebugPump(void)
+{
+    int live;
+
+    if (sLanAuto.queued)
+    {
+        sLanAuto.queued = FALSE;
+        if (sLanAuto.role == 1)
+        {
+            PortLanLog("[LAN] opening host on port %u\n", (unsigned)sLanAuto.port);
+            LanLinkOpenAsHost(sLanAuto.port);
+        }
+        else if (sLanAuto.role == 2)
+        {
+            PortLanLog("[LAN] opening client to %s:%u\n", sLanAuto.host, (unsigned)sLanAuto.port);
+            LanLinkOpenAsClient(sLanAuto.host, sLanAuto.port);
+        }
+        sLanLastLive = -1;
+    }
+
+    live = IsLanLinkLive();
+    if (live != sLanLastLive)
+    {
+        if (sLanLastLive >= 0)
+            PortLanLog("[LAN] status: %s\n", live ? "connected" : "disconnected");
+        else if (live)
+            PortLanLog("[LAN] status: connected\n");
+        sLanLastLive = live;
+    }
+
+    if (live && sLanOpenLink && !sLanLinkOpened)
+    {
+        sLanLinkOpened = TRUE;
+        PortLanLog("[LAN] starting serial handshake (OpenLink)\n");
+        OpenLink();
+    }
+
+    if (live && sLanOpenLink)
+    {
+        /* The CLI harness boots to a non-link screen, so no Cable Club UI
+         * raises the advance trigger. Mimic CheckShouldAdvanceLinkState, but
+         * crucially do NOT force the trigger during HANDSHAKE: LinkMain1's
+         * HANDSHAKE `default` arm calls CheckMasterOrSlave(), which assigns
+         * isMaster from the SD/SI terminals (host -> master). Forcing the
+         * advance every frame skips that and leaves both sides slave, so
+         * neither ever sends MASTER_HANDSHAKE and DoHandshake can't settle.
+         * Before HANDSHAKE we still force it to march START1 -> HANDSHAKE. */
+        if (gLink.state < LINK_STATE_HANDSHAKE)
+        {
+            gShouldAdvanceLinkState = 1;
+        }
+        else if (gLink.state == LINK_STATE_HANDSHAKE
+                 && (gLinkStatus & LINK_STAT_MASTER)
+                 && EXTRACT_PLAYER_COUNT(gLinkStatus) > 1)
+        {
+            gShouldAdvanceLinkState = 1;
+        }
+    }
+
+    if (live)
+    {
+        s32 st = (s32)gLink.state;
+        s32 im = (s32)gLink.isMaster;
+        s32 pc = (s32)gLink.playerCount;
+        s32 adv = (s32)gShouldAdvanceLinkState;
+        s32 scb = (gMain.serialCallback != NULL);
+        s32 rx = (s32)gLink.recvQueue.count;
+        s32 tx = (s32)gLink.sendQueue.count;
+        s32 wl = (s32)gWirelessCommType;
+        s32 qf = (s32)gLink.queueFull;
+        s32 side = (s32)gLink.sendCmdIndex;
+        s32 ride = (s32)gLink.recvCmdIndex;
+        if (st != sLanLastState || im != sLanLastIsMaster || pc != sLanLastPlayerCount
+            || adv != sLanLastAdvance || scb != sLanLastSerialCb
+            || rx != sLanLastRx || tx != sLanLastTx || wl != sLanLastWireless || qf != sLanLastQueueFull
+            || side != sLanLastSendIdx || ride != sLanLastRecvIdx)
+        {
+            PortLanLog("[LAN] state=%d master=%d players=%u adv=%d scb=%d w=%d rx=%d tx=%d qf=%d sIdx=%d rIdx=%d\n",
+                       st, im, (unsigned)pc, (int)adv, scb, wl, rx, tx, qf, side, ride);
+            sLanLastState = st;
+            sLanLastIsMaster = im;
+            sLanLastPlayerCount = pc;
+            sLanLastAdvance = adv;
+            sLanLastSerialCb = scb;
+            sLanLastRx = rx;
+            sLanLastTx = tx;
+            sLanLastWireless = wl;
+            sLanLastQueueFull = qf;
+            sLanLastSendIdx = side;
+            sLanLastRecvIdx = ride;
+        }
+    }
+
+    if (live && gReceivedRemoteLinkPlayers && !sLanLoggedHandshake)
+    {
+        sLanLoggedHandshake = TRUE;
+        PortLanLog("[LAN] handshake: remote link player(s) received, count=%u\n",
+                   (unsigned)GetLinkPlayerCount());
+    }
+    else if (live && !gReceivedRemoteLinkPlayers)
+    {
+        sLanLoggedHandshake = FALSE;
+    }
+}
 
 void LanLinkOpenAsHost(u16 port)
 {
@@ -1826,6 +2030,18 @@ bool32 IsLanLinkLive(void)
 {
     return sPortableLanLink != NULL && lnet_link_live(sPortableLanLink);
 }
+
+// A GBA SIO bus is clocked at 2Mbps and shifts out every word the software
+// enqueued by the end of the frame it was produced, so a battle handshake /
+// block burst is drained within that same frame instead of backing up in the
+// 50-entry queue. A fixed 9-slot budget (1 queued command per frame) keeps the
+// idle seat-handshake balanced but lets real battle bursts outpace the flush,
+// filling the send queue (LINK_STAT_ERROR_QUEUE_FULL -> CloseLink -> 通信错误).
+// Floor the slot budget at 9 so the handshake cadence is preserved, then keep
+// slotting until our own send queue is drained (a full command flushes every 9
+// slots), bounded so a freak frame can't stall the loop forever.
+#define PORTABLE_LAN_SLOTS_PER_FRAME 9
+#define PORTABLE_LAN_MAX_SLOTS_PER_FRAME 192
 
 // Set the multi-player SIO uart role so LinkMain1's CheckMasterOrSlave and
 // SerialCB see the same host/client topology as a 2-player GBA cable.
@@ -1868,15 +2084,35 @@ static void PortableLanSlot(void)
             gMain.serialCallback();
     }
 }
-
 // When this function returns TRUE the callbacks are skipped
 bool8 HandleLinkConnection(void)
 {
+    int slots;
+
+    PortLanDebugPump();
     if (gWirelessCommType == 0)
     {
         PortableLanConfigRegisters();
+        /* The GBA reports LINK_STAT_ERROR_LAG_MASTER when the master sees
+         * fewer than 9 serial transfers between LinkVSync ticks. Our LAN
+         * transport swaps exactly one SIO slot per game frame over TCP, so the
+         * master is perpetually "lagging" by that heuristic and LinkMain2's
+         * TrySetLinkErrorBuffer would tear down the connection (CloseLink) the
+         * instant CONN_ESTABLISHED is reached. The lag check is a real-bus
+         * throughput heuristic that does not apply to this emulated link, so
+         * clear it before LinkMain1 folds it into the status word. */
+        gLink.lag = LAG_NONE;
         gLinkStatus = LinkMain1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
-        PortableLanSlot();
+        /* Drain our own send queue within this frame (floor PORTABLE_LAN_SLOTS
+         * keeps the handshake cadence; the drain loop lets real-battle bursts
+         * flush faster than 1 command/frame so they never back up to the
+         * 50-entry cap). Both peers run this same rule, so the exchange stays
+         * lock-step. Guarded so a pathological frame can't stall the loop. */
+        for (slots = 0; slots < PORTABLE_LAN_SLOTS_PER_FRAME
+                          || (slots < PORTABLE_LAN_MAX_SLOTS_PER_FRAME
+                              && gLink.sendQueue.count > 0);
+             slots++)
+            PortableLanSlot();
         LinkMain2(&gMain.heldKeys);
         if ((gLinkStatus & LINK_STAT_RECEIVED_NOTHING) && IsSendingKeysOverCable() == TRUE)
             return TRUE;

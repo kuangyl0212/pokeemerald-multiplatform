@@ -21,13 +21,18 @@ LNetRole lnet_sio_role(const LNetSio *s) { return s->role; }
 /*
  * Both players present an identical 4-slot RECV: slot0 = host SEND,
  * slot1 = client SEND, delayed by one slot (holds the previous commit).
+ * Unused slots 2..3 float high (0xFFFF) exactly like real GBA multi-SIO
+ * pins, which DoHandshake relies on: it resets playerCount when it sees a
+ * non-handshake slot that is not 0xFFFF.
  */
 unsigned long long lnet_sio_recv_current(const LNetSio *s)
 {
+    unsigned long long view;
     if (s->role == LNET_ROLE_HOST)
-        return (unsigned long long)s->myPrev | ((unsigned long long)s->peerPrev << 16);
+        view = (unsigned long long)s->myPrev | ((unsigned long long)s->peerPrev << 16);
     else
-        return (unsigned long long)s->peerPrev | ((unsigned long long)s->myPrev << 16);
+        view = (unsigned long long)s->peerPrev | ((unsigned long long)s->myPrev << 16);
+    return view | 0xFFFFFFFF00000000ULL;
 }
 
 void lnet_sio_commit(LNetSio *s, unsigned short mySend, unsigned short peerSend)

@@ -92,7 +92,7 @@ static THREAD_RET host_main(void *arg)
         }
         lnet_sio_commit(sio, g_hSend[k], peer);
     }
-    CHECK(g_hostRecv[0] == 0, "host recv[0] starts at 0");
+    CHECK(g_hostRecv[0] == 0xFFFFFFFF00000000ULL, "host recv[0] starts idle (0xFFFF high slots)");
     lnet_sio_free(sio);
     lnet_session_close(s);
     return 0;
@@ -124,7 +124,7 @@ static THREAD_RET client_main(void *arg)
         }
         lnet_sio_commit(sio, g_cSend[k], peer);
     }
-    CHECK(g_clientRecv[0] == 0, "client recv[0] starts at 0");
+    CHECK(g_clientRecv[0] == 0xFFFFFFFF00000000ULL, "client recv[0] starts idle (0xFFFF high slots)");
     lnet_sio_free(sio);
     lnet_session_close(s);
     return 0;
@@ -145,6 +145,7 @@ int main(void)
         unsigned long long expect;
         char msg[96];
         expect = (unsigned long long)g_hSend[k] | ((unsigned long long)g_cSend[k] << 16);
+        expect |= 0xFFFFFFFF00000000ULL;
         snprintf(msg, sizeof(msg), "recv[%d] host == host[k]|client[k]<<16", k + 1);
         CHECK(g_hostRecv[k + 1] == expect, msg);
         snprintf(msg, sizeof(msg), "recv[%d] client == host[k]|client[k]<<16", k + 1);
