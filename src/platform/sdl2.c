@@ -70,6 +70,12 @@ static u8 sPlatformSettings[PLATFORM_SETTING_COUNT] = {0, 4, 0, 1, 1, 10};
 #ifdef __ANDROID__
 static SDL_GameController *androidController;
 #endif
+#ifdef _WIN32
+// XInput slot (0-3) this instance reads. Lets two instances on one machine bind
+// separate gamepads (e.g. host --xpad=0, client --xpad=1) instead of both
+// sharing controller 0.
+static int sXInputPlayer = 0;
+#endif
 
 extern void AgbMain(void);
 extern void DoSoftReset(void);
@@ -142,6 +148,14 @@ int main(int argc, char **argv)
         {
             PortLanRequestOpenLink();
         }
+#ifdef _WIN32
+        else if (strncmp(argv[i], "--xpad=", 7) == 0)
+        {
+            int slot = atoi(argv[i] + 7);
+            if (slot >= 0 && slot < 4)
+                sXInputPlayer = slot;
+        }
+#endif
     }
 
 #ifdef __ANDROID__
@@ -1144,7 +1158,7 @@ u16 GetXInputKeys()
     XINPUT_STATE state;
     ZeroMemory(&state, sizeof(XINPUT_STATE));
 
-    DWORD dwResult = XInputGetState(0, &state);
+    DWORD dwResult = XInputGetState(sXInputPlayer, &state);
     u16 xinputKeys = 0;
 
     if (dwResult == ERROR_SUCCESS)

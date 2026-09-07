@@ -2064,17 +2064,20 @@ static void PortableLanConfigRegisters(void)
 // Drive one SIO slot transaction over the LAN session, feeding the game's
 // existing serial engine (DoHandshake / DoRecv / DoSend) exactly as the GBA
 // serial interrupt would after SIO_START.
-static void PortableLanSlot(void)
+// Returns 1 if the slot was exchanged, 0 if it was skipped (not applicable),
+// or -1 if the peer is gone / the transport failed (the game must surface a
+// link error instead of silently stalling).
+static int PortableLanSlot(void)
 {
     u16 mySend;
     u16 peerSend;
     u64 recvView;
 
     if (!IsLanLinkLive())
-        return;
+        return 0;
 
     if (gLink.state != LINK_STATE_HANDSHAKE && gLink.state != LINK_STATE_CONN_ESTABLISHED)
-        return;
+        return 0;
 
     mySend = REG_SIOMLT_SEND;
     if (lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView))
@@ -2082,12 +2085,35 @@ static void PortableLanSlot(void)
         REG_SIOMLT_RECV = (vu64)recvView;
         if (gMain.serialCallback)
             gMain.serialCallback();
+        return 1;
     }
+    return -1;
+}
+
+// The peer closed the TCP session (e.g. the other instance was terminated
+// mid-battle). Tear the link down and route the surviving player to the game's
+// standard "通信错误 / linked error" screen so the battle unblocks instead of
+// hanging on a dead socket.
+static void HandleLanDisconnect(void)
+{
+    if (!IsLanLinkLive())
+        return;
+
+    PortLanLog("[LAN] peer disconnected, closing link\n");
+    LanLinkClose();
+    sLanLinkOpened = FALSE;
+    sLanLoggedHandshake = FALSE;
+
+    SetLinkErrorBuffer(gLinkStatus, gLink.sendQueue.count, gLastRecvQueueCount, TRUE);
+    gLinkErrorOccurred = TRUE;
+    if (gMain.callback2 != CB2_LinkError)
+        SetMainCallback2(CB2_LinkError);
 }
 // When this function returns TRUE the callbacks are skipped
 bool8 HandleLinkConnection(void)
 {
     int slots;
+    bool8 peerGone = FALSE;
 
     PortLanDebugPump();
     if (gWirelessCommType == 0)
@@ -2112,7 +2138,12 @@ bool8 HandleLinkConnection(void)
                           || (slots < PORTABLE_LAN_MAX_SLOTS_PER_FRAME
                               && gLink.sendQueue.count > 0);
              slots++)
-            PortableLanSlot();
+        {
+            if (PortableLanSlot() < 0)
+                peerGone = TRUE;
+        }
+        if (peerGone)
+            HandleLanDisconnect();
         LinkMain2(&gMain.heldKeys);
         if ((gLinkStatus & LINK_STAT_RECEIVED_NOTHING) && IsSendingKeysOverCable() == TRUE)
             return TRUE;
