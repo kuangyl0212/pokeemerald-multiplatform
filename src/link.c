@@ -1814,17 +1814,6 @@ static bool32 sLanLoggedHandshake;
 static const char *sLanLogPath;
 static bool32 sLanOpenLink;
 static bool32 sLanLinkOpened;
-static s32 sLanLastState = -999;
-static s32 sLanLastIsMaster = -999;
-static s32 sLanLastPlayerCount = -999;
-static s32 sLanLastAdvance = -999;
-static s32 sLanLastSerialCb = -1;
-static s32 sLanLastRx = -1;
-static s32 sLanLastTx = -1;
-static s32 sLanLastWireless = -1;
-static s32 sLanLastQueueFull = -1;
-static s32 sLanLastSendIdx = -1;
-static s32 sLanLastRecvIdx = -1;
 
 static void PortLanLog(const char *fmt, ...);
 
@@ -1855,10 +1844,6 @@ static void PortLanLog(const char *fmt, ...)
         vfprintf(fp, fmt, args);
         fclose(fp);
     }
-    va_end(args);
-
-    va_start(args, fmt);
-    vprintf(fmt, args);
     va_end(args);
 }
 
@@ -1944,40 +1929,6 @@ static void PortLanDebugPump(void)
                  && EXTRACT_PLAYER_COUNT(gLinkStatus) > 1)
         {
             gShouldAdvanceLinkState = 1;
-        }
-    }
-
-    if (live)
-    {
-        s32 st = (s32)gLink.state;
-        s32 im = (s32)gLink.isMaster;
-        s32 pc = (s32)gLink.playerCount;
-        s32 adv = (s32)gShouldAdvanceLinkState;
-        s32 scb = (gMain.serialCallback != NULL);
-        s32 rx = (s32)gLink.recvQueue.count;
-        s32 tx = (s32)gLink.sendQueue.count;
-        s32 wl = (s32)gWirelessCommType;
-        s32 qf = (s32)gLink.queueFull;
-        s32 side = (s32)gLink.sendCmdIndex;
-        s32 ride = (s32)gLink.recvCmdIndex;
-        if (st != sLanLastState || im != sLanLastIsMaster || pc != sLanLastPlayerCount
-            || adv != sLanLastAdvance || scb != sLanLastSerialCb
-            || rx != sLanLastRx || tx != sLanLastTx || wl != sLanLastWireless || qf != sLanLastQueueFull
-            || side != sLanLastSendIdx || ride != sLanLastRecvIdx)
-        {
-            PortLanLog("[LAN] state=%d master=%d players=%u adv=%d scb=%d w=%d rx=%d tx=%d qf=%d sIdx=%d rIdx=%d\n",
-                       st, im, (unsigned)pc, (int)adv, scb, wl, rx, tx, qf, side, ride);
-            sLanLastState = st;
-            sLanLastIsMaster = im;
-            sLanLastPlayerCount = pc;
-            sLanLastAdvance = adv;
-            sLanLastSerialCb = scb;
-            sLanLastRx = rx;
-            sLanLastTx = tx;
-            sLanLastWireless = wl;
-            sLanLastQueueFull = qf;
-            sLanLastSendIdx = side;
-            sLanLastRecvIdx = ride;
         }
     }
 
