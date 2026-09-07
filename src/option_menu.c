@@ -16,6 +16,9 @@
 #include "window.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#ifdef PORTABLE
+#include "link.h"
+#endif
 
 #define tMenuSelection data[0]
 #define tTextSpeed data[1]
@@ -45,6 +48,9 @@ enum
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
     MENUITEM_DISPLAY,
+#ifdef PORTABLE
+    MENUITEM_LAN,
+#endif
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -110,8 +116,25 @@ static void DrawDisplaySettingChoice(u8 row, const u8 *text);
 static void DrawHeaderText(void);
 static void DrawOptionMenuTexts(void);
 static void DrawBgWindowFrames(void);
+#ifdef PORTABLE
+static void OpenLanSettings(u8 taskId);
+static void CloseLanSettings(u8 taskId);
+static void ProcessLanSettingsInput(u8 taskId);
+static void DrawLanSettings(u8 taskId);
+static void DrawLanSettingChoice(u8 row, const u8 *text);
+static void DrawLanNumberChoice(u8 row, u16 value);
+static void UpdateLanEditInput(u8 selection);
+static void SetLanEditing(bool8 editing);
+#endif
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
+#ifdef PORTABLE
+EWRAM_DATA static u8 sLanMode;
+EWRAM_DATA static u16 sLanPort;
+EWRAM_DATA static u8 sLanIp[16];
+EWRAM_DATA static u8 sLanEditedRow;
+EWRAM_DATA static bool8 sLanEditing;
+#endif
 
 static const u16 sOptionMenuText_Pal[] = INCBIN_U16("graphics/interface/option_menu_text.gbapal");
 // note: this is only used in the Japanese release
@@ -126,6 +149,9 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
     [MENUITEM_DISPLAY]       = gText_DisplaySettings,
+#ifdef PORTABLE
+    [MENUITEM_LAN]         = gText_LanSettings,
+#endif
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -145,7 +171,11 @@ static const struct WindowTemplate sOptionMenuWinTemplates[] =
         .tilemapLeft = 2,
         .tilemapTop = 5,
         .width = 26,
+#ifdef PORTABLE
+        .height = 16,
+#else
         .height = 14,
+#endif
         .paletteNum = 1,
         .baseBlock = 0x36
     },
@@ -323,11 +353,18 @@ static void Task_OptionMenuFadeIn(u8 taskId)
 
 static void Task_OptionMenuProcessInput(u8 taskId)
 {
-    if (gTasks[taskId].tPlatformPage)
+    if (gTasks[taskId].tPlatformPage == 1)
     {
         ProcessDisplaySettingsInput(taskId);
         return;
     }
+#ifdef PORTABLE
+    if (gTasks[taskId].tPlatformPage == 2)
+    {
+        ProcessLanSettingsInput(taskId);
+        return;
+    }
+#endif
 
     if (JOY_NEW(A_BUTTON))
     {
@@ -335,6 +372,10 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             gTasks[taskId].func = Task_OptionMenuSave;
         else if (gTasks[taskId].tMenuSelection == MENUITEM_DISPLAY)
             OpenDisplaySettings(taskId);
+#ifdef PORTABLE
+        else if (gTasks[taskId].tMenuSelection == MENUITEM_LAN)
+            OpenLanSettings(taskId);
+#endif
     }
     else if (JOY_NEW(B_BUTTON))
     {
@@ -418,6 +459,9 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 
 static void Task_OptionMenuSave(u8 taskId)
 {
+#ifdef PORTABLE
+    SetLanEditing(FALSE);
+#endif
     gSaveBlock2Ptr->optionsTextSpeed = gTasks[taskId].tTextSpeed;
     gSaveBlock2Ptr->optionsBattleSceneOff = gTasks[taskId].tBattleSceneOff;
     gSaveBlock2Ptr->optionsBattleStyle = gTasks[taskId].tBattleStyle;
@@ -959,9 +1003,287 @@ static void DrawBgWindowFrames(void)
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  4,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  5,  1, 18,  7);
     FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  5,  1, 18,  7);
+#ifdef PORTABLE
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 21,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 21, 26,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 21,  1,  1,  7);
+#else
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 19,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 19, 26,  1,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 19,  1,  1,  7);
+#endif
 
     CopyBgTilemapBufferToVram(1);
 }
+
+#ifdef PORTABLE
+enum
+{
+    LAN_MODE,
+    LAN_PORT,
+    LAN_IP,
+    LAN_CONNECT,
+    LAN_BACK,
+    LAN_ROW_COUNT,
+};
+
+static void SetLanEditing(bool8 editing)
+{
+    if (editing && !sLanEditing)
+        PlatformTextInputStart();
+    else if (!editing && sLanEditing)
+        PlatformTextInputStop();
+    sLanEditing = editing;
+}
+
+static bool8 LanRowEditable(u8 selection)
+{
+    if (selection == LAN_PORT)
+        return TRUE;
+    if (selection == LAN_IP && sLanMode == 2)
+        return TRUE;
+    return FALSE;
+}
+
+static void OpenLanSettings(u8 taskId)
+{
+    gTasks[taskId].tPlatformPage = 2;
+    gTasks[taskId].tMenuSelection = 0;
+    if (sLanPort == 0)
+    {
+        sLanMode = 1;
+        sLanPort = 45680;
+        sLanIp[0] = CHAR_1;
+        sLanIp[1] = CHAR_9;
+        sLanIp[2] = CHAR_2;
+        sLanIp[3] = CHAR_PERIOD;
+        sLanIp[4] = CHAR_1;
+        sLanIp[5] = CHAR_6;
+        sLanIp[6] = CHAR_8;
+        sLanIp[7] = CHAR_PERIOD;
+        sLanIp[8] = CHAR_1;
+        sLanIp[9] = CHAR_PERIOD;
+        sLanIp[10] = CHAR_1;
+        sLanIp[11] = EOS;
+    }
+    SetLanEditing(FALSE);
+    DrawLanSettings(taskId);
+    HighlightOptionMenuItem(0);
+}
+
+static void CloseLanSettings(u8 taskId)
+{
+    gTasks[taskId].tPlatformPage = 0;
+    gTasks[taskId].tMenuSelection = MENUITEM_LAN;
+    DrawOptionMenuTexts();
+    TextSpeed_DrawChoices(gTasks[taskId].tTextSpeed);
+    BattleScene_DrawChoices(gTasks[taskId].tBattleSceneOff);
+    BattleStyle_DrawChoices(gTasks[taskId].tBattleStyle);
+    Sound_DrawChoices(gTasks[taskId].tSound);
+    ButtonMode_DrawChoices(gTasks[taskId].tButtonMode);
+    FrameType_DrawChoices(gTasks[taskId].tWindowFrameType);
+    HighlightOptionMenuItem(MENUITEM_LAN);
+    CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+}
+
+static void DrawLanSettingChoice(u8 row, const u8 *text)
+{
+    FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(1), 100, row * OPTION_ROW_HEIGHT, 112, OPTION_ROW_HEIGHT);
+    DrawOptionMenuChoice(text, 104, row * OPTION_ROW_HEIGHT, 1);
+}
+
+static void DrawLanNumberChoice(u8 row, u16 value)
+{
+    u8 text[8];
+    u8 i = 0;
+
+    if (value >= 10000)
+        text[i++] = value / 10000 + CHAR_0;
+    if (value >= 1000)
+        text[i++] = (value / 1000) % 10 + CHAR_0;
+    if (value >= 100)
+        text[i++] = (value / 100) % 10 + CHAR_0;
+    if (value >= 10)
+        text[i++] = (value / 10) % 10 + CHAR_0;
+    text[i++] = value % 10 + CHAR_0;
+    text[i] = EOS;
+    DrawLanSettingChoice(row, text);
+}
+
+static const u8 *GetLanConnectText(void)
+{
+    if (IsLanLinkLive())
+    {
+        if (gReceivedRemoteLinkPlayers)
+            return gText_LanStop;
+        return gText_LanConnecting;
+    }
+    return gText_LanStart;
+}
+
+static void DrawLanSettings(u8 taskId)
+{
+    u8 row = 0;
+    const u8 *modeText;
+
+    (void)taskId;
+    if (sLanMode == 1)
+        modeText = gText_LanHost;
+    else if (sLanMode == 2)
+        modeText = gText_LanClient;
+    else
+        modeText = gText_LanOff;
+
+    FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanMode, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    DrawLanSettingChoice(row++, modeText);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanPort, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    DrawLanNumberChoice(row++, sLanPort);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanIp, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    DrawLanSettingChoice(row++, sLanMode == 2 ? sLanIp : gText_LanDash);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanStatus, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    DrawLanSettingChoice(row++, GetLanConnectText());
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_Back, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+}
+
+static void UpdateLanEditInput(u8 selection)
+{
+    u8 buf[24];
+    bool8 changed = FALSE;
+    u8 *p;
+
+    if (!sLanEditing)
+        return;
+    if (!PlatformTextInputPoll(buf, sizeof(buf)))
+        return;
+
+    for (p = buf; *p != '\0'; p++)
+    {
+        u8 ch = *p;
+        if (selection == LAN_PORT)
+        {
+            if (ch >= '0' && ch <= '9')
+            {
+                u32 next = (u32)sLanPort * 10 + (ch - '0');
+                if (next > 65535)
+                    next = 65535;
+                sLanPort = (u16)next;
+                changed = TRUE;
+            }
+        }
+        else if (selection == LAN_IP)
+        {
+            u32 len = 0;
+            if ((ch >= '0' && ch <= '9') || ch == '.')
+            {
+                while (sLanIp[len] != EOS)
+                    len++;
+                if (len < sizeof(sLanIp) - 1)
+                {
+                    sLanIp[len] = ch >= '0' && ch <= '9' ? ch - '0' + CHAR_0 : CHAR_PERIOD;
+                    sLanIp[len + 1] = EOS;
+                    changed = TRUE;
+                }
+            }
+        }
+    }
+
+    if (changed)
+    {
+        DrawLanSettings(0);
+        HighlightOptionMenuItem(selection);
+        CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+    }
+}
+
+static void ProcessLanSettingsInput(u8 taskId)
+{
+    u8 selection = gTasks[taskId].tMenuSelection;
+    bool8 changed = FALSE;
+
+    if (JOY_NEW(B_BUTTON) || (JOY_NEW(A_BUTTON) && selection == LAN_BACK))
+    {
+        SetLanEditing(FALSE);
+        CloseLanSettings(taskId);
+        return;
+    }
+    if (JOY_NEW(DPAD_UP))
+    {
+        selection = selection == 0 ? LAN_ROW_COUNT - 1 : selection - 1;
+        changed = TRUE;
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        selection = selection == LAN_ROW_COUNT - 1 ? 0 : selection + 1;
+        changed = TRUE;
+    }
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        bool8 right = JOY_NEW(DPAD_RIGHT);
+        switch (selection)
+        {
+        case LAN_MODE:
+            if (right)
+                sLanMode = sLanMode == 2 ? 0 : sLanMode + 1;
+            else
+                sLanMode = sLanMode == 0 ? 2 : sLanMode - 1;
+            changed = TRUE;
+            break;
+        case LAN_PORT:
+            if (right)
+                sLanPort = sLanPort == 65535 ? 0 : sLanPort + 1;
+            else
+                sLanPort = sLanPort == 0 ? 65535 : sLanPort - 1;
+            changed = TRUE;
+            break;
+        }
+    }
+    else if (JOY_NEW(A_BUTTON) && selection == LAN_CONNECT)
+    {
+        if (IsLanLinkLive())
+        {
+            LanLinkClose();
+        }
+        else if (sLanMode == 1)
+        {
+            PortLanRequestHost(sLanPort);
+        }
+        else if (sLanMode == 2 && sLanIp[0] != EOS)
+        {
+            u8 asciiIp[16];
+            u8 *s = sLanIp;
+            u8 *d = asciiIp;
+
+            while (*s != EOS && d < asciiIp + sizeof(asciiIp) - 1)
+            {
+                if (*s >= CHAR_0 && *s <= CHAR_9)
+                    *d++ = (u8)(*s - CHAR_0 + '0');
+                else if (*s == CHAR_PERIOD)
+                    *d++ = '.';
+                s++;
+            }
+            *d = '\0';
+            PortLanRequestClient(asciiIp, sLanPort);
+        }
+        changed = TRUE;
+    }
+
+    if (LanRowEditable(selection))
+        SetLanEditing(TRUE);
+    else
+        SetLanEditing(FALSE);
+
+    if (changed)
+    {
+        gTasks[taskId].tMenuSelection = selection;
+        DrawLanSettings(taskId);
+        HighlightOptionMenuItem(selection);
+        CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+    }
+    else
+    {
+        UpdateLanEditInput(selection);
+    }
+}
+#endif

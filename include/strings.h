@@ -330,6 +330,20 @@ extern const u8 gText_Back[];
 extern const u8 gText_DisplayMode[];
 extern const u8 gText_DisplayModeMax[];
 extern const u8 gText_DisplayModeInteger[];
+#ifdef PORTABLE
+extern const u8 gText_LanSettings[];
+extern const u8 gText_LanMode[];
+extern const u8 gText_LanOff[];
+extern const u8 gText_LanHost[];
+extern const u8 gText_LanClient[];
+extern const u8 gText_LanPort[];
+extern const u8 gText_LanIp[];
+extern const u8 gText_LanDash[];
+extern const u8 gText_LanStatus[];
+extern const u8 gText_LanStart[];
+extern const u8 gText_LanStop[];
+extern const u8 gText_LanConnecting[];
+#endif
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];

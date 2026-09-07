@@ -77,6 +77,39 @@ static SDL_GameController *androidController;
 static int sXInputPlayer = 0;
 #endif
 
+static char sTextInputBuf[64];
+static u32 sTextInputLen;
+static bool8 sTextInputActive;
+
+void PlatformTextInputStart(void)
+{
+    sTextInputLen = 0;
+    sTextInputBuf[0] = '\0';
+    sTextInputActive = TRUE;
+    SDL_StartTextInput();
+}
+
+void PlatformTextInputStop(void)
+{
+    sTextInputActive = FALSE;
+    SDL_StopTextInput();
+}
+
+bool8 PlatformTextInputPoll(u8 *buf, u32 size)
+{
+    u32 n = sTextInputLen;
+
+    if (n == 0)
+        return FALSE;
+    if (n >= size)
+        n = size - 1;
+    memcpy(buf, sTextInputBuf, n);
+    buf[n] = '\0';
+    sTextInputLen = 0;
+    sTextInputBuf[0] = '\0';
+    return TRUE;
+}
+
 extern void AgbMain(void);
 extern void DoSoftReset(void);
 
@@ -1143,6 +1176,15 @@ void ProcessEvents(void)
             if (controllerAxisY >  16000) controllerAxisKeys |= DPAD_DOWN;
             break;
 #endif
+        case SDL_TEXTINPUT:
+            if (sTextInputActive)
+            {
+                const char *p = event.text.text;
+                while (*p != '\0' && sTextInputLen < sizeof(sTextInputBuf) - 1)
+                    sTextInputBuf[sTextInputLen++] = *p++;
+                sTextInputBuf[sTextInputLen] = '\0';
+            }
+            break;
         case SDL_KEYUP:
             switch (event.key.keysym.sym)
             {
@@ -1180,6 +1222,10 @@ void ProcessEvents(void)
             HANDLE_KEYDOWN(DPAD_DOWN)
             HANDLE_KEYDOWN(DPAD_LEFT)
             HANDLE_KEYDOWN(DPAD_RIGHT)
+            case SDLK_BACKSPACE:
+                if (sTextInputActive && sTextInputLen > 0)
+                    sTextInputBuf[--sTextInputLen] = '\0';
+                break;
             case SDLK_r:
                 if (event.key.keysym.mod & (KMOD_LCTRL | KMOD_RCTRL))
                 {

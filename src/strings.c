@@ -1515,6 +1515,20 @@ const u8 gText_Back[] = _("{CHN}返回");
 const u8 gText_DisplayMode[] = _("{CHN}显示模式");
 const u8 gText_DisplayModeMax[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}{CHN}最大化");
 const u8 gText_DisplayModeInteger[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}{CHN}点对点");
+#ifdef PORTABLE
+const u8 gText_LanSettings[] = _("{CHN}联机设置");
+const u8 gText_LanMode[] = _("{CHN}模式");
+const u8 gText_LanOff[] = _("{CHN}关闭");
+const u8 gText_LanHost[] = _("{CHN}主机");
+const u8 gText_LanClient[] = _("{CHN}客户端");
+const u8 gText_LanPort[] = _("{CHN}端口");
+const u8 gText_LanIp[] = _("{CHN}IP 地址");
+const u8 gText_LanDash[] = _("--");
+const u8 gText_LanStatus[] = _("{CHN}连接状态");
+const u8 gText_LanStart[] = _("{CHN}启动联机");
+const u8 gText_LanStop[] = _("{CHN}停止联机");
+const u8 gText_LanConnecting[] = _("{CHN}连接中…");
+#endif
 const u8 gText_NumPlayerLink[] = _("{CHN}{STR_VAR_1}P联机");
 const u8 gText_BronzeCard[] = _("{CHN}青铜");
 const u8 gText_CopperCard[] = _("{CHN}黄铜");

@@ -28,6 +28,9 @@ enum PlatformSetting
 
 u8 Platform_GetSetting(enum PlatformSetting setting);
 void Platform_SetSetting(enum PlatformSetting setting, u8 value);
+void PlatformTextInputStart(void);
+void PlatformTextInputStop(void);
+bool8 PlatformTextInputPoll(u8 *buf, u32 size);
 void Platform_GetStatus(struct SiiRtcInfo *rtc);
 void Platform_SetStatus(struct SiiRtcInfo *rtc);
 static void UpdateInternalClock(void);
