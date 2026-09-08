@@ -123,8 +123,11 @@ static void ProcessLanSettingsInput(u8 taskId);
 static void DrawLanSettings(u8 taskId);
 static void DrawLanSettingChoice(u8 row, const u8 *text);
 static void DrawLanNumberChoice(u8 row, u16 value);
-static void UpdateLanEditInput(u8 selection);
+static void drawLanEditUpdate(u8 taskId);
 static void SetLanEditing(bool8 editing);
+static void CommitLanEdit(u8 selection);
+static void BeginLanEdit(void);
+static void CancelLanEdit(void);
 #endif
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
@@ -132,7 +135,7 @@ EWRAM_DATA static bool8 sArrowPressed = FALSE;
 EWRAM_DATA static u8 sLanMode;
 EWRAM_DATA static u16 sLanPort;
 EWRAM_DATA static u8 sLanIp[16];
-EWRAM_DATA static u8 sLanEditedRow;
+EWRAM_DATA static u8 sLanBuf[16];
 EWRAM_DATA static bool8 sLanEditing;
 #endif
 
@@ -1036,6 +1039,46 @@ static void SetLanEditing(bool8 editing)
     sLanEditing = editing;
 }
 
+static void BeginLanEdit(void)
+{
+    sLanBuf[0] = EOS;
+    SetLanEditing(TRUE);
+}
+
+static void CancelLanEdit(void)
+{
+    SetLanEditing(FALSE);
+}
+
+static void CommitLanEdit(u8 selection)
+{
+    SetLanEditing(FALSE);
+    if (selection == LAN_IP)
+    {
+        u8 i;
+        for (i = 0; i < sizeof(sLanIp) && sLanBuf[i] != EOS; i++)
+            sLanIp[i] = sLanBuf[i];
+        if (i < sizeof(sLanIp))
+            sLanIp[i] = EOS;
+    }
+    else
+    {
+        u32 v = 0;
+        u8 *p = sLanBuf;
+        while (*p != EOS)
+        {
+            if (*p >= CHAR_0 && *p <= CHAR_9)
+            {
+                v = v * 10 + (*p - CHAR_0);
+                if (v > 65535)
+                    v = 65535;
+            }
+            p++;
+        }
+        sLanPort = (u16)v;
+    }
+}
+
 static bool8 LanRowEditable(u8 selection)
 {
     if (selection == LAN_PORT)
@@ -1089,7 +1132,7 @@ static void CloseLanSettings(u8 taskId)
 static void DrawLanSettingChoice(u8 row, const u8 *text)
 {
     FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(1), 100, row * OPTION_ROW_HEIGHT, 112, OPTION_ROW_HEIGHT);
-    DrawOptionMenuChoice(text, 104, row * OPTION_ROW_HEIGHT, 1);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, text, 104, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
 }
 
 static void DrawLanNumberChoice(u8 row, u16 value)
@@ -1124,9 +1167,9 @@ static const u8 *GetLanConnectText(void)
 static void DrawLanSettings(u8 taskId)
 {
     u8 row = 0;
+    u8 sel = gTasks[taskId].tMenuSelection;
     const u8 *modeText;
 
-    (void)taskId;
     if (sLanMode == 1)
         modeText = gText_LanHost;
     else if (sLanMode == 2)
@@ -1138,19 +1181,24 @@ static void DrawLanSettings(u8 taskId)
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanMode, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     DrawLanSettingChoice(row++, modeText);
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanPort, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
-    DrawLanNumberChoice(row++, sLanPort);
+    if (sLanEditing && sel == LAN_PORT)
+        DrawLanSettingChoice(row++, sLanBuf);
+    else
+        DrawLanNumberChoice(row++, sLanPort);
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanIp, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
-    DrawLanSettingChoice(row++, sLanMode == 2 ? sLanIp : gText_LanDash);
+    if (sLanEditing && sel == LAN_IP)
+        DrawLanSettingChoice(row++, sLanBuf);
+    else
+        DrawLanSettingChoice(row++, sLanMode == 2 ? sLanIp : gText_LanDash);
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanStatus, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     DrawLanSettingChoice(row++, GetLanConnectText());
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_Back, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
 
-static void UpdateLanEditInput(u8 selection)
+static void drawLanEditUpdate(u8 taskId)
 {
     u8 buf[24];
-    bool8 changed = FALSE;
     u8 *p;
 
     if (!sLanEditing)
@@ -1161,38 +1209,37 @@ static void UpdateLanEditInput(u8 selection)
     for (p = buf; *p != '\0'; p++)
     {
         u8 ch = *p;
-        if (selection == LAN_PORT)
+        u32 len = 0;
+        if (ch == 0x08)
         {
-            if (ch >= '0' && ch <= '9')
+            while (sLanBuf[len] != EOS)
+                len++;
+            if (len > 0)
             {
-                u32 next = (u32)sLanPort * 10 + (ch - '0');
-                if (next > 65535)
-                    next = 65535;
-                sLanPort = (u16)next;
-                changed = TRUE;
+                sLanBuf[len - 1] = EOS;
+                goto redraw;
             }
         }
-        else if (selection == LAN_IP)
+        while (sLanBuf[len] != EOS)
+            len++;
+        if (len >= sizeof(sLanBuf) - 1)
+            continue;
+        if (ch >= '0' && ch <= '9')
         {
-            u32 len = 0;
-            if ((ch >= '0' && ch <= '9') || ch == '.')
-            {
-                while (sLanIp[len] != EOS)
-                    len++;
-                if (len < sizeof(sLanIp) - 1)
-                {
-                    sLanIp[len] = ch >= '0' && ch <= '9' ? ch - '0' + CHAR_0 : CHAR_PERIOD;
-                    sLanIp[len + 1] = EOS;
-                    changed = TRUE;
-                }
-            }
+            sLanBuf[len] = (u8)(ch - '0' + CHAR_0);
+            sLanBuf[len + 1] = EOS;
+            goto redraw;
         }
-    }
-
-    if (changed)
-    {
-        DrawLanSettings(0);
-        HighlightOptionMenuItem(selection);
+        else if (ch == '.')
+        {
+            sLanBuf[len] = CHAR_PERIOD;
+            sLanBuf[len + 1] = EOS;
+            goto redraw;
+        }
+        continue;
+redraw:
+        DrawLanSettings(taskId);
+        HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
         CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
     }
 }
@@ -1201,6 +1248,30 @@ static void ProcessLanSettingsInput(u8 taskId)
 {
     u8 selection = gTasks[taskId].tMenuSelection;
     bool8 changed = FALSE;
+
+    if (sLanEditing)
+    {
+        // Editing state: digits/plus backspace build the buffer, A commits, B cancels.
+        if (JOY_NEW(A_BUTTON))
+        {
+            CommitLanEdit(selection);
+            DrawLanSettings(taskId);
+            HighlightOptionMenuItem(selection);
+            CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            CancelLanEdit();
+            DrawLanSettings(taskId);
+            HighlightOptionMenuItem(selection);
+            CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+        }
+        else
+        {
+            drawLanEditUpdate(taskId);
+        }
+        return;
+    }
 
     if (JOY_NEW(B_BUTTON) || (JOY_NEW(A_BUTTON) && selection == LAN_BACK))
     {
@@ -1221,58 +1292,52 @@ static void ProcessLanSettingsInput(u8 taskId)
     else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
     {
         bool8 right = JOY_NEW(DPAD_RIGHT);
-        switch (selection)
+        if (selection == LAN_MODE)
         {
-        case LAN_MODE:
             if (right)
                 sLanMode = sLanMode == 2 ? 0 : sLanMode + 1;
             else
                 sLanMode = sLanMode == 0 ? 2 : sLanMode - 1;
             changed = TRUE;
-            break;
-        case LAN_PORT:
-            if (right)
-                sLanPort = sLanPort == 65535 ? 0 : sLanPort + 1;
-            else
-                sLanPort = sLanPort == 0 ? 65535 : sLanPort - 1;
-            changed = TRUE;
-            break;
         }
     }
-    else if (JOY_NEW(A_BUTTON) && selection == LAN_CONNECT)
+    else if (JOY_NEW(A_BUTTON))
     {
-        if (IsLanLinkLive())
+        if (selection == LAN_CONNECT)
         {
-            LanLinkClose();
-        }
-        else if (sLanMode == 1)
-        {
-            PortLanRequestHost(sLanPort);
-        }
-        else if (sLanMode == 2 && sLanIp[0] != EOS)
-        {
-            u8 asciiIp[16];
-            u8 *s = sLanIp;
-            u8 *d = asciiIp;
-
-            while (*s != EOS && d < asciiIp + sizeof(asciiIp) - 1)
+            if (IsLanLinkLive())
             {
-                if (*s >= CHAR_0 && *s <= CHAR_9)
-                    *d++ = (u8)(*s - CHAR_0 + '0');
-                else if (*s == CHAR_PERIOD)
-                    *d++ = '.';
-                s++;
+                LanLinkClose();
             }
-            *d = '\0';
-            PortLanRequestClient(asciiIp, sLanPort);
-        }
-        changed = TRUE;
-    }
+            else if (sLanMode == 1)
+            {
+                PortLanRequestHost(sLanPort);
+            }
+            else if (sLanMode == 2 && sLanIp[0] != EOS)
+            {
+                u8 asciiIp[16];
+                u8 *s = sLanIp;
+                u8 *d = asciiIp;
 
-    if (LanRowEditable(selection))
-        SetLanEditing(TRUE);
-    else
-        SetLanEditing(FALSE);
+                while (*s != EOS && d < asciiIp + sizeof(asciiIp) - 1)
+                {
+                    if (*s >= CHAR_0 && *s <= CHAR_9)
+                        *d++ = (u8)(*s - CHAR_0 + '0');
+                    else if (*s == CHAR_PERIOD)
+                        *d++ = '.';
+                    s++;
+                }
+                *d = '\0';
+                PortLanRequestClient(asciiIp, sLanPort);
+            }
+            changed = TRUE;
+        }
+        else if (LanRowEditable(selection))
+        {
+            BeginLanEdit();
+            changed = TRUE;
+        }
+    }
 
     if (changed)
     {
@@ -1280,10 +1345,6 @@ static void ProcessLanSettingsInput(u8 taskId)
         DrawLanSettings(taskId);
         HighlightOptionMenuItem(selection);
         CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
-    }
-    else
-    {
-        UpdateLanEditInput(selection);
     }
 }
 #endif

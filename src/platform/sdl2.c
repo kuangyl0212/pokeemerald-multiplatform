@@ -86,13 +86,17 @@ void PlatformTextInputStart(void)
     sTextInputLen = 0;
     sTextInputBuf[0] = '\0';
     sTextInputActive = TRUE;
+#ifdef __ANDROID__
     SDL_StartTextInput();
+#endif
 }
 
 void PlatformTextInputStop(void)
 {
     sTextInputActive = FALSE;
+#ifdef __ANDROID__
     SDL_StopTextInput();
+#endif
 }
 
 bool8 PlatformTextInputPoll(u8 *buf, u32 size)
@@ -1177,6 +1181,7 @@ void ProcessEvents(void)
             break;
 #endif
         case SDL_TEXTINPUT:
+#ifdef __ANDROID__
             if (sTextInputActive)
             {
                 const char *p = event.text.text;
@@ -1184,6 +1189,7 @@ void ProcessEvents(void)
                     sTextInputBuf[sTextInputLen++] = *p++;
                 sTextInputBuf[sTextInputLen] = '\0';
             }
+#endif
             break;
         case SDL_KEYUP:
             switch (event.key.keysym.sym)
@@ -1210,6 +1216,30 @@ void ProcessEvents(void)
             }
             break;
         case SDL_KEYDOWN:
+#ifndef __ANDROID__
+            if (sTextInputActive && !event.key.repeat)
+            {
+                SDL_Keycode sym = event.key.keysym.sym;
+                char c = 0;
+                if (sym >= SDLK_0 && sym <= SDLK_9)
+                    c = (char)('0' + (sym - SDLK_0));
+                else if (sym >= SDLK_KP_1 && sym <= SDLK_KP_9)
+                    c = (char)('1' + (sym - SDLK_KP_1));
+                else if (sym == SDLK_KP_0)
+                    c = '0';
+                else if (sym == SDLK_PERIOD || sym == SDLK_KP_PERIOD)
+                    c = '.';
+                if (c != 0)
+                {
+                    if (sTextInputLen < sizeof(sTextInputBuf) - 1)
+                    {
+                        sTextInputBuf[sTextInputLen++] = c;
+                        sTextInputBuf[sTextInputLen] = '\0';
+                    }
+                    break;
+                }
+            }
+#endif
             switch (event.key.keysym.sym)
             {
             HANDLE_KEYDOWN(A_BUTTON)
@@ -1223,8 +1253,11 @@ void ProcessEvents(void)
             HANDLE_KEYDOWN(DPAD_LEFT)
             HANDLE_KEYDOWN(DPAD_RIGHT)
             case SDLK_BACKSPACE:
-                if (sTextInputActive && sTextInputLen > 0)
-                    sTextInputBuf[--sTextInputLen] = '\0';
+                if (sTextInputActive && sTextInputLen < sizeof(sTextInputBuf) - 1)
+                {
+                    sTextInputBuf[sTextInputLen++] = (char)0x08;
+                    sTextInputBuf[sTextInputLen] = '\0';
+                }
                 break;
             case SDLK_r:
                 if (event.key.keysym.mod & (KMOD_LCTRL | KMOD_RCTRL))
