@@ -137,6 +137,8 @@ EWRAM_DATA static u16 sLanPort;
 EWRAM_DATA static u8 sLanIp[16];
 EWRAM_DATA static u8 sLanBuf[16];
 EWRAM_DATA static bool8 sLanEditing;
+static const u8 *sLastShownConnectText;
+static bool8 sLanConfigLoaded;
 #endif
 
 static const u16 sOptionMenuText_Pal[] = INCBIN_U16("graphics/interface/option_menu_text.gbapal");
@@ -1004,8 +1006,13 @@ static void DrawBgWindowFrames(void)
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  4,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  4, 26,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  4,  1,  1,  7);
+#ifdef PORTABLE
+    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  5,  1, 17,  7);
+    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  5,  1, 17,  7);
+#else
     FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  5,  1, 18,  7);
     FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  5,  1, 18,  7);
+#endif
 #ifdef PORTABLE
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 21,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 21, 26,  1,  7);
@@ -1088,10 +1095,61 @@ static bool8 LanRowEditable(u8 selection)
     return FALSE;
 }
 
+static void LoadPersistedLanConfig(void)
+{
+    u8 mode;
+    u16 port;
+    char asciiIp[16];
+    u8 *d;
+    const char *s;
+
+    if (!Platform_GetLanConfig(&mode, &port, asciiIp, sizeof(asciiIp)))
+        return;
+    sLanMode = mode;
+    sLanPort = port;
+    s = asciiIp;
+    d = sLanIp;
+    while (*s != '\0' && d < sLanIp + sizeof(sLanIp) - 1)
+    {
+        if (*s >= '0' && *s <= '9')
+            *d++ = (u8)(*s - '0' + CHAR_0);
+        else if (*s == '.')
+            *d++ = CHAR_PERIOD;
+        s++;
+    }
+    *d = EOS;
+}
+
+static void PersistLanConfig(void)
+{
+    char asciiIp[16];
+    u8 *d;
+    const u8 *s;
+
+    s = sLanIp;
+    d = (u8 *)asciiIp;
+    while (*s != EOS && d < (u8 *)asciiIp + sizeof(asciiIp) - 1)
+    {
+        if (*s >= CHAR_0 && *s <= CHAR_9)
+            *d++ = (u8)(*s - CHAR_0 + '0');
+        else if (*s == CHAR_PERIOD)
+            *d++ = '.';
+        s++;
+    }
+    *d = '\0';
+    Platform_SetLanConfig(sLanMode, sLanPort, asciiIp);
+}
+
 static void OpenLanSettings(u8 taskId)
 {
     gTasks[taskId].tPlatformPage = 2;
     gTasks[taskId].tMenuSelection = 0;
+    sLastShownConnectText = NULL;
+    if (!sLanConfigLoaded)
+    {
+        sLanConfigLoaded = TRUE;
+        LoadPersistedLanConfig();
+    }
     if (sLanPort == 0)
     {
         sLanMode = 1;
@@ -1255,6 +1313,7 @@ static void ProcessLanSettingsInput(u8 taskId)
         if (JOY_NEW(A_BUTTON))
         {
             CommitLanEdit(selection);
+            PersistLanConfig();
             DrawLanSettings(taskId);
             HighlightOptionMenuItem(selection);
             CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
@@ -1271,6 +1330,19 @@ static void ProcessLanSettingsInput(u8 taskId)
             drawLanEditUpdate(taskId);
         }
         return;
+    }
+
+    // Refresh the connect-status row the moment it changes (start -> connecting
+    // -> stop) instead of waiting for the cursor to move.
+    {
+        const u8 *connectText = GetLanConnectText();
+        if (connectText != sLastShownConnectText)
+        {
+            sLastShownConnectText = connectText;
+            DrawLanSettings(taskId);
+            HighlightOptionMenuItem(selection);
+            CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+        }
     }
 
     if (JOY_NEW(B_BUTTON) || (JOY_NEW(A_BUTTON) && selection == LAN_BACK))
@@ -1299,6 +1371,7 @@ static void ProcessLanSettingsInput(u8 taskId)
             else
                 sLanMode = sLanMode == 0 ? 2 : sLanMode - 1;
             changed = TRUE;
+            PersistLanConfig();
         }
     }
     else if (JOY_NEW(A_BUTTON))

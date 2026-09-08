@@ -29,7 +29,7 @@ foreach(SOURCE IN LISTS GAME_C)
     add_custom_command(
         OUTPUT "${OUTPUT}"
         COMMAND "${CMAKE_COMMAND}" -E make_directory "${OUTPUT_DIR}"
-        COMMAND /bin/sh -c "cd '${ROOT}' && '${CMAKE_C_COMPILER}' --target=${CMAKE_C_COMPILER_TARGET} --sysroot='${CMAKE_SYSROOT}' -E -std=gnu99 -iquote'${ROOT}/include' -iquote'${ROOT}/gflib' -I'${ROOT}/android/SDL2/include' -DNONMATCHING -DPORTABLE -DPLATFORM_SDL2 -DRENDERER_EASY_DRAW -DMODERN=1 -DUBFIX '${SOURCE}' -o '${OUTPUT}.i' && '${ROOT}/tools/preproc/preproc' '${OUTPUT}.i' '${ROOT}/charmap.txt' > '${OUTPUT}'"
+        COMMAND /bin/sh -c "cd '${ROOT}' && '${CMAKE_C_COMPILER}' --target=${CMAKE_C_COMPILER_TARGET} --sysroot='${CMAKE_SYSROOT}' -E -std=gnu99 -iquote'${ROOT}/include' -iquote'${ROOT}/gflib' -iquote'${ROOT}/src/lnet' -I'${ROOT}/android/SDL2/include' -DNONMATCHING -DPORTABLE -DPLATFORM_SDL2 -DRENDERER_EASY_DRAW -DMODERN=1 -DUBFIX '${SOURCE}' -o '${OUTPUT}.i' && '${ROOT}/tools/preproc/preproc' '${OUTPUT}.i' '${ROOT}/charmap.txt' > '${OUTPUT}'"
         DEPENDS "${SOURCE}" "${ROOT}/tools/preproc/preproc" "${ROOT}/charmap.txt"
         VERBATIM)
     list(APPEND GENERATED_C "${OUTPUT}")
@@ -80,6 +80,7 @@ add_library(main SHARED ${GENERATED_C} "${GAME_DATA_OBJECT}")
 target_include_directories(main PRIVATE
     "${ROOT}"
     "${ROOT}/sound"
+    "${ROOT}/src/lnet"
     "${ROOT}/android/SDL2/include")
 target_compile_definitions(main PRIVATE
     NONMATCHING PORTABLE PLATFORM_SDL2 RENDERER_EASY_DRAW MODERN=1 UBFIX)

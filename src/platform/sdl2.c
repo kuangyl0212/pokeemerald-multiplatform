@@ -67,6 +67,10 @@ static u8 sBorderBackground;
 static bool sHasBorderBackgroundConfig;
 static u8 sBackgroundOrderVersion;
 static u8 sPlatformSettings[PLATFORM_SETTING_COUNT] = {0, 4, 0, 1, 1, 10};
+static u8 sLanModePersist;
+static u16 sLanPortPersist;
+static char sLanIpPersist[16] = "";
+static bool sHasLanPersist;
 #ifdef __ANDROID__
 static SDL_GameController *androidController;
 #endif
@@ -690,6 +694,28 @@ static void ReadConfigFile(void)
             sPlatformSettings[PLATFORM_SETTING_BORDER] = value != 0;
         else if (sscanf(line, "volume=%u", &value) == 1 && value <= 10)
             sPlatformSettings[PLATFORM_SETTING_VOLUME] = value;
+        else if (sscanf(line, "lanMode=%u", &value) == 1 && value <= 2)
+        {
+            sLanModePersist = value;
+            sHasLanPersist = true;
+        }
+        else if (sscanf(line, "lanPort=%u", &value) == 1 && value > 0 && value <= 65535)
+        {
+            sLanPortPersist = value;
+            sHasLanPersist = true;
+        }
+        else if (sscanf(line, "lanIp=%15s", sLanIpPersist) == 1)
+        {
+            /* Sanitize: only digits and dots */
+            char *c;
+            bool ok = true;
+            for (c = sLanIpPersist; *c != '\0'; c++)
+                if (!((*c >= '0' && *c <= '9') || *c == '.'))
+                    ok = false;
+            if (!ok)
+                sLanIpPersist[0] = '\0';
+            sHasLanPersist = true;
+        }
 #ifdef __ANDROID__
         else if (sscanf(line, "displayMode=%u", &value) == 1 && value <= 1)
             sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE] = value;
@@ -712,6 +738,9 @@ static void StoreConfigFile(void)
     fprintf(configFile, "vsync=%u\n", sPlatformSettings[PLATFORM_SETTING_VSYNC]);
     fprintf(configFile, "border=%u\n", sPlatformSettings[PLATFORM_SETTING_BORDER]);
     fprintf(configFile, "volume=%u\n", sPlatformSettings[PLATFORM_SETTING_VOLUME]);
+    fprintf(configFile, "lanMode=%u\n", sLanModePersist);
+    fprintf(configFile, "lanPort=%u\n", (unsigned)sLanPortPersist);
+    fprintf(configFile, "lanIp=%s\n", sLanIpPersist[0] ? sLanIpPersist : "192.168.1.1");
 #ifdef __ANDROID__
     fprintf(configFile, "displayMode=%u\n", sPlatformSettings[PLATFORM_SETTING_DISPLAY_MODE]);
 #endif
@@ -839,6 +868,42 @@ void Platform_SetSetting(enum PlatformSetting setting, u8 value)
     }
 #endif
     // Android：displayMode/border 切换由渲染循环每帧动态读取 sPlatformSettings，无需在此处调用 SDL API
+    StoreConfigFile();
+}
+
+bool8 Platform_GetLanConfig(u8 *mode, u16 *port, char *ipAscii, int ipSize)
+{
+    if (!sHasLanPersist)
+        return FALSE;
+    *mode = sLanModePersist;
+    *port = sLanPortPersist;
+    if (ipSize > 0)
+    {
+        int i = 0;
+        while (sLanIpPersist[i] != '\0' && i < ipSize - 1)
+        {
+            ipAscii[i] = sLanIpPersist[i];
+            i++;
+        }
+        ipAscii[i] = '\0';
+    }
+    return TRUE;
+}
+
+void Platform_SetLanConfig(u8 mode, u16 port, const char *ipAscii)
+{
+    sLanModePersist = mode;
+    sLanPortPersist = port;
+    {
+        int i = 0;
+        while (ipAscii != NULL && ipAscii[i] != '\0' && i < (int)sizeof(sLanIpPersist) - 1)
+        {
+            sLanIpPersist[i] = ipAscii[i];
+            i++;
+        }
+        sLanIpPersist[i] = '\0';
+    }
+    sHasLanPersist = true;
     StoreConfigFile();
 }
 

@@ -31,6 +31,8 @@ void Platform_SetSetting(enum PlatformSetting setting, u8 value);
 void PlatformTextInputStart(void);
 void PlatformTextInputStop(void);
 bool8 PlatformTextInputPoll(u8 *buf, u32 size);
+bool8 Platform_GetLanConfig(u8 *mode, u16 *port, char *ipAscii, int ipSize);
+void Platform_SetLanConfig(u8 mode, u16 port, const char *ipAscii);
 void Platform_GetStatus(struct SiiRtcInfo *rtc);
 void Platform_SetStatus(struct SiiRtcInfo *rtc);
 static void UpdateInternalClock(void);

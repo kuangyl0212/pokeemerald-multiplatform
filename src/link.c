@@ -1797,25 +1797,16 @@ void LinkPlayerFromBlock(u32 who)
 
 static LNetLink *sPortableLanLink;
 
-// LAN debug entry for the PC build. A pending connect recorded here (via
-// command-line args) is realized on the first game-frame pump so TCP setup
-// happens inside the emulated game's own thread and frame cadence.
-typedef struct
-{
-    bool32 queued;
-    u8     role; // 1 host, 2 client
-    u16    port;
-    char   host[64];
-} PortLanAutoRequest;
-
-static PortLanAutoRequest sLanAuto;
 static s32 sLanLastLive = -1;
+static s32 sLanLastReady = -1;
 static bool32 sLanLoggedHandshake;
 static const char *sLanLogPath;
 static bool32 sLanOpenLink;
 static bool32 sLanLinkOpened;
 
 static void PortLanLog(const char *fmt, ...);
+static void PortLanPollConnection(int *err);
+static bool32 IsLanLinkReady(void);
 
 void PortLanSetLogFile(const char *path)
 {
@@ -1833,114 +1824,110 @@ static void PortLanLog(const char *fmt, ...)
 {
     va_list args;
     FILE *fp;
+    char buf[512];
 
     va_start(args, fmt);
-    if (sLanLogPath != NULL)
-        fp = fopen(sLanLogPath, "a");
-    else
-        fp = NULL;
+    vsnprintf(buf, sizeof(buf), fmt, args);
+    va_end(args);
+
+    fp = fopen((sLanLogPath != NULL) ? sLanLogPath : "lan.log", "a");
     if (fp != NULL)
     {
-        vfprintf(fp, fmt, args);
+        fputs(buf, fp);
         fclose(fp);
     }
-    va_end(args);
+#ifdef __ANDROID__
+    /* Native stderr shows up in logcat without having to link liblog. */
+    fprintf(stderr, "[pokeelan] %s", buf);
+#endif
 }
 
 void PortLanRequestHost(u16 port)
 {
     LanLinkClose();
-    sLanAuto.queued = TRUE;
-    sLanAuto.role = 1;
-    sLanAuto.port = port;
-    sLanAuto.host[0] = '\0';
     sLanLastLive = -1;
     sLanLoggedHandshake = FALSE;
-    PortLanLog("[LAN] queued: host on port %u\n", (unsigned)port);
+    sLanLastReady = -1;
+    PortLanLog("[LAN] opening host on port %u\n", (unsigned)port);
+    LanLinkOpenAsHost(port);
 }
 
 void PortLanRequestClient(const char *host, u16 port)
 {
     LanLinkClose();
-    sLanAuto.queued = TRUE;
-    sLanAuto.role = 2;
-    sLanAuto.port = port;
-    sLanAuto.host[0] = '\0';
-    (void)strncpy(sLanAuto.host, host, sizeof(sLanAuto.host) - 1);
-    sLanAuto.host[sizeof(sLanAuto.host) - 1] = '\0';
     sLanLastLive = -1;
     sLanLoggedHandshake = FALSE;
-    PortLanLog("[LAN] queued: client -> %s:%u\n", host, (unsigned)port);
+    sLanLastReady = -1;
+    PortLanLog("[LAN] opening client -> %s:%u\n", host, (unsigned)port);
+    LanLinkOpenAsClient(host, port);
 }
 
 static void PortLanDebugPump(void)
 {
     int live;
 
-    if (sLanAuto.queued)
-    {
-        sLanAuto.queued = FALSE;
-        if (sLanAuto.role == 1)
-        {
-            PortLanLog("[LAN] opening host on port %u\n", (unsigned)sLanAuto.port);
-            LanLinkOpenAsHost(sLanAuto.port);
-        }
-        else if (sLanAuto.role == 2)
-        {
-            PortLanLog("[LAN] opening client to %s:%u\n", sLanAuto.host, (unsigned)sLanAuto.port);
-            LanLinkOpenAsClient(sLanAuto.host, sLanAuto.port);
-        }
-        sLanLastLive = -1;
-    }
-
     live = IsLanLinkLive();
-    if (live != sLanLastLive)
+    if (live && !IsLanLinkReady())
     {
-        if (sLanLastLive >= 0)
-            PortLanLog("[LAN] status: %s\n", live ? "connected" : "disconnected");
-        else if (live)
-            PortLanLog("[LAN] status: connected\n");
-        sLanLastLive = live;
+        /* Non-blocking connection establishment: advance the accept/connect
+         * handshake every frame so the game loop never blocks on the socket. */
+        int perr = 0;
+        PortLanPollConnection(&perr);
     }
-
-    if (live && sLanOpenLink && !sLanLinkOpened)
     {
-        sLanLinkOpened = TRUE;
-        PortLanLog("[LAN] starting serial handshake (OpenLink)\n");
-        OpenLink();
-    }
-
-    if (live && sLanOpenLink)
-    {
-        /* The CLI harness boots to a non-link screen, so no Cable Club UI
-         * raises the advance trigger. Mimic CheckShouldAdvanceLinkState, but
-         * crucially do NOT force the trigger during HANDSHAKE: LinkMain1's
-         * HANDSHAKE `default` arm calls CheckMasterOrSlave(), which assigns
-         * isMaster from the SD/SI terminals (host -> master). Forcing the
-         * advance every frame skips that and leaves both sides slave, so
-         * neither ever sends MASTER_HANDSHAKE and DoHandshake can't settle.
-         * Before HANDSHAKE we still force it to march START1 -> HANDSHAKE. */
-        if (gLink.state < LINK_STATE_HANDSHAKE)
+        bool8 ready = live && IsLanLinkReady();
+        if ((bool8)live != sLanLastLive || ready != (bool8)sLanLastReady)
         {
-            gShouldAdvanceLinkState = 1;
+            if (sLanLastLive >= 0 || sLanLastReady >= 0)
+                PortLanLog("[LAN] status: %s\n", ready ? "connected" : "connecting/disconnected");
+            else if (ready)
+                PortLanLog("[LAN] status: connected\n");
+            sLanLastLive = (int)live;
+            sLanLastReady = (int)ready;
         }
-        else if (gLink.state == LINK_STATE_HANDSHAKE
-                 && (gLinkStatus & LINK_STAT_MASTER)
-                 && EXTRACT_PLAYER_COUNT(gLinkStatus) > 1)
-        {
-            gShouldAdvanceLinkState = 1;
-        }
-    }
 
-    if (live && gReceivedRemoteLinkPlayers && !sLanLoggedHandshake)
-    {
-        sLanLoggedHandshake = TRUE;
-        PortLanLog("[LAN] handshake: remote link player(s) received, count=%u\n",
-                   (unsigned)GetLinkPlayerCount());
-    }
-    else if (live && !gReceivedRemoteLinkPlayers)
-    {
-        sLanLoggedHandshake = FALSE;
+        if (ready && sLanOpenLink && !sLanLinkOpened)
+        {
+            sLanLinkOpened = TRUE;
+            PortLanLog("[LAN] starting serial handshake (OpenLink)\n");
+            OpenLink();
+        }
+
+        if (ready && (sLanOpenLink || gLinkCallback != NULL))
+        {
+            /* The CLI harness boots to a non-link screen, so no Cable Club UI
+             * raises the advance trigger, and even in-game the one-shot
+             * Task_TriggerHandshake from OpenLink only marches START1 -> HANDSHAKE
+             * once (it is consumed and cleared). Mimic CheckShouldAdvanceLinkState
+             * for a connected LAN peer, but crucially do NOT force the trigger
+             * blindly during HANDSHAKE: LinkMain1's HANDSHAKE `default` arm calls
+             * CheckMasterOrSlave(), which assigns isMaster from the SD/SI
+             * terminals (host -> master). Forcing every frame skips that and
+             * leaves both sides slave, so neither ever sends MASTER_HANDSHAKE and
+             * DoHandshake can't settle. Before HANDSHAKE we still force it to
+             * march START1 -> HANDSHAKE. */
+            if (gLink.state < LINK_STATE_HANDSHAKE)
+            {
+                gShouldAdvanceLinkState = 1;
+            }
+            else if (gLink.state == LINK_STATE_HANDSHAKE
+                     && (gLinkStatus & LINK_STAT_MASTER)
+                     && EXTRACT_PLAYER_COUNT(gLinkStatus) > 1)
+            {
+                gShouldAdvanceLinkState = 1;
+            }
+        }
+
+        if (ready && gReceivedRemoteLinkPlayers && !sLanLoggedHandshake)
+        {
+            sLanLoggedHandshake = TRUE;
+            PortLanLog("[LAN] handshake: remote link player(s) received, count=%u\n",
+                       (unsigned)GetLinkPlayerCount());
+        }
+        else if (ready && !gReceivedRemoteLinkPlayers)
+        {
+            sLanLoggedHandshake = FALSE;
+        }
     }
 }
 
@@ -1980,6 +1967,36 @@ void LanLinkClose(void)
 bool32 IsLanLinkLive(void)
 {
     return sPortableLanLink != NULL && lnet_link_live(sPortableLanLink);
+}
+
+// Advance non-blocking connection establishment. A connecting host/client is
+// driven every frame until the peer connects and the HELLO handshake completes,
+// so the game loop never blocks on accept()/connect(). On a permanent error the
+// link is torn down so the menu can show disconnected again.
+static void PortLanPollConnection(int *err)
+{
+    int r;
+    if (sPortableLanLink == NULL)
+    {
+        if (err)
+            *err = 0;
+        return;
+    }
+    r = lnet_link_poll(sPortableLanLink, err);
+    if (r < 0)
+    {
+        PortLanLog("[LAN] connection failed (err=%d), closing link\n", err ? *err : -1);
+        LanLinkClose();
+        sLanLinkOpened = FALSE;
+        sLanLoggedHandshake = FALSE;
+        sLanLastReady = -1;
+        sLanLastLive = -1;
+    }
+}
+
+static bool32 IsLanLinkReady(void)
+{
+    return sPortableLanLink != NULL && lnet_link_ready(sPortableLanLink);
 }
 
 // A GBA SIO bus is clocked at 2Mbps and shifts out every word the software
@@ -2023,22 +2040,31 @@ static int PortableLanSlot(void)
     u16 mySend;
     u16 peerSend;
     u64 recvView;
+    int r;
 
     if (!IsLanLinkLive())
+        return 0;
+
+    /* The game may enter the serial link (OpenLink from the Cable Club) before
+     * the LAN peer has connected. That is NOT a disconnect: keep waiting instead
+     * of tearing the link down into CB2_LinkError. Only a peer that was already
+     * connected and then dies/silently errors is surfaced as a link error. */
+    if (!IsLanLinkReady())
         return 0;
 
     if (gLink.state != LINK_STATE_HANDSHAKE && gLink.state != LINK_STATE_CONN_ESTABLISHED)
         return 0;
 
     mySend = REG_SIOMLT_SEND;
-    if (lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView))
+    r = lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView);
+    if (r > 0)
     {
         REG_SIOMLT_RECV = (vu64)recvView;
         if (gMain.serialCallback)
             gMain.serialCallback();
         return 1;
     }
-    return -1;
+    return r; /* 0: slot still in flight (not ready); -1: peer gone/error */
 }
 
 // The peer closed the TCP session (e.g. the other instance was terminated
@@ -2090,8 +2116,11 @@ bool8 HandleLinkConnection(void)
                               && gLink.sendQueue.count > 0);
              slots++)
         {
-            if (PortableLanSlot() < 0)
+            int r = PortableLanSlot();
+            if (r < 0)
                 peerGone = TRUE;
+            if (r <= 0)
+                break; /* slot in flight / peer done sending this frame */
         }
         if (peerGone)
             HandleLanDisconnect();
