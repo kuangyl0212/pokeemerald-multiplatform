@@ -10,7 +10,6 @@
 #include "lnet_link.h"
 
 #include <stdio.h>
-#include <sched.h>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -83,9 +82,6 @@ static THREAD_RET host_main(void *arg)
         return 0;
     }
     CHECK(lnet_link_role(l) == LNET_ROLE_HOST, "host role is HOST");
-    /* Drive non-blocking accept + HELLO until the peer connects. */
-    while (lnet_link_poll(l, &err) == 0)
-        sched_yield();
     for (k = 0; k < ROUND; k++)
     {
         if (!lnet_link_slot(l, g_hSend[k], &g_hostPeer[k], &recvView))
@@ -115,9 +111,6 @@ static THREAD_RET client_main(void *arg)
         return 0;
     }
     CHECK(lnet_link_role(l) == LNET_ROLE_CLIENT, "client role is CLIENT");
-    /* Drive non-blocking connect + HELLO until the peer connects. */
-    while (lnet_link_poll(l, &err) == 0)
-        sched_yield();
     for (k = 0; k < ROUND; k++)
     {
         if (!lnet_link_slot(l, g_cSend[k], &g_clientPeer[k], &recvView))

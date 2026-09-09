@@ -372,6 +372,7 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
             case EXT_CTRL_CODE_FILL_WINDOW:
             case EXT_CTRL_CODE_JPN:
             case EXT_CTRL_CODE_ENG:
+            case EXT_CTRL_CODE_CHN:
             case EXT_CTRL_CODE_PAUSE_MUSIC:
             case EXT_CTRL_CODE_RESUME_MUSIC:
                 break;
@@ -798,6 +799,7 @@ u8 GetExtCtrlCodeLength(u8 code)
         [EXT_CTRL_CODE_MIN_LETTER_SPACING]     = 2,
         [EXT_CTRL_CODE_JPN]                    = 1,
         [EXT_CTRL_CODE_ENG]                    = 1,
+        [EXT_CTRL_CODE_CHN]                    = 1,
         [EXT_CTRL_CODE_PAUSE_MUSIC]            = 1,
         [EXT_CTRL_CODE_RESUME_MUSIC]           = 1,
     };

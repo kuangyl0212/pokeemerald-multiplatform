@@ -12,7 +12,6 @@
 #include "lnet_sio.h"
 
 #include <stdio.h>
-#include <sched.h>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -81,31 +80,16 @@ static THREAD_RET host_main(void *arg)
         g_hostFail = 1;
         return 0;
     }
-    /* Drive non-blocking accept + HELLO until the peer connects. */
-    while (lnet_session_poll(s, &err) == 0)
-        sched_yield();
     CHECK(lnet_session_role(s) == LNET_ROLE_HOST, "host role is HOST");
     sio = lnet_sio_new(LNET_ROLE_HOST);
     for (k = 0; k < ROUND; k++)
     {
         g_hostRecv[k] = lnet_sio_recv_current(sio);
-        /* exchange() is non-blocking now; spin until the slot completes. */
-        while (1)
+        if (lnet_session_exchange(s, g_hSend[k], &peer) != 1 || peer != g_cSend[k])
         {
-            int r = lnet_session_exchange(s, g_hSend[k], &peer);
-            if (r == 1)
-                break;
-            if (r < 0)
-            {
-                g_hostFail = 1;
-                break;
-            }
-            sched_yield();
-        }
-        if (g_hostFail)
-            break;
-        if (peer != g_cSend[k])
             g_hostFail = 1;
+            break;
+        }
         lnet_sio_commit(sio, g_hSend[k], peer);
     }
     CHECK(g_hostRecv[0] == 0xFFFFFFFF00000000ULL, "host recv[0] starts idle (0xFFFF high slots)");
@@ -128,31 +112,16 @@ static THREAD_RET client_main(void *arg)
         g_clientFail = 1;
         return 0;
     }
-    /* Drive non-blocking connect + HELLO until the peer connects. */
-    while (lnet_session_poll(s, &err) == 0)
-        sched_yield();
     CHECK(lnet_session_role(s) == LNET_ROLE_CLIENT, "client role is CLIENT");
     sio = lnet_sio_new(LNET_ROLE_CLIENT);
     for (k = 0; k < ROUND; k++)
     {
         g_clientRecv[k] = lnet_sio_recv_current(sio);
-        /* exchange() is non-blocking now; spin until the slot completes. */
-        while (1)
+        if (lnet_session_exchange(s, g_cSend[k], &peer) != 1 || peer != g_hSend[k])
         {
-            int r = lnet_session_exchange(s, g_cSend[k], &peer);
-            if (r == 1)
-                break;
-            if (r < 0)
-            {
-                g_clientFail = 1;
-                break;
-            }
-            sched_yield();
-        }
-        if (g_clientFail)
-            break;
-        if (peer != g_hSend[k])
             g_clientFail = 1;
+            break;
+        }
         lnet_sio_commit(sio, g_cSend[k], peer);
     }
     CHECK(g_clientRecv[0] == 0xFFFFFFFF00000000ULL, "client recv[0] starts idle (0xFFFF high slots)");

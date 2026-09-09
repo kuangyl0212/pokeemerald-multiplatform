@@ -35,23 +35,10 @@ void lnet_session_close(LNetSession *s);
 LNetRole lnet_session_role(const LNetSession *s);
 
 /*
- * Drive connection establishment for a session created with
- * lnet_session_host()/lnet_session_join(). Both return a pending session that
- * does not block the caller. Call this repeatedly (e.g. every game frame) to
- * accept/connect and complete the HELLO handshake. Returns 1 when ready for
- * exchange, 0 while still connecting, -1 on a permanent error.
- */
-int lnet_session_poll(LNetSession *s, int *err);
-
-/* 1 once the session is connected and the HELLO handshake is complete. */
-int lnet_session_is_ready(const LNetSession *s);
-
-/*
  * Exchange one SIO slot value with the peer.
- * Pass your own CURRENT per-slot SEND value; on success *peerVal receives the
- * peer's SEND for the same slot. Blocks until the full 3-byte slot has been
- * written and read (the whole atomic transfer). Returns 1 on success, -1 on a
- * permanent/protocol error or a peer that closed.
+ * Pass your OWN current per-slot SEND value; on success *peerVal receives the
+ * peer's SEND for the same slot. Blocks until the peer also calls this.
+ * Returns 1 on success, 0 if the peer closed, -1 on protocol/transport error.
  */
 int lnet_session_exchange(LNetSession *s, unsigned short myVal, unsigned short *peerVal);
 

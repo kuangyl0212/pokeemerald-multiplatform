@@ -24,16 +24,6 @@ LNetRole lnet_link_role(const LNetLink *l);
 int lnet_link_live(const LNetLink *l);
 
 /*
- * Advance connection establishment (call every game frame while connecting).
- * Returns 1 once the session is ready for exchange, 0 while still connecting,
- * -1 on a permanent error. Safe to call on a live/ready link.
- */
-int lnet_link_poll(LNetLink *l, int *err);
-
-/* 1 once the link is connected and the HELLO handshake is complete. */
-int lnet_link_ready(const LNetLink *l);
-
-/*
  * Perform one 16-bit SIO slot exchange.  Sends `mySend`, sets *peerSend to the
  * peer's value for the same slot, and writes *recvView to the 4-player RECV the
  * GBA would present (slot0 = host SEND, slot1 = client SEND, others 0).
