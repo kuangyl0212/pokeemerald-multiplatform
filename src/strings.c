@@ -1528,6 +1528,10 @@ const u8 gText_LanStatus[] = _("{CHN}连接状态");
 const u8 gText_LanStart[] = _("{CHN}启动联机");
 const u8 gText_LanStop[] = _("{CHN}停止联机");
 const u8 gText_LanConnecting[] = _("{CHN}连接中…");
+const u8 gText_LanRelayHost[] = _("{CHN}中继建房");
+const u8 gText_LanRelayJoin[] = _("{CHN}中继加入");
+const u8 gText_LanRoom[] = _("{CHN}房间号");
+const u8 gText_LanRoomPrompt[] = _("{CHN}请输入");
 #endif
 const u8 gText_NumPlayerLink[] = _("{CHN}{STR_VAR_1}P联机");
 const u8 gText_BronzeCard[] = _("{CHN}青铜");

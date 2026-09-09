@@ -140,6 +140,32 @@ LNetSession *lnet_session_join(const char *host, unsigned short port, int *err)
     return s;
 }
 
+/* Wrap an already-connected, READY transport socket as a session. Only the
+ * HELLO role handshake is still outstanding; lnet_session_poll() advances it. */
+LNetSession *lnet_session_open(LNetSock *sock, LNetRole role, int *err)
+{
+    LNetSession *s;
+
+    if (err)
+        *err = LNET_ERR_OK;
+    if (sock == NULL)
+    {
+        if (err)
+            *err = LNET_ERR_SOCKET;
+        return NULL;
+    }
+
+    s = (LNetSession *)calloc(1, sizeof(LNetSession));
+    s->sock = sock; /* transport is already established */
+    s->role = role;
+    s->alive = 1;
+    s->connecting = 0;
+    s->hsStep = HS_STEP_FIRST;
+    s->hsOutSent = 0;
+    s->hsInGot = 0;
+    return s;
+}
+
 /* Drive connection establishment for a pending session. Returns 1 when the
  * HELLO handshake is complete (the session is ready for exchange), 0 while
  * still connecting (poll again later), or -1 on a permanent error. */

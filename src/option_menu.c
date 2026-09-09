@@ -135,9 +135,11 @@ EWRAM_DATA static bool8 sArrowPressed = FALSE;
 EWRAM_DATA static u8 sLanMode;
 EWRAM_DATA static u16 sLanPort;
 EWRAM_DATA static u8 sLanIp[16];
+EWRAM_DATA static u8 sLanRoom[16];
 EWRAM_DATA static u8 sLanBuf[16];
 EWRAM_DATA static bool8 sLanEditing;
 static const u8 *sLastShownConnectText;
+static char sDrawnRoom[32]; // last relay room id we painted (content snapshot, not pointer)
 static bool8 sLanConfigLoaded;
 #endif
 
@@ -1032,6 +1034,7 @@ enum
     LAN_MODE,
     LAN_PORT,
     LAN_IP,
+    LAN_ROOM,
     LAN_CONNECT,
     LAN_BACK,
     LAN_ROW_COUNT,
@@ -1057,6 +1060,22 @@ static void CancelLanEdit(void)
     SetLanEditing(FALSE);
 }
 
+// Convert a game-font numeric/IP buffer to an ASCII string (digits + '.').
+// Digits are kept, every other char is dropped, the result is NUL-terminated.
+static void LanFontToAscii(const u8 *src, char *dst, u32 dstSize)
+{
+    const u8 *s = src;
+    char *d = dst;
+    for (; *s != EOS && d < dst + dstSize - 1; s++)
+    {
+        if (*s >= CHAR_0 && *s <= CHAR_9)
+            *d++ = (char)(*s - CHAR_0 + '0');
+        else if (*s == CHAR_PERIOD)
+            *d++ = '.';
+    }
+    *d = '\0';
+}
+
 static void CommitLanEdit(u8 selection)
 {
     SetLanEditing(FALSE);
@@ -1067,6 +1086,17 @@ static void CommitLanEdit(u8 selection)
             sLanIp[i] = sLanBuf[i];
         if (i < sizeof(sLanIp))
             sLanIp[i] = EOS;
+    }
+    else if (selection == LAN_ROOM)
+    {
+        u8 i;
+        for (i = 0; i < sizeof(sLanRoom) && sLanBuf[i] != EOS; i++)
+        {
+            if (sLanBuf[i] >= CHAR_0 && sLanBuf[i] <= CHAR_9)
+                sLanRoom[i] = sLanBuf[i];
+        }
+        if (i < sizeof(sLanRoom))
+            sLanRoom[i] = EOS;
     }
     else
     {
@@ -1090,7 +1120,9 @@ static bool8 LanRowEditable(u8 selection)
 {
     if (selection == LAN_PORT)
         return TRUE;
-    if (selection == LAN_IP && sLanMode == 2)
+    if (selection == LAN_IP && (sLanMode == 2 || sLanMode == 3 || sLanMode == 4))
+        return TRUE;
+    if (selection == LAN_ROOM && sLanMode == 4)
         return TRUE;
     return FALSE;
 }
@@ -1145,6 +1177,7 @@ static void OpenLanSettings(u8 taskId)
     gTasks[taskId].tPlatformPage = 2;
     gTasks[taskId].tMenuSelection = 0;
     sLastShownConnectText = NULL;
+    sLanRoom[0] = EOS;
     if (!sLanConfigLoaded)
     {
         sLanConfigLoaded = TRUE;
@@ -1211,6 +1244,32 @@ static void DrawLanNumberChoice(u8 row, u16 value)
     DrawLanSettingChoice(row, text);
 }
 
+// The relay room id arrives from the network as ASCII digits, but the game
+// font renders digits at CHAR_0..CHAR_9 (0xA1..0xAA), not ASCII 0x30..0x39.
+// Convert before drawing so the code is actually visible.
+static void DrawLanRelayRoomChoice(u8 row)
+{
+    u8 buf[16];
+    u8 i = 0;
+    const char *room = PortLanGetRelayRoomId();
+    if (room)
+    {
+        for (; room[i] != '\0' && i < sizeof(buf) - 1; i++)
+        {
+            if (room[i] >= '0' && room[i] <= '9')
+                buf[i] = CHAR_0 + (room[i] - '0');
+            else
+                buf[i] = room[i];
+        }
+        buf[i] = EOS;
+    }
+    else
+    {
+        buf[0] = EOS;
+    }
+    DrawLanSettingChoice(row, buf);
+}
+
 static const u8 *GetLanConnectText(void)
 {
     if (PortLanIsConnecting())
@@ -1232,6 +1291,10 @@ static void DrawLanSettings(u8 taskId)
         modeText = gText_LanHost;
     else if (sLanMode == 2)
         modeText = gText_LanClient;
+    else if (sLanMode == 3)
+        modeText = gText_LanRelayHost;
+    else if (sLanMode == 4)
+        modeText = gText_LanRelayJoin;
     else
         modeText = gText_LanOff;
 
@@ -1247,7 +1310,16 @@ static void DrawLanSettings(u8 taskId)
     if (sLanEditing && sel == LAN_IP)
         DrawLanSettingChoice(row++, sLanBuf);
     else
-        DrawLanSettingChoice(row++, sLanMode == 2 ? sLanIp : gText_LanDash);
+        DrawLanSettingChoice(row++, (sLanMode == 2 || sLanMode == 3 || sLanMode == 4) ? sLanIp : gText_LanDash);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanRoom, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
+    if (sLanEditing && sel == LAN_ROOM)
+        DrawLanSettingChoice(row++, sLanBuf);
+    else if (sLanMode == 4)
+        DrawLanSettingChoice(row++, sLanRoom);
+    else if (sLanMode == 3)
+        DrawLanRelayRoomChoice(row++);
+    else
+        DrawLanSettingChoice(row++, gText_LanDash);
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_LanStatus, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
     DrawLanSettingChoice(row++, GetLanConnectText());
     AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_Back, 8, row * OPTION_ROW_HEIGHT + 1, TEXT_SKIP_DRAW, NULL);
@@ -1307,6 +1379,12 @@ static void ProcessLanSettingsInput(u8 taskId)
     u8 selection = gTasks[taskId].tMenuSelection;
     bool8 changed = FALSE;
 
+    // Drive the LAN/relay connection every frame while this menu is open. The
+    // relay CREATE is only realised inside PortLanPump(), so without this a
+    // relay host would never send CREATE (and the room code would never arrive)
+    // until the player left the settings screen.
+    PortLanPump();
+
     if (sLanEditing)
     {
         // Editing state: digits/plus backspace build the buffer, A commits, B cancels.
@@ -1333,12 +1411,49 @@ static void ProcessLanSettingsInput(u8 taskId)
     }
 
     // Refresh the connect-status row the moment it changes (start -> connecting
-    // -> stop) instead of waiting for the cursor to move.
+    // -> stop) instead of waiting for the cursor to move. A relay host also
+    // re-renders as soon as the relay reports a room code so it appears on
+    // screen immediately.
     {
         const u8 *connectText = GetLanConnectText();
-        if (connectText != sLastShownConnectText)
+        // PortLanGetRelayRoomId() always returns the SAME shared buffer, so a
+        // pointer (or pointer-content) comparison can never observe the buffer
+        // filling up. Snapshot the drawn text and diff contents instead.
+        int roomChanged = 0;
+        if (sLanMode == 3)
         {
+            const char *room = PortLanGetRelayRoomId();
+            int i = 0;
+            for (; i < (int)sizeof(sDrawnRoom) - 1; i++)
+            {
+                char c = (room && room[i]) ? room[i] : '\0';
+                if (c != sDrawnRoom[i])
+                {
+                    if (room && room[i])
+                        roomChanged = 1;  // room text gained content
+                    else if (sDrawnRoom[i] != '\0')
+                        roomChanged = 1;  // room text emptied
+                    break;
+                }
+                if (c == '\0')
+                    break;
+            }
+        }
+        if (connectText != sLastShownConnectText || roomChanged)
+        {
+            int i = 0;
             sLastShownConnectText = connectText;
+            if (sLanMode == 3)
+            {
+                const char *room = PortLanGetRelayRoomId();
+                for (; room && room[i] && i < (int)sizeof(sDrawnRoom) - 1; i++)
+                    sDrawnRoom[i] = room[i];
+                sDrawnRoom[i] = '\0';
+            }
+            else
+            {
+                sDrawnRoom[0] = '\0';
+            }
             DrawLanSettings(taskId);
             HighlightOptionMenuItem(selection);
             CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
@@ -1367,9 +1482,9 @@ static void ProcessLanSettingsInput(u8 taskId)
         if (selection == LAN_MODE)
         {
             if (right)
-                sLanMode = sLanMode == 2 ? 0 : sLanMode + 1;
+                sLanMode = (u8)((sLanMode + 1) % 5);
             else
-                sLanMode = sLanMode == 0 ? 2 : sLanMode - 1;
+                sLanMode = (u8)(sLanMode == 0 ? 4 : sLanMode - 1);
             changed = TRUE;
             PersistLanConfig();
         }
@@ -1388,20 +1503,23 @@ static void ProcessLanSettingsInput(u8 taskId)
             }
             else if (sLanMode == 2 && sLanIp[0] != EOS)
             {
-                u8 asciiIp[16];
-                u8 *s = sLanIp;
-                u8 *d = asciiIp;
-
-                while (*s != EOS && d < asciiIp + sizeof(asciiIp) - 1)
-                {
-                    if (*s >= CHAR_0 && *s <= CHAR_9)
-                        *d++ = (u8)(*s - CHAR_0 + '0');
-                    else if (*s == CHAR_PERIOD)
-                        *d++ = '.';
-                    s++;
-                }
-                *d = '\0';
+                char asciiIp[32];
+                LanFontToAscii(sLanIp, asciiIp, sizeof(asciiIp));
                 PortLanRequestClient(asciiIp, sLanPort);
+            }
+            else if (sLanMode == 3 && sLanIp[0] != EOS)
+            {
+                char asciiIp[32];
+                LanFontToAscii(sLanIp, asciiIp, sizeof(asciiIp));
+                PortLanRequestRelayCreate(asciiIp, sLanPort, "pokeemerald", LNET_RELAY_VERSION);
+            }
+            else if (sLanMode == 4 && sLanIp[0] != EOS && sLanRoom[0] != EOS)
+            {
+                char asciiIp[32];
+                char asciiRoom[16];
+                LanFontToAscii(sLanIp, asciiIp, sizeof(asciiIp));
+                LanFontToAscii(sLanRoom, asciiRoom, sizeof(asciiRoom));
+                PortLanRequestRelayJoin(asciiIp, sLanPort, asciiRoom, LNET_RELAY_VERSION);
             }
             changed = TRUE;
         }

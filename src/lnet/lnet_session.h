@@ -30,6 +30,15 @@ LNetSession *lnet_session_host(unsigned short port, int *err);
  */
 LNetSession *lnet_session_join(const char *host, unsigned short port, int *err);
 
+/*
+ * Build a session over an already-connected, READY transport socket (e.g. the
+ * relay socket after the server reported READY to both peers). The socket's
+ * transport is established, so only the HELLO role handshake remains: drive it
+ * with lnet_session_poll() before lnet_session_exchange(). `sock` is owned by
+ * this session and is closed by lnet_session_close().
+ */
+LNetSession *lnet_session_open(LNetSock *sock, LNetRole role, int *err);
+
 void lnet_session_close(LNetSession *s);
 
 LNetRole lnet_session_role(const LNetSession *s);

@@ -18,6 +18,14 @@ typedef struct LNetLink LNetLink;
  * err is LNET_ERR_OK (0) on success, or LNET_ERR_* on failure. */
 LNetLink *lnet_link_host(unsigned short port, int *err);
 LNetLink *lnet_link_join(const char *host, unsigned short port, int *err);
+
+/*
+ * Build a link over an already-connected, READY transport socket (e.g. the
+ * relay socket after the server reported READY). `sock` is owned by the link.
+ * The HELLO role handshake is still driven by lnet_link_poll() before exchange.
+ */
+LNetLink *lnet_link_open(LNetSock *sock, LNetRole role, int *err);
+
 void lnet_link_close(LNetLink *l);
 
 LNetRole lnet_link_role(const LNetLink *l);

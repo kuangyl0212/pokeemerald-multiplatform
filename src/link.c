@@ -1,4 +1,5 @@
 #include "global.h"
+#include <stdarg.h>
 #include "m4a.h"
 #include "malloc.h"
 #include "reload_save.h"
@@ -1792,20 +1793,30 @@ void LinkPlayerFromBlock(u32 who)
 }
 
 #ifdef PORTABLE
-#include <stdarg.h>
 #include "lnet_link.h"
+#include "lnet/lnet_relay.h"
 
 static LNetLink *sPortableLanLink;
+static char sPortableRelayRoomId[32];
+// A relay socket that has issued CREATE (host) or JOIN (client) and is waiting
+// for the relay server's READY (room full). Polled once per frame via
+// lnet_relay_poll_ready so neither side blocks the game loop while the room
+// settles; on READY it is upgraded to a host/client link.
+static LNetSock *sPortableRelayPending;
+static u8 sPortableRelayPendingRole; // LNET_ROLE_HOST / LNET_ROLE_CLIENT
 
 // LAN debug entry for the PC build. A pending connect recorded here (via
-// command-line args) is realized on the first game-frame pump so TCP setup
-// happens inside the emulated game's own thread and frame cadence.
+// command-line args) or the in-game settings is realized on the first game-frame
+// pump so TCP setup happens inside the emulated game's own thread and frame cadence.
 typedef struct
 {
     bool32 queued;
-    u8     role; // 1 host, 2 client
+    u8     role; // 1 host, 2 client, 3 relay-host, 4 relay-client
     u16    port;
-    char   host[64];
+    char   host[64]; // 1/2: host IP; 3/4: relay server address
+    char   room[32]; // relay only: host -> room name, client -> room code
+    char   version[16]; // relay only: protocol version
+    char   name[32]; // relay only: host room name (for display)
 } PortLanAutoRequest;
 
 static PortLanAutoRequest sLanAuto;
@@ -1882,10 +1893,88 @@ void PortLanRequestClient(const char *host, u16 port)
     LanLinkOpenAsClient(sLanAuto.host, sLanAuto.port);
 }
 
+void PortLanRequestRelayCreate(const char *server, u16 port, const char *roomName, const char *version)
+{
+    LanLinkClose();
+    sPortableRelayRoomId[0] = '\0';
+    sLanAuto.queued = TRUE;
+    sLanAuto.role = 3;
+    sLanAuto.port = port;
+    sLanAuto.host[0] = '\0';
+    (void)strncpy(sLanAuto.host, server, sizeof(sLanAuto.host) - 1);
+    sLanAuto.host[sizeof(sLanAuto.host) - 1] = '\0';
+    sLanAuto.room[0] = '\0';
+    sLanAuto.name[0] = '\0';
+    if (roomName != NULL)
+        (void)strncpy(sLanAuto.name, roomName, sizeof(sLanAuto.name) - 1);
+    sLanAuto.name[sizeof(sLanAuto.name) - 1] = '\0';
+    sLanAuto.version[0] = '\0';
+    if (version != NULL)
+        (void)strncpy(sLanAuto.version, version, sizeof(sLanAuto.version) - 1);
+    sLanAuto.version[sizeof(sLanAuto.version) - 1] = '\0';
+    sLanLastLive = -1;
+    sLanLoggedHandshake = FALSE;
+    PortLanLog("[LAN] queued: relay host -> %s:%u (name %s, ver %s)\n",
+               server, (unsigned)port, sLanAuto.name, sLanAuto.version);
+}
+
+void PortLanRequestRelayJoin(const char *server, u16 port, const char *roomId, const char *version)
+{
+    LanLinkClose();
+    sPortableRelayRoomId[0] = '\0';
+    sLanAuto.queued = TRUE;
+    sLanAuto.role = 4;
+    sLanAuto.port = port;
+    sLanAuto.host[0] = '\0';
+    (void)strncpy(sLanAuto.host, server, sizeof(sLanAuto.host) - 1);
+    sLanAuto.host[sizeof(sLanAuto.host) - 1] = '\0';
+    sLanAuto.room[0] = '\0';
+    if (roomId != NULL)
+        (void)strncpy(sLanAuto.room, roomId, sizeof(sLanAuto.room) - 1);
+    sLanAuto.room[sizeof(sLanAuto.room) - 1] = '\0';
+    sLanAuto.version[0] = '\0';
+    if (version != NULL)
+        (void)strncpy(sLanAuto.version, version, sizeof(sLanAuto.version) - 1);
+    sLanAuto.version[sizeof(sLanAuto.version) - 1] = '\0';
+    sLanLastLive = -1;
+    sLanLoggedHandshake = FALSE;
+    PortLanLog("[LAN] queued: relay client -> %s:%u (room %s, ver %s)\n",
+               server, (unsigned)port, sLanAuto.room, sLanAuto.version);
+}
+
+const char *PortLanGetRelayRoomId(void)
+{
+    return (sLanAuto.role == 3) ? sPortableRelayRoomId : NULL;
+}
+
+static void PortLanDebugPump(void);
+void PortLanPump(void)
+{
+    PortLanDebugPump();
+}
+
 static void PortLanDebugPump(void)
 {
     int live;
 
+    /* Drive the non-blocking connection + HELLO handshake. When the host has
+     * opened a listener (or the client issued a connect) this advances the
+     * accept/connect and HELLO a few bytes per frame without ever blocking the
+     * game loop; until it completes IsLanLinkLive() stays false. */
+    if (sPortableLanLink != NULL)
+    {
+        int herr;
+        if (lnet_link_poll(sPortableLanLink, &herr) < 0)
+        {
+            PortLanLog("[LAN] link setup failed (err=%d), closing\n", herr);
+            LanLinkClose();
+        }
+    }
+
+    /* role dispatch: 1/2 are queued LAN links; 3/4 are relay links. The UI
+     * realises a request on the next pump: LAN links open directly, while relay
+     * links issue a non-blocking CREATE (host) / JOIN (client) and leave the
+     * pending socket for the READY polling below. */
     if (sLanAuto.queued)
     {
         sLanAuto.queued = FALSE;
@@ -1899,20 +1988,64 @@ static void PortLanDebugPump(void)
             PortLanLog("[LAN] opening client to %s:%u\n", sLanAuto.host, (unsigned)sLanAuto.port);
             LanLinkOpenAsClient(sLanAuto.host, sLanAuto.port);
         }
+        else if (sLanAuto.role == 3)
+        {
+            int rerr = 0;
+            LNetSock *sock = lnet_relay_connect_create(sLanAuto.host, sLanAuto.port,
+                            sLanAuto.name, sLanAuto.version,
+                            sPortableRelayRoomId, sizeof(sPortableRelayRoomId), &rerr);
+            if (sock == NULL)
+            {
+                PortLanLog("[LAN] relay create failed (err %d)\n", rerr);
+                sPortableRelayRoomId[0] = '\0';
+            }
+            else
+            {
+                PortLanLog("[LAN] relay host created, waiting for READY\n");
+                sPortableRelayPending = sock;
+                sPortableRelayPendingRole = LNET_ROLE_HOST;
+            }
+        }
+        else if (sLanAuto.role == 4)
+        {
+            int rerr = 0;
+            LNetSock *sock = lnet_relay_connect_join(sLanAuto.host, sLanAuto.port,
+                            sLanAuto.room, sLanAuto.version, &rerr);
+            if (sock == NULL)
+            {
+                PortLanLog("[LAN] relay join failed (err %d)\n", rerr);
+            }
+            else
+            {
+                PortLanLog("[LAN] relay client joined, waiting for READY\n");
+                sPortableRelayPending = sock;
+                sPortableRelayPendingRole = LNET_ROLE_CLIENT;
+            }
+        }
         sLanLastLive = -1;
     }
 
-    /* Drive the non-blocking connection + HELLO handshake. When the host has
-     * opened a listener (or the client issued a connect) this advances the
-     * accept/connect and HELLO a few bytes per frame without ever blocking the
-     * game loop; until it completes IsLanLinkLive() stays false. */
-    if (sPortableLanLink != NULL)
+    /* A relay host keeps its room open without blocking the game: poll for the
+     * guest's READY once per frame, then upgrade the socket to a host link. */
+    if (sPortableRelayPending != NULL)
     {
-        int herr;
-        if (lnet_link_poll(sPortableLanLink, &herr) < 0)
+        int err = 0;
+        int r = lnet_relay_poll_ready(sPortableRelayPending, &err);
+        if (r > 0)
         {
-            PortLanLog("[LAN] link setup failed (err=%d), closing\n", herr);
-            LanLinkClose();
+            PortLanLog("[LAN] relay %s ready, establishing link\n",
+                       sPortableRelayPendingRole == LNET_ROLE_HOST ? "host" : "client");
+            sPortableLanLink = lnet_link_open(sPortableRelayPending, sPortableRelayPendingRole, &err);
+            sPortableRelayPending = NULL;
+            if (sPortableLanLink == NULL)
+                PortLanLog("[LAN] relay link handshake failed (err %d)\n", err);
+        }
+        else if (r < 0)
+        {
+            PortLanLog("[LAN] relay wait failed (err %d), closing\n", err);
+            lnet_net_close(sPortableRelayPending);
+            sPortableRelayPending = NULL;
+            sPortableRelayRoomId[0] = '\0';
         }
     }
 
@@ -2015,7 +2148,16 @@ bool32 IsLanLinkLive(void)
  * the peer joins. */
 bool32 PortLanIsConnecting(void)
 {
-    return sPortableLanLink != NULL;
+    if (sPortableLanLink != NULL)
+        return TRUE;
+    // A relay host/client that issued CREATE/JOIN but has not reached a live
+    // link yet (socket awaiting READY, or an outstanding relay request) is
+    // still "connecting" so the settings UI keeps the status row on 连接中….
+    if (sPortableRelayPending != NULL)
+        return TRUE;
+    if (sLanAuto.queued && (sLanAuto.role == 3 || sLanAuto.role == 4))
+        return TRUE;
+    return FALSE;
 }
 
 // A GBA SIO bus is clocked at 2Mbps and shifts out every word the software

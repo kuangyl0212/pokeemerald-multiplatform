@@ -343,6 +343,10 @@ extern const u8 gText_LanStatus[];
 extern const u8 gText_LanStart[];
 extern const u8 gText_LanStop[];
 extern const u8 gText_LanConnecting[];
+extern const u8 gText_LanRelayHost[];
+extern const u8 gText_LanRelayJoin[];
+extern const u8 gText_LanRoom[];
+extern const u8 gText_LanRoomPrompt[];
 #endif
 
 extern const u8 gText_MaleSymbol[];

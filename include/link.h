@@ -289,6 +289,7 @@ void SetLinkStandbyCallback(void);
 void SetWirelessCommType1(void);
 void CheckShouldAdvanceLinkState(void);
 void SetCloseLinkCallback(void);
+#define LNET_RELAY_VERSION "1"
 #ifdef PORTABLE
 void LanLinkOpenAsHost(u16 port);
 void LanLinkOpenAsClient(const char *host, u16 port);
@@ -299,6 +300,10 @@ void PortLanRequestHost(u16 port);
 void PortLanRequestClient(const char *host, u16 port);
 void PortLanSetLogFile(const char *path);
 void PortLanRequestOpenLink(void);
+void PortLanRequestRelayCreate(const char *server, u16 port, const char *roomName, const char *version);
+void PortLanRequestRelayJoin(const char *server, u16 port, const char *roomId, const char *version);
+const char *PortLanGetRelayRoomId(void);
+void PortLanPump(void);
 #endif
 bool8 HandleLinkConnection(void);
 void SetLinkDebugValues(u32 seed, u32 flags);

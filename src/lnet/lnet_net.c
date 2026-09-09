@@ -543,6 +543,29 @@ int lnet_net_recv_nb(LNetSock *s, void *data, size_t n, size_t *got, int *err)
     return 1;
 }
 
+int lnet_net_readable(LNetSock *s)
+{
+    struct timeval tv = { 0, 0 };
+    fd_set rfds;
+    FD_ZERO(&rfds);
+    FD_SET(s->fd, &rfds);
+#ifdef _WIN32
+    {
+        int n = (int)select(0, &rfds, NULL, NULL, &tv);
+        if (n < 0)
+            return -1;
+        return n > 0 ? 1 : 0;
+    }
+#else
+    {
+        int n = (int)select(s->fd + 1, &rfds, NULL, NULL, &tv);
+        if (n < 0)
+            return -1;
+        return n > 0 ? 1 : 0;
+    }
+#endif
+}
+
 void lnet_net_close(LNetSock *s)
 {
     if (s == NULL)

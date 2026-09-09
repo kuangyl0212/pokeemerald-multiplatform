@@ -49,6 +49,11 @@ int lnet_net_send_all(LNetSock *s, const void *data, size_t n, int *err);
 /* Receive exactly n bytes. Returns 1 on success, 0 on closed/error. */
 int lnet_net_recv_all(LNetSock *s, void *data, size_t n, int *err);
 
+/* Non-blocking check whether data is currently readable on s (no bytes are
+ * consumed). Returns >0 if readable, 0 if not, <0 on error. Used to poll for
+ * relay READY without freezing the game frame loop. */
+int lnet_net_readable(LNetSock *s);
+
 /* Non-blocking send: select-gated single socket op that never blocks the
  * caller. Returns 1 if bytes were moved, 0 if the socket would block (poll
  * again later; *sent holds how many bytes were already written), -1 on error. */

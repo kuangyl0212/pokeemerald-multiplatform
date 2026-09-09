@@ -38,6 +38,24 @@ LNetLink *lnet_link_join(const char *host, unsigned short port, int *err)
     return l;
 }
 
+/* Build a link over an already-connected, READY socket (e.g. the relay socket
+ * once the server reports READY). Takes ownership of `sock`; HELLO + SLOT still
+ * run on top, so lnet_link_poll() must be called until ready before exchange. */
+LNetLink *lnet_link_open(LNetSock *sock, LNetRole role, int *err)
+{
+    LNetLink *l = (LNetLink *)calloc(1, sizeof(LNetLink));
+    l->session = lnet_session_open(sock, role, err);
+    if (l->session == NULL)
+    {
+        free(l);
+        lnet_net_close(sock);
+        return NULL;
+    }
+    l->role = role;
+    l->sio = lnet_sio_new(l->role);
+    return l;
+}
+
 void lnet_link_close(LNetLink *l)
 {
     if (l == NULL)
