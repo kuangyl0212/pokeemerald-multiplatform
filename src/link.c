@@ -2040,31 +2040,22 @@ static int PortableLanSlot(void)
     u16 mySend;
     u16 peerSend;
     u64 recvView;
-    int r;
 
     if (!IsLanLinkLive())
-        return 0;
-
-    /* The game may enter the serial link (OpenLink from the Cable Club) before
-     * the LAN peer has connected. That is NOT a disconnect: keep waiting instead
-     * of tearing the link down into CB2_LinkError. Only a peer that was already
-     * connected and then dies/silently errors is surfaced as a link error. */
-    if (!IsLanLinkReady())
         return 0;
 
     if (gLink.state != LINK_STATE_HANDSHAKE && gLink.state != LINK_STATE_CONN_ESTABLISHED)
         return 0;
 
     mySend = REG_SIOMLT_SEND;
-    r = lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView);
-    if (r > 0)
+    if (lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView))
     {
         REG_SIOMLT_RECV = (vu64)recvView;
         if (gMain.serialCallback)
             gMain.serialCallback();
         return 1;
     }
-    return r; /* 0: slot still in flight (not ready); -1: peer gone/error */
+    return -1;
 }
 
 // The peer closed the TCP session (e.g. the other instance was terminated
@@ -2116,11 +2107,8 @@ bool8 HandleLinkConnection(void)
                               && gLink.sendQueue.count > 0);
              slots++)
         {
-            int r = PortableLanSlot();
-            if (r < 0)
+            if (PortableLanSlot() < 0)
                 peerGone = TRUE;
-            if (r <= 0)
-                break; /* slot in flight / peer done sending this frame */
         }
         if (peerGone)
             HandleLanDisconnect();

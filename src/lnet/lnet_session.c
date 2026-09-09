@@ -36,11 +36,6 @@ struct LNetSession
     int hsOutSent;
     unsigned char hsIn[3];
     int hsInGot;
-    /* non-blocking SLOT exchange progress (partial send/recv of one 3-byte slot) */
-    unsigned char slotOut[3];
-    int slotOutSent;
-    unsigned char slotIn[3];
-    int slotInGot;
 };
 
 /* Send our HELLO message without blocking. Returns 1 once all 3 bytes are
@@ -252,71 +247,46 @@ int lnet_session_is_ready(const LNetSession *s)
 }
 
 /*
- * Exchange one SIO slot value with the peer non-blockingly. Each call does at
- * most one select()-gated send and one select()-gated recv, so it never blocks
- * the game loop waiting for a slow peer. Partial I/O for the in-flight slot is
- * buffered across calls and resumed the next time exchange() is invoked.
- * Returns 1 when a full slot was exchanged (*peerVal is valid), 0 while the
- * slot is still in progress (call again later), and -1 on a permanent error or
- * a peer that closed - in which case the session is marked dead.
+ * Exchange one SIO slot value with the peer, blocking until the full 3-byte
+ * slot has been written and read. A slot is the whole atomic unit the game's
+ * serial engine expects on every transfer; splitting it across calls would let
+ * the two TCP streams drift out of lock-step and corrupt the slot stream
+ * (CHECKSUM errors) while also throttling each frame's drain so the master's
+ * send queue backs up to the 50-entry cap (QUEUE_FULL). Both peers call this
+ * from the same frame hook, and TCP is full-duplex, so send-then-recv cannot
+ * deadlock. Returns 1 on success (*peerVal is valid), -1 on a permanent error
+ * or a peer that closed - in which case the session is marked dead.
  */
 int lnet_session_exchange(LNetSession *s, unsigned short myVal, unsigned short *peerVal)
 {
-    size_t adv;
+    unsigned char out[3];
+    unsigned char in[3];
     int err;
-    int r;
 
     if (s == NULL || s->sock == NULL)
         return -1;
-    if (s->slotOutSent == 0)
-    {
-        s->slotOut[0] = MSG_SLOT;
-        s->slotOut[1] = (unsigned char)(myVal >> 8);
-        s->slotOut[2] = (unsigned char)(myVal & 0xFF);
-    }
 
-    /* Send our slot first, resuming any partial send from a prior frame. */
-    if (s->slotOutSent < 3)
-    {
-        r = lnet_net_send_nb(s->sock, s->slotOut + s->slotOutSent,
-                             3 - s->slotOutSent, &adv, &err);
-        if (r < 0)
-        {
-            s->alive = 0;
-            return -1;
-        }
-        if (r == 0)
-            return 0; /* peer not consuming yet; still alive, retry later */
-        s->slotOutSent += (int)adv;
-        if (s->slotOutSent < 3)
-            return 0; /* partial send buffered, resume later */
-    }
+    out[0] = MSG_SLOT;
+    out[1] = (unsigned char)(myVal >> 8);
+    out[2] = (unsigned char)(myVal & 0xFF);
 
-    /* Then read the peer's slot, resuming any partial recv. */
-    if (s->slotInGot < 3)
+    /* Send our slot first, then read the peer's, all in one call. */
+    if (!lnet_net_send_all(s->sock, out, sizeof(out), &err))
     {
-        r = lnet_net_recv_nb(s->sock, s->slotIn + s->slotInGot,
-                             3 - s->slotInGot, &adv, &err);
-        if (r < 0)
-        {
-            s->alive = 0;
-            return -1;
-        }
-        if (r == 0)
-            return 0; /* peer's slot not arrived yet; retry later */
-        s->slotInGot += (int)adv;
-        if (s->slotInGot < 3)
-            return 0; /* partial recv buffered, resume later */
+        s->alive = 0;
+        return -1;
     }
-
-    if (s->slotIn[0] != MSG_SLOT)
+    if (!lnet_net_recv_all(s->sock, in, sizeof(in), &err))
+    {
+        s->alive = 0;
+        return -1;
+    }
+    if (in[0] != MSG_SLOT)
     {
         s->alive = 0;
         return -1;
     }
     if (peerVal)
-        *peerVal = (unsigned short)(((unsigned short)s->slotIn[1] << 8) | s->slotIn[2]);
-    s->slotOutSent = 0;
-    s->slotInGot = 0;
+        *peerVal = (unsigned short)(((unsigned short)in[1] << 8) | in[2]);
     return 1;
 }

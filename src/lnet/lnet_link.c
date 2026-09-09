@@ -77,17 +77,15 @@ int lnet_link_ready(const LNetLink *l)
 
 int lnet_link_slot(LNetLink *l, unsigned short mySend, unsigned short *peerSend, unsigned long long *recvView)
 {
-    int r;
+    int err;
 
     if (l == NULL || l->session == NULL)
         return 0;
-    if (!lnet_session_is_ready(l->session))
+    if (lnet_session_exchange(l->session, mySend, peerSend) != 1)
         return 0;
-    r = lnet_session_exchange(l->session, mySend, peerSend);
-    if (r != 1)
-        return r; /* 0: slot in progress (not ready); -1: peer gone/error */
     /* RECV must reflect the just-completed slot; commit then expose it. */
     lnet_sio_commit(l->sio, mySend, *peerSend);
     *recvView = lnet_sio_recv_current(l->sio);
+    (void)err;
     return 1;
 }
