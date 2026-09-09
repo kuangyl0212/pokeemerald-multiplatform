@@ -1850,19 +1850,25 @@ static void PortLanLog(const char *fmt, ...)
 void PortLanRequestHost(u16 port)
 {
     LanLinkClose();
-    sLanAuto.queued = TRUE;
+    sLanAuto.queued = FALSE;
     sLanAuto.role = 1;
     sLanAuto.port = port;
     sLanAuto.host[0] = '\0';
     sLanLastLive = -1;
     sLanLoggedHandshake = FALSE;
-    PortLanLog("[LAN] queued: host on port %u\n", (unsigned)port);
+    // Open the listener right away so sPortableLanLink is live the moment the
+    // player presses A; the settings UI reads PortLanIsConnecting() to show
+    // "connecting" immediately instead of waiting for the peer to join. The
+    // non-blocking accept/poll is still advanced later by PortLanDebugPump
+    // once the game enters the link screen (HandleLinkConnection).
+    PortLanLog("[LAN] opening host on port %u\n", (unsigned)port);
+    LanLinkOpenAsHost(port);
 }
 
 void PortLanRequestClient(const char *host, u16 port)
 {
     LanLinkClose();
-    sLanAuto.queued = TRUE;
+    sLanAuto.queued = FALSE;
     sLanAuto.role = 2;
     sLanAuto.port = port;
     sLanAuto.host[0] = '\0';
@@ -1870,7 +1876,10 @@ void PortLanRequestClient(const char *host, u16 port)
     sLanAuto.host[sizeof(sLanAuto.host) - 1] = '\0';
     sLanLastLive = -1;
     sLanLoggedHandshake = FALSE;
-    PortLanLog("[LAN] queued: client -> %s:%u\n", host, (unsigned)port);
+    // As above: issue the non-blocking connect immediately so the UI flips to
+    // "connecting" on the press, independent of the peer's state.
+    PortLanLog("[LAN] opening client to %s:%u\n", host, (unsigned)port);
+    LanLinkOpenAsClient(sLanAuto.host, sLanAuto.port);
 }
 
 static void PortLanDebugPump(void)
@@ -1998,6 +2007,15 @@ bool32 IsLanLinkLive(void)
      * non-blocking connect/accept (see lnet_link_poll) and must NOT be treated
      * as ready, otherwise the game would OpenLink too early. */
     return sPortableLanLink != NULL && lnet_link_ready(sPortableLanLink);
+}
+
+/* True once the player has started a LAN session (host listening / client
+ * connect issued) but the link may not yet be connected+handshaken. This lets
+ * the settings UI show "connecting" the moment the player presses A, before
+ * the peer joins. */
+bool32 PortLanIsConnecting(void)
+{
+    return sPortableLanLink != NULL;
 }
 
 // A GBA SIO bus is clocked at 2Mbps and shifts out every word the software

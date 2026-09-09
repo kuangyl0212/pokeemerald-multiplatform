@@ -1213,9 +1213,9 @@ static void DrawLanNumberChoice(u8 row, u16 value)
 
 static const u8 *GetLanConnectText(void)
 {
-    if (IsLanLinkLive())
+    if (PortLanIsConnecting())
     {
-        if (gReceivedRemoteLinkPlayers)
+        if (IsLanLinkLive() && gReceivedRemoteLinkPlayers)
             return gText_LanStop;
         return gText_LanConnecting;
     }
