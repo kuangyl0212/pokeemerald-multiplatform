@@ -59,17 +59,35 @@ int lnet_link_live(const LNetLink *l)
     return l != NULL && l->session != NULL;
 }
 
+int lnet_link_poll(LNetLink *l, int *err)
+{
+    if (l == NULL || l->session == NULL)
+    {
+        if (err)
+            *err = LNET_ERR_OK;
+        return -1;
+    }
+    return lnet_session_poll(l->session, err);
+}
+
+int lnet_link_ready(const LNetLink *l)
+{
+    return l != NULL && l->session != NULL && lnet_session_is_ready(l->session);
+}
+
 int lnet_link_slot(LNetLink *l, unsigned short mySend, unsigned short *peerSend, unsigned long long *recvView)
 {
-    int err;
+    int r;
 
     if (l == NULL || l->session == NULL)
         return 0;
-    if (lnet_session_exchange(l->session, mySend, peerSend) != 1)
+    if (!lnet_session_is_ready(l->session))
         return 0;
+    r = lnet_session_exchange(l->session, mySend, peerSend);
+    if (r != 1)
+        return 0; /* -1: peer gone/error -> link failed */
     /* RECV must reflect the just-completed slot; commit then expose it. */
     lnet_sio_commit(l->sio, mySend, *peerSend);
     *recvView = lnet_sio_recv_current(l->sio);
-    (void)err;
     return 1;
 }

@@ -1893,6 +1893,20 @@ static void PortLanDebugPump(void)
         sLanLastLive = -1;
     }
 
+    /* Drive the non-blocking connection + HELLO handshake. When the host has
+     * opened a listener (or the client issued a connect) this advances the
+     * accept/connect and HELLO a few bytes per frame without ever blocking the
+     * game loop; until it completes IsLanLinkLive() stays false. */
+    if (sPortableLanLink != NULL)
+    {
+        int herr;
+        if (lnet_link_poll(sPortableLanLink, &herr) < 0)
+        {
+            PortLanLog("[LAN] link setup failed (err=%d), closing\n", herr);
+            LanLinkClose();
+        }
+    }
+
     live = IsLanLinkLive();
     if (live != sLanLastLive)
     {
@@ -1979,7 +1993,11 @@ void LanLinkClose(void)
 
 bool32 IsLanLinkLive(void)
 {
-    return sPortableLanLink != NULL && lnet_link_live(sPortableLanLink);
+    /* "Live" means the LAN link is fully up - the peer has connected and the
+     * HELLO role handshake completed. Before that the session is still in
+     * non-blocking connect/accept (see lnet_link_poll) and must NOT be treated
+     * as ready, otherwise the game would OpenLink too early. */
+    return sPortableLanLink != NULL && lnet_link_ready(sPortableLanLink);
 }
 
 // A GBA SIO bus is clocked at 2Mbps and shifts out every word the software

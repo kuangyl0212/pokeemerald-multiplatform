@@ -80,6 +80,16 @@ static THREAD_RET host_main(void *arg)
         g_hostFail = 1;
         return 0;
     }
+    /* lnet_session_host does NOT block to accept; poll until ready. */
+    while (!lnet_session_is_ready(s))
+    {
+        if (lnet_session_poll(s, &err) < 0)
+        {
+            g_hostFail = 1;
+            break;
+        }
+        sched_yield();
+    }
     CHECK(lnet_session_role(s) == LNET_ROLE_HOST, "host role is HOST");
     sio = lnet_sio_new(LNET_ROLE_HOST);
     for (k = 0; k < ROUND; k++)
@@ -111,6 +121,16 @@ static THREAD_RET client_main(void *arg)
     {
         g_clientFail = 1;
         return 0;
+    }
+    /* lnet_session_join does NOT block to connect; poll until ready. */
+    while (!lnet_session_is_ready(s))
+    {
+        if (lnet_session_poll(s, &err) < 0)
+        {
+            g_clientFail = 1;
+            break;
+        }
+        sched_yield();
     }
     CHECK(lnet_session_role(s) == LNET_ROLE_CLIENT, "client role is CLIENT");
     sio = lnet_sio_new(LNET_ROLE_CLIENT);

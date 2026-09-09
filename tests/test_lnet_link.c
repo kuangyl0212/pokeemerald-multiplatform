@@ -25,6 +25,7 @@ static HANDLE g_ht, g_ct;
 #define THREAD_RET DWORD WINAPI
 #else
 #include <pthread.h>
+#include <sched.h>
 #define RUN_BOTH()                              \
     do                                          \
     {                                           \
@@ -82,6 +83,16 @@ static THREAD_RET host_main(void *arg)
         return 0;
     }
     CHECK(lnet_link_role(l) == LNET_ROLE_HOST, "host role is HOST");
+    while (!lnet_link_ready(l))
+    {
+        if (lnet_link_poll(l, &err) < 0)
+        {
+            printf("FAIL: host setup failed (err=%d)\n", err);
+            g_hostOk = 0;
+            break;
+        }
+        sched_yield();
+    }
     for (k = 0; k < ROUND; k++)
     {
         if (!lnet_link_slot(l, g_hSend[k], &g_hostPeer[k], &recvView))
@@ -111,6 +122,16 @@ static THREAD_RET client_main(void *arg)
         return 0;
     }
     CHECK(lnet_link_role(l) == LNET_ROLE_CLIENT, "client role is CLIENT");
+    while (!lnet_link_ready(l))
+    {
+        if (lnet_link_poll(l, &err) < 0)
+        {
+            g_clientOk = 0;
+            printf("FAIL: client link setup failed (err=%d)\n", err);
+            break;
+        }
+        sched_yield();
+    }
     for (k = 0; k < ROUND; k++)
     {
         if (!lnet_link_slot(l, g_cSend[k], &g_clientPeer[k], &recvView))
