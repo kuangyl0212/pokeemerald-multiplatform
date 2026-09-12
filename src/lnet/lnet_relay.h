@@ -10,6 +10,7 @@
 #define LNET_RELAY_H
 
 #include "lnet_net.h"
+#include "lnet_session.h"
 
 /*
  * Connect to the relay server as the HOST and create a room. Sends
@@ -44,9 +45,12 @@ int lnet_relay_wait_ready(LNetSock *sock, int *err);
  * Returns 1 when READY was consumed (the room is full), 0 when still waiting
  * (nothing read), or -1 on a protocol/transport error. Poll this once per game
  * frame -- e.g. while a host shows its room code after lnet_relay_connect_create
- * -- so the frame loop is never blocked waiting for a guest to join.
+ * -- so the frame loop is never blocked waiting for a guest to join. If the
+ * server tagged the READY with a HOST/CLIENT role, *outRole is updated to that
+ * role (it is only written on an explicit "HOST"/"CLIENT" suffix; a plain
+ * "READY" leaves *outRole untouched). Pass NULL to ignore the role.
  */
-int lnet_relay_poll_ready(LNetSock *sock, int *err);
+int lnet_relay_poll_ready(LNetSock *sock, int *err, LNetRole *outRole);
 
 /*
  * Guest variant of the two-phase flow: connect, send JOIN roomId version, and

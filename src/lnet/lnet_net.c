@@ -566,6 +566,21 @@ int lnet_net_readable(LNetSock *s)
 #endif
 }
 
+/* Pure delay, implemented with select() on no descriptors so it needs no
+ * platform headers beyond what this file already pulls in. Bounded by the
+ * caller; used to let a relayed slot reply arrive without busy-spinning. */
+void lnet_net_idle_wait(unsigned usec)
+{
+    struct timeval tv;
+    tv.tv_sec = (long)(usec / 1000000u);
+    tv.tv_usec = (long)(usec % 1000000u);
+#ifdef _WIN32
+    select(0, NULL, NULL, NULL, &tv);
+#else
+    select(0, NULL, NULL, NULL, &tv);
+#endif
+}
+
 void lnet_net_close(LNetSock *s)
 {
     if (s == NULL)

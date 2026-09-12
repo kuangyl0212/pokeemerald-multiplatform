@@ -4,6 +4,10 @@
 #define MAX_LINK_PLAYERS 4
 #define MAX_RFU_PLAYERS 5
 #define CMD_LENGTH 8
+// Payload bytes carried per block-transfer frame (gSendCmd[1..CMD_LENGTH-1],
+// each slot holding 2 bytes). The GBA stride; kept explicit because the last
+// frame of a block rarely fills it and must not read past the block's end.
+#define SEND_BLOCK_PAYLOAD ((CMD_LENGTH - 1) * 2)
 #define QUEUE_CAPACITY 50
 #define OVERWORLD_RECV_QUEUE_MAX 3
 #define BLOCK_BUFFER_SIZE 0x100

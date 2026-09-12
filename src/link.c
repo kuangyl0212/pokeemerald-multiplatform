@@ -69,6 +69,16 @@ static u16 sRecvNonzeroCheck;
 static u8 sChecksumAvailable;
 static u8 sHandshakePlayerCount;
 
+
+
+
+
+
+
+static bool8 sLanSlotWasFill;
+static bool8 sRecvRecordDirty;
+static bool8 sLanFrameDirty;
+
 COMMON_DATA u16 gLinkPartnersHeldKeys[6] = {0};
 COMMON_DATA u32 gLinkDebugSeed = 0;
 COMMON_DATA struct LinkPlayerBlock gLocalLinkPlayerBlock = {0};
@@ -135,10 +145,13 @@ static bool32 InitBlockSend(const void *, size_t);
 static void LinkCB_BlockSendBegin(void);
 static void LinkCB_BlockSend(void);
 static void LinkCB_BlockSendEnd(void);
+static void HandleLocalLinkPlayerReceived(void);
 static void SetBlockReceivedFlag(u8);
 static u16 LinkTestCalcBlockChecksum(const u16 *, u16);
 static void LinkTest_PrintHex(u32, u8, u8, u8);
 static void LinkCB_RequestPlayerDataExchange(void);
+static void LinkCB_MasterInitBlockSend(void);
+static void LinkCB_SlaveInitBlockSend(void);
 static void Task_PrintTestData(u8);
 
 static void LinkCB_ReadyCloseLink(void);
@@ -390,6 +403,9 @@ void OpenLink(void)
         gLinkDummy1 = FALSE;
         gReadyCloseLinkType = 0;
         CreateTask(Task_TriggerHandshake, 2);
+        SetSerialCallback(SerialCB);
+        PortLanLog("[LAN] serial callback installed (SerialCB)\n");
+
     }
     else
     {
@@ -413,6 +429,8 @@ void CloseLink(void)
         LinkRfu_Shutdown();
     sLinkOpen = FALSE;
     DisableSerial();
+
+    SetSerialCallback(NULL);
 }
 
 static void TestBlockTransfer(u8 nothing, u8 is, u8 used)
@@ -515,6 +533,23 @@ u16 LinkMain2(const u16 *heldKeys)
     return gLinkStatus;
 }
 
+static void HandleLocalLinkPlayerReceived(void)
+{
+    int i;
+    int count;
+
+    count = 0;
+    gRemoteLinkPlayersNotReceived[GetMultiplayerId()] = 0;
+    for (i = 0; i < GetLinkPlayerCount_2(); i++)
+    {
+        count += gRemoteLinkPlayersNotReceived[i];
+    }
+    if (count == 0 && gReceivedRemoteLinkPlayers == 0)
+    {
+        gReceivedRemoteLinkPlayers = 1;
+    }
+}
+
 static void HandleReceiveRemoteLinkPlayer(u8 who)
 {
     int i;
@@ -578,6 +613,8 @@ static void ProcessRecvCmds(u8 unused)
             }
             case LINKCMD_CONT_BLOCK:
             {
+                u32 remain = sBlockRecv[i].size - sBlockRecv[i].pos;
+
                 if (sBlockRecv[i].size > BLOCK_BUFFER_SIZE)
                 {
                     u16 *buffer;
@@ -586,7 +623,12 @@ static void ProcessRecvCmds(u8 unused)
                     buffer = (u16 *)gDecompressionBuffer;
                     for (j = 0; j < CMD_LENGTH - 1; j++)
                     {
-                        buffer[(sBlockRecv[i].pos / 2) + j] = gRecvCmds[i][j + 1];
+
+
+
+
+                        if (remain > (u32)(j * 2 + 1))
+                            buffer[(sBlockRecv[i].pos / 2) + j] = gRecvCmds[i][j + 1];
                     }
                 }
                 else
@@ -595,11 +637,15 @@ static void ProcessRecvCmds(u8 unused)
 
                     for (j = 0; j < CMD_LENGTH - 1; j++)
                     {
-                        gBlockRecvBuffer[i][(sBlockRecv[i].pos / 2) + j] = gRecvCmds[i][j + 1];
+                        if (remain > (u32)(j * 2 + 1))
+                            gBlockRecvBuffer[i][(sBlockRecv[i].pos / 2) + j] = gRecvCmds[i][j + 1];
                     }
                 }
 
-                sBlockRecv[i].pos += (CMD_LENGTH - 1) * 2;
+                if (remain > ((8 - 1) * 2))
+                    sBlockRecv[i].pos += ((8 - 1) * 2);
+                else
+                    sBlockRecv[i].pos = sBlockRecv[i].size;
 
                 if (sBlockRecv[i].pos >= sBlockRecv[i].size)
                 {
@@ -688,6 +734,7 @@ static void BuildSendCmd(u16 command)
             gSendCmd[0] = LINKCMD_INIT_BLOCK;
             gSendCmd[1] = sBlockSend.size;
             gSendCmd[2] = sBlockSend.multiplayerId + 0x80;
+            PortLanLog("[LAN] build INIT block size=%u cmd1=%04x\n", sBlockSend.size, gSendCmd[1]);
             break;
         case LINKCMD_BLENDER_NO_PBLOCK_SPACE:
             gSendCmd[0] = LINKCMD_BLENDER_NO_PBLOCK_SPACE;
@@ -947,6 +994,7 @@ static void ResetBlockSend(void)
 
 static bool32 InitBlockSend(const void *src, size_t size)
 {
+    PortLanLog("[LAN] InitBlockSend size=%lu active=%d\n", (unsigned long)size, sBlockSend.active);
     if (sBlockSend.active)
     {
         return FALSE;
@@ -982,14 +1030,28 @@ static void LinkCB_BlockSend(void)
 {
     int i;
     const u8 *src;
+    u32 remain;
 
     src = sBlockSend.src;
     gSendCmd[0] = LINKCMD_CONT_BLOCK;
+    remain = sBlockSend.size - sBlockSend.pos;
     for (i = 0; i < CMD_LENGTH - 1; i++)
     {
-        gSendCmd[i + 1] = (src[sBlockSend.pos + i * 2 + 1] << 8) | src[sBlockSend.pos + i * 2];
+
+
+
+
+
+        if (remain > (u32)(i * 2 + 1))
+            gSendCmd[i + 1] = (src[sBlockSend.pos + i * 2 + 1] << 8) | src[sBlockSend.pos + i * 2];
+        else
+            gSendCmd[i + 1] = 0;
     }
-    sBlockSend.pos += 14;
+    if (remain > ((8 - 1) * 2))
+        sBlockSend.pos += ((8 - 1) * 2);
+    else
+        sBlockSend.pos = sBlockSend.size;
+    PortLanLog("[LAN] CONT pos=%u size=%u\n", sBlockSend.pos, sBlockSend.size);
     if (sBlockSend.size <= sBlockSend.pos)
     {
         sBlockSend.active = FALSE;
@@ -1000,6 +1062,7 @@ static void LinkCB_BlockSend(void)
 static void LinkCB_BlockSendEnd(void)
 {
     gLinkCallback = NULL;
+    HandleLocalLinkPlayerReceived();
 }
 
 static void LinkCB_BerryBlenderSendHeldKeys(void)
@@ -1224,8 +1287,44 @@ static void LinkCB_RequestPlayerDataExchange(void)
     if (gLinkStatus & LINK_STAT_MASTER)
     {
         BuildSendCmd(LINKCMD_SEND_LINK_TYPE);
+        gLinkCallback = LinkCB_MasterInitBlockSend;
     }
-    gLinkCallback = NULL;
+    else if (IsLanLinkLive())
+    {
+        BuildSendCmd(0x2222);
+        gLinkCallback = LinkCB_SlaveInitBlockSend;
+    }
+    else
+    {
+        gLinkCallback = NULL;
+    }
+}
+
+static void LinkCB_SlaveInitBlockSend(void)
+{
+    struct LinkPlayerBlock *block;
+
+    InitLocalLinkPlayer();
+    block = &gLocalLinkPlayerBlock;
+    block->linkPlayer = gLocalLinkPlayer;
+    memcpy(block->magic1, sASCIIGameFreakInc, sizeof(block->magic1) - 1);
+    memcpy(block->magic2, sASCIIGameFreakInc, sizeof(block->magic2) - 1);
+    InitBlockSend(block, sizeof(*block));
+}
+
+static void LinkCB_MasterInitBlockSend(void)
+{
+    struct LinkPlayerBlock *block;
+
+    InitLocalLinkPlayer();
+    block = &gLocalLinkPlayerBlock;
+    block->linkPlayer = gLocalLinkPlayer;
+    memcpy(block->magic1, sASCIIGameFreakInc, sizeof(block->magic1) - 1);
+    memcpy(block->magic2, sASCIIGameFreakInc, sizeof(block->magic2) - 1);
+    InitBlockSend(block, sizeof(*block));
+
+
+
 }
 
 static void Task_PrintTestData(u8 taskId)
@@ -1826,6 +1925,10 @@ static const char *sLanLogPath;
 static bool32 sLanOpenLink;
 static bool32 sLanLinkOpened;
 
+
+
+static u8 gLanHandshakeToggle;
+
 static void PortLanLog(const char *fmt, ...);
 
 void PortLanSetLogFile(const char *path)
@@ -1947,6 +2050,18 @@ const char *PortLanGetRelayRoomId(void)
     return (sLanAuto.role == 3) ? sPortableRelayRoomId : NULL;
 }
 
+static void AdvanceLanHandshake(void)
+{
+
+
+
+    if (gLanHandshakeToggle ^= 1)
+        return;
+
+    if (gLink.isMaster != LINK_MASTER)
+        return;
+    gLink.handshakeAsMaster = 1;
+}
 static void PortLanDebugPump(void);
 void PortLanPump(void)
 {
@@ -2030,12 +2145,14 @@ static void PortLanDebugPump(void)
     if (sPortableRelayPending != NULL)
     {
         int err = 0;
-        int r = lnet_relay_poll_ready(sPortableRelayPending, &err);
+        LNetRole readyRole = (LNetRole)sPortableRelayPendingRole;
+        int r = lnet_relay_poll_ready(sPortableRelayPending, &err, &readyRole);
         if (r > 0)
         {
+            sPortableRelayPendingRole = (u8)readyRole;
             PortLanLog("[LAN] relay %s ready, establishing link\n",
-                       sPortableRelayPendingRole == LNET_ROLE_HOST ? "host" : "client");
-            sPortableLanLink = lnet_link_open(sPortableRelayPending, sPortableRelayPendingRole, &err);
+                       readyRole == LNET_ROLE_HOST ? "host" : "client");
+            sPortableLanLink = lnet_link_open(sPortableRelayPending, readyRole, &err);
             sPortableRelayPending = NULL;
             if (sPortableLanLink == NULL)
                 PortLanLog("[LAN] relay link handshake failed (err %d)\n", err);
@@ -2077,15 +2194,9 @@ static void PortLanDebugPump(void)
          * neither ever sends MASTER_HANDSHAKE and DoHandshake can't settle.
          * Before HANDSHAKE we still force it to march START1 -> HANDSHAKE. */
         if (gLink.state < LINK_STATE_HANDSHAKE)
-        {
             gShouldAdvanceLinkState = 1;
-        }
-        else if (gLink.state == LINK_STATE_HANDSHAKE
-                 && (gLinkStatus & LINK_STAT_MASTER)
-                 && EXTRACT_PLAYER_COUNT(gLinkStatus) > 1)
-        {
-            gShouldAdvanceLinkState = 1;
-        }
+        else if (gLink.state == LINK_STATE_HANDSHAKE)
+            AdvanceLanHandshake();
     }
 
     if (live && gReceivedRemoteLinkPlayers && !sLanLoggedHandshake)
@@ -2181,48 +2292,18 @@ static void PortableLanConfigRegisters(void)
         SIO_MULTI_CNT->id = 0;
         SIO_MULTI_CNT->sd = 1; // master holds SD high, SI low
         SIO_MULTI_CNT->si = 0;
+        gLink.localId = 0;
+        gLink.isMaster = LINK_MASTER;
     }
     else
     {
         SIO_MULTI_CNT->id = 1;
         SIO_MULTI_CNT->sd = 0;
         SIO_MULTI_CNT->si = 1;
+        gLink.localId = 1;
+        gLink.isMaster = LINK_SLAVE;
     }
 }
-
-// Drive one SIO slot transaction over the LAN session, feeding the game's
-// existing serial engine (DoHandshake / DoRecv / DoSend) exactly as the GBA
-// serial interrupt would after SIO_START.
-// Returns 1 if the slot was exchanged, 0 if it was skipped (not applicable),
-// or -1 if the peer is gone / the transport failed (the game must surface a
-// link error instead of silently stalling).
-static int PortableLanSlot(void)
-{
-    u16 mySend;
-    u16 peerSend;
-    u64 recvView;
-
-    if (!IsLanLinkLive())
-        return 0;
-
-    if (gLink.state != LINK_STATE_HANDSHAKE && gLink.state != LINK_STATE_CONN_ESTABLISHED)
-        return 0;
-
-    mySend = REG_SIOMLT_SEND;
-    if (lnet_link_slot(sPortableLanLink, mySend, &peerSend, &recvView))
-    {
-        REG_SIOMLT_RECV = (vu64)recvView;
-        if (gMain.serialCallback)
-            gMain.serialCallback();
-        return 1;
-    }
-    return -1;
-}
-
-// The peer closed the TCP session (e.g. the other instance was terminated
-// mid-battle). Tear the link down and route the surviving player to the game's
-// standard "通信错误 / linked error" screen so the battle unblocks instead of
-// hanging on a dead socket.
 static void HandleLanDisconnect(void)
 {
     if (!IsLanLinkLive())
@@ -2241,7 +2322,6 @@ static void HandleLanDisconnect(void)
 // When this function returns TRUE the callbacks are skipped
 bool8 HandleLinkConnection(void)
 {
-    int slots;
     bool8 peerGone = FALSE;
 
     PortLanDebugPump();
@@ -2257,19 +2337,122 @@ bool8 HandleLinkConnection(void)
          * throughput heuristic that does not apply to this emulated link, so
          * clear it before LinkMain1 folds it into the status word. */
         gLink.lag = LAG_NONE;
+
+
+
+
         gLinkStatus = LinkMain1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
         /* Drain our own send queue within this frame (floor PORTABLE_LAN_SLOTS
          * keeps the handshake cadence; the drain loop lets real-battle bursts
          * flush faster than 1 command/frame so they never back up to the
          * 50-entry cap). Both peers run this same rule, so the exchange stays
          * lock-step. Guarded so a pathological frame can't stall the loop. */
-        for (slots = 0; slots < PORTABLE_LAN_SLOTS_PER_FRAME
-                          || (slots < PORTABLE_LAN_MAX_SLOTS_PER_FRAME
-                              && gLink.sendQueue.count > 0);
-             slots++)
+        if (IsLanLinkLive()
+         && (gLink.state == LINK_STATE_HANDSHAKE || gLink.state == LINK_STATE_CONN_ESTABLISHED))
         {
-            if (PortableLanSlot() < 0)
+            int slots = 9;
+            int done = 0;
+
+            int r = lnet_link_pump(sPortableLanLink);
+
+            u16 wire0 = 0, wire1 = 0;
+            u32 recvView0 = 0;
+            bool8 anyFill = 0;
+
+            if (r < 0)
                 peerGone = TRUE;
+
+            /* Per-frame phase anchor: the engine's counter state machine has
+             * exactly one legal steady cycle - a frame starts at (0,0), runs
+             * 8 accumulate slots + 1 sample slot, and SendRecvDone resets it
+             * back to (0,0) at the frame tail. Forcing both indices to 0
+             * every frame makes counter phase drift mathematically impossible
+             * and removes the INIT_TIMER entry asymmetry between master and
+             * slave that produced the (0,0) vs (7,6) fixed points. */
+            gLink.sendCmdIndex = 0;
+            gLink.recvCmdIndex = 0;
+            sRecvNonzeroCheck = 0;
+            sRecvRecordDirty = 0;
+            sLanFrameDirty = 0;
+
+            if (gLink.state == LINK_STATE_HANDSHAKE && (*(vu16 *)(REG_BASE + 0x12a)) == 0)
+            {
+                /* Seed the handshake magic while the wire is idle so the first
+                 * slot of the frame carries it to the peer. */
+                (*(vu16 *)(REG_BASE + 0x12a)) = gLink.handshakeAsMaster ? 0x8FFF : 0xB9A0;
+            }
+
+            /* Exactly 9 slots per frame - no more, no less. A peer slot we
+             * have not received yet is filled with 0xFFFF rather than waited
+             * for. Waiting is what broke the cadence: an earlier revision
+             * polled the socket until the peer replied, so a frame completed
+             * however many slots the WAN happened to deliver (0 on 1513 of
+             * 1706 frames in the 151932 logs) and the two peers'
+             * sendCmdIndex/recvCmdIndex reset phases drifted apart for good. */
+            while (done < slots)
+            {
+                u16 peerSend = 0;
+                u64 recvView = 0;
+                int gotPeer = 0;
+
+                if (gMain.serialCallback == NULL)
+                {
+                    PortLanLog("[LAN] slot completed with no serial callback installed\n");
+                    break;
+                }
+
+                r = lnet_link_slot(sPortableLanLink, (*(vu16 *)(REG_BASE + 0x12a)), &peerSend, &gotPeer, &recvView);
+                if (r < 0)
+                {
+                    peerGone = TRUE;
+                    break;
+                }
+
+                if (done == 0)
+                {
+                    wire0 = (*(vu16 *)(REG_BASE + 0x12a));
+                    recvView0 = (u32)(recvView & 0xFFFFFFFFu);
+                }
+                else if (done == 1)
+                {
+                    wire1 = (*(vu16 *)(REG_BASE + 0x12a));
+                }
+
+                (*(vu64 *)(REG_BASE + 0x120)) = (vu64)recvView;
+
+                sLanSlotWasFill = !gotPeer;
+                anyFill |= sLanSlotWasFill;
+                sLanFrameDirty |= sLanSlotWasFill;
+                gMain.serialCallback();
+                done++;
+            }
+
+            if (anyFill)
+                sChecksumAvailable = 0;
+
+            if (gLink.state == LINK_STATE_HANDSHAKE)
+                PortLanLog("[LAN][HS] state=%d tx=%04x rol=%d done=%d pc=%d hb0=%04x hb1=%04x mst=%d ham=%d fr=%d w0=%04x w1=%04x rv0=%08x\n",
+                           gLink.state, (*(vu16 *)(REG_BASE + 0x12a)), lnet_link_role(sPortableLanLink), done,
+                           (int)gLink.playerCount, gLink.handshakeBuffer[0], gLink.handshakeBuffer[1],
+                           (int)gLink.isMaster, (int)gLink.handshakeAsMaster, sHandshakePlayerCount,
+                           wire0, wire1, recvView0);
+            else
+            {
+                u16 rx0 = 0;
+                unsigned long lSent = 0, lRecv = 0, lSendOv = 0, lRecvOv = 0, lSeqGap = 0;
+                unsigned long lFd = 0, lFf = 0;
+                if (gLink.recvQueue.count > 0)
+                    rx0 = gLink.recvQueue.data[0][0][gLink.recvQueue.pos];
+
+                lnet_link_stats(sPortableLanLink, &lSent, &lRecv, &lSendOv, &lRecvOv, &lSeqGap, &lFd, &lFf);
+                PortLanLog("[LAN][CN] state=%d cb=%d tx=%04x rx=%04x rol=%d q=%u rn=%d sq=%d done=%d si=%d ri=%d ts=%lu tr=%lu so=%lu ro=%lu sg=%lu fd=%lu ff=%lu\n",
+                           gLink.state, (gLinkCallback != NULL), gSendCmd[0], rx0,
+                           lnet_link_role(sPortableLanLink),
+                           (unsigned)gLink.recvQueue.count, (int)gLink.receivedNothing,
+                           (int)gLink.sendQueue.count, done,
+                           (int)gLink.sendCmdIndex, (int)gLink.recvCmdIndex,
+                           lSent, lRecv, lSendOv, lRecvOv, lSeqGap, lFd, lFf);
+            }
         }
         if (peerGone)
             HandleLanDisconnect();
@@ -2655,6 +2838,14 @@ void SerialCB(void)
         case LINK_STATE_HANDSHAKE:
             if (DoHandshake())
             {
+                gLink.sendCmdIndex = 0;
+                gLink.recvCmdIndex = 0;
+                gLink.checksum = 0;
+                sChecksumAvailable = 0;
+                sRecvNonzeroCheck = 0;
+
+                sSendBufferEmpty = (gLink.sendQueue.count == 0);
+
                 if (gLink.isMaster)
                 {
                     gLink.state = LINK_STATE_INIT_TIMER;
@@ -2698,6 +2889,17 @@ static bool8 DoHandshake(void)
     }
     *(u64 *)gLink.handshakeBuffer = REG_SIOMLT_RECV;
     REG_SIOMLT_RECV = 0;
+    PortLanLog("[LAN][DH] ham=%d => send=%04x recv=%04x %04x %04x %04x\n",
+               (int)gLink.handshakeAsMaster, (*(vu16 *)(REG_BASE + 0x12a)),
+               gLink.handshakeBuffer[0], gLink.handshakeBuffer[1],
+               gLink.handshakeBuffer[2], gLink.handshakeBuffer[3]);
+    if (gLink.handshakeBuffer[0] == 0
+     && gLink.handshakeBuffer[1] == 0
+     && gLink.handshakeBuffer[2] == 0
+     && gLink.handshakeBuffer[3] == 0)
+    {
+        return 0;
+    }
     gLink.handshakeAsMaster = FALSE;
     for (i = 0; i < MAX_LINK_PLAYERS; i++)
     {
@@ -2742,11 +2944,31 @@ static void DoRecv(void)
     {
         for (i = 0; i < gLink.playerCount; i++)
         {
-            if (gLink.checksum != recv[i] && sChecksumAvailable)
+
+
+
+
+
+
+            if (!sChecksumAvailable)
+            {
+
+            }
+            else if (recv[i] & 0x8000)
+            {
+
+            }
+            else if ((gLink.checksum & 0x7FFF) != (recv[i] & 0x7FFF))
             {
                 gLink.badChecksum = TRUE;
             }
         }
+
+
+
+
+
+
         gLink.checksum = 0;
         sChecksumAvailable = TRUE;
     }
@@ -2759,11 +2981,29 @@ static void DoRecv(void)
         }
         if (gLink.recvQueue.count < QUEUE_CAPACITY)
         {
-            for (i = 0; i < gLink.playerCount; i++)
+
+
+
+
+
+
+            if (sLanSlotWasFill)
             {
-                gLink.checksum += recv[i];
-                sRecvNonzeroCheck |= recv[i];
-                gLink.recvQueue.data[i][gLink.recvCmdIndex][index] = recv[i];
+                for (i = 0; i < gLink.playerCount; i++)
+                {
+                    gLink.recvQueue.data[i][gLink.recvCmdIndex][index] = 0xFFFF;
+                }
+                sRecvRecordDirty = 1;
+            }
+            else
+
+            {
+                for (i = 0; i < gLink.playerCount; i++)
+                {
+                    gLink.checksum += recv[i];
+                    sRecvNonzeroCheck |= recv[i];
+                    gLink.recvQueue.data[i][gLink.recvCmdIndex][index] = recv[i];
+                }
             }
         }
         else
@@ -2771,19 +3011,43 @@ static void DoRecv(void)
             gLink.queueFull = QUEUE_FULL_RECV;
         }
         gLink.recvCmdIndex++;
-        if (gLink.recvCmdIndex == CMD_LENGTH && sRecvNonzeroCheck)
+
+
+
+
+        if (gLink.recvCmdIndex == 8 && sRecvNonzeroCheck && !sRecvRecordDirty)
         {
             gLink.recvQueue.count++;
+        }
+        if (gLink.recvCmdIndex == 8)
+        {
             sRecvNonzeroCheck = 0;
+            sRecvRecordDirty = 0;
         }
     }
+
+
+
+
+
+
+
 }
 
 static void DoSend(void)
 {
     if (gLink.sendCmdIndex == CMD_LENGTH)
     {
-        REG_SIOMLT_SEND = gLink.checksum;
+
+
+
+        if (sLanFrameDirty)
+            (*(vu16 *)(REG_BASE + 0x12a)) = (gLink.checksum & 0x7FFF) | 0x8000;
+        else
+            (*(vu16 *)(REG_BASE + 0x12a)) = (gLink.checksum & 0x7FFF);
+
+
+
         if (!sSendBufferEmpty)
         {
             gLink.sendQueue.count--;

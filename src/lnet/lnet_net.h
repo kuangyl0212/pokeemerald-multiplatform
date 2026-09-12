@@ -64,6 +64,10 @@ int lnet_net_send_nb(LNetSock *s, const void *data, size_t n, size_t *sent, int 
  * how many bytes were already read), -1 on error/closed. */
 int lnet_net_recv_nb(LNetSock *s, void *data, size_t n, size_t *got, int *err);
 
+/* Sleep up to `usec` microseconds (a pure delay, no socket involved). Used by
+ * the SIO slot loop to let a relayed reply come back without burning CPU. */
+void lnet_net_idle_wait(unsigned usec);
+
 /* Close and free a socket. Passing NULL is a no-op. */
 void lnet_net_close(LNetSock *s);
 

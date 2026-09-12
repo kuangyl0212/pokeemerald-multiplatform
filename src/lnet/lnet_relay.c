@@ -116,7 +116,7 @@ int lnet_relay_wait_ready(LNetSock *sock, int *err)
     return 1;
 }
 
-int lnet_relay_poll_ready(LNetSock *sock, int *err)
+int lnet_relay_poll_ready(LNetSock *sock, int *err, LNetRole *outRole)
 {
     char line[RELAY_LINE_MAX];
 
@@ -127,11 +127,22 @@ int lnet_relay_poll_ready(LNetSock *sock, int *err)
      * atomic on loopback/LAN and can only stall a single frame. */
     if (!recv_line(sock, line, sizeof(line), err))
         return -1;
-    if (looks_like_err(line) || strcmp(line, "READY") != 0)
+    if (looks_like_err(line) || strncmp(line, "READY", 5) != 0)
     {
         if (err && *err == 0)
             *err = -1;
         return -1;
+    }
+    /* The server may tag READY with the HELLO role so each side starts the
+     * handshake in its own direction: room creator/host -> HOST, joiner -> CLIENT.
+     * Surface it through *outRole. A legacy plain "READY" or unknown suffix
+     * leaves the caller's *outRole untouched so its create/join default holds. */
+    if (outRole != NULL)
+    {
+        if (strcmp(line + 5, " HOST") == 0)
+            *outRole = LNET_ROLE_HOST;
+        else if (strcmp(line + 5, " CLIENT") == 0)
+            *outRole = LNET_ROLE_CLIENT;
     }
     return 1;
 }
